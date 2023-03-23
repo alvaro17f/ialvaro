@@ -1,0 +1,97 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Navbar /> > should match the snapshot 1`] = `
+<div>
+  <nav
+    class="bg-gray-800"
+  >
+    <div
+      class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8"
+    >
+      <div
+        class="flex items-center justify-between h-16"
+      >
+        <div
+          class="flex items-center"
+        >
+          <div
+            class="flex-shrink-0"
+          >
+            <a
+              href="/"
+            >
+              <img
+                alt="logo"
+                class="w-8 h-8"
+                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+              />
+            </a>
+          </div>
+          <div
+            class="hidden md:block"
+          >
+            <div
+              class="flex items-baseline ml-10 space-x-4"
+            >
+              <a
+                class="px-3 py-2 text-sm font-medium text-white rounded-md hover:bg-gray-700"
+                href="/"
+              >
+                Home
+              </a>
+              <a
+                class="px-3 py-2 text-sm font-medium text-white rounded-md hover:bg-gray-700"
+                href="/about"
+              >
+                About
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex -mr-2 md:hidden"
+        >
+          <button
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            class="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-900 rounded-md hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+            type="button"
+          >
+            <span
+              class="sr-only"
+            >
+              menu-mobile
+            </span>
+            <svg
+              aria-hidden="true"
+              class="block w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <header
+    class="bg-white shadow"
+  >
+    <div
+      class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8"
+    >
+      <h1
+        class="text-3xl font-bold text-gray-900"
+      />
+    </div>
+  </header>
+</div>
+`;

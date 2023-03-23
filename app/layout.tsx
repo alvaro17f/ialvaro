@@ -1,12 +1,12 @@
 import "../styles/globals.css";
-import Nav from "./components/Nav";
+import Navbar from "./components/Navbar";
 
 export const metadata = {
 	title: "AZAMA",
 	description: "official website",
 };
 
-export default function RootLayout({
+export default function HomeLayout({
 	children,
 }: {
 	children: React.ReactNode;
@@ -14,8 +14,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body>
-				<Nav />
-				{children}
+				<Navbar />
+				<main className="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+					{children}
+				</main>
 			</body>
 		</html>
 	);

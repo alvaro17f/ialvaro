@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body {
-    @apply bg-yellow-300;
+    @apply text-azama-white bg-azama-dark ;
     
 }

@@ -14,7 +14,7 @@ export default function HomeLayout({
 	return (
 		<html lang='en'>
 			<body>
-				<Navbar />
+				<Navbar title={metadata.title} />
 				<main className="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
 					{children}
 				</main>

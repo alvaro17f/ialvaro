@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
 
@@ -14,10 +14,10 @@ const links = [
 	},
 ];
 
-export default function Navbar() {
+export default function Navbar({title = "azama"}) {
 	const [isOpen, setIsOpen] = useState(false);
-
 	const ref = useRef(null);
+
 	return (
 		<>
 			<nav className="bg-gray-800">
@@ -125,7 +125,7 @@ export default function Navbar() {
 
 			<header className="bg-white shadow">
 				<div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-					<h1 className="text-3xl font-bold text-gray-900">{}</h1>
+					<h1 className="text-3xl font-bold text-gray-900">{title}</h1>
 				</div>
 			</header>
 		</>

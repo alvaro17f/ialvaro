@@ -1,8 +1,7 @@
-
-
 export default function Home() {
-  return (
-    <main>
-    </main>
-  )
+	return (
+		<main>
+			<h1>AZAMA</h1>
+		</main>
+	);
 }

@@ -6,7 +6,7 @@ import {
 	fireEvent,
 	cleanup,
 } from "@testing-library/react";
-import Navbar from "../../app/components/Navbar";
+import Navbar from "@/app/components/Navbar";
 
 describe("<Navbar />", () => {
 	beforeEach(() => {

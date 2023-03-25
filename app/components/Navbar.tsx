@@ -14,7 +14,7 @@ const links = [
 	},
 ];
 
-export default function Navbar({title = "azama"}) {
+export default function Navbar({ title = "azama" }) {
 	const [isOpen, setIsOpen] = useState(false);
 	const ref = useRef(null);
 

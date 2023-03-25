@@ -6,7 +6,7 @@ import {
 	fireEvent,
 	cleanup,
 } from "@testing-library/react";
-import Home from "../app/page";
+import Home from "@/app/page";
 
 describe("<Home />", () => {
 	beforeEach(() => {

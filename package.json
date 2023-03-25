@@ -8,8 +8,9 @@
 		"build": "next build",
 		"start": "next start",
 		"test": "vitest",
+		"test:ui": "vitest --ui",
 		"coverage": "vitest --coverage",
-		"ui": "vitest --coverage --ui"
+		"coverage:ui": "vitest --coverage --ui"
 	},
 	"dependencies": {
 		"@types/node": "18.15.5",

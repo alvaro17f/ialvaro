@@ -1,7 +1,11 @@
+export const metadata = {
+	title: "AZAMA",
+};
+
 export default function Home() {
 	return (
 		<main>
-			<h1>AZAMA</h1>
+			<h1>{metadata.title}</h1>
 		</main>
 	);
 }

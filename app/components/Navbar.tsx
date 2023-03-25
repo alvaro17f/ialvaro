@@ -1,7 +1,7 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
+import { useRef, useState } from "react";
 
 const links = [
 	{
@@ -14,7 +14,7 @@ const links = [
 	},
 ];
 
-export default function Navbar({ title = "azama" }) {
+export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const ref = useRef(null);
 
@@ -40,6 +40,7 @@ export default function Navbar({ title = "azama" }) {
 											key={route}
 											href={route}
 											className="px-3 py-2 text-sm font-medium text-white rounded-md hover:bg-gray-700"
+											aria-label={`${label}-desktop`}
 										>
 											{label}
 										</Link>
@@ -122,12 +123,6 @@ export default function Navbar({ title = "azama" }) {
 					}
 				</Transition>
 			</nav>
-
-			<header className="bg-white shadow">
-				<div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-					<h1 className="text-3xl font-bold text-gray-900">{title}</h1>
-				</div>
-			</header>
 		</>
 	);
 }

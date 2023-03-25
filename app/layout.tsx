@@ -2,8 +2,12 @@ import "@/styles/globals.css";
 import Navbar from "./components/Navbar";
 
 export const metadata = {
-	title: "AZAMA",
-	description: "official website",
+	icons: "/favicon.ico",
+	title: {
+		default: "AZAMA",
+		template: "%s | AZAMA",
+	},
+	description: "Official website",
 };
 
 export default function HomeLayout({
@@ -14,7 +18,7 @@ export default function HomeLayout({
 	return (
 		<html lang='en'>
 			<body>
-				<Navbar title={metadata.title} />
+				<Navbar />
 				<main className="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
 					{children}
 				</main>

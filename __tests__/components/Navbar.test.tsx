@@ -15,7 +15,7 @@ describe("<Navbar />", () => {
 	afterEach(cleanup);
 
 	it("should match the snapshot", () => {
-		const {container} = render(<Navbar />)
+		const { container } = render(<Navbar />);
 		expect(container).toMatchSnapshot();
 	});
 
@@ -53,7 +53,7 @@ describe("<Navbar />", () => {
 		expect(menuItems.length).toBeGreaterThan(0);
 		expect(screen.getByLabelText(/home-mobile/i)).toBeDefined();
 		expect(screen.getByLabelText(/about-mobile/i)).toBeDefined();
-		fireEvent.click(screen.getByLabelText(/home/i));
+		fireEvent.click(screen.getByLabelText(/home-mobile/i));
 		expect(screen.queryByLabelText(/about-mobile/i)).toBeNull();
 		expect(screen.queryByLabelText(/home-mobile/i)).toBeNull();
 	});

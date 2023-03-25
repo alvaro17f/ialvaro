@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import Navbar from "./components/Navbar";
+import { Poppins } from "next/font/google";
 
 export const metadata = {
 	icons: "/favicon.ico",
@@ -10,6 +11,12 @@ export const metadata = {
 	description: "Official website",
 };
 
+const poppins = Poppins({
+	subsets: ["latin"],
+	variable: "--font-poppins",
+	weight: ["400", "700"],
+});
+
 export default function HomeLayout({
 	children,
 }: {
@@ -17,11 +24,9 @@ export default function HomeLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body>
+			<body className={`${poppins.variable} font-sans`}>
 				<Navbar />
-				<main className="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-					{children}
-				</main>
+				<main className="py-6 mx-5 max-w-7xl sm:px-6 lg:px-8">{children}</main>
 			</body>
 		</html>
 	);

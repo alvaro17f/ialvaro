@@ -20,17 +20,13 @@ export default function Navbar() {
 
 	return (
 		<>
-			<nav className="bg-gray-800">
+			<nav>
 				<div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
 					<div className="flex items-center justify-between h-16">
 						<div className="flex items-center">
 							<div className="flex-shrink-0">
 								<Link href="/">
-									<img
-										className="w-8 h-8"
-										src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-										alt="logo"
-									/>
+									<img className="w-32" src="azama_full.svg" alt="logo" />
 								</Link>
 							</div>
 							<div className="hidden md:block">
@@ -39,7 +35,7 @@ export default function Navbar() {
 										<Link
 											key={route}
 											href={route}
-											className="px-3 py-2 text-sm font-medium text-white rounded-md hover:bg-gray-700"
+											className="px-3 py-2 text-sm font-medium rounded-md text-azama-text-white hover:bg-azama-primary hover:text-azama-text-dark"
 											aria-label={`${label}-desktop`}
 										>
 											{label}
@@ -52,7 +48,7 @@ export default function Navbar() {
 							<button
 								onClick={() => setIsOpen(!isOpen)}
 								type="button"
-								className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-900 rounded-md hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+								className="inline-flex items-center justify-center p-2 rounded-md text-azama-text-white focus:outline-none focus:ring-2 focus:ring-offset-2 "
 								aria-controls="mobile-menu"
 								aria-expanded="false"
 							>

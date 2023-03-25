@@ -1,11 +1,9 @@
-export const metadata = {
-	title: "AZAMA",
-};
+import Header from "@/app/components/Header";
 
 export default function Home() {
 	return (
-		<main>
-			<h1>{metadata.title}</h1>
-		</main>
+		<>
+			<Header value="Home" />
+		</>
 	);
 }

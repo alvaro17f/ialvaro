@@ -1,3 +1,5 @@
+import Header from "../components/Header";
+
 export const metadata = {
 	title: "About",
 };
@@ -5,7 +7,7 @@ export const metadata = {
 export default function About() {
 	return (
 		<>
-			<h1>{metadata.title}</h1>
+			<Header value={metadata.title} />
 		</>
 	);
 }

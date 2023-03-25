@@ -19,10 +19,15 @@ describe("<Home />", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render the title", () => {
-		const main = within(screen.getByRole("main"));
+	it("should render the <Header />", () => {
 		expect(
-			main.getByRole("heading", { level: 1, name: /azama/i }),
+			screen.getByRole("heading", { level: 1, name: /home/i }),
+		).toBeDefined();
+	});
+
+	it("should render the <Content />", () => {
+		expect(
+			screen.getByLabelText(/content/i),
 		).toBeDefined();
 	});
 });

@@ -1,7 +1,8 @@
 "use client";
 import { Transition } from "@headlessui/react";
+import "animate.css";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const links = [
 	{

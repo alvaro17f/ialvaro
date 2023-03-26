@@ -1,5 +1,4 @@
 "use client";
-import { Transition } from "@headlessui/react";
 import "animate.css";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -12,6 +11,10 @@ const links = [
 	{
 		label: "About",
 		route: "/about",
+	},
+	{
+		label: "Portfolio",
+		route: "/portfolio",
 	},
 ];
 
@@ -92,33 +95,23 @@ export default function Navbar() {
 					</div>
 				</div>
 
-				<Transition
-					show={isOpen}
-					enter="transition ease-out duration-100 transform"
-					enterFrom="opacity-0 scale-95"
-					enterTo="opacity-100 scale-100"
-					leave="transition ease-in duration-75 transform"
-					leaveFrom="opacity-100 scale-100"
-					leaveTo="opacity-0 scale-95"
-				>
-					{
-						<div className="md:hidden">
-							<div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-								{links.map(({ label, route }) => (
-									<Link
-										key={route}
-										href={route}
-										onClick={() => setIsOpen(!isOpen)}
-										className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-gray-700"
-										aria-label={`${label}-mobile`}
-									>
-										{label}
-									</Link>
-								))}
-							</div>
+				{isOpen && (
+					<div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+						<div className="md:hidden animate__animated animate__fadeIn ">
+							{links.map(({ label, route }) => (
+								<Link
+									key={route}
+									href={route}
+									onClick={() => setIsOpen(!isOpen)}
+									className="block px-3 py-2 text-base font-medium text-white rounded-md animate__animated animate__slideInRight animate__faster hover:bg-azama-muted"
+									aria-label={`${label}-mobile`}
+								>
+									{label}
+								</Link>
+							))}
 						</div>
-					}
-				</Transition>
+					</div>
+				)}
 			</nav>
 		</>
 	);

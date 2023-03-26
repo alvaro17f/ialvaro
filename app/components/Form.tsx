@@ -66,10 +66,10 @@ export default function Form() {
 						placeholder="Your message goes here..."
 					/>
 					<button
-						className="active:bg-azama-success opacity-80 max-w-[15rem] md:w-[42rem] md:max-w-none p-5 rounded-xl shadow-md shadow-azama-base bg-azama-danger"
+						className="active:bg-azama-danger opacity-80 max-w-[15rem] md:w-[42rem] md:max-w-none p-5 rounded-xl shadow-md shadow-azama-base bg-azama-success text-5xl"
 						type="submit"
 					>
-						Send
+						🤘	
 					</button>
 				</form>
 			</section>

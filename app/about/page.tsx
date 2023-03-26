@@ -10,15 +10,15 @@ export default function About() {
 		<>
 			<Header value={metadata.title} />
 			<Content>
-				<div className="flex flex-col items-center md:flex-row">
-					<div className="mb-5 grow md:ml-12 md:mr-20">
+				<div className="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center">
+					<div className="mb-5">
 						<img
 							src="profile.png"
 							alt="profile picture"
-							className="object-cover md:max-w-[20rem] md:min-w-[15rem] border-[5px] rounded-full animate__animated animate__fadeIn animate__slow border-azama-muted"
+							className="object-cover md:max-w-[15rem] md:min-w-[15rem] border-[5px] rounded-full animate__animated animate__fadeIn animate__slow border-azama-muted"
 						/>
 					</div>
-					<div className="grow-1 max-w-[75ch]">
+					<div className="max-w-[75ch]">
 						<h2 className="text-3xl">Hello World!</h2>
 						<p>
 							My name is Álvaro and I am a Full Stack Developer.

@@ -1,4 +1,5 @@
 import Content from "../components/Content";
+import Form from "../components/Form";
 import Header from "../components/Header";
 
 export const metadata = {
@@ -40,6 +41,7 @@ export default function About() {
 					</div>
 				</div>
 			</Content>
+			<Form />
 		</>
 	);
 }

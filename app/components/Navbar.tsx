@@ -1,7 +1,7 @@
 "use client";
 import "animate.css";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const links = [
 	{
@@ -9,12 +9,12 @@ const links = [
 		route: "/",
 	},
 	{
-		label: "About",
-		route: "/about",
-	},
-	{
 		label: "Portfolio",
 		route: "/portfolio",
+	},
+	{
+		label: "About",
+		route: "/about",
 	},
 ];
 

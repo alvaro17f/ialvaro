@@ -26,7 +26,7 @@ export default function HomeLayout({
 		<html lang='en'>
 			<body className={`${poppins.variable} font-sans`}>
 				<Navbar />
-				<main className="py-6 mx-5 max-w-7xl sm:px-6 lg:px-8">{children}</main>
+				<main className="py-6 mx-5 md:mx-auto max-w-7xl sm:px-6 lg:px-8">{children}</main>
 			</body>
 		</html>
 	);

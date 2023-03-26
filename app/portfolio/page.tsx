@@ -1,4 +1,6 @@
-import PortfolioComponent from "@/app/portfolio/components/portfolio";
+import Content from "../components/Content";
+import Header from "../components/Header";
+
 export const metadata = {
 	title: "Portfolio",
 };
@@ -6,7 +8,11 @@ export const metadata = {
 export default function Portfolio() {
 	return (
 		<>
-			<PortfolioComponent />
+			<Header value={metadata.title} />
+			<div className="grid grid-cols-2 gap-5 divide-x">
+				<Content>A</Content>
+				<Content>B</Content>
+			</div>
 		</>
 	);
 }

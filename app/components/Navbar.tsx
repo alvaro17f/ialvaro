@@ -58,7 +58,7 @@ export default function Navbar() {
 							<button
 								onClick={() => setIsOpen(!isOpen)}
 								type="button"
-								className="inline-flex items-center justify-center p-2 rounded-md text-azama-white focus:outline-none focus:ring-2 focus:ring-offset-2 "
+								className="inline-flex items-center justify-center p-2 rounded-md text-azama-white focus:outline-none focus:ring-2 focus:ring-offset-2"
 								aria-controls="mobile-menu"
 								aria-expanded="false"
 							>

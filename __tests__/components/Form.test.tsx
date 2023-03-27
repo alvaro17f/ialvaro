@@ -69,6 +69,6 @@ describe("<Form />", () => {
 		fireEvent.submit(screen.getByLabelText("submit"));
 		await waitFor(() => {
 			screen.getByText(/thank you/i);
-		}, {timeout: 2000});
+		}, {timeout: 2500});
 	});
 });

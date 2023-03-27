@@ -11,23 +11,29 @@ exports[`<Home /> > should match the snapshot 1`] = `
       Home
     </h1>
   </section>
-  <section
-    aria-label="content"
-    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white animate__animated animate__fadeInLeft animate__delay-0.7s"
+  <div
+    class="grid grid-cols-2 gap-5 divide-x"
   >
-    <article
-      class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+    <section
+      aria-label="content"
+      class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white animate__animated animate__fadeInLeft animate__delay-0.7s"
     >
-      <div
-        class="grid grid-cols-1 place-items-center"
+      <article
+        class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
       >
-        <h2
-          class="text-3xl"
-        >
-          Hello World!
-        </h2>
-      </div>
-    </article>
-  </section>
+        A
+      </article>
+    </section>
+    <section
+      aria-label="content"
+      class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white animate__animated animate__fadeInLeft animate__delay-0.7s"
+    >
+      <article
+        class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+      >
+        B
+      </article>
+    </section>
+  </div>
 </div>
 `;

@@ -1,5 +1,4 @@
-import Content from "../components/Content";
-import Header from "../components/Header";
+import Parallax from "@/app/components/Parallax";
 
 export const metadata = {
 	title: "Portfolio",
@@ -7,12 +6,8 @@ export const metadata = {
 
 export default function Portfolio() {
 	return (
-		<>
-			<Header value={metadata.title} />
-			<div className="grid grid-cols-2 gap-5 divide-x">
-				<Content>A</Content>
-				<Content>B</Content>
-			</div>
-		</>
+		<div className="animate__animated animate__fadeIn">
+			<Parallax />
+		</div>
 	);
 }

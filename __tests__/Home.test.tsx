@@ -6,7 +6,7 @@ import {
 	fireEvent,
 	cleanup,
 } from "@testing-library/react";
-import Home from "@/app/page";
+import Home, { metadata } from "@/app/page";
 
 describe("<Home />", () => {
 	beforeEach(() => {
@@ -25,9 +25,11 @@ describe("<Home />", () => {
 		).toBeDefined();
 	});
 
+	it("should match metadata's title to <Header /> title", () => {
+		expect(metadata.title).toStrictEqual("Home");
+	});
+
 	it("should render the <Content />", () => {
-		expect(
-			screen.getByLabelText(/content/i),
-		).toBeDefined();
+		expect(screen.getAllByLabelText(/content/i).length).toBe(2);
 	});
 });

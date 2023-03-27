@@ -1,15 +1,18 @@
-import Header from "@/app/components/Header";
-import Content from "@/app/components/Content";
+import Content from "./components/Content";
+import Header from "./components/Header";
+
+export const metadata = {
+	title: "Home",
+};
 
 export default function Home() {
 	return (
 		<>
-			<Header value="Home" />
-			<Content>
-				<div className="grid grid-cols-1 place-items-center">
-					<h2 className="text-3xl">Hello World!</h2>
-				</div>
-			</Content>
+			<Header value={metadata.title} />
+			<div className="grid grid-cols-2 gap-5 divide-x">
+				<Content>A</Content>
+				<Content>B</Content>
+			</div>
 		</>
 	);
 }

@@ -4,5 +4,5 @@
 
 body {
     @apply box-border;
-    @apply text-azama-text-white bg-azama-base ;
+    @apply text-azama-white bg-azama-base ;
 }

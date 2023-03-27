@@ -1,4 +1,4 @@
-const { fontFamily } = require('tailwindcss/defaultTheme')
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -14,10 +14,6 @@ module.exports = {
 		extend: {
 			colors: {
 				azama: {
-					text: {
-						white: "#e0def4",
-						dark: "#2a273f",
-					},
 					base: "#232136",
 					primary: "#ea9a97",
 					secondary: "#908caa",
@@ -26,8 +22,8 @@ module.exports = {
 					warning: "#f6c177",
 					info: "#3e8fb0",
 					muted: "#6e6a86",
-					black: "#000000",
-					white: "#ffffff",
+					white: "#e0def4",
+					dark: "#2a273f",
 				},
 			},
 			fontFamily: {

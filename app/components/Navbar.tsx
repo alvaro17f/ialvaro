@@ -39,7 +39,7 @@ export default function Navbar() {
 										<Link
 											key={route}
 											href={route}
-											className="px-3 py-2 text-sm font-medium rounded-md text-azama-text-white hover:bg-azama-primary hover:text-azama-text-dark"
+											className="px-3 py-2 text-sm font-medium rounded-md text-azama-white hover:bg-azama-primary hover:text-azama-dark"
 											aria-label={`${label}-desktop`}
 										>
 											{label}
@@ -52,7 +52,7 @@ export default function Navbar() {
 							<button
 								onClick={() => setIsOpen(!isOpen)}
 								type="button"
-								className="inline-flex items-center justify-center p-2 rounded-md text-azama-text-white focus:outline-none focus:ring-2 focus:ring-offset-2 "
+								className="inline-flex items-center justify-center p-2 rounded-md text-azama-white focus:outline-none focus:ring-2 focus:ring-offset-2 "
 								aria-controls="mobile-menu"
 								aria-expanded="false"
 							>

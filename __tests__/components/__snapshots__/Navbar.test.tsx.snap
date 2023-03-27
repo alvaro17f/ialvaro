@@ -20,8 +20,9 @@ exports[`<Navbar /> > should match the snapshot 1`] = `
             >
               <img
                 alt="logo"
-                class="w-32"
-                src="azama_full.svg"
+                height="120"
+                src="/images/azama_full.svg"
+                width="120"
               />
             </a>
           </div>
@@ -61,7 +62,7 @@ exports[`<Navbar /> > should match the snapshot 1`] = `
           <button
             aria-controls="mobile-menu"
             aria-expanded="false"
-            class="inline-flex items-center justify-center p-2 rounded-md text-azama-white focus:outline-none focus:ring-2 focus:ring-offset-2 "
+            class="inline-flex items-center justify-center p-2 rounded-md text-azama-white focus:outline-none focus:ring-2 focus:ring-offset-2"
             type="button"
           >
             <span

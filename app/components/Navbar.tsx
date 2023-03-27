@@ -1,6 +1,5 @@
 "use client";
 import "animate.css";
-import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
@@ -31,7 +30,7 @@ export default function Navbar() {
 						<div className="flex items-center">
 							<div className="flex-shrink-0">
 								<Link href="/">
-									<Image
+									<img
 										width={120}
 										height={120}
 										src="/images/azama_full.svg"

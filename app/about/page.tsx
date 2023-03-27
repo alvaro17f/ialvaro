@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Content from "../components/Content";
 import Form from "../components/Form";
 import Header from "../components/Header";
@@ -14,7 +13,7 @@ export default function About() {
 			<Content>
 				<div className="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center">
 					<div className="mb-5">
-						<Image
+						<img
 							src="/images/profile.png"
 							alt="profile picture"
 							width={200}

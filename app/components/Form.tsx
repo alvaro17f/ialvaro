@@ -38,7 +38,7 @@ export default function Form() {
 						placeholder="Your message goes here..."
 					/>
 					<button
-						className="opacity-80 max-w-[15rem] md:w-[42rem] md:max-w-none p-5 rounded-xl shadow-md shadow-azama-base bg-azama-primary bg-opacity-100 active:bg-opacity-50 text-5xl"
+						className="opacity-80 max-w-[15rem] md:w-[12rem] md:max-w-none p-5 rounded-xl shadow-md shadow-azama-base bg-azama-success bg-opacity-100 active:bg-opacity-50 text-5xl"
 						type="submit"
 					>
 						🔥

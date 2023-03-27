@@ -1,0 +1,39 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<About /> > should match the snapshot 1`] = `
+<div>
+  <section
+    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-primary animate__animated animate__jackInTheBox"
+  >
+    <h1
+      class="text-7xl animate__animated animate__fadeIn animate__delay-0.7s"
+    >
+      Portfolio
+    </h1>
+  </section>
+  <div
+    class="grid grid-cols-2 gap-5 divide-x"
+  >
+    <section
+      aria-label="content"
+      class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white animate__animated animate__fadeInLeft animate__delay-0.7s"
+    >
+      <article
+        class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+      >
+        A
+      </article>
+    </section>
+    <section
+      aria-label="content"
+      class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white animate__animated animate__fadeInLeft animate__delay-0.7s"
+    >
+      <article
+        class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+      >
+        B
+      </article>
+    </section>
+  </div>
+</div>
+`;

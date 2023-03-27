@@ -1,0 +1,68 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Form /> > should match the snapshot 1`] = `
+<div>
+  <section
+    aria-label="section-form"
+    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-warning animate__animated animate__fadeInLeft animate__delay-0.7s"
+  >
+    <div
+      class="mb-5 md:mb-0 md:text-center"
+    >
+      <h2
+        class="text-3xl"
+      >
+        CONTACT ME!
+      </h2>
+      <p>
+        It's free
+      </p>
+    </div>
+    <form
+      aria-label="contact-form"
+      class="grid gap-5 p-2 place-items-center md:w-full"
+    >
+      <input
+        aria-label="name"
+        class="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+        defaultvalue=""
+        name="name"
+        placeholder="Name *"
+        required=""
+        type="text"
+      />
+      <input
+        aria-label="email"
+        class="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+        defaultvalue=""
+        name="email"
+        placeholder="Email *"
+        required=""
+        type="email"
+      />
+      <input
+        aria-label="phone"
+        class="bg-azama-base placeholder:text-azama-muted text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+        defaultvalue=""
+        name="phone"
+        placeholder="Phone"
+        type="text"
+      />
+      <textarea
+        aria-label="message"
+        class="bg-azama-base text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 shadow-md rounded-xl shadow-azama-base placeholder:text-azama-danger"
+        name="message"
+        placeholder="Your message goes here... *"
+        required=""
+      />
+      <button
+        aria-label="submit"
+        class="md:w-40  p-4 rounded-full shadow-md shadow-azama-danger bg-azama-base bg-opacity-100 active:bg-opacity-50 text-5xl false"
+        type="submit"
+      >
+        🔥
+      </button>
+    </form>
+  </section>
+</div>
+`;

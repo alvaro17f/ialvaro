@@ -17,14 +17,14 @@ export default function Form() {
 						className="opacity-80 max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
 						type="text"
 						name="name"
-						placeholder="Name"
+						placeholder="Name *"
 						required
 					/>
 					<input
 						className="opacity-80 max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
 						type="email"
 						name="email"
-						placeholder="Email"
+						placeholder="Email *"
 						required
 					/>
 					<input
@@ -35,7 +35,8 @@ export default function Form() {
 					/>
 					<textarea
 						className="opacity-80 max-w-[15rem] md:w-[42rem] md:max-w-none p-8 shadow-md rounded-xl shadow-azama-base"
-						placeholder="Your message goes here..."
+						placeholder="Your message goes here... *"
+						required
 					/>
 					<button
 						className="opacity-80 max-w-[15rem] md:w-[12rem] md:max-w-none p-5 rounded-xl shadow-md shadow-azama-base bg-azama-success bg-opacity-100 active:bg-opacity-50 text-5xl"

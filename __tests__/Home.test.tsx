@@ -1,15 +1,16 @@
-import { expect, it, describe, beforeEach, afterEach } from "vitest";
-import {
-	render,
-	screen,
-	within,
-	fireEvent,
-	cleanup,
-} from "@testing-library/react";
 import Home, { metadata } from "@/app/page";
+import { cleanup, render, screen } from "@testing-library/react";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("<Home />", () => {
 	beforeEach(() => {
+		const mockIntersectionObserver = vi.fn();
+		mockIntersectionObserver.mockReturnValue({
+			observe: () => null,
+			unobserve: () => null,
+			disconnect: () => null,
+		});
+		window.IntersectionObserver = mockIntersectionObserver;
 		render(<Home />);
 	});
 	afterEach(cleanup);

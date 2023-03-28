@@ -14,30 +14,34 @@ exports[`<Home /> > should match the snapshot 1`] = `
     </h1>
   </section>
   <div
-    class="grid grid-cols-2 gap-5 divide-x"
+    style="opacity: 0; transform: scale(0) translateZ(0);"
   >
-    <section
-      aria-label="content"
-      class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
-      style="opacity: 0; transform: translateX(-800px) translateZ(0);"
+    <div
+      class="grid grid-cols-2 gap-5 divide-x"
     >
-      <article
-        class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+      <section
+        aria-label="content"
+        class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
+        style="opacity: 0; transform: translateX(-800px) translateZ(0);"
       >
-        A
-      </article>
-    </section>
-    <section
-      aria-label="content"
-      class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
-      style="opacity: 0; transform: translateX(-800px) translateZ(0);"
-    >
-      <article
-        class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+        <article
+          class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+        >
+          A
+        </article>
+      </section>
+      <section
+        aria-label="content"
+        class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
+        style="opacity: 0; transform: translateX(-800px) translateZ(0);"
       >
-        B
-      </article>
-    </section>
+        <article
+          class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+        >
+          B
+        </article>
+      </section>
+    </div>
   </div>
 </div>
 `;

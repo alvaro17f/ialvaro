@@ -1,9 +1,9 @@
-import Parallax from "@/app/portfolio/Parallax";
+import PortfolioParallax from "@/app/portfolio/parallax";
 
 export const metadata = {
 	title: "Portfolio",
 };
 
 export default function Portfolio() {
-	return <Parallax />;
+	return <PortfolioParallax />;
 }

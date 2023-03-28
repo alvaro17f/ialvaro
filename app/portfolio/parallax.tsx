@@ -32,7 +32,7 @@ function Image({ id }: { id: number }) {
 	);
 }
 
-export default function Parallax() {
+export default function PortfolioParallax() {
 	const { scrollYProgress } = useScroll();
 	const scaleX = useSpring(scrollYProgress, {
 		stiffness: 100,

@@ -9,7 +9,7 @@ export const metadata = {
 export default function About() {
 	return (
 		<>
-			<Header value={metadata.title} />
+			<Header title={metadata.title} />
 			<Content>
 				<div className="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center">
 					<div className="mb-5">
@@ -18,7 +18,7 @@ export default function About() {
 							alt="profile picture"
 							width={200}
 							height={200}
-							className="border-[5px] rounded-full animate__animated animate__fadeIn animate__slow border-azama-muted"
+							className="border-[5px] rounded-full border-azama-muted"
 						/>
 					</div>
 					<div className="max-w-[75ch]">

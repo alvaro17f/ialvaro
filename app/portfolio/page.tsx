@@ -5,9 +5,5 @@ export const metadata = {
 };
 
 export default function Portfolio() {
-	return (
-		<div className="animate__animated animate__fadeIn">
-			<Parallax />
-		</div>
-	);
+	return <Parallax />;
 }

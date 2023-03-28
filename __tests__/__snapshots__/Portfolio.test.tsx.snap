@@ -2,93 +2,89 @@
 
 exports[`<Portfolio /> > should match the snapshot 1`] = `
 <div>
-  <div
-    class="animate__animated animate__fadeIn"
+  <section
+    class="parallax_section"
   >
-    <section
-      class="parallax_section"
+    <div>
+      <img
+        alt="A London skyscraper"
+        class="parallax_img"
+        src="parallax/1.jpg"
+      />
+    </div>
+    <h2
+      style="transform: translateY(-300px) translateZ(0);"
     >
-      <div>
-        <img
-          alt="A London skyscraper"
-          class="parallax_img"
-          src="parallax/1.jpg"
-        />
-      </div>
-      <h2
-        style="transform: translateY(-300px) translateZ(0);"
-      >
-        #001
-      </h2>
-    </section>
-    <section
-      class="parallax_section"
+      #001
+    </h2>
+  </section>
+  <section
+    class="parallax_section"
+  >
+    <div>
+      <img
+        alt="A London skyscraper"
+        class="parallax_img"
+        src="parallax/2.jpg"
+      />
+    </div>
+    <h2
+      style="transform: translateY(-300px) translateZ(0);"
     >
-      <div>
-        <img
-          alt="A London skyscraper"
-          class="parallax_img"
-          src="parallax/2.jpg"
-        />
-      </div>
-      <h2
-        style="transform: translateY(-300px) translateZ(0);"
-      >
-        #002
-      </h2>
-    </section>
-    <section
-      class="parallax_section"
+      #002
+    </h2>
+  </section>
+  <section
+    class="parallax_section"
+  >
+    <div>
+      <img
+        alt="A London skyscraper"
+        class="parallax_img"
+        src="parallax/3.jpg"
+      />
+    </div>
+    <h2
+      style="transform: translateY(-300px) translateZ(0);"
     >
-      <div>
-        <img
-          alt="A London skyscraper"
-          class="parallax_img"
-          src="parallax/3.jpg"
-        />
-      </div>
-      <h2
-        style="transform: translateY(-300px) translateZ(0);"
-      >
-        #003
-      </h2>
-    </section>
-    <section
-      class="parallax_section"
+      #003
+    </h2>
+  </section>
+  <section
+    class="parallax_section"
+  >
+    <div>
+      <img
+        alt="A London skyscraper"
+        class="parallax_img"
+        src="parallax/4.jpg"
+      />
+    </div>
+    <h2
+      style="transform: translateY(-300px) translateZ(0);"
     >
-      <div>
-        <img
-          alt="A London skyscraper"
-          class="parallax_img"
-          src="parallax/4.jpg"
-        />
-      </div>
-      <h2
-        style="transform: translateY(-300px) translateZ(0);"
-      >
-        #004
-      </h2>
-    </section>
-    <section
-      class="parallax_section"
+      #004
+    </h2>
+  </section>
+  <section
+    class="parallax_section"
+  >
+    <div>
+      <img
+        alt="A London skyscraper"
+        class="parallax_img"
+        src="parallax/5.jpg"
+      />
+    </div>
+    <h2
+      style="transform: translateY(-300px) translateZ(0);"
     >
-      <div>
-        <img
-          alt="A London skyscraper"
-          class="parallax_img"
-          src="parallax/5.jpg"
-        />
-      </div>
-      <h2
-        style="transform: translateY(-300px) translateZ(0);"
-      >
-        #005
-      </h2>
-    </section>
-    <div
-      class="progress"
-      style="transform: scaleX(0) translateZ(0);"
-    />
-  </div>
+      #005
+    </h2>
+  </section>
+  <div
+    class="progress"
+    style="transform: scaleX(0) translateZ(0);"
+  />
 </div>
 `;

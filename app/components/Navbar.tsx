@@ -1,5 +1,5 @@
 "use client";
-import "animate.css";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
@@ -102,19 +102,25 @@ export default function Navbar() {
 
 				{isOpen && (
 					<div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-						<div className="md:hidden animate__animated animate__fadeIn ">
+						<motion.div
+							className="md:hidden"
+							initial={{ x: 10, opacity: 0 }}
+							animate={{ x: 0, opacity: 1 }}
+							exit={{ opacity: 0 }}
+							transition={{ duration: 1 }}
+						>
 							{links.map(({ label, route }) => (
 								<Link
 									key={route}
 									href={route}
 									onClick={() => setIsOpen(!isOpen)}
-									className="block px-3 py-2 text-base font-medium text-white rounded-md animate__animated animate__slideInRight animate__faster hover:bg-azama-muted"
+									className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-azama-muted"
 									aria-label={`${label}-mobile`}
 								>
 									{label}
 								</Link>
 							))}
-						</div>
+						</motion.div>
 					</div>
 				)}
 			</nav>

@@ -3,10 +3,12 @@
 exports[`<Home /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-primary animate__animated animate__jackInTheBox"
+    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+    style="opacity: 0; transform: translateX(0px) translateY(0px) scaleY(0.5) translateZ(0);"
   >
     <h1
-      class="text-7xl animate__animated animate__fadeIn animate__delay-0.7s"
+      class="text-7xl"
+      style="opacity: 0;"
     >
       Home
     </h1>
@@ -16,7 +18,8 @@ exports[`<Home /> > should match the snapshot 1`] = `
   >
     <section
       aria-label="content"
-      class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white animate__animated animate__fadeInLeft animate__delay-0.7s"
+      class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
+      style="opacity: 0; transform: translateX(-800px) translateZ(0);"
     >
       <article
         class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
@@ -26,7 +29,8 @@ exports[`<Home /> > should match the snapshot 1`] = `
     </section>
     <section
       aria-label="content"
-      class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white animate__animated animate__fadeInLeft animate__delay-0.7s"
+      class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
+      style="opacity: 0; transform: translateX(-800px) translateZ(0);"
     >
       <article
         class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"

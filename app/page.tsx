@@ -8,9 +8,9 @@ export const metadata = {
 export default function Home() {
 	return (
 		<>
-			<Header value={metadata.title} />
+			<Header title={metadata.title} />
 			<div className="grid grid-cols-2 gap-5 divide-x">
-				<Content>A</Content>
+				<Content duration={1.2}>A</Content>
 				<Content>B</Content>
 			</div>
 		</>

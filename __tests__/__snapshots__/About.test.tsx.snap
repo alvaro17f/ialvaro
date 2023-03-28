@@ -3,17 +3,20 @@
 exports[`<About /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-primary animate__animated animate__jackInTheBox"
+    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+    style="opacity: 0; transform: translateX(0px) translateY(0px) scaleY(0.5) translateZ(0);"
   >
     <h1
-      class="text-7xl animate__animated animate__fadeIn animate__delay-0.7s"
+      class="text-7xl"
+      style="opacity: 0;"
     >
       About
     </h1>
   </section>
   <section
     aria-label="content"
-    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white animate__animated animate__fadeInLeft animate__delay-0.7s"
+    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
+    style="opacity: 0; transform: translateX(-800px) translateZ(0);"
   >
     <article
       class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
@@ -26,7 +29,7 @@ exports[`<About /> > should match the snapshot 1`] = `
         >
           <img
             alt="profile picture"
-            class="border-[5px] rounded-full animate__animated animate__fadeIn animate__slow border-azama-muted"
+            class="border-[5px] rounded-full border-azama-muted"
             height="200"
             src="/images/profile.png"
             width="200"
@@ -59,7 +62,8 @@ exports[`<About /> > should match the snapshot 1`] = `
   </section>
   <section
     aria-label="section-form"
-    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-warning animate__animated animate__fadeInLeft animate__delay-0.7s"
+    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-warning"
+    style="opacity: 0; transform: translateX(-70px) scale(0.7) translateZ(0);"
   >
     <div
       class="mb-5 md:mb-0 md:text-center"
@@ -112,7 +116,8 @@ exports[`<About /> > should match the snapshot 1`] = `
       />
       <button
         aria-label="submit"
-        class="md:w-40  p-4 rounded-full shadow-md shadow-azama-danger bg-azama-base bg-opacity-100 active:bg-opacity-50 text-5xl false"
+        class="p-4 text-5xl rounded-full shadow-md md:w-40 shadow-azama-danger bg-azama-base"
+        tabindex="0"
         type="submit"
       >
         🔥

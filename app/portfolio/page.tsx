@@ -1,4 +1,4 @@
-import Parallax from "@/app/components/Parallax";
+import Parallax from "@/app/portfolio/Parallax";
 
 export const metadata = {
 	title: "Portfolio",

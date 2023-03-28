@@ -1,6 +1,6 @@
-import Content from "../components/Content";
-import Form from "../components/Form";
-import Header from "../components/Header";
+import Content from "@/components/Content";
+import Form from "@/components/Form";
+import Header from "@/components/Header";
 
 export const metadata = {
 	title: "About",

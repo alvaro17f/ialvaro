@@ -1,7 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChangeEvent, FormEvent, useState } from "react";
-import Spinner from "@/app/components/Spinner";
+import Spinner from "@/components/Spinner";
 
 type Props = {
 	duration?: number;

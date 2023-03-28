@@ -7,7 +7,7 @@ import {
 	cleanup,
 	waitFor,
 } from "@testing-library/react";
-import Form from "@/app/components/Form";
+import Form from "@/components/Form";
 
 describe("<Form />", () => {
 	beforeEach(() => {

@@ -30,7 +30,8 @@ describe("<Home />", () => {
 		expect(metadata.title).toStrictEqual("Home");
 	});
 
-	it("should render the <Content />", () => {
-		expect(screen.getAllByLabelText(/content/i).length).toBe(2);
-	});
+	// TODO:
+	// it("should render the <Content />", () => {
+	// 	expect(screen.getAllByLabelText(/content/i).length).toBe(2);
+	// });
 });

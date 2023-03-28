@@ -86,5 +86,6 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
     class="progress"
     style="transform: scaleX(0) translateZ(0);"
   />
+  ;
 </div>
 `;

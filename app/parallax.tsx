@@ -14,6 +14,111 @@ export default function Parallax() {
 				<About />
 			</LazyView> */}
 
+			<LazyView once={false}>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
+			<LazyView>
+				<div className="grid grid-cols-2 gap-5 divide-x">
+					<Content duration={1.2}>A</Content>
+					<Content>B</Content>
+				</div>
+			</LazyView>
+
 			<LazyView>
 				<div className="grid grid-cols-2 gap-5 divide-x">
 					<Content duration={1.2}>A</Content>

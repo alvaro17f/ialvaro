@@ -15,7 +15,7 @@ export default function Header({ title, duration = 1.2 }: Props) {
 			transition={{ ease: "easeOut", duration }}
 		>
 			<motion.h1
-			className="text-7xl"
+			className="text-5xl md:text-7xl"
 			initial={{opacity: 0}}
 			animate={{opacity: 1}}
 			transition={{duration}}

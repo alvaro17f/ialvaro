@@ -1,4 +1,5 @@
-import PortfolioParallax from "@/app/portfolio/parallax";
+import Header from "@/components/Header";
+import Parallax from "@/components/parallax";
 import Scrollup from "@/components/Scrollup";
 
 export const metadata = {
@@ -8,7 +9,20 @@ export const metadata = {
 export default function Portfolio() {
 	return (
 		<>
-			<PortfolioParallax />;
+			<Header title="Portfolio" />
+			<Parallax>
+				<div>
+					<img src="/images/azama_full.svg" alt="hey" />
+					<p>HELLO</p>
+				</div>
+			</Parallax>
+
+			<Parallax>
+				<div>
+					<img src="/images/azama_full.svg" alt="hey" />
+					<p>HELLO</p>
+				</div>
+			</Parallax>
 			<Scrollup />
 		</>
 	);

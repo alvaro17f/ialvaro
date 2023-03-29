@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Parallax from "@/components/Parallax";
 import Scrollup from "@/components/Scrollup";
+import data from "@/data/portfolio.json";
+import Link from "next/link";
 
 export const metadata = {
 	title: "Portfolio",
@@ -10,40 +12,16 @@ export default function Portfolio() {
 	return (
 		<>
 			<Header title="Portfolio" />
-			<Parallax title="HEY">
-				<div>
-					<img src="/parallax/1.jpg" alt="hey" />
-					<p>HELLO</p>
-				</div>
-			</Parallax>
-
-			<Parallax title="YOU">
-				<div>
-					<img src="/parallax/2.jpg" alt="hey" />
-					<p>HELLO</p>
-				</div>
-			</Parallax>
-
-			<Parallax>
-				<div>
-					<img src="/parallax/3.jpg" alt="hey" />
-					<p>HELLO</p>
-				</div>
-			</Parallax>
-
-			<Parallax>
-				<div>
-					<img src="/parallax/4.jpg" alt="hey" />
-					<p>HELLO</p>
-				</div>
-			</Parallax>
-
-			<Parallax>
-				<div>
-					<img src="/parallax/5.jpg" alt="hey" />
-					<p>HELLO</p>
-				</div>
-			</Parallax>
+			{data.map(({ id, title, image, url, description }) => {
+				return (
+					<Link key={id} href={url} target="_blank">
+						<Parallax title={title}>
+							<img src={image} alt="hey" />
+							<p>{description}</p>
+						</Parallax>
+					</Link>
+				);
+			})}
 			<Scrollup />
 		</>
 	);

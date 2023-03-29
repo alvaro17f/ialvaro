@@ -41,14 +41,21 @@ export default function Navbar() {
 							<div className="hidden md:block">
 								<div className="flex items-baseline ml-10 space-x-4">
 									{links.map(({ label, route }) => (
-										<Link
+										<motion.div
 											key={route}
-											href={route}
-											className="px-3 py-2 text-sm font-medium rounded-md cursor-pointer  text-azama-white hover:bg-azama-danger hover:text-azama-dark"
-											aria-label={`${label}-desktop`}
+											initial={{ scale: 1 }}
+											whileHover={{ scale: 1.2 }}
+											whileTap={{ scale: 1 }}
 										>
-											{label}
-										</Link>
+											<Link
+												key={route}
+												href={route}
+												className="px-3 py-2 text-sm font-medium rounded-md cursor-pointer text-azama-white hover:bg-azama-danger hover:text-azama-dark"
+												aria-label={`${label}-desktop`}
+											>
+												{label}
+											</Link>
+										</motion.div>
 									))}
 								</div>
 							</div>

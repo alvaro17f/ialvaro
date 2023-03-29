@@ -43,16 +43,19 @@ export default function Parallax({ children, title }: Props) {
 					</svg>
 				</figure>
 				<LazyView>
-					<motion.h1 key={title} className="mb-5 text-6xl text-azama-danger">
-						{title}
-					</motion.h1>
 					<motion.div
-						className="cursor-pointer relative h-[300px] w-[200px]"
+						className="cursor-pointer relative h-[300px] w-[200px] md:w-[300px]"
 						initial={{ scale: 1 }}
 						whileHover={{ scale: 1.3 }}
 						whileTap={{ scale: 1 }}
 						transition={{ duration: 0.3 }}
 					>
+						<motion.h1
+							key={title}
+							className="mb-5 text-6xl text-azama-danger w-[100%]"
+						>
+							{title}
+						</motion.h1>
 						{children}
 					</motion.div>
 				</LazyView>

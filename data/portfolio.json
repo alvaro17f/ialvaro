@@ -1,0 +1,37 @@
+[
+	{
+		"id": "1",
+		"title": "AZAMA WEBSITE",
+		"image": "/demo/azama_next.png",
+		"description": "A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion",
+		"url": "https://github.com/alvaro17f"
+	},
+	{
+		"id": "2",
+		"title": "TWO",
+		"image": "/portfolio/2.jpg",
+		"description": "A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion",
+		"url": "https://github.com/alvaro17f"
+	},
+	{
+		"id": "3",
+		"title": "THREE",
+		"image": "/portfolio/3.jpg",
+		"description": "A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion",
+		"url": "https://github.com/alvaro17f"
+	},
+	{
+		"id": "4",
+		"title": "FOUR",
+		"image": "/portfolio/4.jpg",
+		"description": "A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion",
+		"url": "https://github.com/alvaro17f"
+	},
+	{
+		"id": "5",
+		"title": "FIVE",
+		"image": "/portfolio/5.jpg",
+		"description": "A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion",
+		"url": "https://github.com/alvaro17f"
+	}
+]

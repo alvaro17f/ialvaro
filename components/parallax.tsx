@@ -35,7 +35,7 @@ export default function Parallax({ children }: Props) {
 							cy="50"
 							r="30"
 							pathLength="1"
-							className="stroke-azama-danger fill-none stroke-[5%]"
+							className="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
 							style={{ pathLength: scrollYProgress }}
 						/>
 					</svg>

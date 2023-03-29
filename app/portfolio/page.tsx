@@ -23,6 +23,20 @@ export default function Portfolio() {
 					<p>HELLO</p>
 				</div>
 			</Parallax>
+
+			<Parallax>
+				<div>
+					<img src="/images/azama_full.svg" alt="hey" />
+					<p>HELLO</p>
+				</div>
+			</Parallax>
+
+			<Parallax>
+				<div>
+					<img src="/images/azama_full.svg" alt="hey" />
+					<p>HELLO</p>
+				</div>
+			</Parallax>
 			<Scrollup />
 		</>
 	);

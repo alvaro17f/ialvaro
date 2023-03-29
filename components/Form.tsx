@@ -38,7 +38,7 @@ export default function Form({ duration = 1 }: Props) {
 			<AnimatePresence mode="wait">
 				{!isSubmitted ? (
 					<motion.section
-						className="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-warning"
+						className="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-secondary"
 						aria-label="section-form"
 						initial={{ x: -70, opacity: 0, scale: 0.7 }}
 						animate={{ x: 0, opacity: 1, scale: 1 }}
@@ -94,7 +94,7 @@ export default function Form({ duration = 1 }: Props) {
 								required
 							/>
 							<motion.button
-								className="p-4 text-5xl rounded-full shadow-md md:w-40 shadow-azama-danger bg-azama-base"
+								className="p-4 text-5xl rounded-full shadow-md md:w-40 shadow-azama-base bg-azama-base"
 								type="submit"
 								aria-label="submit"
 								whileHover={{ scale: 1.2 }}
@@ -107,7 +107,7 @@ export default function Form({ duration = 1 }: Props) {
 					</motion.section>
 				) : (
 					<motion.section
-						className="grid grid-cols-1 p-5 mb-5 rounded-lg place-items-center text-azama-dark bg-azama-warning"
+						className="grid grid-cols-1 p-5 mb-5 rounded-lg place-items-center text-azama-dark bg-azama-secondary"
 						aria-label="form"
 						initial={{ opacity: 0, scale: 0.7 }}
 						animate={{ opacity: 1, scale: 1 }}

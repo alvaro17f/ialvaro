@@ -47,7 +47,7 @@ export default function Scrollup() {
 				<motion.button
 					onClick={goToTop}
 					aria-label="scrollup"
-					className="flex justify-center items-center fixed bottom-[60px] right-[50px] w-[60px] h-[60px] text-base leading-[48px] bg-azama-danger border-none rounded-full text-azama-white cursor-pointer"
+					className="flex justify-center items-center fixed bottom-[60px] right-[50px] w-[60px] h-[60px] text-base leading-[48px] bg-azama-danger border-none rounded-full text-azama-dark cursor-pointer"
 					initial={{ y: 100, opacity: 0 }}
 					animate={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
 					exit={{ y: 100, opacity: 0, transition: { duration: 0.6 } }}

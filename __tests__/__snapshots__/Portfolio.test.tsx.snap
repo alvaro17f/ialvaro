@@ -3,89 +3,294 @@
 exports[`<Portfolio /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="parallax_section"
+    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+    style="opacity: 0; transform: translateX(0px) translateY(0px) scaleY(0.5) translateZ(0);"
   >
-    <div>
-      <img
-        alt="A London skyscraper"
-        class="parallax_img"
-        src="parallax/1.jpg"
-      />
-    </div>
-    <h2
-      style="transform: translateY(-300px) translateZ(0);"
+    <h1
+      class="text-7xl"
+      style="opacity: 0;"
     >
-      #001
-    </h2>
+      Portfolio
+    </h1>
   </section>
   <section
-    class="parallax_section"
+    class="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center"
   >
     <div>
-      <img
-        alt="A London skyscraper"
-        class="parallax_img"
-        src="parallax/2.jpg"
-      />
+      <figure
+        class="sticky top-0 w-20 h-20 p-0 m-0"
+      >
+        <svg
+          class="-rotate-90 -translate-x-12 md:-translate-x-72"
+          height="75"
+          viewBox="0 0 100 100"
+          width="75"
+        >
+          <circle
+            class="stroke-azama-danger fill-none stroke-[5%] opacity-20"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+          />
+          <circle
+            class="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+            stroke-dasharray="0px 1px"
+            stroke-dashoffset="0px"
+          />
+        </svg>
+      </figure>
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <h1
+          class="mb-5 text-6xl text-azama-danger"
+        >
+          HEY
+        </h1>
+        <div
+          class="cursor-pointer relative h-[300px] w-[200px]"
+          style="transform: none;"
+          tabindex="0"
+        >
+          <div>
+            <img
+              alt="hey"
+              src="/parallax/1.jpg"
+            />
+            <p>
+              HELLO
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <h2
-      style="transform: translateY(-300px) translateZ(0);"
-    >
-      #002
-    </h2>
   </section>
   <section
-    class="parallax_section"
+    class="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center"
   >
     <div>
-      <img
-        alt="A London skyscraper"
-        class="parallax_img"
-        src="parallax/3.jpg"
-      />
+      <figure
+        class="sticky top-0 w-20 h-20 p-0 m-0"
+      >
+        <svg
+          class="-rotate-90 -translate-x-12 md:-translate-x-72"
+          height="75"
+          viewBox="0 0 100 100"
+          width="75"
+        >
+          <circle
+            class="stroke-azama-danger fill-none stroke-[5%] opacity-20"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+          />
+          <circle
+            class="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+            stroke-dasharray="0px 1px"
+            stroke-dashoffset="0px"
+          />
+        </svg>
+      </figure>
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <h1
+          class="mb-5 text-6xl text-azama-danger"
+        >
+          YOU
+        </h1>
+        <div
+          class="cursor-pointer relative h-[300px] w-[200px]"
+          style="transform: none;"
+          tabindex="0"
+        >
+          <div>
+            <img
+              alt="hey"
+              src="/parallax/2.jpg"
+            />
+            <p>
+              HELLO
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <h2
-      style="transform: translateY(-300px) translateZ(0);"
-    >
-      #003
-    </h2>
   </section>
   <section
-    class="parallax_section"
+    class="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center"
   >
     <div>
-      <img
-        alt="A London skyscraper"
-        class="parallax_img"
-        src="parallax/4.jpg"
-      />
+      <figure
+        class="sticky top-0 w-20 h-20 p-0 m-0"
+      >
+        <svg
+          class="-rotate-90 -translate-x-12 md:-translate-x-72"
+          height="75"
+          viewBox="0 0 100 100"
+          width="75"
+        >
+          <circle
+            class="stroke-azama-danger fill-none stroke-[5%] opacity-20"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+          />
+          <circle
+            class="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+            stroke-dasharray="0px 1px"
+            stroke-dashoffset="0px"
+          />
+        </svg>
+      </figure>
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <h1
+          class="mb-5 text-6xl text-azama-danger"
+        />
+        <div
+          class="cursor-pointer relative h-[300px] w-[200px]"
+          style="transform: none;"
+          tabindex="0"
+        >
+          <div>
+            <img
+              alt="hey"
+              src="/parallax/3.jpg"
+            />
+            <p>
+              HELLO
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <h2
-      style="transform: translateY(-300px) translateZ(0);"
-    >
-      #004
-    </h2>
   </section>
   <section
-    class="parallax_section"
+    class="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center"
   >
     <div>
-      <img
-        alt="A London skyscraper"
-        class="parallax_img"
-        src="parallax/5.jpg"
-      />
+      <figure
+        class="sticky top-0 w-20 h-20 p-0 m-0"
+      >
+        <svg
+          class="-rotate-90 -translate-x-12 md:-translate-x-72"
+          height="75"
+          viewBox="0 0 100 100"
+          width="75"
+        >
+          <circle
+            class="stroke-azama-danger fill-none stroke-[5%] opacity-20"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+          />
+          <circle
+            class="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+            stroke-dasharray="0px 1px"
+            stroke-dashoffset="0px"
+          />
+        </svg>
+      </figure>
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <h1
+          class="mb-5 text-6xl text-azama-danger"
+        />
+        <div
+          class="cursor-pointer relative h-[300px] w-[200px]"
+          style="transform: none;"
+          tabindex="0"
+        >
+          <div>
+            <img
+              alt="hey"
+              src="/parallax/4.jpg"
+            />
+            <p>
+              HELLO
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <h2
-      style="transform: translateY(-300px) translateZ(0);"
-    >
-      #005
-    </h2>
   </section>
-  <div
-    class="progress"
-    style="transform: scaleX(0) translateZ(0);"
-  />
-  ;
+  <section
+    class="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center"
+  >
+    <div>
+      <figure
+        class="sticky top-0 w-20 h-20 p-0 m-0"
+      >
+        <svg
+          class="-rotate-90 -translate-x-12 md:-translate-x-72"
+          height="75"
+          viewBox="0 0 100 100"
+          width="75"
+        >
+          <circle
+            class="stroke-azama-danger fill-none stroke-[5%] opacity-20"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+          />
+          <circle
+            class="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+            stroke-dasharray="0px 1px"
+            stroke-dashoffset="0px"
+          />
+        </svg>
+      </figure>
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <h1
+          class="mb-5 text-6xl text-azama-danger"
+        />
+        <div
+          class="cursor-pointer relative h-[300px] w-[200px]"
+          style="transform: none;"
+          tabindex="0"
+        >
+          <div>
+            <img
+              alt="hey"
+              src="/parallax/5.jpg"
+            />
+            <p>
+              HELLO
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 `;

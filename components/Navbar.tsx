@@ -44,7 +44,7 @@ export default function Navbar() {
 										<Link
 											key={route}
 											href={route}
-											className="px-3 py-2 text-sm font-medium rounded-md text-azama-white hover:bg-azama-danger hover:text-azama-dark"
+											className="px-3 py-2 text-sm font-medium rounded-md cursor-pointer  text-azama-white hover:bg-azama-danger hover:text-azama-dark"
 											aria-label={`${label}-desktop`}
 										>
 											{label}

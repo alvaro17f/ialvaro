@@ -34,21 +34,21 @@ exports[`<Navbar /> > should match the snapshot 1`] = `
             >
               <a
                 aria-label="Home-desktop"
-                class="px-3 py-2 text-sm font-medium rounded-md text-azama-white hover:bg-azama-primary hover:text-azama-dark"
+                class="px-3 py-2 text-sm font-medium rounded-md cursor-pointer  text-azama-white hover:bg-azama-danger hover:text-azama-dark"
                 href="/"
               >
                 Home
               </a>
               <a
                 aria-label="Portfolio-desktop"
-                class="px-3 py-2 text-sm font-medium rounded-md text-azama-white hover:bg-azama-primary hover:text-azama-dark"
+                class="px-3 py-2 text-sm font-medium rounded-md cursor-pointer  text-azama-white hover:bg-azama-danger hover:text-azama-dark"
                 href="/portfolio"
               >
                 Portfolio
               </a>
               <a
                 aria-label="About-desktop"
-                class="px-3 py-2 text-sm font-medium rounded-md text-azama-white hover:bg-azama-primary hover:text-azama-dark"
+                class="px-3 py-2 text-sm font-medium rounded-md cursor-pointer  text-azama-white hover:bg-azama-danger hover:text-azama-dark"
                 href="/about"
               >
                 About

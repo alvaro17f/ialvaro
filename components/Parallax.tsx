@@ -1,12 +1,14 @@
 "use client";
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
+import LazyView from "./LazyView";
 
 type Props = {
 	children: React.ReactNode;
+	title?: string;
 };
 
-export default function Parallax({ children }: Props) {
+export default function Parallax({ children, title }: Props) {
 	const ref = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: ref,
@@ -40,15 +42,20 @@ export default function Parallax({ children }: Props) {
 						/>
 					</svg>
 				</figure>
-				<motion.div
-					className="cursor-pointer relative h-[300px] w-[200px]"
-					initial={{ scale: 1 }}
-					whileHover={{ scale: 1.3 }}
-					whileTap={{ scale: 1 }}
-					transition={{ duration: 0.3 }}
-				>
-					{children}
-				</motion.div>
+				<LazyView>
+					<motion.h1 key={title} className="mb-5 text-6xl text-azama-danger">
+						{title}
+					</motion.h1>
+					<motion.div
+						className="cursor-pointer relative h-[300px] w-[200px]"
+						initial={{ scale: 1 }}
+						whileHover={{ scale: 1.3 }}
+						whileTap={{ scale: 1 }}
+						transition={{ duration: 0.3 }}
+					>
+						{children}
+					</motion.div>
+				</LazyView>
 			</div>
 		</section>
 	);

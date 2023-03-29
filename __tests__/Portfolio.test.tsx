@@ -1,9 +1,16 @@
-import { expect, it, describe, beforeEach, afterEach } from "vitest";
+import { expect, it, describe, beforeEach, afterEach, vi } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import Portfolio, { metadata } from "@/app/portfolio/page";
 
 describe("<Portfolio />", () => {
 	beforeEach(() => {
+		const mockIntersectionObserver = vi.fn();
+		mockIntersectionObserver.mockReturnValue({
+			observe: () => null,
+			unobserve: () => null,
+			disconnect: () => null,
+		});
+		window.IntersectionObserver = mockIntersectionObserver;
 		render(<Portfolio />);
 	});
 	afterEach(cleanup);

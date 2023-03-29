@@ -14,11 +14,11 @@ export default function Parallax({ children }: Props) {
 	});
 
 	return (
-		<section className="m-0 p-0 pb-[100px] h-[100dvh] flex justify-center items-center">
+		<section className="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center">
 			<div ref={ref}>
 				<figure className="sticky top-0 w-20 h-20 p-0 m-0">
 					<svg
-						className="-translate-x-[100px] -rotate-90 "
+						className="-rotate-90 -translate-x-12 md:-translate-x-72"
 						width="75"
 						height="75"
 						viewBox="0 0 100 100"

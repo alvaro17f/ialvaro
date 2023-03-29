@@ -7,7 +7,7 @@ exports[`<About /> > should match the snapshot 1`] = `
     style="opacity: 0; transform: translateX(0px) translateY(0px) scaleY(0.5) translateZ(0);"
   >
     <h1
-      class="text-7xl"
+      class="text-5xl md:text-7xl"
       style="opacity: 0;"
     >
       About

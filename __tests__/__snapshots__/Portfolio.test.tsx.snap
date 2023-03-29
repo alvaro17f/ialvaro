@@ -7,21 +7,23 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
     style="opacity: 0; transform: translateX(0px) translateY(0px) scaleY(0.5) translateZ(0);"
   >
     <h1
-      class="text-7xl"
+      class="text-5xl md:text-7xl"
       style="opacity: 0;"
     >
       Portfolio
     </h1>
   </section>
   <section
-    class="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center"
+    class="m-0 p-0 pb-32 h-[100dvh]"
   >
-    <div>
+    <div
+      class="grid grid-cols-[4fr_10fr] place-items-center gap-2"
+    >
       <figure
         class="sticky top-0 w-20 h-20 p-0 m-0"
       >
         <svg
-          class="-rotate-90 -translate-x-12 md:-translate-x-72"
+          class="-rotate-90"
           height="75"
           viewBox="0 0 100 100"
           width="75"
@@ -47,38 +49,46 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
       <div
         style="opacity: 0; transform: scale(0) translateZ(0);"
       >
-        <h1
-          class="mb-5 text-6xl text-azama-danger"
+        <a
+          href="https://github.com/alvaro17f"
+          target="_blank"
         >
-          HEY
-        </h1>
-        <div
-          class="cursor-pointer relative h-[300px] w-[200px]"
-          style="transform: none;"
-          tabindex="0"
-        >
-          <div>
+          <div
+            class="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
+            style="transform: none;"
+            tabindex="0"
+          >
+            <div
+              class="h-32"
+            />
+            <h1
+              class="mb-5 text-4xl md:text-6xl text-azama-danger w-[100%]"
+            >
+              AZAMA WEBSITE
+            </h1>
             <img
               alt="hey"
-              src="/parallax/1.jpg"
+              src="/demo/azama_next.png"
             />
             <p>
-              HELLO
+              A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion
             </p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
   <section
-    class="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center"
+    class="m-0 p-0 pb-32 h-[100dvh]"
   >
-    <div>
+    <div
+      class="grid grid-cols-[4fr_10fr] place-items-center gap-2"
+    >
       <figure
         class="sticky top-0 w-20 h-20 p-0 m-0"
       >
         <svg
-          class="-rotate-90 -translate-x-12 md:-translate-x-72"
+          class="-rotate-90"
           height="75"
           viewBox="0 0 100 100"
           width="75"
@@ -104,38 +114,46 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
       <div
         style="opacity: 0; transform: scale(0) translateZ(0);"
       >
-        <h1
-          class="mb-5 text-6xl text-azama-danger"
+        <a
+          href="https://github.com/alvaro17f"
+          target="_blank"
         >
-          YOU
-        </h1>
-        <div
-          class="cursor-pointer relative h-[300px] w-[200px]"
-          style="transform: none;"
-          tabindex="0"
-        >
-          <div>
+          <div
+            class="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
+            style="transform: none;"
+            tabindex="0"
+          >
+            <div
+              class="h-32"
+            />
+            <h1
+              class="mb-5 text-4xl md:text-6xl text-azama-danger w-[100%]"
+            >
+              TWO
+            </h1>
             <img
               alt="hey"
-              src="/parallax/2.jpg"
+              src="/portfolio/2.jpg"
             />
             <p>
-              HELLO
+              A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion
             </p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
   <section
-    class="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center"
+    class="m-0 p-0 pb-32 h-[100dvh]"
   >
-    <div>
+    <div
+      class="grid grid-cols-[4fr_10fr] place-items-center gap-2"
+    >
       <figure
         class="sticky top-0 w-20 h-20 p-0 m-0"
       >
         <svg
-          class="-rotate-90 -translate-x-12 md:-translate-x-72"
+          class="-rotate-90"
           height="75"
           viewBox="0 0 100 100"
           width="75"
@@ -161,36 +179,46 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
       <div
         style="opacity: 0; transform: scale(0) translateZ(0);"
       >
-        <h1
-          class="mb-5 text-6xl text-azama-danger"
-        />
-        <div
-          class="cursor-pointer relative h-[300px] w-[200px]"
-          style="transform: none;"
-          tabindex="0"
+        <a
+          href="https://github.com/alvaro17f"
+          target="_blank"
         >
-          <div>
+          <div
+            class="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
+            style="transform: none;"
+            tabindex="0"
+          >
+            <div
+              class="h-32"
+            />
+            <h1
+              class="mb-5 text-4xl md:text-6xl text-azama-danger w-[100%]"
+            >
+              THREE
+            </h1>
             <img
               alt="hey"
-              src="/parallax/3.jpg"
+              src="/portfolio/3.jpg"
             />
             <p>
-              HELLO
+              A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion
             </p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
   <section
-    class="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center"
+    class="m-0 p-0 pb-32 h-[100dvh]"
   >
-    <div>
+    <div
+      class="grid grid-cols-[4fr_10fr] place-items-center gap-2"
+    >
       <figure
         class="sticky top-0 w-20 h-20 p-0 m-0"
       >
         <svg
-          class="-rotate-90 -translate-x-12 md:-translate-x-72"
+          class="-rotate-90"
           height="75"
           viewBox="0 0 100 100"
           width="75"
@@ -216,36 +244,46 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
       <div
         style="opacity: 0; transform: scale(0) translateZ(0);"
       >
-        <h1
-          class="mb-5 text-6xl text-azama-danger"
-        />
-        <div
-          class="cursor-pointer relative h-[300px] w-[200px]"
-          style="transform: none;"
-          tabindex="0"
+        <a
+          href="https://github.com/alvaro17f"
+          target="_blank"
         >
-          <div>
+          <div
+            class="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
+            style="transform: none;"
+            tabindex="0"
+          >
+            <div
+              class="h-32"
+            />
+            <h1
+              class="mb-5 text-4xl md:text-6xl text-azama-danger w-[100%]"
+            >
+              FOUR
+            </h1>
             <img
               alt="hey"
-              src="/parallax/4.jpg"
+              src="/portfolio/4.jpg"
             />
             <p>
-              HELLO
+              A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion
             </p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
   <section
-    class="m-0 p-0 pb-32 h-[100dvh] flex justify-center items-center"
+    class="m-0 p-0 pb-32 h-[100dvh]"
   >
-    <div>
+    <div
+      class="grid grid-cols-[4fr_10fr] place-items-center gap-2"
+    >
       <figure
         class="sticky top-0 w-20 h-20 p-0 m-0"
       >
         <svg
-          class="-rotate-90 -translate-x-12 md:-translate-x-72"
+          class="-rotate-90"
           height="75"
           viewBox="0 0 100 100"
           width="75"
@@ -271,24 +309,32 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
       <div
         style="opacity: 0; transform: scale(0) translateZ(0);"
       >
-        <h1
-          class="mb-5 text-6xl text-azama-danger"
-        />
-        <div
-          class="cursor-pointer relative h-[300px] w-[200px]"
-          style="transform: none;"
-          tabindex="0"
+        <a
+          href="https://github.com/alvaro17f"
+          target="_blank"
         >
-          <div>
+          <div
+            class="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
+            style="transform: none;"
+            tabindex="0"
+          >
+            <div
+              class="h-32"
+            />
+            <h1
+              class="mb-5 text-4xl md:text-6xl text-azama-danger w-[100%]"
+            >
+              FIVE
+            </h1>
             <img
               alt="hey"
-              src="/parallax/5.jpg"
+              src="/portfolio/5.jpg"
             />
             <p>
-              HELLO
+              A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion
             </p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>

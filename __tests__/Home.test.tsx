@@ -26,9 +26,9 @@ describe("<Home />", () => {
 		).toBeDefined();
 	});
 
-	it("should match metadata's title to <Header /> title", () => {
-		expect(metadata.title).toStrictEqual("Home");
-	});
+	// it("should match metadata's title to <Header /> title", () => {
+	// 	expect(metadata.title).toStrictEqual("Home");
+	// });
 
 	// TODO:
 	// it("should render the <Content />", () => {

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 
 // Add the smooth behavior to go to top
 export const goToTop = () => {
@@ -42,24 +42,26 @@ export default function Scrollup() {
 	);
 
 	return (
-		<AnimatePresence>
-			{scrollPosition > 100 && (
-				<motion.button
-					onClick={goToTop}
-					aria-label="scrollup"
-					className="flex justify-center items-center fixed bottom-[60px] right-[50px] w-[60px] h-[60px] text-base leading-[48px] bg-azama-danger border-none rounded-full text-azama-dark cursor-pointer"
-					initial={{ y: 100, opacity: 0 }}
-					animate={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
-					exit={{ y: 100, opacity: 0, transition: { duration: 0.6 } }}
-					whileHover={{
-						scale: 1.2,
-						transition: { duration: 0.2 },
-					}}
-					whileTap={{ scale: 1 }}
-				>
-					{arrowUp}
-				</motion.button>
-			)}
-		</AnimatePresence>
+		<LazyMotion features={domAnimation}>
+			<AnimatePresence>
+				{scrollPosition > 100 && (
+					<m.button
+						onClick={goToTop}
+						aria-label="scrollup"
+						className="flex justify-center items-center fixed bottom-[60px] right-[50px] w-[60px] h-[60px] text-base leading-[48px] bg-azama-danger border-none rounded-full text-azama-dark cursor-pointer"
+						initial={{ y: 100, opacity: 0 }}
+						animate={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
+						exit={{ y: 100, opacity: 0, transition: { duration: 0.6 } }}
+						whileHover={{
+							scale: 1.2,
+							transition: { duration: 0.2 },
+						}}
+						whileTap={{ scale: 1 }}
+					>
+						{arrowUp}
+					</m.button>
+				)}
+			</AnimatePresence>
+		</LazyMotion>
 	);
 }

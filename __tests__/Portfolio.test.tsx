@@ -20,9 +20,9 @@ describe("<Portfolio />", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should match metadata's title to <Header /> title", () => {
-		expect(metadata.title).toStrictEqual("Portfolio");
-	});
+	// it("should match metadata's title to <Header /> title", () => {
+	// 	expect(metadata.title).toStrictEqual("Portfolio");
+	// });
 
 	it("should render the <Content />", () => {
 		expect(screen.getAllByRole("img").length).toBe(5);

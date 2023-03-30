@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 
 type Props = {
 	title: string;
@@ -8,20 +8,22 @@ type Props = {
 
 export default function Header({ title, duration = 1.2 }: Props) {
 	return (
-		<motion.section
-			className="p-5 mb-5 rounded-lg text-azama-dark bg-azama-primary"
-			initial={{ x: 0, y: 0, opacity: 0, scaleY: 0.5 }}
-			animate={{ x: 0, y: 0, opacity: 1, scaleY: 1 }}
-			transition={{ ease: "easeOut", duration }}
-		>
-			<motion.h1
-			className="text-5xl md:text-7xl"
-			initial={{opacity: 0}}
-			animate={{opacity: 1}}
-			transition={{duration}}
+		<LazyMotion features={domAnimation}>
+			<m.section
+				className="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+				initial={{ width: "0%", opacity: 0, scaleY: 0.5 }}
+				animate={{ width: "80%", opacity: 1, scaleY: 1 }}
+				transition={{ ease: "easeOut", duration }}
 			>
-				{title}
-			</motion.h1>
-		</motion.section>
+				<m.h1
+					className="text-5xl md:text-3xl"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration }}
+				>
+					{title}
+				</m.h1>
+			</m.section>
+		</LazyMotion>
 	);
 }

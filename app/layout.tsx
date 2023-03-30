@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import { Poppins } from "next/font/google";
 
 export const metadata = {
-	icons: "/favicon.ico",
+	icons: { icon: "/favicon.svg" },
 	title: {
 		default: "AZAMA",
 		template: "%s | AZAMA",

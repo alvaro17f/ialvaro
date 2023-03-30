@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --base: "#1e1e2e";
-  --primary: "#89b4fa";
-  --secondary: "#cba6f7";
-  /* --secondary: "#f2cdcd"; */
-  --success: "#94e2d5";
-  --danger: "#f38ba8";
-  --warning: "#f9e2af";
-  --info: "#89b4fa";
-  --muted: "#6c7086";
-  --dark: "#1e1e2e";
-  --white: "#cdd6f4";
-}
-
 body {
     @apply box-border;
     @apply text-azama-white bg-azama-base ;
@@ -26,6 +12,6 @@ body::-webkit-scrollbar {
   }
    
 body::-webkit-scrollbar-thumb {
-  @apply bg-azama-secondary;
+  @apply bg-azama-primary;
   -webkit-border-radius: 1ex;
 }

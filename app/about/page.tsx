@@ -18,7 +18,7 @@ export default function About() {
 							alt="profile picture"
 							width={200}
 							height={200}
-							className="border-[5px] rounded-full border-azama-muted"
+							className="border-[5px] rounded-full border-azama-white"
 						/>
 					</div>
 					<div className="max-w-[75ch]">

@@ -3,11 +3,11 @@
 exports[`<About /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-primary"
-    style="opacity: 0; transform: translateX(0px) translateY(0px) scaleY(0.5) translateZ(0);"
+    class="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+    style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
   >
     <h1
-      class="text-5xl md:text-7xl"
+      class="text-5xl md:text-3xl"
       style="opacity: 0;"
     >
       About
@@ -15,7 +15,7 @@ exports[`<About /> > should match the snapshot 1`] = `
   </section>
   <section
     aria-label="content"
-    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
+    class="p-5 mb-5 rounded-lg text-azama-white undefined"
     style="opacity: 0; transform: translateX(-800px) translateZ(0);"
   >
     <article
@@ -29,7 +29,7 @@ exports[`<About /> > should match the snapshot 1`] = `
         >
           <img
             alt="profile picture"
-            class="border-[5px] rounded-full border-azama-muted"
+            class="border-[5px] rounded-full border-azama-white"
             height="200"
             src="/images/profile.png"
             width="200"
@@ -62,7 +62,7 @@ exports[`<About /> > should match the snapshot 1`] = `
   </section>
   <section
     aria-label="section-form"
-    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-secondary"
+    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
     style="opacity: 0; transform: translateX(-70px) scale(0.7) translateZ(0);"
   >
     <div

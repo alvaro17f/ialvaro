@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
@@ -41,21 +41,23 @@ export default function Navbar() {
 							<div className="hidden md:block">
 								<div className="flex items-baseline ml-10 space-x-4">
 									{links.map(({ label, route }) => (
-										<motion.div
-											key={route}
-											initial={{ scale: 1 }}
-											whileHover={{ scale: 1.2 }}
-											whileTap={{ scale: 1 }}
-										>
-											<Link
+										<LazyMotion key={route} features={domAnimation}>
+											<m.div
 												key={route}
-												href={route}
-												className="px-3 py-2 text-sm font-medium rounded-md cursor-pointer text-azama-white hover:bg-azama-danger hover:text-azama-dark"
-												aria-label={`${label}-desktop`}
+												initial={{ scale: 1 }}
+												whileHover={{ scale: 1.2 }}
+												whileTap={{ scale: 1 }}
 											>
-												{label}
-											</Link>
-										</motion.div>
+												<Link
+													key={route}
+													href={route}
+													className="px-3 py-2 text-sm font-medium rounded-md cursor-pointer text-azama-white hover:bg-azama-danger hover:text-azama-dark"
+													aria-label={`${label}-desktop`}
+												>
+													{label}
+												</Link>
+											</m.div>
+										</LazyMotion>
 									))}
 								</div>
 							</div>
@@ -108,27 +110,29 @@ export default function Navbar() {
 				</div>
 
 				{isOpen && (
-					<div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-						<motion.div
-							className="md:hidden"
-							initial={{ x: 10, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							exit={{ opacity: 0 }}
-							transition={{ duration: 1 }}
-						>
-							{links.map(({ label, route }) => (
-								<Link
-									key={route}
-									href={route}
-									onClick={() => setIsOpen(!isOpen)}
-									className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-azama-muted"
-									aria-label={`${label}-mobile`}
-								>
-									{label}
-								</Link>
-							))}
-						</motion.div>
-					</div>
+					<LazyMotion features={domAnimation}>
+						<div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+							<m.div
+								className="md:hidden"
+								initial={{ x: 10, opacity: 0 }}
+								animate={{ x: 0, opacity: 1 }}
+								exit={{ opacity: 0 }}
+								transition={{ duration: 1 }}
+							>
+								{links.map(({ label, route }) => (
+									<Link
+										key={route}
+										href={route}
+										onClick={() => setIsOpen(!isOpen)}
+										className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-azama-muted"
+										aria-label={`${label}-mobile`}
+									>
+										{label}
+									</Link>
+								))}
+							</m.div>
+						</div>
+					</LazyMotion>
 				)}
 			</nav>
 		</>

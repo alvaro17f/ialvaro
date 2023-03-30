@@ -4,7 +4,7 @@ exports[`<Form /> > should match the snapshot 1`] = `
 <div>
   <section
     aria-label="section-form"
-    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-secondary"
+    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
     style="opacity: 0; transform: translateX(-70px) scale(0.7) translateZ(0);"
   >
     <div

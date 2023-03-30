@@ -1,0 +1,27 @@
+"use client";
+import Header from "@/components/Header";
+import Script from "@/app/portfolio/Portfolio";
+import Scrollup from "@/components/Scrollup";
+import data from "@/data/portfolio.json";
+
+// export const metadata = {
+// 	title: "Portfolio",
+// };
+
+export default function Portfolio() {
+	return (
+		<>
+			<title>Portfolio | AZAMA</title>
+			<Header title="Portfolio" />
+			{data.map(({ id, title, image, url, description }) => {
+				return (
+					<Script key={id} url={url} title={title}>
+						<img src={image} alt="hey" />
+						<p>{description}</p>
+					</Script>
+				);
+			})}
+			<Scrollup />
+		</>
+	);
+}

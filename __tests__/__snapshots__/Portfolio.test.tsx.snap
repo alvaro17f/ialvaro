@@ -2,12 +2,15 @@
 
 exports[`<Portfolio /> > should match the snapshot 1`] = `
 <div>
+  <title>
+    Portfolio | AZAMA
+  </title>
   <section
-    class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-primary"
-    style="opacity: 0; transform: translateX(0px) translateY(0px) scaleY(0.5) translateZ(0);"
+    class="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+    style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
   >
     <h1
-      class="text-5xl md:text-7xl"
+      class="text-5xl md:text-3xl"
       style="opacity: 0;"
     >
       Portfolio
@@ -17,7 +20,7 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
     class="m-0 p-0 pb-32 h-[100dvh]"
   >
     <div
-      class="grid grid-cols-[4fr_10fr] place-items-center gap-2"
+      class="grid grid-cols-[1fr_2fr] place-items-center gap-2"
     >
       <figure
         class="sticky top-0 w-20 h-20 p-0 m-0"
@@ -62,12 +65,12 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
               class="h-32"
             />
             <h1
-              class="mb-5 text-4xl md:text-6xl text-azama-danger w-[100%]"
+              class="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
             >
               AZAMA WEBSITE
             </h1>
             <img
-              alt="hey"
+              alt="AZAMA WEBSITE"
               src="/demo/azama_next.png"
             />
             <p>
@@ -82,7 +85,7 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
     class="m-0 p-0 pb-32 h-[100dvh]"
   >
     <div
-      class="grid grid-cols-[4fr_10fr] place-items-center gap-2"
+      class="grid grid-cols-[1fr_2fr] place-items-center gap-2"
     >
       <figure
         class="sticky top-0 w-20 h-20 p-0 m-0"
@@ -127,12 +130,12 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
               class="h-32"
             />
             <h1
-              class="mb-5 text-4xl md:text-6xl text-azama-danger w-[100%]"
+              class="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
             >
               TWO
             </h1>
             <img
-              alt="hey"
+              alt="TWO"
               src="/portfolio/2.jpg"
             />
             <p>
@@ -147,7 +150,7 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
     class="m-0 p-0 pb-32 h-[100dvh]"
   >
     <div
-      class="grid grid-cols-[4fr_10fr] place-items-center gap-2"
+      class="grid grid-cols-[1fr_2fr] place-items-center gap-2"
     >
       <figure
         class="sticky top-0 w-20 h-20 p-0 m-0"
@@ -192,12 +195,12 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
               class="h-32"
             />
             <h1
-              class="mb-5 text-4xl md:text-6xl text-azama-danger w-[100%]"
+              class="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
             >
               THREE
             </h1>
             <img
-              alt="hey"
+              alt="THREE"
               src="/portfolio/3.jpg"
             />
             <p>
@@ -212,7 +215,7 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
     class="m-0 p-0 pb-32 h-[100dvh]"
   >
     <div
-      class="grid grid-cols-[4fr_10fr] place-items-center gap-2"
+      class="grid grid-cols-[1fr_2fr] place-items-center gap-2"
     >
       <figure
         class="sticky top-0 w-20 h-20 p-0 m-0"
@@ -257,12 +260,12 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
               class="h-32"
             />
             <h1
-              class="mb-5 text-4xl md:text-6xl text-azama-danger w-[100%]"
+              class="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
             >
               FOUR
             </h1>
             <img
-              alt="hey"
+              alt="FOUR"
               src="/portfolio/4.jpg"
             />
             <p>
@@ -277,7 +280,7 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
     class="m-0 p-0 pb-32 h-[100dvh]"
   >
     <div
-      class="grid grid-cols-[4fr_10fr] place-items-center gap-2"
+      class="grid grid-cols-[1fr_2fr] place-items-center gap-2"
     >
       <figure
         class="sticky top-0 w-20 h-20 p-0 m-0"
@@ -322,12 +325,12 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
               class="h-32"
             />
             <h1
-              class="mb-5 text-4xl md:text-6xl text-azama-danger w-[100%]"
+              class="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
             >
               FIVE
             </h1>
             <img
-              alt="hey"
+              alt="FIVE"
               src="/portfolio/5.jpg"
             />
             <p>

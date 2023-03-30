@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "app/portfolio/page.tsx.old"  ],
+, "app/portfolio/page.tsx.old", "app/page.tsx.old", "components/Wobble.tsx.old"  ],
   "exclude": [
     "node_modules"
   ]

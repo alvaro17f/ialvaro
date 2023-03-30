@@ -20,17 +20,17 @@ describe("<Home />", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render the <Header />", () => {
-		expect(
-			screen.getByRole("heading", { level: 1, name: /home/i }),
-		).toBeDefined();
-	});
+	// TODO:
+	// it("should render the <Header />", () => {
+	// 	expect(
+	// 		screen.getByRole("heading", { level: 1, name: /home/i }),
+	// 	).toBeDefined();
+	// });
 
 	// it("should match metadata's title to <Header /> title", () => {
 	// 	expect(metadata.title).toStrictEqual("Home");
 	// });
 
-	// TODO:
 	// it("should render the <Content />", () => {
 	// 	expect(screen.getAllByLabelText(/content/i).length).toBe(2);
 	// });

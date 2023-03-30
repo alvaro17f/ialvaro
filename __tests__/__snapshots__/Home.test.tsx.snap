@@ -6,15 +6,103 @@ exports[`<Home /> > should match the snapshot 1`] = `
     Home | AZAMA
   </title>
   <section
-    class="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
-    style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
+    class="h-[100dvh] top-0 grid place-items-center gap-5"
   >
-    <h1
-      class="text-5xl md:text-3xl"
-      style="opacity: 0;"
-    >
-      Home
-    </h1>
+    <div>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        A
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        L
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        V
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        A
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        R
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        O
+      </span>
+      <br />
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+      >
+        G
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+      >
+        A
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+      >
+        R
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+      >
+        C
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+      >
+        I
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+      >
+        A
+      </span>
+      <br />
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        M
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        A
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        C
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        I
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        A
+      </span>
+      <span
+        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+      >
+        S
+      </span>
+      <br />
+    </div>
   </section>
   <div
     style="opacity: 0; transform: scale(0) translateZ(0);"

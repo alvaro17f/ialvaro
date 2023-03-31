@@ -32,7 +32,7 @@ export default function Contact() {
 	};
 	return (
 		<section id="contact" className="h-[100dvh]">
-			<div className="h-20 md:h-52" />
+			<div className="h-24 md:h-52" />
 			<LazyMotion features={domAnimation}>
 				<AnimatePresence mode="wait">
 					{!isSubmitted ? (
@@ -129,7 +129,7 @@ export default function Contact() {
 					)}
 				</AnimatePresence>
 			</LazyMotion>
-			<div className="h-52" />
+			<div className="h-28" />
 		</section>
 	);
 }

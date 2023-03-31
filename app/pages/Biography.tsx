@@ -1,27 +1,34 @@
 import Content from "@/components/Content";
-import Form from "@/components/Form";
 import Header from "@/components/Header";
 
-export default function About() {
+export default function Bio() {
 	return (
-		<section id="about">
-			<Header title="About" />
-
+		<section id="biography">
 			<Content>
-				<div className="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center">
+				<div className="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center h-[100dvh]">
 					<div className="mb-5">
-						<img
-							src="/images/profile.png"
-							alt="profile picture"
-							width={200}
-							height={200}
-							className="border-[5px] rounded-full border-azama-white"
-						/>
+						<a
+							href="https://linkedin.com/in/alvarogarciamacias"
+							rel="noreferrer"
+							target="_blank"
+						>
+							<img
+								src="/images/profile.png"
+								alt="profile picture"
+								width={200}
+								height={200}
+								className="border-[7px] rounded-full border-azama-white hover:border-dashed cursor-pointer"
+							/>
+						</a>
 					</div>
 					<div className="max-w-[75ch]">
-						<h2 className="text-3xl">Hello World!</h2>
+						<h2 className="mb-4 text-4xl">
+							Hello <span className="text-azama-danger">World</span>!
+						</h2>
 						<p>
-							My name is Álvaro and I am a Full Stack Developer.
+							My name is{" "}
+							<span className="text-xl text-azama-primary">Álvaro</span> and I
+							am a Full Stack Developer.
 							<br />
 							I feel very fortunate to have found what I am passionate about and
 							to make it my job.
@@ -40,8 +47,6 @@ export default function About() {
 					</div>
 				</div>
 			</Content>
-
-			<Form />
 		</section>
 	);
 }

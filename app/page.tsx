@@ -1,9 +1,11 @@
 "use client";
 import Scrollup from "@/components/Scrollup";
 import { useEffect, useState } from "react";
-import About from "./pages/About";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
+import Bio from "./pages/Biography";
+import Experience from "./pages/Experience";
+import Contact from "./pages/Contact";
 
 export default function Page() {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -32,8 +34,10 @@ export default function Page() {
 			<title>{title}</title>
 			{/* TODO: BACKGROUND WITH HTML ELEMENTS TRANSPARENT */}
 			<Home />
+			<Bio />
+			<Experience />
 			<Portfolio />
-			<About />
+			<Contact />
 			<Scrollup />
 		</>
 	);

@@ -8,12 +8,20 @@ const links = [
 		route: "home",
 	},
 	{
+		label: "Biography",
+		route: "biography",
+	},
+	{
+		label: "Experience",
+		route: "experience",
+	},
+	{
 		label: "Portfolio",
 		route: "portfolio",
 	},
 	{
-		label: "About",
-		route: "about",
+		label: "Contact",
+		route: "contact",
 	},
 ];
 

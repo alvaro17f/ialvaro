@@ -13,7 +13,7 @@ export default function Header({ title, duration = 1.2 }: Props) {
 			<m.section
 				className="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
 				initial={{ width: "0%", opacity: 0, scaleY: 0.5 }}
-				whileInView={{ width: "80%", opacity: 1, scaleY: 1 }}
+				whileInView={{ width: "100%", opacity: 1, scaleY: 1 }}
 				viewport={{once: true}}
 				transition={{ ease: "easeOut", duration }}
 			>

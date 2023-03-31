@@ -2,12 +2,9 @@
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { ChangeEvent, FormEvent, useState } from "react";
 import Spinner from "@/components/Spinner";
+import Header from "@/components/Header";
 
-type Props = {
-	duration?: number;
-};
-
-export default function Form({ duration = 1 }: Props) {
+export default function Contact() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [data, setData] = useState({
@@ -34,7 +31,8 @@ export default function Form({ duration = 1 }: Props) {
 		}, 1000);
 	};
 	return (
-		<>
+		<section id="contact" className="h-[100dvh]">
+			<div className="h-20 md:h-52" />
 			<LazyMotion features={domAnimation}>
 				<AnimatePresence mode="wait">
 					{!isSubmitted ? (
@@ -43,14 +41,15 @@ export default function Form({ duration = 1 }: Props) {
 							aria-label="section-form"
 							initial={{ x: -70, opacity: 0, scale: 0.7 }}
 							whileInView={{ x: 0, opacity: 1, scale: 1 }}
-							viewport={{once: true}}
+							viewport={{ once: true }}
 							exit={{ opacity: 0 }}
-							transition={{ ease: "easeInOut", duration }}
+							transition={{ ease: "easeInOut", duration: 1 }}
 							key={`${isSubmitted}`}
 						>
 							<div className="mb-5 md:mb-0 md:text-center">
 								<h2 className="text-3xl">CONTACT ME!</h2>
 								<p>It's free</p>
+								<p>github - linkedIn</p>
 							</div>
 							<form
 								onSubmit={submit}
@@ -113,7 +112,7 @@ export default function Form({ duration = 1 }: Props) {
 							aria-label="form"
 							initial={{ opacity: 0, scale: 0.7 }}
 							animate={{ opacity: 1, scale: 1 }}
-							transition={{ ease: "easeInOut", duration }}
+							transition={{ ease: "easeInOut", duration: 1 }}
 							key={`${isSubmitted}`}
 						>
 							<h3 className="text-3xl">
@@ -130,6 +129,7 @@ export default function Form({ duration = 1 }: Props) {
 					)}
 				</AnimatePresence>
 			</LazyMotion>
-		</>
+			<div className="h-52" />
+		</section>
 	);
 }

@@ -109,7 +109,7 @@ export default function Form({ duration = 1 }: Props) {
 						</m.section>
 					) : (
 						<m.section
-							className="grid grid-cols-1 p-5 mb-5 rounded-lg place-items-center text-azama-dark bg-azama-white"
+							className="grid grid-cols-1 p-5 mb-5 border rounded-xl border-azama-muted place-items-center text-azama-white"
 							aria-label="form"
 							initial={{ opacity: 0, scale: 0.7 }}
 							animate={{ opacity: 1, scale: 1 }}

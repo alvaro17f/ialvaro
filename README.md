@@ -4,6 +4,7 @@
 ![azama_next](public/demo/azama_next.png)
 
 ## TODO
-- [ ] Home
-- [ ] Portfolio parallax
-- [ ] Dockerfile
+- [ ] Title reactive
+- [ ] Whitespaces
+- [ ] Form
+- [ ] Hello World length selector

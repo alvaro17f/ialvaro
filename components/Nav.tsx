@@ -12,6 +12,10 @@ const links = [
 		route: "biography",
 	},
 	{
+		label: "Skills",
+		route: "skills",
+	},
+	{
 		label: "Experience",
 		route: "experience",
 	},

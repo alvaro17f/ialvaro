@@ -1,7 +1,6 @@
 import Content from "@/components/Content";
-import Header from "@/components/Header";
 
-export default function Bio() {
+export default function Biography() {
 	return (
 		<section id="biography">
 			<Content>

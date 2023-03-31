@@ -3,9 +3,10 @@ import Scrollup from "@/components/Scrollup";
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
-import Bio from "./pages/Biography";
+import Biography from "./pages/Biography";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
+import Skills from "./pages/Skills";
 
 export default function Page() {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -34,7 +35,8 @@ export default function Page() {
 			<title>{title}</title>
 			{/* TODO: BACKGROUND WITH HTML ELEMENTS TRANSPARENT */}
 			<Home />
-			<Bio />
+			<Biography />
+			<Skills />
 			<Experience />
 			<Portfolio />
 			<Contact />

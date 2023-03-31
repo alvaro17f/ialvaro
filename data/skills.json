@@ -1,0 +1,50 @@
+[
+	{
+		"id": "1",
+		"title": "react.js",
+		"image": "/skills/react.svg",
+		"url": "https://react.dev/"
+	},
+	{
+		"id": "2",
+		"title": "vue.js",
+		"image": "/skills/vue.svg",
+		"url": "https://vue.org/"
+	},
+	{
+		"id": "3",
+		"title": "typescript",
+		"image": "/skills/typescript.svg",
+		"url": "https://typescriptlang.org/"
+	},
+	{
+		"id": "4",
+		"title": "javascript",
+		"image": "/skills/javascript.svg",
+		"url": "https://javascript.com/"
+	},
+	{
+		"id": "5",
+		"title": "tailwind",
+		"image": "/skills/tailwind.svg",
+		"url": "https://tailwindcss.com/"
+	},
+	{
+		"id": "6",
+		"title": "next.js",
+		"image": "/skills/next.svg",
+		"url": "https://nextjs.org/"
+	},
+	{
+		"id": "7",
+		"title": "rust",
+		"image": "/skills/rust.svg",
+		"url": "https://rust-lang.org/"
+	},
+	{
+		"id": "8",
+		"title": "go",
+		"image": "/skills/go.svg",
+		"url": "https://go.dev/"
+	}
+]

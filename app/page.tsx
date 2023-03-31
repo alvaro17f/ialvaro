@@ -19,12 +19,25 @@ export default function Page() {
 
 		window.addEventListener("scroll", updatePosition);
 
-		if (scrollPosition < 700) {
-			setTitle("Home");
-		} else if (scrollPosition > 10) {
-			setTitle("AZAMA");
+		console.log(scrollPosition);
+		if (window.innerWidth > 768) {
+			if (scrollPosition < 700) {
+				setTitle("Home | AGM");
+			} else if (scrollPosition < 1400) {
+				setTitle("Biography | AGM");
+			} else if (scrollPosition < 2800) {
+				setTitle("Skills | AGM");
+			} else if (scrollPosition < 4200) {
+				setTitle("Experience | AGM");
+			} else if (scrollPosition < 4500) {
+				setTitle("Resume | AGM");
+			} else if (scrollPosition >= 4500) {
+				setTitle("Contact | AGM");
+			} else {
+				setTitle("AGM");
+			}
 		} else {
-			setTitle("AZAMA");
+			setTitle("AGM");
 		}
 
 		return () => window.removeEventListener("scroll", updatePosition);

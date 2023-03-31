@@ -2,7 +2,6 @@
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { ChangeEvent, FormEvent, useState } from "react";
 import Spinner from "@/components/Spinner";
-import Header from "@/components/Header";
 
 export default function Contact() {
 	const [isSubmitting, setIsSubmitting] = useState(false);

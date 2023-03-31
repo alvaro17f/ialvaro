@@ -64,7 +64,7 @@ export default function Form({ duration = 1 }: Props) {
 									onChange={updateData}
 									placeholder="Name *"
 									aria-label="name"
-									className="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-sm rounded-xl shadow-azama-white focus:outline-none"
+									className="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-azama-danger border-azama-muted rounded-xl focus:outline-none"
 									required
 								/>
 								<input
@@ -74,7 +74,7 @@ export default function Form({ duration = 1 }: Props) {
 									onChange={updateData}
 									placeholder="Email *"
 									aria-label="email"
-									className="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-sm rounded-xl shadow-azama-white focus:outline-none"
+									className="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border border-azama-muted rounded-xl focus:outline-none focus:border-azama-danger"
 									required
 								/>
 								<input
@@ -84,10 +84,10 @@ export default function Form({ duration = 1 }: Props) {
 									onChange={updateData}
 									placeholder="Phone"
 									aria-label="phone"
-									className="bg-azama-base placeholder:text-azama-muted text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-sm rounded-xl shadow-azama-white focus:outline-none"
+									className="bg-azama-base placeholder:text-azama-muted text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 border border-azama-muted rounded-xl focus:border-azama-primary focus:outline-none"
 								/>
 								<textarea
-									className="bg-azama-base text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 border border-azama-primary focus:border-azama-danger rounded-xl placeholder:text-azama-danger focus:outline-none"
+									className="bg-azama-base text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 border border-azama-muted focus:border-azama-danger rounded-xl placeholder:text-azama-danger focus:outline-none"
 									name="message"
 									value={data.message}
 									onChange={updateData}

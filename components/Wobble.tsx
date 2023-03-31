@@ -34,7 +34,7 @@ const Text = ({
 	return (
 		<LazyMotion features={domAnimation}>
 			<m.span
-				className={`inline-block cursor-default text-9xl ${style}`}
+				className={`inline-block cursor-default text-6xl md:text-9xl ${style}`}
 				animate={controls}
 				onMouseOver={() => !isPlaying && rubberBand()}
 				onAnimationComplete={() => setIsPlaying(false)}

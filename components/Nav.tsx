@@ -24,6 +24,10 @@ const links = [
 	// 	route: "portfolio",
 	// },
 	{
+		label: "Resume",
+		route: "resume",
+	},
+	{
 		label: "Contact",
 		route: "contact",
 	},

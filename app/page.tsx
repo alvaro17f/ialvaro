@@ -7,6 +7,7 @@ import Biography from "./pages/Biography";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
+import Resume from "./pages/Resume";
 
 export default function Page() {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -39,6 +40,7 @@ export default function Page() {
 			<Skills />
 			<Experience />
 			{/* <Portfolio /> */}
+			<Resume />
 			<Contact />
 			<Scrollup />
 		</>

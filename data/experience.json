@@ -5,7 +5,20 @@
 		"image": "/experience/devoteam.svg",
 		"date_from": "October 2021",
 		"date_to": "April 2022",
-		"description": "bla bla bla",
+		"description": {
+			"title": {
+				"one": "Client",
+				"two": "Projects",
+				"three": "Tasks",
+				"four": "skills"
+			},
+			"content": {
+				"one": "RSI",
+				"two": "Frontend management for Banco Caminos, Arquia, Vall Banc, Fiare, Bancofar, etc...\n",
+				"three": "- Web application development using Vue.js and React.js\n- REST API integration in front-end applications\n- Unit and integration test development\n- Code documentation\n- Translations using i18n\n- Modification and elaboration of login pages\n- Internal SSO access elaboration\n- Modification of CSS styles",
+				"four": "..."
+			}
+		},
 		"url": "https://devoteam.com/"
 	},
 	{
@@ -14,7 +27,20 @@
 		"image": "/experience/company.svg",
 		"date_from": "April 2022",
 		"date_to": "now",
-		"description": "bla bla bla",
-		"url": "https://devoteam.com/"
+		"description": {
+			"title": {
+				"one": "",
+				"two": "",
+				"three": "",
+				"four": ""
+			},
+			"content": {
+				"one": "",
+				"two": "",
+				"three": "",
+				"four": ""
+			}
+		},
+		"url": "#"
 	}
 ]

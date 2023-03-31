@@ -3,166 +3,585 @@
 exports[`<Home /> > should match the snapshot 1`] = `
 <div>
   <title>
-    Home | AZAMA
+    Home
   </title>
   <section
     class="h-[100dvh] top-0 grid place-items-center gap-5"
+    id="home"
   >
     <div>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         A
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         L
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         V
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         A
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         R
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         O
       </span>
       <br />
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
       >
         G
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
       >
         A
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
       >
         R
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
       >
         C
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
       >
         I
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
       >
         A
       </span>
       <br />
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         M
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         A
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         C
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         I
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         A
       </span>
       <span
-        class="inline-block cursor-default text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
       >
         S
       </span>
       <br />
     </div>
   </section>
-  <div
-    style="opacity: 0; transform: scale(0) translateZ(0);"
+  <section
+    id="biography"
+  >
+    <section
+      aria-label="content"
+      class="p-5 mb-5 rounded-lg text-azama-white"
+      style="opacity: 0; transform: translateX(-800) translateZ(0);"
+    >
+      <article
+        class="p-5"
+      >
+        <div
+          class="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center h-[100dvh]"
+        >
+          <div
+            class="mb-5"
+          >
+            <a
+              href="https://linkedin.com/in/alvarogarciamacias"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                alt="profile picture"
+                class="border-[7px] rounded-full border-azama-white hover:border-dashed cursor-pointer"
+                height="200"
+                src="/images/profile.png"
+                width="200"
+              />
+            </a>
+          </div>
+          <div
+            class="max-w-[75ch]"
+          >
+            <h2
+              class="mb-4 text-4xl"
+            >
+              Hello 
+              <span
+                class="text-azama-danger"
+              >
+                World
+              </span>
+              !
+            </h2>
+            <p>
+              My name is
+               
+              <span
+                class="text-xl text-azama-primary"
+              >
+                Álvaro
+              </span>
+               and I am a Full Stack Developer.
+              <br />
+              I feel very fortunate to have found what I am passionate about and to make it my job.
+              <br />
+              I have also worked managing, training and leading marketing teams at a national level.
+              <br />
+              If there is one thing that characterises me, it is that I am 100% involved in everything I do.
+              <br />
+              I am hard-working, perfectionist and non-conformist.
+              <br />
+              I have a direct and creative working style. And I put all the energy I get from working in what I am so enthusiastic about.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </section>
+  <section
+    id="skills"
   >
     <div
-      class="grid grid-cols-2 gap-5 divide-x h-[100dvh]"
+      class="h-24"
+    />
+    <section
+      class="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+      style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
     >
-      <section
-        aria-label="content"
-        class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
-        style="opacity: 0; transform: translateX(-800px) translateZ(0);"
+      <h1
+        class="text-5xl md:text-3xl"
+        style="opacity: 0;"
       >
-        <article
-          class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
-        >
-          A
-        </article>
-      </section>
-      <section
-        aria-label="content"
-        class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
-        style="opacity: 0; transform: translateX(-800px) translateZ(0);"
+        Skills
+      </h1>
+    </section>
+    <div
+      class="grid gap-5 my-24 md:grid-cols-4 place-items-center"
+    >
+      <div
+        class="grid place-content-center"
       >
-        <article
-          class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+        <a
+          href="https://react.dev/"
+          rel="noreferrer"
+          target="_blank"
         >
-          B
-        </article>
-      </section>
+          <div
+            class="grid p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="react.js"
+              class="w-44 h-44 "
+              src="/skills/react.svg"
+            />
+            <h1
+              class="mb-5 text-xl text-azama-white"
+            >
+              react.js
+            </h1>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://vue.org/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="grid p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="vue.js"
+              class="w-44 h-44 "
+              src="/skills/vue.svg"
+            />
+            <h1
+              class="mb-5 text-xl text-azama-white"
+            >
+              vue.js
+            </h1>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://typescriptlang.org/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="grid p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="typescript"
+              class="w-44 h-44 "
+              src="/skills/typescript.svg"
+            />
+            <h1
+              class="mb-5 text-xl text-azama-white"
+            >
+              typescript
+            </h1>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://javascript.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="grid p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="javascript"
+              class="w-44 h-44 "
+              src="/skills/javascript.svg"
+            />
+            <h1
+              class="mb-5 text-xl text-azama-white"
+            >
+              javascript
+            </h1>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://tailwindcss.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="grid p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="tailwind"
+              class="w-44 h-44 "
+              src="/skills/tailwind.svg"
+            />
+            <h1
+              class="mb-5 text-xl text-azama-white"
+            >
+              tailwind
+            </h1>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://nextjs.org/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="grid p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="next.js"
+              class="w-44 h-44 "
+              src="/skills/next.svg"
+            />
+            <h1
+              class="mb-5 text-xl text-azama-white"
+            >
+              next.js
+            </h1>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://rust-lang.org/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="grid p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="rust"
+              class="w-44 h-44 "
+              src="/skills/rust.svg"
+            />
+            <h1
+              class="mb-5 text-xl text-azama-white"
+            >
+              rust
+            </h1>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://go.dev/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="grid p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="go"
+              class="w-44 h-44 "
+              src="/skills/go.svg"
+            />
+            <h1
+              class="mb-5 text-xl text-azama-white"
+            >
+              go
+            </h1>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-  <div
-    style="opacity: 0; transform: scale(0) translateZ(0);"
+  </section>
+  <section
+    id="experience"
   >
     <div
-      class="grid grid-cols-2 gap-5 divide-x h-[100dvh]"
+      class="h-24"
+    />
+    <section
+      class="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+      style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
     >
-      <section
-        aria-label="content"
-        class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
-        style="opacity: 0; transform: translateX(-800px) translateZ(0);"
+      <h1
+        class="text-5xl md:text-3xl"
+        style="opacity: 0;"
       >
-        <article
-          class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
-        >
-          A
-        </article>
-      </section>
-      <section
-        aria-label="content"
-        class="p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
-        style="opacity: 0; transform: translateX(-800px) translateZ(0);"
+        Experience
+      </h1>
+    </section>
+    <div
+      class="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
+    >
+      <div
+        class="grid gap-2 border-dashed cursor-pointer border-[4px] border-azama-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
+        style="opacity: 0; transform: none;"
+        tabindex="0"
       >
-        <article
-          class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+        <a
+          href="https://devoteam.com/"
+          target="_blank"
         >
-          B
-        </article>
-      </section>
+          <img
+            alt="devoteam"
+            class="w-56 h-36"
+            src="/experience/devoteam.svg"
+          />
+        </a>
+        <p>
+          October 2021
+           - 
+          April 2022
+        </p>
+      </div>
+      <div
+        class="mt-12"
+      >
+        <h1
+          class="mb-5 text-4xl md:text-6xl text-azama-primary"
+          style="opacity: 0;"
+        >
+          devoteam
+        </h1>
+        <p
+          class="mb-20"
+          style="opacity: 0;"
+        >
+          bla bla bla
+        </p>
+      </div>
     </div>
-  </div>
+    <div
+      class="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
+    >
+      <div
+        class="grid gap-2 border-dashed cursor-pointer border-[4px] border-azama-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
+        style="opacity: 0; transform: none;"
+        tabindex="0"
+      >
+        <a
+          href="https://devoteam.com/"
+          target="_blank"
+        >
+          <img
+            alt="your startup"
+            class="w-56 h-36"
+            src="/experience/company.svg"
+          />
+        </a>
+        <p>
+          April 2022
+           - 
+          now
+        </p>
+      </div>
+      <div
+        class="mt-12"
+      >
+        <h1
+          class="mb-5 text-4xl md:text-6xl text-azama-primary"
+          style="opacity: 0;"
+        >
+          your startup
+        </h1>
+        <p
+          class="mb-20"
+          style="opacity: 0;"
+        >
+          bla bla bla
+        </p>
+      </div>
+    </div>
+  </section>
+  <section
+    class="h-[100dvh]"
+    id="contact"
+  >
+    <div
+      class="h-24 md:h-36"
+    />
+    <section
+      aria-label="section-form"
+      class="grid md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-xl text-azama-white border border-azama-muted"
+      style="opacity: 0; transform: translateX(-70px) scale(0.7) translateZ(0);"
+    >
+      <div
+        class="mb-5 md:mb-0 md:text-center"
+      >
+        <h2
+          class="text-3xl"
+        >
+          CONTACT ME!
+        </h2>
+        <p>
+          It's free
+        </p>
+        <p>
+          github - linkedIn
+        </p>
+      </div>
+      <form
+        aria-label="contact-form"
+        class="grid gap-5 p-2 place-items-center md:w-full"
+      >
+        <input
+          aria-label="name"
+          class="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-azama-danger border-azama-muted rounded-xl focus:outline-none"
+          defaultvalue=""
+          name="name"
+          placeholder="Name *"
+          required=""
+          type="text"
+        />
+        <input
+          aria-label="email"
+          class="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border border-azama-muted rounded-xl focus:outline-none focus:border-azama-danger"
+          defaultvalue=""
+          name="email"
+          placeholder="Email *"
+          required=""
+          type="email"
+        />
+        <input
+          aria-label="phone"
+          class="bg-azama-base placeholder:text-azama-muted text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 border border-azama-muted rounded-xl focus:border-azama-primary focus:outline-none"
+          defaultvalue=""
+          name="phone"
+          placeholder="Phone"
+          type="text"
+        />
+        <textarea
+          aria-label="message"
+          class="bg-azama-base text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 border border-azama-muted focus:border-azama-danger rounded-xl placeholder:text-azama-danger focus:outline-none"
+          name="message"
+          placeholder="Your message goes here... *"
+          required=""
+        />
+        <button
+          aria-label="submit"
+          class="p-0 m-5 text-5xl rounded-full shadow-md md:w-40 shadow-azama-base bg-azama-base"
+          tabindex="0"
+          type="submit"
+        >
+          🔥
+        </button>
+      </form>
+    </section>
+    <div
+      class="h-28"
+    />
+  </section>
 </div>
 `;

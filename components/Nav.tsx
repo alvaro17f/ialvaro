@@ -1,25 +1,26 @@
 "use client";
 import { m, LazyMotion, domAnimation, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const links = [
 	{
 		label: "Home",
-		route: "/",
+		route: "home",
 	},
 	{
 		label: "Portfolio",
-		route: "/portfolio",
+		route: "portfolio",
 	},
 	{
 		label: "About",
-		route: "/about",
+		route: "about",
 	},
 ];
 
 export default function Nav() {
 	const [scrollPosition, setScrollPosition] = useState(0);
+	const [isOpen, setIsOpen] = useState(false);
+	const ref = useRef(null);
 
 	useEffect(() => {
 		const updatePosition = () => {
@@ -31,8 +32,8 @@ export default function Nav() {
 		return () => window.removeEventListener("scroll", updatePosition);
 	}, []);
 
-	const [isOpen, setIsOpen] = useState(false);
-	const ref = useRef(null);
+	const scroller = (route: string) =>
+		document.getElementById(route)?.scrollIntoView({ behavior: "smooth" });
 
 	return (
 		<>
@@ -41,23 +42,23 @@ export default function Nav() {
 					{scrollPosition > 700 && (
 						<m.nav
 							className="fixed z-50 w-full bg-azama-base rounded-xl "
-							initial={{ opacity: 0, width: "0%" }}
-							animate={{ opacity: 1, width: "100%" }}
-							exit={{ opacity: 0, width: "20%", transition: { duration: 0.5 } }}
-							transition={{ duration: 1 }}
+							initial={{ opacity: 0}}
+							animate={{ opacity: 1}}
+							exit={{ opacity: 0, transition: { duration: 0.3 } }}
+							transition={{ duration: 1.5 }}
 						>
 							<div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
 								<div className="flex items-center justify-between h-16">
 									<div className="flex items-center">
 										<div className="flex-shrink-0">
-											<Link href="/">
+											<button onClick={() => scroller("home")}>
 												<img
 													width={120}
 													height={120}
 													src="/images/azama_full.svg"
 													alt="logo"
 												/>
-											</Link>
+											</button>
 										</div>
 										<div className="hidden md:block">
 											<div className="flex items-baseline ml-10 space-x-4">
@@ -68,14 +69,14 @@ export default function Nav() {
 														whileHover={{ scale: 1.2 }}
 														whileTap={{ scale: 1 }}
 													>
-														<Link
+														<button
 															key={route}
-															href={route}
+															onClick={() => scroller(route)}
 															className="px-3 py-2 text-sm font-medium rounded-md cursor-pointer text-azama-white hover:bg-azama-danger hover:text-azama-dark"
 															aria-label={`${label}-desktop`}
 														>
 															{label}
-														</Link>
+														</button>
 													</m.div>
 												))}
 											</div>
@@ -138,15 +139,17 @@ export default function Nav() {
 										transition={{ duration: 1 }}
 									>
 										{links.map(({ label, route }) => (
-											<Link
+											<button
 												key={route}
-												href={route}
-												onClick={() => setIsOpen(!isOpen)}
+												onClick={() => {
+													setIsOpen(!isOpen);
+													scroller(route);
+												}}
 												className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-azama-muted"
 												aria-label={`${label}-mobile`}
 											>
 												{label}
-											</Link>
+											</button>
 										))}
 									</m.div>
 								</div>

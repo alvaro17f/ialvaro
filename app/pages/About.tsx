@@ -1,15 +1,13 @@
 import Content from "@/components/Content";
 import Form from "@/components/Form";
 import Header from "@/components/Header";
-
-export const metadata = {
-	title: "About",
-};
+import LazyView from "@/components/LazyView";
 
 export default function About() {
 	return (
-		<>
-			<Header title={metadata.title} />
+		<section id="about">
+			<Header title="About" />
+
 			<Content>
 				<div className="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center">
 					<div className="mb-5">
@@ -44,6 +42,6 @@ export default function About() {
 				</div>
 			</Content>
 			<Form />
-		</>
+		</section>
 	);
 }

@@ -8,7 +8,7 @@ type Props = {
 export default function LazyView({
 	children,
 	once = true,
-	duration = 0.3,
+	duration = 1,
 }: Props) {
 	return (
 		<LazyMotion features={domAnimation}>
@@ -18,8 +18,8 @@ export default function LazyView({
 				viewport={{ once: once }}
 				transition={{ duration }}
 				variants={{
-					visible: { opacity: 1, scale: 1 },
-					hidden: { opacity: 0, scale: 0 },
+					visible: { opacity: 1 },
+					hidden: { opacity: 0 },
 				}}
 			>
 				{children}

@@ -5,11 +5,6 @@ import LazyView from "../../components/LazyView";
 import Link from "next/link";
 import data from "@/data/portfolio.json";
 import Header from "@/components/Header";
-import Scrollup from "@/components/Scrollup";
-
-// export const metadata = {
-// 	title: "Portfolio",
-// };
 
 export default function Portfolio() {
 	const ref = useRef(null);
@@ -19,8 +14,7 @@ export default function Portfolio() {
 	});
 
 	return (
-		<>
-			<title>Portfolio | AZAMA</title>
+		<section id="portfolio">
 			<Header title="Portfolio" />
 			{data.map(({ id, title, image, url, description }) => (
 				<LazyMotion key={id} features={domAnimation}>
@@ -53,7 +47,7 @@ export default function Portfolio() {
 									/>
 								</svg>
 							</figure>
-							<LazyView duration={1}>
+							<LazyView>
 								<Link href={url} target="_blank">
 									<m.div
 										className="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
@@ -78,7 +72,6 @@ export default function Portfolio() {
 					</section>
 				</LazyMotion>
 			))}
-			<Scrollup />
-		</>
+		</section>
 	);
 }

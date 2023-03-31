@@ -1,45 +1,41 @@
 "use client";
 import Scrollup from "@/components/Scrollup";
+import { useEffect, useState } from "react";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Portfolio from "./pages/Portfolio";
 import LazyView from "@/components/LazyView";
-import Content from "@/components/Content";
-import Wobble from "@/components/Wobble";
 
-// export const metadata = {
-// 	title: "Home",
-// };
+export default function Page() {
+	const [scrollPosition, setScrollPosition] = useState(0);
+	const [title, setTitle] = useState("AZAMA");
 
-export default function Home() {
+	useEffect(() => {
+		const updatePosition = () => {
+			setScrollPosition(window.scrollY);
+		};
+
+		window.addEventListener("scroll", updatePosition);
+
+		if (scrollPosition < 700) {
+			setTitle("Home");
+		} else if (scrollPosition > 10) {
+			setTitle("AZAMA");
+		} else {
+			setTitle("AZAMA");
+		}
+
+		return () => window.removeEventListener("scroll", updatePosition);
+	});
+
 	return (
 		<>
-			<title>Home | AZAMA</title>
+			<title>{title}</title>
 			{/* TODO: BACKGROUND WITH HTML ELEMENTS TRANSPARENT */}
-			<section className="h-[100dvh] top-0 grid place-items-center gap-5">
-				<div>
-					<Wobble sentence="ALVARO" style="hover:text-azama-primary" />
-					<Wobble sentence="GARCIA" style="hover:text-azama-danger" />
-					<Wobble sentence="MACIAS" style="hover:text-azama-primary" />
-				</div>
-			</section>
-			<LazyView once={false}>
-				<div className="grid grid-cols-2 gap-5 divide-x h-[100dvh]">
-					<Content duration={1.2} bg="bg-azama-white" text="dark">
-						A
-					</Content>
-					<Content duration={1.2} bg="bg-azama-white" text="dark">
-						B
-					</Content>
-				</div>
-			</LazyView>
-
+			<Home />
+			<Portfolio />
 			<LazyView>
-				<div className="grid grid-cols-2 gap-5 divide-x h-[100dvh]">
-					<Content duration={1.2} bg="bg-azama-white" text="dark">
-						A
-					</Content>
-					<Content duration={1.2} bg="bg-azama-white" text="dark">
-						B
-					</Content>
-				</div>
+				<About />
 			</LazyView>
 			<Scrollup />
 		</>

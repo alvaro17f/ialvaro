@@ -9,6 +9,7 @@ type Props = {
 export default function Header({ title, duration = 1.2 }: Props) {
 	return (
 		<LazyMotion features={domAnimation}>
+			<div className="h-24" />
 			<m.section
 				className="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
 				initial={{ width: "0%", opacity: 0, scaleY: 0.5 }}

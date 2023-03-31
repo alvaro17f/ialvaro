@@ -1,6 +1,6 @@
 import { expect, it, describe, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
-import About, { metadata } from "@/app/about/page";
+import About, { metadata } from "@/app/pages/page";
 
 describe("<About />", () => {
 	beforeEach(() => {

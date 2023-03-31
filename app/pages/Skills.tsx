@@ -15,7 +15,7 @@ export default function Skills() {
 	return (
 		<section id="skills">
 			<Header title="Skills" />
-			<div className="grid gap-5 md:grid-cols-4 place-items-center">
+			<div className="grid gap-5 my-24 md:grid-cols-4 place-items-center">
 				{data.map(({ id, title, image, url }) => (
 					<LazyMotion key={id} features={domAnimation}>
 						<div ref={ref} className="grid place-content-center">
@@ -27,7 +27,7 @@ export default function Skills() {
 									viewport={{once: true}}
 									whileHover={{ scale: 1.1 }}
 									whileTap={{ scale: 1 }}
-									transition={{ duration: 0.7 }}
+									transition={{ duration: 1 }}
 								>
 									{/* <div className="h-32" /> */}
 									<img src={image} alt={title} className="w-44 h-44 " />

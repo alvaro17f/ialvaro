@@ -38,7 +38,7 @@ export default function Page() {
 			<Biography />
 			<Skills />
 			<Experience />
-			<Portfolio />
+			{/* <Portfolio /> */}
 			<Contact />
 			<Scrollup />
 		</>

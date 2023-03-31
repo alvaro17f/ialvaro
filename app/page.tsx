@@ -19,7 +19,6 @@ export default function Page() {
 
 		window.addEventListener("scroll", updatePosition);
 
-		console.log(scrollPosition);
 		if (window.innerWidth > 768) {
 			if (scrollPosition < 700) {
 				setTitle("Home | AGM");

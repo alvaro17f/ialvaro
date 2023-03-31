@@ -1,37 +1,17 @@
 "use client";
-import { useRef } from "react";
-import { domAnimation, LazyMotion, m, useScroll } from "framer-motion";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import Link from "next/link";
 import data from "@/data/experience.json";
 import Header from "@/components/Header";
 
 export default function Experience() {
-	const ref = useRef(null);
-	const { scrollYProgress } = useScroll({
-		target: ref,
-		offset: ["end end", "start start"],
-	});
-
 	return (
 		<section id="experience">
 			<Header title="Experience" />
 			{data.map(
-				({
-					id,
-					title,
-					image,
-					url,
-					projects,
-					tasks,
-					date_from,
-					date_to,
-					description,
-				}) => (
+				({ id, title, image, url, date_from, date_to, description }) => (
 					<LazyMotion key={id} features={domAnimation}>
-						<div
-							ref={ref}
-							className="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
-						>
+						<div className="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10">
 							<m.div
 								className="grid gap-2 border-dashed cursor-pointer border-[4px] border-azama-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
 								initial={{ scale: 1, opacity: 0 }}

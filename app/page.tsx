@@ -2,7 +2,6 @@
 import Scrollup from "@/components/Scrollup";
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
 import Biography from "./pages/Biography";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";

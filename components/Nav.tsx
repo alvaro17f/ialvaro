@@ -58,8 +58,8 @@ export default function Nav() {
 					{scrollPosition > 700 && (
 						<m.nav
 							className="fixed z-50 w-full bg-azama-base rounded-xl "
-							initial={{ opacity: 0}}
-							animate={{ opacity: 1}}
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
 							exit={{ opacity: 0, transition: { duration: 0.3 } }}
 							transition={{ duration: 1.5 }}
 						>
@@ -67,7 +67,12 @@ export default function Nav() {
 								<div className="flex items-center justify-between h-16">
 									<div className="flex items-center">
 										<div className="flex-shrink-0">
-											<button onClick={() => scroller("home")}>
+											<button
+												onClick={() => {
+													scroller("home");
+													isOpen && setIsOpen(!isOpen);
+												}}
+											>
 												<img
 													width={120}
 													height={120}

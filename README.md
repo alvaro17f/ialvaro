@@ -8,3 +8,6 @@
 - [ ] Whitespaces
 - [ ] Form
 - [ ] Hello World length selector
+- [ ] Translate
+- [ ] Tests
+- [ ] Add more skills (jest, docker, etc...)

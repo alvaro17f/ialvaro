@@ -39,10 +39,11 @@ export default function Form({ duration = 1 }: Props) {
 				<AnimatePresence mode="wait">
 					{!isSubmitted ? (
 						<m.section
-							className="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
+							className="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-white border border-azama-muted"
 							aria-label="section-form"
 							initial={{ x: -70, opacity: 0, scale: 0.7 }}
-							animate={{ x: 0, opacity: 1, scale: 1 }}
+							whileInView={{ x: 0, opacity: 1, scale: 1 }}
+							viewport={{once: true}}
 							exit={{ opacity: 0 }}
 							transition={{ ease: "easeInOut", duration }}
 							key={`${isSubmitted}`}
@@ -63,7 +64,7 @@ export default function Form({ duration = 1 }: Props) {
 									onChange={updateData}
 									placeholder="Name *"
 									aria-label="name"
-									className="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+									className="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-sm rounded-xl shadow-azama-white focus:outline-none"
 									required
 								/>
 								<input
@@ -73,7 +74,7 @@ export default function Form({ duration = 1 }: Props) {
 									onChange={updateData}
 									placeholder="Email *"
 									aria-label="email"
-									className="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+									className="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-sm rounded-xl shadow-azama-white focus:outline-none"
 									required
 								/>
 								<input
@@ -83,10 +84,10 @@ export default function Form({ duration = 1 }: Props) {
 									onChange={updateData}
 									placeholder="Phone"
 									aria-label="phone"
-									className="bg-azama-base placeholder:text-azama-muted text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+									className="bg-azama-base placeholder:text-azama-muted text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-sm rounded-xl shadow-azama-white focus:outline-none"
 								/>
 								<textarea
-									className="bg-azama-base text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 shadow-md rounded-xl shadow-azama-base placeholder:text-azama-danger"
+									className="bg-azama-base text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 border border-azama-primary focus:border-azama-danger rounded-xl placeholder:text-azama-danger focus:outline-none"
 									name="message"
 									value={data.message}
 									onChange={updateData}
@@ -95,7 +96,7 @@ export default function Form({ duration = 1 }: Props) {
 									required
 								/>
 								<m.button
-									className="p-4 text-5xl rounded-full shadow-md md:w-40 shadow-azama-base bg-azama-base"
+									className="p-0 m-5 text-5xl rounded-full shadow-md md:w-40 shadow-azama-base bg-azama-base"
 									type="submit"
 									aria-label="submit"
 									whileHover={{ scale: 1.2 }}

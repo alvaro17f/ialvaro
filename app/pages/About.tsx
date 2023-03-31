@@ -1,7 +1,6 @@
 import Content from "@/components/Content";
 import Form from "@/components/Form";
 import Header from "@/components/Header";
-import LazyView from "@/components/LazyView";
 
 export default function About() {
 	return (

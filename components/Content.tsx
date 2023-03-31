@@ -20,11 +20,12 @@ export default function Content({
 				<m.section
 					className={`p-5 mb-5 rounded-lg text-azama-${text} ${bg}`}
 					initial={{ x: -800, opacity: 0 }}
-					animate={{ x: 0, opacity: 1 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{once: true}}
 					transition={{ duration }}
 					aria-label="content"
 				>
-					<article className="p-5 animate__animated animate__fadeIn animate__delay-1.2s">
+					<article className="p-5">
 						{children}
 					</article>
 				</m.section>

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
-import LazyView from "@/components/LazyView";
 
 export default function Page() {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -34,9 +33,7 @@ export default function Page() {
 			{/* TODO: BACKGROUND WITH HTML ELEMENTS TRANSPARENT */}
 			<Home />
 			<Portfolio />
-			<LazyView>
-				<About />
-			</LazyView>
+			<About />
 			<Scrollup />
 		</>
 	);

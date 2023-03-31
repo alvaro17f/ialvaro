@@ -47,9 +47,31 @@ export default function Contact() {
 							key={`${isSubmitted}`}
 						>
 							<div className="mb-5 md:mb-0 md:text-center">
-								<h2 className="text-3xl">CONTACT ME!</h2>
-								<p>It's free</p>
-								<p>github - linkedIn</p>
+								<h2 className="mb-5 text-3xl">CONTACT ME!</h2>
+								<div className="grid grid-cols-2 place-items-center">
+									<a
+										href="https://github.com/alvaro17f"
+										target="_blank"
+										rel="noreferrer"
+									>
+										<img
+											src="/social/github.svg"
+											alt="github"
+											className="w-10 h-10"
+										/>
+									</a>
+									<a
+										href="https://linkedin.com/in/alvarogarciamacias"
+										target="_blank"
+										rel="noreferrer"
+									>
+										<img
+											src="/social/linkedin.svg"
+											alt="linkedin"
+											className="w-10 h-10"
+										/>
+									</a>
+								</div>
 							</div>
 							<form
 								onSubmit={submit}

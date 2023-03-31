@@ -21,13 +21,13 @@ export default function Skills() {
 						<div ref={ref} className="grid place-content-center">
 							<a href={url} rel="noreferrer" target="_blank">
 								<m.div
-									className="grid p-5 text-center border-dashed cursor-pointer from-transparent to-azama-muted bg-gradient-to-br hover:to-azama-primary place-items-center rounded-xl"
+									className="grid p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
 									initial={{ scale: 1, opacity: 0 }}
 									whileInView={{opacity: 1}}
 									viewport={{once: true}}
 									whileHover={{ scale: 1.1 }}
 									whileTap={{ scale: 1 }}
-									transition={{ duration: 1 }}
+									transition={{ duration: 0.7 }}
 								>
 									{/* <div className="h-32" /> */}
 									<img src={image} alt={title} className="w-44 h-44 " />

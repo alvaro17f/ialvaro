@@ -16,7 +16,17 @@ export default function Experience() {
 		<section id="experience">
 			<Header title="Experience" />
 			{data.map(
-				({ id, title, image, url, projects, tasks, date_from, date_to, description }) => (
+				({
+					id,
+					title,
+					image,
+					url,
+					projects,
+					tasks,
+					date_from,
+					date_to,
+					description,
+				}) => (
 					<LazyMotion key={id} features={domAnimation}>
 						<div
 							ref={ref}
@@ -57,16 +67,27 @@ export default function Experience() {
 									viewport={{ once: false }}
 									transition={{ duration: 2 }}
 								>
-									<p className="text-xl underline text-azama-danger">{description?.title.one}</p>
+									<p className="text-xl underline text-azama-danger">
+										{description?.title.one}
+									</p>
 									{description.content?.one}
 									<br />
-									<p className="text-xl underline text-azama-danger">{description?.title.two}</p>
+									<br />
+									<p className="text-xl underline text-azama-danger">
+										{description?.title.two}
+									</p>
 									{description.content?.two}
 									<br />
-									<p className="text-xl underline text-azama-danger">{description?.title.three}</p>
+									<br />
+									<p className="text-xl underline text-azama-danger">
+										{description?.title.three}
+									</p>
 									{description.content?.three}
 									<br />
-									<p className="text-xl underline text-azama-danger">{description?.title.four}</p>
+									<br />
+									<p className="text-xl underline text-azama-danger">
+										{description?.title.four}
+									</p>
 									{description.content?.four}
 								</m.div>
 							</div>

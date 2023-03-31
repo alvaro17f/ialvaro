@@ -15,13 +15,12 @@ export default function Experience() {
 	return (
 		<section id="experience">
 			<Header title="Experience" />
-			<div>
 				{data.map(
 					({ id, title, image, url, description, date_from, date_to }) => (
 						<LazyMotion key={id} features={domAnimation}>
-							<div ref={ref} className="grid md:grid-cols-[1fr_2fr] md:gap-10">
+							<div ref={ref} className="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10">
 								<m.div
-									className="grid gap-5 p-5 border border-dashed cursor-pointer h-60 mb-36 place-items-center rounded-xl"
+									className="grid gap-2 border-dashed cursor-pointer border-[4px] border-azama-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
 									initial={{ scale: 1, opacity: 0 }}
 									whileInView={{ opacity: 1 }}
 									viewport={{ once: true }}
@@ -41,17 +40,18 @@ export default function Experience() {
 										key={title}
 										initial={{ opacity: 0 }}
 										whileInView={{ opacity: 1 }}
-										viewport={{once: false}}
+										viewport={{ once: false }}
 										transition={{ duration: 1 }}
-										className="mb-5 text-4xl md:text-6xl text-azama-primary w-[100%]"
+										className="mb-5 text-4xl md:text-6xl text-azama-primary"
 									>
 										{title}
 									</m.h1>
 
 									<m.p
+										className="mb-20"
 										initial={{ opacity: 0 }}
 										whileInView={{ opacity: 1 }}
-										viewport={{once: false}}
+										viewport={{ once: false }}
 										transition={{ duration: 2 }}
 									>
 										{description}
@@ -61,7 +61,6 @@ export default function Experience() {
 						</LazyMotion>
 					),
 				)}
-			</div>
 		</section>
 	);
 }

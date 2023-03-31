@@ -40,6 +40,7 @@ export default function About() {
 					</div>
 				</div>
 			</Content>
+
 			<Form />
 		</section>
 	);

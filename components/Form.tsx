@@ -39,7 +39,7 @@ export default function Form({ duration = 1 }: Props) {
 				<AnimatePresence mode="wait">
 					{!isSubmitted ? (
 						<m.section
-							className="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-white border border-azama-muted"
+							className="grid md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-xl text-azama-white border border-azama-muted"
 							aria-label="section-form"
 							initial={{ x: -70, opacity: 0, scale: 0.7 }}
 							whileInView={{ x: 0, opacity: 1, scale: 1 }}

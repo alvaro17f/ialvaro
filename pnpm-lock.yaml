@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@emailjs/browser': ^3.10.0
   '@testing-library/react': ^14.0.0
-  '@types/node': 18.15.11
   '@types/react': 18.0.31
   '@types/react-dom': 18.0.11
   '@vitejs/plugin-react': ^3.1.0
@@ -22,7 +22,7 @@ specifiers:
   vitest: ^0.29.8
 
 dependencies:
-  '@types/node': 18.15.11
+  '@emailjs/browser': 3.10.0
   '@types/react': 18.0.31
   '@types/react-dom': 18.0.11
   framer-motion: 10.10.0_biqbaboplfbrettd7655fr4n2y
@@ -41,7 +41,7 @@ devDependencies:
   postcss: 8.4.21
   rome: 12.0.0
   tailwindcss: 3.3.0_postcss@8.4.21
-  vite: 4.2.1_@types+node@18.15.11
+  vite: 4.2.1
   vitest: 0.29.8_u3uym26rurlyrasizffeurchem
 
 packages:
@@ -284,6 +284,11 @@ packages:
   /@bcoe/v8-coverage/0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
+
+  /@emailjs/browser/3.10.0:
+    resolution: {integrity: sha512-pregUOBkSjjctQoAgn8DcSaeY4ypHjXAJEzWlJysM3RkQXw1ulavfHva3YYeAkxfJ7qbIhpyvRmhyQlgNG4GVg==}
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   /@emotion/is-prop-valid/0.8.8:
     resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
@@ -787,6 +792,7 @@ packages:
 
   /@types/node/18.15.11:
     resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==}
+    dev: true
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
@@ -817,7 +823,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6_@babel+core@7.21.3
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.2.1_@types+node@18.15.11
+      vite: 4.2.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2578,6 +2584,39 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  /vite/4.2.1:
+    resolution: {integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      esbuild: 0.17.12
+      postcss: 8.4.21
+      resolve: 1.22.1
+      rollup: 3.20.1
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /vite/4.2.1_@types+node@18.15.11:

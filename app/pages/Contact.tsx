@@ -1,9 +1,11 @@
 "use client";
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import Spinner from "@/components/Spinner";
 
 export default function Contact() {
+	const form = useRef(null);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [data, setData] = useState({
@@ -12,6 +14,7 @@ export default function Contact() {
 		phone: "",
 		message: "",
 	});
+
 	const updateData = ({
 		target,
 	}: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -20,14 +23,30 @@ export default function Contact() {
 			[target.name]: target.value,
 		});
 	};
-	const submit = (e: FormEvent<HTMLFormElement>): void => {
+	const submit = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		setIsSubmitting(true);
 
-		setInterval(() => {
-			setIsSubmitting(false);
-			setIsSubmitted(true);
-		}, 1000);
+		emailjs
+			.sendForm(
+				process.env.NEXT_PUBLIC_SERVICE_ID,
+				process.env.NEXT_PUBLIC_TEMPLATE_ID,
+				form.current,
+				process.env.NEXT_PUBLIC_PUBLIC_KEY,
+			)
+			.then(
+				(result) => {
+					setIsSubmitting(true);
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+					console.log("hey");
+				},
+			)
+			.finally(() => {
+				setIsSubmitting(false);
+				setIsSubmitted(true);
+			});
 	};
 	return (
 		<section id="contact" className="h-[100dvh]">
@@ -81,6 +100,7 @@ export default function Contact() {
 								</div>
 							</div>
 							<form
+								ref={form}
 								onSubmit={submit}
 								className="grid gap-5 p-2 place-items-center md:w-full"
 								aria-label="contact-form"

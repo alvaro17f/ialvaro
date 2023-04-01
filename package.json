@@ -13,7 +13,7 @@
 		"coverage:ui": "vitest --coverage --ui"
 	},
 	"dependencies": {
-		"@types/node": "18.15.11",
+		"@emailjs/browser": "^3.10.0",
 		"@types/react": "18.0.31",
 		"@types/react-dom": "18.0.11",
 		"framer-motion": "^10.10.0",

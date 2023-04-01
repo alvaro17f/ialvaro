@@ -33,8 +33,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "app/portfolio/page.tsx.old", "app/page.tsx.old", "components/Wobble.tsx.old"  ],
+    ".next/types/**/*.ts",
+  ],
   "exclude": [
     "node_modules"
   ]

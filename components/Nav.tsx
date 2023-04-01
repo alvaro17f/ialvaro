@@ -74,10 +74,9 @@ export default function Nav() {
 												}}
 											>
 												<img
-													width={120}
-													height={120}
-													src="/images/azama_full.svg"
+													src="/images/ialvaro.svg"
 													alt="logo"
+													className="h-10"
 												/>
 											</button>
 										</div>

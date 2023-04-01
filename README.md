@@ -11,3 +11,5 @@
 - [ ] Translate
 - [ ] Tests
 - [ ] Add more skills (jest, docker, etc...)
+
+> "The most powerful weapon on earth is the human soul on fire." - Ferdinand Foch

@@ -6,7 +6,7 @@
 ## TODO
 - [x] Title reactive
 - [x] Whitespaces
-- [ ] Form
+- [x] Form
 - [ ] Hello World length selector
 - [ ] Translate
 - [ ] Tests

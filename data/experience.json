@@ -10,7 +10,7 @@
 				"one": "Client",
 				"two": "Projects",
 				"three": "Tasks",
-				"four": "skills"
+				"four": "Skills"
 			},
 			"content": {
 				"one": "RSI",
@@ -23,7 +23,7 @@
 	},
 	{
 		"id": "2",
-		"title": "your startup",
+		"title": "your company",
 		"image": "/experience/company.svg",
 		"date_from": "April 2023",
 		"date_to": "now",
@@ -41,6 +41,6 @@
 				"four": ""
 			}
 		},
-		"url": "#"
+		"url": ""
 	}
 ]

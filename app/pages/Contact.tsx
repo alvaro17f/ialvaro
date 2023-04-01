@@ -3,6 +3,7 @@ import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Spinner from "@/components/Spinner";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Contact() {
 	const form = useRef(null);
@@ -36,17 +37,16 @@ export default function Contact() {
 			)
 			.then(
 				(result) => {
-					console.log(result.text);
+					toast.success(result.text);
+					setIsSubmitting(false);
+					setIsSubmitted(true);
 				},
 				(error) => {
 					console.log(error.text);
-					console.log("hey");
+					toast.error("ERROR");
+					setIsSubmitting(false);
 				},
-			)
-			.finally(() => {
-				setIsSubmitting(false);
-				setIsSubmitted(true);
-			});
+			);
 	};
 	return (
 		<section id="contact" className="h-[100dvh]">
@@ -170,15 +170,13 @@ export default function Contact() {
 									😀
 								</span>
 							</h3>
-							<p>
-								Your message has been received. Please check your email for
-								confirmation.
-							</p>
+							<p>Your message has been sent.</p>
 						</m.section>
 					)}
 				</AnimatePresence>
 			</LazyMotion>
 			<div className="h-28" />
+			<Toaster position="top-center" reverseOrder={false} />
 		</section>
 	);
 }

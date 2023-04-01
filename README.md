@@ -7,9 +7,9 @@
 - [x] Title reactive
 - [x] Whitespaces
 - [x] Form
+- [x] Add more skills (jest, docker, etc...)
 - [ ] Hello World length selector
 - [ ] Translate
 - [ ] Tests
-- [ ] Add more skills (jest, docker, etc...)
 
 > "The most powerful weapon on earth is the human soul on fire." - Ferdinand Foch

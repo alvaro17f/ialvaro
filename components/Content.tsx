@@ -17,8 +17,8 @@ export default function Content({
 			<LazyMotion features={domAnimation}>
 				<m.section
 					className={`p-5 mb-5 rounded-lg ${style}`}
-					initial={{ x: -300, opacity: 0 }}
-					whileInView={{ x: 0, opacity: 1 }}
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
 					viewport={{ once: false }}
 					transition={{ duration }}
 					aria-label="content"

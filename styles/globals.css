@@ -6,11 +6,6 @@
   -webkit-tap-highlight-color:transparent;
 }
 
-html {
-
-  overflow-x: hidden;
-}
-
 body {
     @apply box-border;
     @apply text-azama-white bg-azama-base ;

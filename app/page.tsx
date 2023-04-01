@@ -22,7 +22,7 @@ export default function Page() {
 		if (window.innerWidth > 768) {
 			if (scrollPosition < 700) {
 				setTitle("Home | AGM");
-			} else if (scrollPosition < 1400) {
+			} else if (scrollPosition < 1800) {
 				setTitle("Biography | AGM");
 			} else if (scrollPosition < 2800) {
 				setTitle("Skills | AGM");

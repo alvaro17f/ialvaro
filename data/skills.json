@@ -46,5 +46,29 @@
 		"title": "go",
 		"image": "/skills/go.svg",
 		"url": "https://go.dev/"
+	},
+	{
+		"id": "9",
+		"title": "astro",
+		"image": "/skills/astro.svg",
+		"url": "https://astro.build/"
+	},
+	{
+		"id": "10",
+		"title": "node.js",
+		"image": "/skills/node.svg",
+		"url": "https://nodejs.org/"
+	},
+	{
+		"id": "11",
+		"title": "docker",
+		"image": "/skills/docker.svg",
+		"url": "https://docker.com/"
+	},
+	{
+		"id": "12",
+		"title": "sql",
+		"image": "/skills/sql.svg",
+		"url": "https://mysql.com/"
 	}
 ]

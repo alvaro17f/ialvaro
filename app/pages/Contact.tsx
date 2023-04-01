@@ -40,7 +40,7 @@ export default function Contact() {
 							aria-label="section-form"
 							initial={{ x: -70, opacity: 0, scale: 0.7 }}
 							whileInView={{ x: 0, opacity: 1, scale: 1 }}
-							viewport={{ once: true }}
+							viewport={{ once: false }}
 							exit={{ opacity: 0 }}
 							transition={{ ease: "easeInOut", duration: 1 }}
 							key={`${isSubmitted}`}

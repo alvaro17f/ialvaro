@@ -16,7 +16,7 @@ export default function Experience() {
 								className="grid gap-2 border-dashed cursor-pointer border-[4px] border-azama-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
 								initial={{ scale: 1, opacity: 0 }}
 								whileInView={{ opacity: 1 }}
-								viewport={{ once: true }}
+								viewport={{ once: false }}
 								whileHover={{ scale: 1.1 }}
 								whileTap={{ scale: 1 }}
 								transition={{ duration: 0.7 }}

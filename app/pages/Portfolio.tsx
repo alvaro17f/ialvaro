@@ -24,7 +24,7 @@ export default function Portfolio() {
 										className="cursor-pointer w-[30dvw]"
 										initial={{ scale: 1, opacity: 0 }}
 										whileInView={{opacity: 1}}
-										viewport={{once: true}}
+										viewport={{once: false}}
 										whileHover={{ scale: 1.1 }}
 										whileTap={{ scale: 1 }}
 										transition={{ duration: 0.7 }}

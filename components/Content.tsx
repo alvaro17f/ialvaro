@@ -19,7 +19,7 @@ export default function Content({
 					className={`p-5 mb-5 rounded-lg ${style}`}
 					initial={{ x: "-800", opacity: 0 }}
 					whileInView={{ x: 0, opacity: 1 }}
-					viewport={{ once: true }}
+					viewport={{ once: false }}
 					transition={{ duration }}
 					aria-label="content"
 				>

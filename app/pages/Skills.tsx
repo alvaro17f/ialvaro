@@ -16,7 +16,7 @@ export default function Skills() {
 									className="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
 									initial={{ scale: 1, opacity: 0 }}
 									whileInView={{ opacity: 1 }}
-									viewport={{ once: true }}
+									viewport={{ once: false }}
 									whileHover={{ scale: 1.1 }}
 									whileTap={{ scale: 1 }}
 									transition={{ duration: 0.7 }}

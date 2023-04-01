@@ -14,7 +14,7 @@ export default function Header({ title, duration = 1.2 }: Props) {
 				className="p-2 mb-5 rounded-lg text-azama-dark from-azama-primary to-transparent bg-gradient-to-r"
 				initial={{ width: "0%", opacity: 0, scaleY: 0.5 }}
 				whileInView={{ width: "100%", opacity: 1, scaleY: 1 }}
-				viewport={{once: true}}
+				viewport={{once: false}}
 				transition={{ ease: "easeOut", duration }}
 			>
 				<m.h1

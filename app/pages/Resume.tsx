@@ -14,7 +14,7 @@ export default function Resume() {
 							whileInView={{ opacity: 1 }}
 							whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
 							whileTap={{ scale: 0.99, transition: { duration: 0.1 } }}
-							viewport={{ once: true }}
+							viewport={{ once: false }}
 							transition={{ duration: 2 }}
 							aria-label="content"
 						>

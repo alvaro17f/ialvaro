@@ -4,7 +4,7 @@ exports[`<Form /> > should match the snapshot 1`] = `
 <div>
   <section
     aria-label="section-form"
-    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
+    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-alvaro-dark bg-alvaro-white"
     style="opacity: 0; transform: translateX(-70px) scale(0.7) translateZ(0);"
   >
     <div
@@ -25,7 +25,7 @@ exports[`<Form /> > should match the snapshot 1`] = `
     >
       <input
         aria-label="name"
-        class="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+        class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-alvaro-base"
         defaultvalue=""
         name="name"
         placeholder="Name *"
@@ -34,7 +34,7 @@ exports[`<Form /> > should match the snapshot 1`] = `
       />
       <input
         aria-label="email"
-        class="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+        class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-alvaro-base"
         defaultvalue=""
         name="email"
         placeholder="Email *"
@@ -43,7 +43,7 @@ exports[`<Form /> > should match the snapshot 1`] = `
       />
       <input
         aria-label="phone"
-        class="bg-azama-base placeholder:text-azama-muted text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+        class="bg-alvaro-base placeholder:text-alvaro-muted text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-alvaro-base"
         defaultvalue=""
         name="phone"
         placeholder="Phone"
@@ -51,14 +51,14 @@ exports[`<Form /> > should match the snapshot 1`] = `
       />
       <textarea
         aria-label="message"
-        class="bg-azama-base text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 shadow-md rounded-xl shadow-azama-base placeholder:text-azama-danger"
+        class="bg-alvaro-base text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 shadow-md rounded-xl shadow-alvaro-base placeholder:text-alvaro-danger"
         name="message"
         placeholder="Your message goes here... *"
         required=""
       />
       <button
         aria-label="submit"
-        class="p-4 text-5xl rounded-full shadow-md md:w-40 shadow-azama-base bg-azama-base"
+        class="p-4 text-5xl rounded-full shadow-md md:w-40 shadow-alvaro-base bg-alvaro-base"
         tabindex="0"
         type="submit"
       >

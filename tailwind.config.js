@@ -13,7 +13,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				azama: {
+				alvaro: {
 					base: "#1e1e2e",
 					primary: "#89b4fa",
 					secondary: "#cba6f7",

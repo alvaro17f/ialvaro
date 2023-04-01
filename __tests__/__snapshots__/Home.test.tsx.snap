@@ -11,94 +11,94 @@ exports[`<Home /> > should match the snapshot 1`] = `
   >
     <div>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         A
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         L
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         V
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         A
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         R
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         O
       </span>
       <br />
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
       >
         G
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
       >
         A
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
       >
         R
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
       >
         C
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
       >
         I
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-danger"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
       >
         A
       </span>
       <br />
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         M
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         A
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         C
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         I
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         A
       </span>
       <span
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-azama-primary"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
       >
         S
       </span>
@@ -110,7 +110,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
   >
     <section
       aria-label="content"
-      class="p-5 mb-5 rounded-lg text-azama-white"
+      class="p-5 mb-5 rounded-lg text-alvaro-white"
       style="opacity: 0; transform: translateX(-800) translateZ(0);"
     >
       <article
@@ -129,7 +129,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
             >
               <img
                 alt="profile picture"
-                class="border-[7px] rounded-full border-azama-white hover:border-dashed cursor-pointer"
+                class="border-[7px] rounded-full border-alvaro-white hover:border-dashed cursor-pointer"
                 height="200"
                 src="/images/profile.png"
                 width="200"
@@ -144,7 +144,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
             >
               Hello 
               <span
-                class="text-azama-danger"
+                class="text-alvaro-danger"
               >
                 World
               </span>
@@ -154,7 +154,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
               My name is
                
               <span
-                class="text-xl text-azama-primary"
+                class="text-xl text-alvaro-primary"
               >
                 Álvaro
               </span>
@@ -182,7 +182,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
       class="h-24"
     />
     <section
-      class="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+      class="p-2 mb-5 rounded-lg text-alvaro-dark bg-alvaro-primary"
       style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
     >
       <h1
@@ -214,7 +214,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
               src="/skills/react.svg"
             />
             <h1
-              class="mb-5 text-xl text-azama-white"
+              class="mb-5 text-xl text-alvaro-white"
             >
               react.js
             </h1>
@@ -240,7 +240,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
               src="/skills/vue.svg"
             />
             <h1
-              class="mb-5 text-xl text-azama-white"
+              class="mb-5 text-xl text-alvaro-white"
             >
               vue.js
             </h1>
@@ -266,7 +266,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
               src="/skills/typescript.svg"
             />
             <h1
-              class="mb-5 text-xl text-azama-white"
+              class="mb-5 text-xl text-alvaro-white"
             >
               typescript
             </h1>
@@ -292,7 +292,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
               src="/skills/javascript.svg"
             />
             <h1
-              class="mb-5 text-xl text-azama-white"
+              class="mb-5 text-xl text-alvaro-white"
             >
               javascript
             </h1>
@@ -318,7 +318,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
               src="/skills/tailwind.svg"
             />
             <h1
-              class="mb-5 text-xl text-azama-white"
+              class="mb-5 text-xl text-alvaro-white"
             >
               tailwind
             </h1>
@@ -344,7 +344,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
               src="/skills/next.svg"
             />
             <h1
-              class="mb-5 text-xl text-azama-white"
+              class="mb-5 text-xl text-alvaro-white"
             >
               next.js
             </h1>
@@ -370,7 +370,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
               src="/skills/rust.svg"
             />
             <h1
-              class="mb-5 text-xl text-azama-white"
+              class="mb-5 text-xl text-alvaro-white"
             >
               rust
             </h1>
@@ -396,7 +396,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
               src="/skills/go.svg"
             />
             <h1
-              class="mb-5 text-xl text-azama-white"
+              class="mb-5 text-xl text-alvaro-white"
             >
               go
             </h1>
@@ -412,7 +412,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
       class="h-24"
     />
     <section
-      class="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+      class="p-2 mb-5 rounded-lg text-alvaro-dark bg-alvaro-primary"
       style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
     >
       <h1
@@ -426,7 +426,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
       class="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
     >
       <div
-        class="grid gap-2 border-dashed cursor-pointer border-[4px] border-azama-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
+        class="grid gap-2 border-dashed cursor-pointer border-[4px] border-alvaro-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
         style="opacity: 0; transform: none;"
         tabindex="0"
       >
@@ -450,7 +450,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
         class="mt-12"
       >
         <h1
-          class="mb-5 text-4xl md:text-6xl text-azama-primary"
+          class="mb-5 text-4xl md:text-6xl text-alvaro-primary"
           style="opacity: 0;"
         >
           devoteam
@@ -467,7 +467,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
       class="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
     >
       <div
-        class="grid gap-2 border-dashed cursor-pointer border-[4px] border-azama-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
+        class="grid gap-2 border-dashed cursor-pointer border-[4px] border-alvaro-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
         style="opacity: 0; transform: none;"
         tabindex="0"
       >
@@ -491,7 +491,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
         class="mt-12"
       >
         <h1
-          class="mb-5 text-4xl md:text-6xl text-azama-primary"
+          class="mb-5 text-4xl md:text-6xl text-alvaro-primary"
           style="opacity: 0;"
         >
           your startup
@@ -514,7 +514,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
     />
     <section
       aria-label="section-form"
-      class="grid md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-xl text-azama-white border border-azama-muted"
+      class="grid md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-xl text-alvaro-white border border-alvaro-muted"
       style="opacity: 0; transform: translateX(-70px) scale(0.7) translateZ(0);"
     >
       <div
@@ -538,7 +538,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
       >
         <input
           aria-label="name"
-          class="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-azama-danger border-azama-muted rounded-xl focus:outline-none"
+          class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-alvaro-danger border-alvaro-muted rounded-xl focus:outline-none"
           defaultvalue=""
           name="name"
           placeholder="Name *"
@@ -547,7 +547,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
         />
         <input
           aria-label="email"
-          class="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border border-azama-muted rounded-xl focus:outline-none focus:border-azama-danger"
+          class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border border-alvaro-muted rounded-xl focus:outline-none focus:border-alvaro-danger"
           defaultvalue=""
           name="email"
           placeholder="Email *"
@@ -556,7 +556,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
         />
         <input
           aria-label="phone"
-          class="bg-azama-base placeholder:text-azama-muted text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 border border-azama-muted rounded-xl focus:border-azama-primary focus:outline-none"
+          class="bg-alvaro-base placeholder:text-alvaro-muted text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 border border-alvaro-muted rounded-xl focus:border-alvaro-primary focus:outline-none"
           defaultvalue=""
           name="phone"
           placeholder="Phone"
@@ -564,14 +564,14 @@ exports[`<Home /> > should match the snapshot 1`] = `
         />
         <textarea
           aria-label="message"
-          class="bg-azama-base text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 border border-azama-muted focus:border-azama-danger rounded-xl placeholder:text-azama-danger focus:outline-none"
+          class="bg-alvaro-base text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 border border-alvaro-muted focus:border-alvaro-danger rounded-xl placeholder:text-alvaro-danger focus:outline-none"
           name="message"
           placeholder="Your message goes here... *"
           required=""
         />
         <button
           aria-label="submit"
-          class="p-0 m-5 text-5xl rounded-full shadow-md md:w-40 shadow-azama-base bg-azama-base"
+          class="p-0 m-5 text-5xl rounded-full shadow-md md:w-40 shadow-alvaro-base bg-alvaro-base"
           tabindex="0"
           type="submit"
         >

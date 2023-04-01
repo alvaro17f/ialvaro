@@ -1,7 +1,7 @@
 version: '3.8'
 services:
-  azama_dev:
-    container_name: azama_dev
+  ialvaro:
+    container_name: ialvaro
     build: .
     ports:
       - "127.0.0.1:3900:3000"

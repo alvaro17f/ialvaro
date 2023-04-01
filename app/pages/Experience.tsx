@@ -13,7 +13,7 @@ export default function Experience() {
 					<LazyMotion key={id} features={domAnimation}>
 						<div className="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10">
 							<m.div
-								className="grid gap-2 border-dashed cursor-pointer border-[4px] border-azama-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
+								className="grid gap-2 border-dashed cursor-pointer border-[4px] border-alvaro-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
 								initial={{ scale: 1, opacity: 0 }}
 								whileInView={{ opacity: 1 }}
 								viewport={{ once: false }}
@@ -35,7 +35,7 @@ export default function Experience() {
 									whileInView={{ opacity: 1 }}
 									viewport={{ once: false }}
 									transition={{ duration: 1 }}
-									className="mb-5 text-4xl md:text-6xl text-azama-primary"
+									className="mb-5 text-4xl md:text-6xl text-alvaro-primary"
 								>
 									{title}
 								</m.h1>
@@ -47,25 +47,25 @@ export default function Experience() {
 									viewport={{ once: false }}
 									transition={{ duration: 2 }}
 								>
-									<p className="text-xl underline text-azama-danger">
+									<p className="text-xl underline text-alvaro-danger">
 										{description?.title.one}
 									</p>
 									{description.content?.one}
 									<br />
 									<br />
-									<p className="text-xl underline text-azama-danger">
+									<p className="text-xl underline text-alvaro-danger">
 										{description?.title.two}
 									</p>
 									{description.content?.two}
 									<br />
 									<br />
-									<p className="text-xl underline text-azama-danger">
+									<p className="text-xl underline text-alvaro-danger">
 										{description?.title.three}
 									</p>
 									{description.content?.three}
 									<br />
 									<br />
-									<p className="text-xl underline text-azama-danger">
+									<p className="text-xl underline text-alvaro-danger">
 										{description?.title.four}
 									</p>
 									{description.content?.four}

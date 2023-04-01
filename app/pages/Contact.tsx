@@ -55,7 +55,7 @@ export default function Contact() {
 				<AnimatePresence mode="wait">
 					{!isSubmitted ? (
 						<m.section
-							className="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-xl text-azama-white border border-azama-muted"
+							className="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-xl text-alvaro-white border border-alvaro-muted"
 							aria-label="section-form"
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
@@ -73,7 +73,7 @@ export default function Contact() {
 										rel="noreferrer"
 									>
 										<svg
-											className="fill-azama-white hover:fill-azama-primary"
+											className="fill-alvaro-white hover:fill-alvaro-primary"
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 64 64"
 											width="48px"
@@ -88,7 +88,7 @@ export default function Contact() {
 										rel="noreferrer"
 									>
 										<svg
-											className="fill-azama-white hover:fill-azama-primary"
+											className="fill-alvaro-white hover:fill-alvaro-primary"
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 64 64"
 											width="48px"
@@ -112,7 +112,7 @@ export default function Contact() {
 									onChange={updateData}
 									placeholder="Name *"
 									aria-label="name"
-									className="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-azama-danger border-azama-muted rounded-xl focus:outline-none"
+									className="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-alvaro-danger border-alvaro-muted rounded-xl focus:outline-none"
 									required
 								/>
 								<input
@@ -122,7 +122,7 @@ export default function Contact() {
 									onChange={updateData}
 									placeholder="Email *"
 									aria-label="email"
-									className="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border border-azama-muted rounded-xl focus:outline-none focus:border-azama-danger"
+									className="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border border-alvaro-muted rounded-xl focus:outline-none focus:border-alvaro-danger"
 									required
 								/>
 								<input
@@ -132,10 +132,10 @@ export default function Contact() {
 									onChange={updateData}
 									placeholder="Phone"
 									aria-label="phone"
-									className="bg-azama-base placeholder:text-azama-muted text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 border border-azama-muted rounded-xl focus:border-azama-primary focus:outline-none"
+									className="bg-alvaro-base placeholder:text-alvaro-muted text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 border border-alvaro-muted rounded-xl focus:border-alvaro-primary focus:outline-none"
 								/>
 								<textarea
-									className="bg-azama-base text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 border border-azama-muted focus:border-azama-danger rounded-xl placeholder:text-azama-danger focus:outline-none"
+									className="bg-alvaro-base text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 border border-alvaro-muted focus:border-alvaro-danger rounded-xl placeholder:text-alvaro-danger focus:outline-none"
 									name="message"
 									value={data.message}
 									onChange={updateData}
@@ -144,7 +144,7 @@ export default function Contact() {
 									required
 								/>
 								<m.button
-									className="p-0 m-5 text-5xl rounded-full shadow-md md:w-40 shadow-azama-base bg-azama-base"
+									className="p-0 m-5 text-5xl rounded-full shadow-md md:w-40 shadow-alvaro-base bg-alvaro-base"
 									type="submit"
 									aria-label="submit"
 									whileHover={{ scale: 1.2 }}
@@ -157,7 +157,7 @@ export default function Contact() {
 						</m.section>
 					) : (
 						<m.section
-							className="grid grid-cols-1 p-5 mb-5 border rounded-xl border-azama-muted place-items-center text-azama-white"
+							className="grid grid-cols-1 p-5 mb-5 border rounded-xl border-alvaro-muted place-items-center text-alvaro-white"
 							aria-label="form"
 							initial={{ opacity: 0, scale: 0.7 }}
 							animate={{ opacity: 1, scale: 1 }}

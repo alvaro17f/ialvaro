@@ -8,7 +8,7 @@
 
 body {
     @apply box-border;
-    @apply text-azama-white bg-azama-base ;
+    @apply text-alvaro-white bg-alvaro-base ;
 }
 
 body::-webkit-scrollbar {
@@ -16,6 +16,6 @@ body::-webkit-scrollbar {
   }
    
 body::-webkit-scrollbar-thumb {
-  @apply bg-azama-primary;
+  @apply bg-alvaro-primary;
   -webkit-border-radius: 1ex;
 }

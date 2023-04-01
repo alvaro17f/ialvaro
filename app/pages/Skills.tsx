@@ -23,7 +23,7 @@ export default function Skills() {
 								>
 									{/* <div className="h-32" /> */}
 									<img src={image} alt={title} className="w-40 h-40 p-3" />
-									<m.h1 key={title} className="mb-5 text-xl text-azama-white">
+									<m.h1 key={title} className="mb-5 text-xl text-alvaro-white">
 										{title}
 									</m.h1>
 								</m.div>

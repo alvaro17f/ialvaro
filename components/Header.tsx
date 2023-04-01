@@ -11,7 +11,7 @@ export default function Header({ title, duration = 1.2 }: Props) {
 		<LazyMotion features={domAnimation}>
 			<div className="h-24" />
 			<m.section
-				className="p-2 mb-5 rounded-lg text-azama-dark from-azama-primary to-transparent bg-gradient-to-r"
+				className="p-2 mb-5 rounded-lg text-alvaro-dark from-alvaro-primary to-transparent bg-gradient-to-r"
 				initial={{ width: "0%", opacity: 0, scaleY: 0.5 }}
 				whileInView={{ width: "100%", opacity: 1, scaleY: 1 }}
 				viewport={{once: false}}

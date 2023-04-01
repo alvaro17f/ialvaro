@@ -5,8 +5,8 @@ import Nav from "@/components/Nav";
 export const metadata = {
 	icons: { icon: "/favicon.svg" },
 	// title: {
-	// 	default: "AZAMA",
-	// 	template: "%s | AZAMA",
+	// 	default: "ialvaro",
+	// 	template: "%s - [ iAlvaro ]",
 	// },
 	description: "Official website",
 };

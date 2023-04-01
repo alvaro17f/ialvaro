@@ -10,7 +10,7 @@ type Props = {
 export default function Content({
 	children,
 	duration = 1,
-	style = "text-azama-white",
+	style = "text-alvaro-white",
 }: Props) {
 	return (
 		<>

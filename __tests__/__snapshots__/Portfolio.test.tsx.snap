@@ -3,10 +3,10 @@
 exports[`<Portfolio /> > should match the snapshot 1`] = `
 <div>
   <title>
-    Portfolio | AZAMA
+    Portfolio - [ iAlvaro ]
   </title>
   <section
-    class="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+    class="p-2 mb-5 rounded-lg text-alvaro-dark bg-alvaro-primary"
     style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
   >
     <h1
@@ -32,14 +32,14 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
           width="75"
         >
           <circle
-            class="stroke-azama-danger fill-none stroke-[5%] opacity-20"
+            class="stroke-alvaro-danger fill-none stroke-[5%] opacity-20"
             cx="50"
             cy="50"
             pathLength="1"
             r="30"
           />
           <circle
-            class="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            class="stroke-alvaro-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
             cx="50"
             cy="50"
             pathLength="1"
@@ -65,12 +65,12 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
               class="h-32"
             />
             <h1
-              class="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
+              class="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
             >
-              AZAMA WEBSITE
+              ialvaro WEBSITE
             </h1>
             <img
-              alt="AZAMA WEBSITE"
+              alt="ialvaro WEBSITE"
               src="/demo/azama_next.png"
             />
             <p>
@@ -97,14 +97,14 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
           width="75"
         >
           <circle
-            class="stroke-azama-danger fill-none stroke-[5%] opacity-20"
+            class="stroke-alvaro-danger fill-none stroke-[5%] opacity-20"
             cx="50"
             cy="50"
             pathLength="1"
             r="30"
           />
           <circle
-            class="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            class="stroke-alvaro-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
             cx="50"
             cy="50"
             pathLength="1"
@@ -130,7 +130,7 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
               class="h-32"
             />
             <h1
-              class="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
+              class="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
             >
               TWO
             </h1>
@@ -162,14 +162,14 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
           width="75"
         >
           <circle
-            class="stroke-azama-danger fill-none stroke-[5%] opacity-20"
+            class="stroke-alvaro-danger fill-none stroke-[5%] opacity-20"
             cx="50"
             cy="50"
             pathLength="1"
             r="30"
           />
           <circle
-            class="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            class="stroke-alvaro-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
             cx="50"
             cy="50"
             pathLength="1"
@@ -195,7 +195,7 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
               class="h-32"
             />
             <h1
-              class="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
+              class="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
             >
               THREE
             </h1>
@@ -227,14 +227,14 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
           width="75"
         >
           <circle
-            class="stroke-azama-danger fill-none stroke-[5%] opacity-20"
+            class="stroke-alvaro-danger fill-none stroke-[5%] opacity-20"
             cx="50"
             cy="50"
             pathLength="1"
             r="30"
           />
           <circle
-            class="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            class="stroke-alvaro-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
             cx="50"
             cy="50"
             pathLength="1"
@@ -260,7 +260,7 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
               class="h-32"
             />
             <h1
-              class="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
+              class="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
             >
               FOUR
             </h1>
@@ -292,14 +292,14 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
           width="75"
         >
           <circle
-            class="stroke-azama-danger fill-none stroke-[5%] opacity-20"
+            class="stroke-alvaro-danger fill-none stroke-[5%] opacity-20"
             cx="50"
             cy="50"
             pathLength="1"
             r="30"
           />
           <circle
-            class="stroke-azama-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            class="stroke-alvaro-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
             cx="50"
             cy="50"
             pathLength="1"
@@ -325,7 +325,7 @@ exports[`<Portfolio /> > should match the snapshot 1`] = `
               class="h-32"
             />
             <h1
-              class="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
+              class="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
             >
               FIVE
             </h1>

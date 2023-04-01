@@ -9,7 +9,7 @@ export default function Resume() {
 					<div className="h-24" />
 					<a href="/assets/resume.pdf" target="_blank" rel="noreferrer">
 						<m.div
-							className="grid place-items-center p-5 mb-5 rounded-xl border-[5px] border-azama-danger text-azama-white"
+							className="grid place-items-center p-5 mb-5 rounded-xl border-[5px] border-alvaro-danger text-alvaro-white"
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
 							whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}

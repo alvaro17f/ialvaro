@@ -10,7 +10,7 @@ import Resume from "./pages/Resume";
 
 export default function Page() {
 	const [scrollPosition, setScrollPosition] = useState(0);
-	const [title, setTitle] = useState("AZAMA");
+	const [title, setTitle] = useState("[ iAlvaro ]");
 
 	useEffect(() => {
 		const updatePosition = () => {
@@ -21,22 +21,22 @@ export default function Page() {
 
 		if (window.innerWidth > 768) {
 			if (scrollPosition < 700) {
-				setTitle("Home | AGM");
+				setTitle("Home - [ iAlvaro ]");
 			} else if (scrollPosition < 1600) {
-				setTitle("Biography | AGM");
+				setTitle("Biography - [ iAlvaro ]");
 			} else if (scrollPosition < 2600) {
-				setTitle("Skills | AGM");
+				setTitle("Skills - [ iAlvaro ]");
 			} else if (scrollPosition < 4200) {
-				setTitle("Experience | AGM");
+				setTitle("Experience - [ iAlvaro ]");
 			} else if (scrollPosition < 4500) {
-				setTitle("Resume | AGM");
+				setTitle("Resume - [ iAlvaro ]");
 			} else if (scrollPosition >= 4500) {
-				setTitle("Contact | AGM");
+				setTitle("Contact - [ iAlvaro ]");
 			} else {
-				setTitle("AGM");
+				setTitle("[ iAlvaro ]");
 			}
 		} else {
-			setTitle("AGM");
+			setTitle("[ iAlvaro ]");
 		}
 
 		return () => window.removeEventListener("scroll", updatePosition);

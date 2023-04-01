@@ -32,7 +32,7 @@ export default function Portfolio() {
 										<div className="h-32" />
 										<m.h1
 											key={title}
-											className="mb-5 text-4xl md:text-6xl text-azama-white w-[100%]"
+											className="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
 										>
 											{title}
 										</m.h1>

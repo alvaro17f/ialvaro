@@ -57,7 +57,7 @@ export default function Nav() {
 				<AnimatePresence>
 					{scrollPosition > 700 && (
 						<m.nav
-							className="fixed z-50 w-full bg-azama-base rounded-xl "
+							className="fixed z-50 w-full bg-alvaro-base rounded-xl "
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							exit={{ opacity: 0, transition: { duration: 0.3 } }}
@@ -93,7 +93,7 @@ export default function Nav() {
 														<button
 															key={route}
 															onClick={() => scroller(route)}
-															className="px-3 py-2 text-sm font-medium rounded-md cursor-pointer text-azama-white hover:bg-azama-danger hover:text-azama-dark"
+															className="px-3 py-2 text-sm font-medium rounded-md cursor-pointer text-alvaro-white hover:bg-alvaro-danger hover:text-alvaro-dark"
 															aria-label={`${label}-desktop`}
 														>
 															{label}
@@ -107,7 +107,7 @@ export default function Nav() {
 										<button
 											onClick={() => setIsOpen(!isOpen)}
 											type="button"
-											className="inline-flex items-center justify-center p-2 rounded-md text-azama-white focus:outline-none focus:ring-2 focus:ring-offset-2"
+											className="inline-flex items-center justify-center p-2 rounded-md text-alvaro-white focus:outline-none focus:ring-2 focus:ring-offset-2"
 											aria-controls="mobile-menu"
 											aria-expanded="false"
 										>
@@ -166,7 +166,7 @@ export default function Nav() {
 													setIsOpen(!isOpen);
 													scroller(route);
 												}}
-												className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-azama-muted"
+												className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-alvaro-muted"
 												aria-label={`${label}-mobile`}
 											>
 												{label}

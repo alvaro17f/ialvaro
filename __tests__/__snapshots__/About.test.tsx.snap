@@ -3,7 +3,7 @@
 exports[`<About /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="p-2 mb-5 rounded-lg text-azama-dark bg-azama-primary"
+    class="p-2 mb-5 rounded-lg text-alvaro-dark bg-alvaro-primary"
     style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
   >
     <h1
@@ -15,7 +15,7 @@ exports[`<About /> > should match the snapshot 1`] = `
   </section>
   <section
     aria-label="content"
-    class="p-5 mb-5 rounded-lg text-azama-white undefined"
+    class="p-5 mb-5 rounded-lg text-alvaro-white undefined"
     style="opacity: 0; transform: translateX(-800px) translateZ(0);"
   >
     <article
@@ -29,7 +29,7 @@ exports[`<About /> > should match the snapshot 1`] = `
         >
           <img
             alt="profile picture"
-            class="border-[5px] rounded-full border-azama-white"
+            class="border-[5px] rounded-full border-alvaro-white"
             height="200"
             src="/images/profile.png"
             width="200"
@@ -62,7 +62,7 @@ exports[`<About /> > should match the snapshot 1`] = `
   </section>
   <section
     aria-label="section-form"
-    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-azama-dark bg-azama-white"
+    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-alvaro-dark bg-alvaro-white"
     style="opacity: 0; transform: translateX(-70px) scale(0.7) translateZ(0);"
   >
     <div
@@ -83,7 +83,7 @@ exports[`<About /> > should match the snapshot 1`] = `
     >
       <input
         aria-label="name"
-        class="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+        class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-alvaro-base"
         defaultvalue=""
         name="name"
         placeholder="Name *"
@@ -92,7 +92,7 @@ exports[`<About /> > should match the snapshot 1`] = `
       />
       <input
         aria-label="email"
-        class="bg-azama-base placeholder:text-azama-danger text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+        class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-alvaro-base"
         defaultvalue=""
         name="email"
         placeholder="Email *"
@@ -101,7 +101,7 @@ exports[`<About /> > should match the snapshot 1`] = `
       />
       <input
         aria-label="phone"
-        class="bg-azama-base placeholder:text-azama-muted text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-azama-base"
+        class="bg-alvaro-base placeholder:text-alvaro-muted text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-alvaro-base"
         defaultvalue=""
         name="phone"
         placeholder="Phone"
@@ -109,14 +109,14 @@ exports[`<About /> > should match the snapshot 1`] = `
       />
       <textarea
         aria-label="message"
-        class="bg-azama-base text-azama-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 shadow-md rounded-xl shadow-azama-base placeholder:text-azama-danger"
+        class="bg-alvaro-base text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 shadow-md rounded-xl shadow-alvaro-base placeholder:text-alvaro-danger"
         name="message"
         placeholder="Your message goes here... *"
         required=""
       />
       <button
         aria-label="submit"
-        class="p-4 text-5xl rounded-full shadow-md md:w-40 shadow-azama-base bg-azama-base"
+        class="p-4 text-5xl rounded-full shadow-md md:w-40 shadow-alvaro-base bg-alvaro-base"
         tabindex="0"
         type="submit"
       >

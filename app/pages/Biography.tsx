@@ -16,17 +16,17 @@ export default function Biography() {
 								alt="profile picture"
 								width={200}
 								height={200}
-								className="border-[7px] rounded-full border-azama-white hover:border-dashed cursor-pointer"
+								className="border-[7px] rounded-full border-alvaro-white hover:border-dashed cursor-pointer"
 							/>
 						</a>
 					</div>
 					<div className="max-w-[75ch]">
 						<h2 className="mb-4 text-4xl">
-							Hello <span className="text-azama-danger">World</span>!
+							Hello <span className="text-alvaro-danger">World</span>!
 						</h2>
 						<p>
 							My name is{" "}
-							<span className="text-xl text-azama-primary">Álvaro</span> and I
+							<span className="text-xl text-alvaro-primary">Álvaro</span> and I
 							am a Full Stack Developer.
 							<br />
 							I feel very fortunate to have found what I am passionate about and

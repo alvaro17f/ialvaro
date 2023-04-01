@@ -16,7 +16,7 @@
 				"one": "RSI",
 				"two": "Frontend management for Banco Caminos, Arquia, Vall Banc, Fiare, Bancofar, etc...",
 				"three": "- Web application development using Vue.js and React.js\n- REST API integration in front-end applications\n- Unit and integration test development\n- Code documentation\n- Translations using i18n\n- Modification and elaboration of login pages\n- Internal SSO access elaboration\n- Modification of CSS styles",
-				"four": "vue.js\nreact.js\ntypescript\njavascript\nnode.js\nhtml\ncss\njsp\noracle db\ninkscape\njira\ngit\ndbeaver\npostman\ninvision\noverflow"
+				"four": "vue.js\nreact.js\ntypescript\njavascript\njest.js\nnode.js\nhtml\ncss\njsp\noracle db\ninkscape\njira\ngit\ndbeaver\npostman\ninvision\noverflow"
 			}
 		},
 		"url": "https://devoteam.com/"

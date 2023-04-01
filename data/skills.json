@@ -49,9 +49,9 @@
 	},
 	{
 		"id": "9",
-		"title": "astro",
-		"image": "/skills/astro.svg",
-		"url": "https://astro.build/"
+		"title": "jest",
+		"image": "/skills/jest.svg",
+		"url": "https://jestjs.io/"
 	},
 	{
 		"id": "10",

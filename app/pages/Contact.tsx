@@ -1,11 +1,16 @@
 "use client";
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
-import { ChangeEvent, FormEvent, useRef, useState } from "react";
+import {
+	ChangeEvent,
+	FormEvent,
+	useRef,
+	useState,
+} from "react";
 import emailjs from "@emailjs/browser";
 import Spinner from "@/components/Spinner";
 
 export default function Contact() {
-	const form = useRef("");
+	const form = useRef(null);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [data, setData] = useState({
@@ -25,7 +30,7 @@ export default function Contact() {
 	};
 	const submit = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-
+		if (form.current === null) return;
 		emailjs
 			.sendForm(
 				process.env.NEXT_PUBLIC_SERVICE_ID,

@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import Spinner from "@/components/Spinner";
 
 export default function Contact() {
-	const form = useRef(null);
+	const form = useRef("");
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [data, setData] = useState({

@@ -4,8 +4,8 @@
 ![azama_next](public/demo/azama_next.png)
 
 ## TODO
-- [ ] Title reactive
-- [ ] Whitespaces
+- [x] Title reactive
+- [x] Whitespaces
 - [ ] Form
 - [ ] Hello World length selector
 - [ ] Translate

@@ -22,9 +22,9 @@ export default function Page() {
 		if (window.innerWidth > 768) {
 			if (scrollPosition < 700) {
 				setTitle("Home | AGM");
-			} else if (scrollPosition < 1800) {
+			} else if (scrollPosition < 1600) {
 				setTitle("Biography | AGM");
-			} else if (scrollPosition < 2800) {
+			} else if (scrollPosition < 2600) {
 				setTitle("Skills | AGM");
 			} else if (scrollPosition < 4200) {
 				setTitle("Experience | AGM");

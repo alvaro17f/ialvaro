@@ -176,7 +176,7 @@ export default function Contact() {
 				</AnimatePresence>
 			</LazyMotion>
 			<div className="h-28" />
-			<Toaster position="top-center" reverseOrder={false} />
+			<Toaster position="bottom-right" reverseOrder={false} />
 		</section>
 	);
 }

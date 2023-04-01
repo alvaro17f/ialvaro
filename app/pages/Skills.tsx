@@ -13,7 +13,7 @@ export default function Skills() {
 						<div className="grid place-content-center">
 							<a href={url} rel="noreferrer" target="_blank">
 								<m.div
-									className="grid p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+									className="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
 									initial={{ scale: 1, opacity: 0 }}
 									whileInView={{ opacity: 1 }}
 									viewport={{ once: true }}
@@ -22,7 +22,7 @@ export default function Skills() {
 									transition={{ duration: 0.7 }}
 								>
 									{/* <div className="h-32" /> */}
-									<img src={image} alt={title} className="w-44" />
+									<img src={image} alt={title} className="w-40 h-40 p-3" />
 									<m.h1 key={title} className="mb-5 text-xl text-azama-white">
 										{title}
 									</m.h1>

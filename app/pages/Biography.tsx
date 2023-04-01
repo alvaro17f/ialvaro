@@ -4,7 +4,7 @@ export default function Biography() {
 	return (
 		<section id="biography">
 			<Content>
-				<div className="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center h-[100dvh]">
+				<div className="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center h-[100dvh] mb-32 md:mb-0">
 					<div className="mb-5">
 						<a
 							href="https://linkedin.com/in/alvarogarciamacias"

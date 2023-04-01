@@ -22,7 +22,7 @@ export default function Skills() {
 									transition={{ duration: 0.7 }}
 								>
 									{/* <div className="h-32" /> */}
-									<img src={image} alt={title} className="w-44 h-44 " />
+									<img src={image} alt={title} className="w-44" />
 									<m.h1 key={title} className="mb-5 text-xl text-azama-white">
 										{title}
 									</m.h1>

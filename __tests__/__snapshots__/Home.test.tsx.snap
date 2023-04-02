@@ -770,32 +770,33 @@ overflow
       <form
         aria-label="contact-form"
         class="grid gap-5 p-2 place-items-center md:w-full"
+        name="<input type=\\"text\\" name=\\"name\\" placeholder=\\"Name *\\" aria-label=\\"name\\" class=\\"bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-alvaro-danger border-alvaro-muted rounded-xl focus:outline-none\\" required=\\"\\" value=\\"\\">"
       >
         <input
           aria-label="name"
           class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-alvaro-danger border-alvaro-muted rounded-xl focus:outline-none"
-          defaultvalue=""
           name="name"
           placeholder="Name *"
           required=""
           type="text"
+          value=""
         />
         <input
           aria-label="email"
           class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border border-alvaro-muted rounded-xl focus:outline-none focus:border-alvaro-danger"
-          defaultvalue=""
           name="email"
           placeholder="Email *"
           required=""
           type="email"
+          value=""
         />
         <input
           aria-label="phone"
           class="bg-alvaro-base placeholder:text-alvaro-muted text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 border border-alvaro-muted rounded-xl focus:border-alvaro-primary focus:outline-none"
-          defaultvalue=""
           name="phone"
           placeholder="Phone"
           type="text"
+          value=""
         />
         <textarea
           aria-label="message"

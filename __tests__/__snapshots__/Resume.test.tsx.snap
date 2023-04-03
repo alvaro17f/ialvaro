@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Resume /> > should match the snapshot 1`] = `
+<div>
+  <section
+    id="resume"
+  >
+    <div
+      class="h-24"
+    />
+    <a
+      href="/assets/resume.pdf"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <div
+        aria-label="content"
+        class="grid place-items-center p-5 mb-5 rounded-xl border-[5px] border-alvaro-danger text-alvaro-white"
+        style="opacity: 0;"
+        tabindex="0"
+      >
+        <h1
+          class="text-5xl text-center"
+        >
+          GET MY RESUME FOR FREE!
+        </h1>
+        <img
+          alt="download"
+          class="h-20"
+          src="/skills/react.svg"
+        />
+      </div>
+    </a>
+  </section>
+</div>
+`;

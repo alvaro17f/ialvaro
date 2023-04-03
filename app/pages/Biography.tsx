@@ -21,9 +21,9 @@ export default function Biography() {
 						</a>
 					</div>
 					<div className="max-w-[75ch]">
-						<h2 className="mb-4 text-4xl">
+						<h1 className="mb-4 text-4xl">
 							Hello <span className="text-alvaro-danger">World</span>!
-						</h2>
+						</h1>
 						<p>
 							My name is{" "}
 							<span className="text-xl text-alvaro-primary">Álvaro</span> and I

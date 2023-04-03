@@ -14,6 +14,7 @@ export default function Skills() {
 							<a href={url} rel="noreferrer" target="_blank">
 								<m.div
 									className="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+									aria-label="skill"
 									initial={{ scale: 1, opacity: 0 }}
 									whileInView={{ opacity: 1 }}
 									viewport={{ once: false }}
@@ -21,11 +22,10 @@ export default function Skills() {
 									whileTap={{ scale: 1 }}
 									transition={{ duration: 0.7 }}
 								>
-									{/* <div className="h-32" /> */}
 									<img src={image} alt={title} className="w-40 h-40 p-3" />
-									<m.h1 key={title} className="mb-5 text-xl text-alvaro-white">
+									<m.h2 key={title} className="mb-5 text-xl text-alvaro-white">
 										{title}
-									</m.h1>
+									</m.h2>
 								</m.div>
 							</a>
 						</div>

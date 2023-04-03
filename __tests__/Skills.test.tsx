@@ -1,8 +1,8 @@
-import Home from "@/app/pages/Home";
+import Skills from "@/app/pages/Skills";
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-describe("<Home />", () => {
+describe("<Skills />", () => {
 	beforeEach(() => {
 		const mockIntersectionObserver = vi.fn();
 		mockIntersectionObserver.mockReturnValue({
@@ -11,16 +11,23 @@ describe("<Home />", () => {
 			disconnect: () => null,
 		});
 		window.IntersectionObserver = mockIntersectionObserver;
-		render(<Home />);
+		render(<Skills />);
 	});
 	afterEach(cleanup);
 
 	it("should match the snapshot", () => {
-		const { container } = render(<Home />);
+		const { container } = render(<Skills />);
 		expect(container).toMatchSnapshot();
 	});
-	it("should show wobble content with 18 letters", () => {
-		expect(screen.getAllByLabelText("wobble").length).toBe(18)
-	})
 
+	it("should render a heading", () => {
+		expect(
+			screen.getByRole("heading", { level: 1, name: /skills/i }),
+		).toBeDefined();
+	});
+
+	it("should render skills", () => {
+		expect(screen.getAllByLabelText(/skill/i).length).toBe(12);
+		expect(screen.getAllByRole("img").length).toBe(12);
+	});
 });

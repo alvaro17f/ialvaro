@@ -1,0 +1,352 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Skills /> > should match the snapshot 1`] = `
+<div>
+  <section
+    id="skills"
+  >
+    <div
+      class="h-24"
+    />
+    <section
+      class="p-2 mb-5 rounded-lg text-alvaro-dark from-alvaro-primary to-transparent bg-gradient-to-r"
+      style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
+    >
+      <h1
+        class="text-5xl md:text-3xl"
+        style="opacity: 0;"
+      >
+        Skills
+      </h1>
+    </section>
+    <div
+      class="grid grid-cols-2 gap-5 md:grid-cols-4 place-items-center"
+    >
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://react.dev/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="react.js"
+              class="w-40 h-40 p-3"
+              src="/skills/react.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              react.js
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://vue.org/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="vue.js"
+              class="w-40 h-40 p-3"
+              src="/skills/vue.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              vue.js
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://typescriptlang.org/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="typescript"
+              class="w-40 h-40 p-3"
+              src="/skills/typescript.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              typescript
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://javascript.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="javascript"
+              class="w-40 h-40 p-3"
+              src="/skills/javascript.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              javascript
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://tailwindcss.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="tailwind"
+              class="w-40 h-40 p-3"
+              src="/skills/tailwind.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              tailwind
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://nextjs.org/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="next.js"
+              class="w-40 h-40 p-3"
+              src="/skills/next.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              next.js
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://rust-lang.org/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="rust"
+              class="w-40 h-40 p-3"
+              src="/skills/ferris.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              rust
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://go.dev/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="go"
+              class="w-40 h-40 p-3"
+              src="/skills/go.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              go
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://jestjs.io/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="jest"
+              class="w-40 h-40 p-3"
+              src="/skills/jest.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              jest
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://nodejs.org/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="node.js"
+              class="w-40 h-40 p-3"
+              src="/skills/node.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              node.js
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://docker.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="docker"
+              class="w-40 h-40 p-3"
+              src="/skills/docker.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              docker
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div
+        class="grid place-content-center"
+      >
+        <a
+          href="https://mysql.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            aria-label="skill"
+            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
+            style="opacity: 0; transform: none;"
+            tabindex="0"
+          >
+            <img
+              alt="sql"
+              class="w-40 h-40 p-3"
+              src="/skills/sql.svg"
+            />
+            <h2
+              class="mb-5 text-xl text-alvaro-white"
+            >
+              sql
+            </h2>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+`;

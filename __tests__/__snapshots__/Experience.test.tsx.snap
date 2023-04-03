@@ -1,0 +1,181 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Experience /> > should match the snapshot 1`] = `
+<div>
+  <section
+    id="experience"
+  >
+    <div
+      class="h-24"
+    />
+    <section
+      class="p-2 mb-5 rounded-lg text-alvaro-dark from-alvaro-primary to-transparent bg-gradient-to-r"
+      style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
+    >
+      <h1
+        class="text-5xl md:text-3xl"
+        style="opacity: 0;"
+      >
+        Experience
+      </h1>
+    </section>
+    <div
+      class="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
+    >
+      <div
+        aria-label="experience"
+        class="grid gap-2 border-dashed cursor-pointer border-[4px] border-alvaro-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
+        style="opacity: 0;"
+        tabindex="0"
+      >
+        <a
+          href="https://devoteam.com/"
+          target="_blank"
+        >
+          <img
+            alt="devoteam"
+            class="w-56 h-36"
+            src="/experience/devoteam.svg"
+          />
+        </a>
+        <p>
+          October 2021
+           - 
+          April 2023
+        </p>
+      </div>
+      <div
+        class="mt-12 md:mt-0"
+      >
+        <h1
+          aria-label="title"
+          class="mb-5 text-4xl md:text-6xl text-alvaro-primary"
+          style="opacity: 0;"
+        >
+          devoteam
+        </h1>
+        <div
+          aria-label="content"
+          class="mb-20 whitespace-pre-wrap"
+          style="opacity: 0;"
+        >
+          <p
+            class="text-xl underline text-alvaro-danger"
+          >
+            Client
+          </p>
+          RSI
+          <br />
+          <br />
+          <p
+            class="text-xl underline text-alvaro-danger"
+          >
+            Projects
+          </p>
+          Frontend management for Banco Caminos, Arquia, Vall Banc, Fiare, Bancofar, etc...
+          <br />
+          <br />
+          <p
+            class="text-xl underline text-alvaro-danger"
+          >
+            Tasks
+          </p>
+          - Web application development using Vue.js and React.js
+- REST API integration in front-end applications
+- Unit and integration test development
+- Code documentation
+- Translations using i18n
+- Modification and elaboration of login pages
+- Internal SSO access elaboration
+- Modification of CSS styles
+          <br />
+          <br />
+          <p
+            class="text-xl underline text-alvaro-danger"
+          >
+            Skills
+          </p>
+          vue.js
+react.js
+typescript
+javascript
+jest.js
+node.js
+html
+css
+jsp
+oracle db
+inkscape
+jira
+git
+dbeaver
+postman
+invision
+overflow
+        </div>
+      </div>
+    </div>
+    <div
+      class="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
+    >
+      <div
+        aria-label="experience"
+        class="grid gap-2 border-dashed cursor-pointer border-[4px] border-alvaro-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
+        style="opacity: 0;"
+        tabindex="0"
+      >
+        <a
+          href=""
+          target="_blank"
+        >
+          <img
+            alt="your company"
+            class="w-56 h-36"
+            src="/experience/company.svg"
+          />
+        </a>
+        <p>
+          April 2023
+           - 
+          now
+        </p>
+      </div>
+      <div
+        class="mt-12 md:mt-0"
+      >
+        <h1
+          aria-label="title"
+          class="mb-5 text-4xl md:text-6xl text-alvaro-primary"
+          style="opacity: 0;"
+        >
+          your company
+        </h1>
+        <div
+          aria-label="content"
+          class="mb-20 whitespace-pre-wrap"
+          style="opacity: 0;"
+        >
+          <p
+            class="text-xl underline text-alvaro-danger"
+          />
+          <br />
+          <br />
+          <p
+            class="text-xl underline text-alvaro-danger"
+          />
+          <br />
+          <br />
+          <p
+            class="text-xl underline text-alvaro-danger"
+          />
+          <br />
+          <br />
+          <p
+            class="text-xl underline text-alvaro-danger"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

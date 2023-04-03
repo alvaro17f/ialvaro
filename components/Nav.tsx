@@ -107,6 +107,7 @@ export default function Nav() {
 											onClick={() => setIsOpen(!isOpen)}
 											type="button"
 											className="inline-flex items-center justify-center p-2 rounded-md text-alvaro-white focus:outline-none focus:ring-2 focus:ring-offset-2"
+											aria-label="menu-mobile"
 											aria-controls="mobile-menu"
 											aria-expanded="false"
 										>

@@ -38,6 +38,7 @@ const Text = ({
 				animate={controls}
 				onMouseOver={() => !isPlaying && rubberBand()}
 				onAnimationComplete={() => setIsPlaying(false)}
+				aria-label="wobble"
 			>
 				{children}
 			</m.span>
@@ -51,7 +52,6 @@ type Props = {
 };
 
 export default function Wobble({ sentence, style }: Props) {
-	// const sentence = "Hello World".split("");
 	return (
 		<>
 			{sentence.split("").map((letter, index) => {

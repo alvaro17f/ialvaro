@@ -14,7 +14,8 @@ export default function Experience() {
 						<div className="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10">
 							<m.div
 								className="grid gap-2 border-dashed cursor-pointer border-[4px] border-alvaro-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
-								initial={{ scale: 1, opacity: 0 }}
+								aria-label="experience"
+								initial={{ opacity: 0 }}
 								whileInView={{ opacity: 1 }}
 								viewport={{ once: false }}
 								whileHover={{ scale: 1.1 }}
@@ -31,6 +32,7 @@ export default function Experience() {
 							<div className="mt-12 md:mt-0">
 								<m.h1
 									key={title}
+									aria-label="title"
 									initial={{ opacity: 0 }}
 									whileInView={{ opacity: 1 }}
 									viewport={{ once: false }}
@@ -42,6 +44,7 @@ export default function Experience() {
 
 								<m.div
 									className="mb-20 whitespace-pre-wrap"
+									aria-label="content"
 									initial={{ opacity: 0 }}
 									whileInView={{ opacity: 1 }}
 									viewport={{ once: false }}

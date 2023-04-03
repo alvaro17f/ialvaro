@@ -1,0 +1,76 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Biography /> > should match the snapshot 1`] = `
+<div>
+  <section
+    id="biography"
+  >
+    <section
+      aria-label="content"
+      class="p-5 mb-5 rounded-lg text-alvaro-white"
+      style="opacity: 0;"
+    >
+      <article
+        class="p-5"
+      >
+        <div
+          class="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center h-[100dvh] mb-32 md:mb-0"
+        >
+          <div
+            class="mb-5"
+          >
+            <a
+              href="https://linkedin.com/in/alvarogarciamacias"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                alt="profile picture"
+                class="border-[7px] rounded-full border-alvaro-white hover:border-dashed cursor-pointer"
+                height="200"
+                src="/images/profile/profile.png"
+                width="200"
+              />
+            </a>
+          </div>
+          <div
+            class="max-w-[75ch]"
+          >
+            <h1
+              class="mb-4 text-4xl"
+            >
+              Hello 
+              <span
+                class="text-alvaro-danger"
+              >
+                World
+              </span>
+              !
+            </h1>
+            <p>
+              My name is
+               
+              <span
+                class="text-xl text-alvaro-primary"
+              >
+                Álvaro
+              </span>
+               and I am a Full Stack Developer.
+              <br />
+              I feel very fortunate to have found what I am passionate about and to make it my job.
+              <br />
+              I have also worked managing, training and leading marketing teams at a national level.
+              <br />
+              If there is one thing that characterises me, it is that I am 100% involved in everything I do.
+              <br />
+              I am hard-working, perfectionist and non-conformist.
+              <br />
+              I have a direct and creative working style. And I put all the energy I get from working in what I am so enthusiastic about.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </section>
+</div>
+`;

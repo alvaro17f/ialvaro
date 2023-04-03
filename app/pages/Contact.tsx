@@ -65,7 +65,7 @@ export default function Contact() {
 							key={`${isSubmitted}`}
 						>
 							<div className="mb-5 md:mb-0 md:text-center">
-								<h2 className="mb-5 text-3xl">CONTACT ME!</h2>
+								<h1 className="mb-5 text-3xl">CONTACT ME!</h1>
 								<div className="grid grid-cols-2 place-items-center">
 									<a
 										href="https://github.com/alvaro17f"

@@ -74,7 +74,7 @@ export default function Nav() {
 												}}
 											>
 												<img
-													src="/images/ialvaro.svg"
+													src="/images/logo/blue.png"
 													alt="logo"
 													className="h-10"
 												/>

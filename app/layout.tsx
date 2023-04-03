@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import Nav from "@/components/Nav";
 
 export const metadata = {
-	icons: { icon: "/favicon.svg" },
+	icons: { icon: "/images/favicon/blue.svg" },
 	// title: {
 	// 	default: "ialvaro",
 	// 	template: "%s - [ iAlvaro ]",

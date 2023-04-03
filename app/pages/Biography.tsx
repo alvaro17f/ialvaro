@@ -12,7 +12,7 @@ export default function Biography() {
 							target="_blank"
 						>
 							<img
-								src="/images/profile.png"
+								src="/images/profile/profile.png"
 								alt="profile picture"
 								width={200}
 								height={200}

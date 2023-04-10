@@ -27,7 +27,7 @@ exports[`<Contact /> > should match the snapshot 1`] = `
         >
           <a
             href="https://github.com/alvaro17f"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <svg
@@ -44,7 +44,7 @@ exports[`<Contact /> > should match the snapshot 1`] = `
           </a>
           <a
             href="https://linkedin.com/in/alvarogarciamacias"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <svg

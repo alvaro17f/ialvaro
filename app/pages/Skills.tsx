@@ -10,7 +10,7 @@ export default function Skills() {
 				{data.map(({ id, title, image, url }) => (
 					<LazyMotion key={id} features={domAnimation}>
 						<div className="grid place-content-center">
-							<a href={url} rel="noreferrer" target="_blank">
+							<a href={url} rel="noopener noreferrer" target="_blank">
 								<m.div
 									className="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
 									aria-label="skill"

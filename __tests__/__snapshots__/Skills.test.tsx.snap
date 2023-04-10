@@ -27,7 +27,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://react.dev/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -54,7 +54,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://vue.org/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -81,7 +81,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://typescriptlang.org/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -108,7 +108,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://javascript.com/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -135,7 +135,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://tailwindcss.com/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -162,7 +162,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://nextjs.org/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -189,7 +189,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://rust-lang.org/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -216,7 +216,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://go.dev/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -243,7 +243,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://jestjs.io/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -270,7 +270,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://nodejs.org/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -297,7 +297,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://docker.com/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -324,7 +324,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <a
           href="https://mysql.com/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div

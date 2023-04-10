@@ -29,7 +29,7 @@ export default function Biography() {
 					<div className="mb-5">
 						<a
 							href="https://linkedin.com/in/alvarogarciamacias"
-							rel="noreferrer"
+							rel="noopener noreferrer"
 							target="_blank"
 						>
 							<img

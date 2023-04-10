@@ -69,7 +69,7 @@ export default function Contact() {
 									<a
 										href="https://github.com/alvaro17f"
 										target="_blank"
-										rel="noreferrer"
+										rel="noopener noreferrer"
 									>
 										<svg
 											className="fill-alvaro-white hover:fill-alvaro-primary"
@@ -84,7 +84,7 @@ export default function Contact() {
 									<a
 										href="https://linkedin.com/in/alvarogarciamacias"
 										target="_blank"
-										rel="noreferrer"
+										rel="noopener noreferrer"
 									>
 										<svg
 											className="fill-alvaro-white hover:fill-alvaro-primary"
@@ -175,7 +175,7 @@ export default function Contact() {
 				</AnimatePresence>
 			</LazyMotion>
 			<div className="h-28" />
-			<Toaster position="bottom-left" reverseOrder={false} />
+			<Toaster position="top-center" reverseOrder={false} />
 		</section>
 	);
 }

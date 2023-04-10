@@ -1,5 +1,4 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
-import Link from "next/link";
 import data from "@/data/experience.json";
 import Header from "@/components/Header";
 
@@ -21,9 +20,9 @@ export default function Experience() {
 								whileTap={{ scale: 1 }}
 								transition={{ duration: 0.7 }}
 							>
-								<Link href={url} target="_blank">
+								<a href={url} target="_blank" rel="noopener noreferrer">
 									<img src={image} alt={title} className="w-56 h-36" />
-								</Link>
+								</a>
 								<p>
 									{date_from} - {date_to}
 								</p>

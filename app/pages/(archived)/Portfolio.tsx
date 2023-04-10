@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { domAnimation, LazyMotion, m, useScroll } from "framer-motion";
-import Link from "next/link";
 import data from "@/data/portfolio.json";
 import Header from "@/components/Header";
 
@@ -18,27 +17,27 @@ export default function Portfolio() {
 				{data.map(({ id, title, image, url, description }) => (
 					<LazyMotion key={id} features={domAnimation}>
 						<div ref={ref}>
-								<Link href={url} target="_blank">
-									<m.div
-										className="cursor-pointer w-[30dvw]"
-										initial={{ scale: 1, opacity: 0 }}
-										whileInView={{opacity: 1}}
-										viewport={{once: false}}
-										whileHover={{ scale: 1.1 }}
-										whileTap={{ scale: 1 }}
-										transition={{ duration: 0.7 }}
+							<a href={url} target="_blank" rel="noopener noreferrer">
+								<m.div
+									className="cursor-pointer w-[30dvw]"
+									initial={{ scale: 1, opacity: 0 }}
+									whileInView={{ opacity: 1 }}
+									viewport={{ once: false }}
+									whileHover={{ scale: 1.1 }}
+									whileTap={{ scale: 1 }}
+									transition={{ duration: 0.7 }}
+								>
+									<div className="h-32" />
+									<m.h1
+										key={title}
+										className="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
 									>
-										<div className="h-32" />
-										<m.h1
-											key={title}
-											className="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
-										>
-											{title}
-										</m.h1>
-										<img src={image} alt={title} />
-										<p>{description}</p>
-									</m.div>
-								</Link>
+										{title}
+									</m.h1>
+									<img src={image} alt={title} />
+									<p>{description}</p>
+								</m.div>
+							</a>
 						</div>
 					</LazyMotion>
 				))}

@@ -1,4 +1,3 @@
-"use client";
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";

@@ -1,5 +1,4 @@
-"use client";
-import { domAnimation, LazyMotion, m, useScroll } from "framer-motion";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import data from "@/data/skills.json";
 import Header from "@/components/Header";
 

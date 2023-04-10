@@ -1,4 +1,3 @@
-"use client";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import Link from "next/link";
 import data from "@/data/experience.json";

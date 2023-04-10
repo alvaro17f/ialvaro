@@ -24,8 +24,8 @@ const links = [
 	// 	route: "portfolio",
 	// },
 	{
-		label: "Resume",
-		route: "resume",
+		label: "CV",
+		route: "cv",
 	},
 	{
 		label: "Contact",

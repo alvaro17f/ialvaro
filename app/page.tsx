@@ -6,11 +6,16 @@ import Biography from "./pages/Biography";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
-import Resume from "./pages/Resume";
+import CV from "./pages/CV";
 
 export default function Page() {
+	const [isMobile, setIsMobile] = useState(true);
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const [title, setTitle] = useState("[ iAlvaro ]");
+
+	useEffect(() => {
+		setIsMobile(window.innerWidth < 768);
+	}, [window.innerWidth]);
 
 	useEffect(() => {
 		const updatePosition = () => {
@@ -19,7 +24,7 @@ export default function Page() {
 
 		window.addEventListener("scroll", updatePosition);
 
-		if (window.innerWidth > 768) {
+		if (!isMobile) {
 			if (scrollPosition < 700) {
 				setTitle("Home - [ iAlvaro ]");
 			} else if (scrollPosition < 1600) {
@@ -29,7 +34,7 @@ export default function Page() {
 			} else if (scrollPosition < 4200) {
 				setTitle("Experience - [ iAlvaro ]");
 			} else if (scrollPosition < 4500) {
-				setTitle("Resume - [ iAlvaro ]");
+				setTitle("CV - [ iAlvaro ]");
 			} else if (scrollPosition >= 4500) {
 				setTitle("Contact - [ iAlvaro ]");
 			} else {
@@ -47,11 +52,12 @@ export default function Page() {
 			<title>{title}</title>
 			{/* TODO: BACKGROUND WITH HTML ELEMENTS TRANSPARENT */}
 			<Home />
+			{/* <Biography /> */}
 			<Biography />
 			<Skills />
 			<Experience />
 			{/* <Portfolio /> */}
-			<Resume />
+			<CV />
 			<Contact />
 			<Scrollup />
 		</>

@@ -1,13 +1,12 @@
-import Content from "@/components/Content";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 
-export default function Resume() {
+export default function CV() {
 	return (
 		<>
 			<LazyMotion features={domAnimation}>
-				<section id="resume">
+				<section id="cv">
 					<div className="h-24" />
-					<a href="/assets/resume.pdf" target="_blank" rel="noreferrer">
+					<a href="/cv/cv.pdf" target="_blank" rel="noreferrer">
 						<m.div
 							className="grid place-items-center p-5 mb-5 rounded-xl border-[5px] border-alvaro-danger text-alvaro-white"
 							initial={{ opacity: 0 }}
@@ -18,8 +17,8 @@ export default function Resume() {
 							transition={{ duration: 2 }}
 							aria-label="content"
 						>
-							<h1 className="text-5xl text-center">GET MY RESUME FOR FREE!</h1>
-							<img src="/skills/react.svg" alt="download" className="h-20" />
+							<h1 className="text-5xl text-center">GET MY CV FOR FREE!</h1>
+							<img src="/cv/download.svg" alt="download" className="w-10 h-10 mt-5" />
 						</m.div>
 					</a>
 				</section>

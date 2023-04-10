@@ -1,15 +1,15 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Resume /> > should match the snapshot 1`] = `
+exports[`<CV /> > should match the snapshot 1`] = `
 <div>
   <section
-    id="resume"
+    id="cv"
   >
     <div
       class="h-24"
     />
     <a
-      href="/assets/resume.pdf"
+      href="/cv/cv.pdf"
       rel="noreferrer"
       target="_blank"
     >
@@ -22,12 +22,12 @@ exports[`<Resume /> > should match the snapshot 1`] = `
         <h1
           class="text-5xl text-center"
         >
-          GET MY RESUME FOR FREE!
+          GET MY CV FOR FREE!
         </h1>
         <img
           alt="download"
-          class="h-20"
-          src="/skills/react.svg"
+          class="w-10 h-10 mt-5"
+          src="/cv/download.svg"
         />
       </div>
     </a>

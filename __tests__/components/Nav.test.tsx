@@ -43,7 +43,7 @@ describe("<Nav />", () => {
 			expect(navigation.getByLabelText(/biography/i)).toBeDefined();
 			expect(navigation.getByLabelText(/skills/i)).toBeDefined();
 			expect(navigation.getByLabelText(/experience/i)).toBeDefined();
-			expect(navigation.getByLabelText(/resume/i)).toBeDefined();
+			expect(navigation.getByLabelText(/cv/i)).toBeDefined();
 			expect(navigation.getByLabelText(/contact/i)).toBeDefined();
 		});
 	});
@@ -58,7 +58,7 @@ describe("<Nav />", () => {
 			expect(navigation.getByLabelText(/biography-mobile/i)).toBeDefined();
 			expect(navigation.getByLabelText(/skills-mobile/i)).toBeDefined();
 			expect(navigation.getByLabelText(/experience-mobile/i)).toBeDefined();
-			expect(navigation.getByLabelText(/resume-mobile/i)).toBeDefined();
+			expect(navigation.getByLabelText(/cv-mobile/i)).toBeDefined();
 			expect(navigation.getByLabelText(/contact-mobile/i)).toBeDefined();
 		});
 	});
@@ -71,5 +71,10 @@ describe("<Nav />", () => {
 			fireEvent.click(navigation.getByLabelText(/home-mobile/i));
 		});
 		expect(screen.queryByLabelText(/home-mobile/i)).toBeNull();
+	});
+
+	it("should allow button to be clicked", () => {
+		fireEvent.scroll(window, { target: { scrollY: 800 } });
+		fireEvent.click(screen.getByAltText("logo"));
 	});
 });

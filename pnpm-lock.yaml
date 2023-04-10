@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@emailjs/browser': ^3.10.0
   '@testing-library/react': ^14.0.0
-  '@types/react': 18.0.32
+  '@types/react': 18.0.33
   '@types/react-dom': 18.0.11
   '@vitejs/plugin-react': ^3.1.0
   '@vitest/coverage-c8': ^0.29.8
@@ -11,7 +11,7 @@ specifiers:
   autoprefixer: 10.4.14
   csstype: ^3.1.2
   framer-motion: ^10.10.0
-  happy-dom: ^9.1.0
+  happy-dom: ^9.1.7
   next: 13.2.4
   postcss: 8.4.21
   react: 18.2.0
@@ -25,7 +25,7 @@ specifiers:
 
 dependencies:
   '@emailjs/browser': 3.10.0
-  '@types/react': 18.0.32
+  '@types/react': 18.0.33
   '@types/react-dom': 18.0.11
   framer-motion: 10.10.0_biqbaboplfbrettd7655fr4n2y
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
@@ -41,12 +41,12 @@ devDependencies:
   '@vitest/ui': 0.29.8
   autoprefixer: 10.4.14_postcss@8.4.21
   csstype: 3.1.2
-  happy-dom: 9.1.0
+  happy-dom: 9.1.7
   postcss: 8.4.21
   rome: 12.0.0
   tailwindcss: 3.3.1_postcss@8.4.21
   vite: 4.2.1
-  vitest: 0.29.8_xqxrqu3gf7v7zttxml5ldt6qnq
+  vitest: 0.29.8_jys6l3gkykzbk5wllfuye26ng4
 
 packages:
 
@@ -804,10 +804,10 @@ packages:
   /@types/react-dom/18.0.11:
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
-      '@types/react': 18.0.32
+      '@types/react': 18.0.33
 
-  /@types/react/18.0.32:
-    resolution: {integrity: sha512-gYGXdtPQ9Cj0w2Fwqg5/ak6BcK3Z15YgjSqtyDizWUfx7mQ8drs0NBUzRRsAdoFVTO8kJ8L2TL8Skm7OFPnLUw==}
+  /@types/react/18.0.33:
+    resolution: {integrity: sha512-sHxzVxeanvQyQ1lr8NSHaj0kDzcNiGpILEVt69g9S31/7PfMvNCKLKcsHw4lYKjs3cGNJjXSP4mYzX43QlnjNA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -840,7 +840,7 @@ packages:
       c8: 7.13.0
       picocolors: 1.0.0
       std-env: 3.3.2
-      vitest: 0.29.8_xqxrqu3gf7v7zttxml5ldt6qnq
+      vitest: 0.29.8_jys6l3gkykzbk5wllfuye26ng4
     dev: true
 
   /@vitest/expect/0.29.8:
@@ -1479,8 +1479,8 @@ packages:
       get-intrinsic: 1.2.0
     dev: true
 
-  /happy-dom/9.1.0:
-    resolution: {integrity: sha512-Z/oOcAJsZjHFOQ/VK8n0CnZBjWucZNeZwFdlDK234vIBW9IVYGWjSUR9ujK6nwsSzJ6vNdYuSZoiag72AzlD0A==}
+  /happy-dom/9.1.7:
+    resolution: {integrity: sha512-tLkzW0w9EclIsV75hlCFStJa7CYSEUe+OVU8vK+3wzSvzFeXrGnCujuMcYQAPUXDl1CXoQ2ySaTZcqt3ZBJbSw==}
     dependencies:
       css.escape: 1.5.1
       he: 1.2.0
@@ -2660,7 +2660,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.29.8_xqxrqu3gf7v7zttxml5ldt6qnq:
+  /vitest/0.29.8_jys6l3gkykzbk5wllfuye26ng4:
     resolution: {integrity: sha512-JIAVi2GK5cvA6awGpH0HvH/gEG9PZ0a/WoxdiV3PmqK+3CjQMf8c+J/Vhv4mdZ2nRyXFw66sAg6qz7VNkaHfDQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -2704,7 +2704,7 @@ packages:
       cac: 6.7.14
       chai: 4.3.7
       debug: 4.3.4
-      happy-dom: 9.1.0
+      happy-dom: 9.1.7
       local-pkg: 0.4.3
       pathe: 1.1.0
       picocolors: 1.0.0

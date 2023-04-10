@@ -1,4 +1,3 @@
-"use client";
 import { useRef } from "react";
 import { domAnimation, LazyMotion, m, useScroll } from "framer-motion";
 import Link from "next/link";

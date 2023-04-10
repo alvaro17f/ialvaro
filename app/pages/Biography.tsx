@@ -9,7 +9,7 @@ export default function Biography() {
 
 	useEffect(() => {
 		setIsMobile(window.innerWidth < 768);
-	}, [window.innerWidth]);
+	});
 
 	useEffect(() => {
 		setSelectedBio(data[slider]);

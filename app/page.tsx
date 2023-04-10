@@ -15,7 +15,7 @@ export default function Page() {
 
 	useEffect(() => {
 		setIsMobile(window.innerWidth < 768);
-	}, [window.innerWidth]);
+	});
 
 	useEffect(() => {
 		const updatePosition = () => {

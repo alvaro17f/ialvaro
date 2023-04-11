@@ -1,12 +1,12 @@
 "use client";
 import Scrollup from "@/components/Scrollup";
 import { useEffect, useState } from "react";
-import Home from "./pages/Home";
 import Biography from "./pages/Biography";
-import Experience from "./pages/Experience";
-import Contact from "./pages/Contact";
-import Skills from "./pages/Skills";
 import CV from "./pages/CV";
+import Contact from "./pages/Contact";
+import Experience from "./pages/Experience";
+import Home from "./pages/Home";
+import Skills from "./pages/Skills";
 
 export default function Page() {
 	const [isMobile, setIsMobile] = useState(true);
@@ -52,7 +52,6 @@ export default function Page() {
 			<title>{title}</title>
 			{/* TODO: BACKGROUND WITH HTML ELEMENTS TRANSPARENT */}
 			<Home />
-			{/* <Biography /> */}
 			<Biography />
 			<Skills />
 			<Experience />

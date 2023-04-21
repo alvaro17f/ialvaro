@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useId, useState } from "react";
 import {
 	m,
 	LazyMotion,
@@ -52,11 +52,13 @@ type Props = {
 };
 
 export default function Wobble({ sentence, style }: Props) {
+	const uuid = useId();
+
 	return (
 		<>
 			{sentence.split("").map((letter, index) => {
 				return (
-					<Text style={style} key={index}>
+					<Text style={style} key={`${uuid}-${index}`}>
 						{letter === " " ? "\u00A0" : letter}
 					</Text>
 				);

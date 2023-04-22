@@ -70,7 +70,7 @@ export default function Biography() {
 							max={data.length - 1}
 							value={slider}
 							onChange={handleSlider}
-							className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+							className="w-full h-2 bg-gray-200 rounded-lg outline-none appearance-none cursor-pointer dark:bg-gray-700"
 						/>
 					)}
 					<button

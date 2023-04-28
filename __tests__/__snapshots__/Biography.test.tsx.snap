@@ -72,7 +72,7 @@ exports[`<Biography /> > should match the snapshot 1`] = `
             Shortest
           </button>
           <input
-            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+            class="w-full h-2 bg-gray-200 rounded-lg outline-none appearance-none cursor-pointer dark:bg-gray-700"
             id="minmax-range"
             max="2"
             min="0"

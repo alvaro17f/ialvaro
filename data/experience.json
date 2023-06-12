@@ -42,27 +42,5 @@
 			}
 		},
 		"url": "https://knowmadmood.com/"
-	},
-	{
-		"id": "3",
-		"title": "your company",
-		"image": "/experience/company.svg",
-		"date_from": "April 2023",
-		"date_to": "now",
-		"description": {
-			"title": {
-				"one": "",
-				"two": "",
-				"three": "",
-				"four": ""
-			},
-			"content": {
-				"one": "",
-				"two": "",
-				"three": "",
-				"four": ""
-			}
-		},
-		"_url": ""
 	}
 ]

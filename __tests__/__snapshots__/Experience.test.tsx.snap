@@ -131,7 +131,7 @@ overflow
           target="_blank"
         >
           <img
-            alt="Knowmad Mood"
+            alt="knowmad mood"
             class="w-56 h-36"
             src="/experience/knowmadmood.svg"
           />
@@ -150,7 +150,7 @@ overflow
           class="mb-5 text-4xl md:text-6xl text-alvaro-primary"
           style="opacity: 0;"
         >
-          Knowmad Mood
+          knowmad mood
         </h1>
         <div
           aria-label="content"

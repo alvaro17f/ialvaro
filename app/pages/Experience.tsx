@@ -6,7 +6,7 @@ export default function Experience() {
 	return (
 		<section id="experience">
 			<Header title="Experience" />
-			{data.reverse().map(
+			{data.map(
 				({ id, title, image, url, date_from, date_to, description }) => (
 					<LazyMotion key={id} features={domAnimation}>
 						<div className="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10">

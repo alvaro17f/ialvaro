@@ -1,27 +1,5 @@
 [
 	{
-		"id": "1",
-		"title": "devoteam",
-		"image": "/experience/devoteam.svg",
-		"date_from": "October 2021",
-		"date_to": "April 2023",
-		"description": {
-			"title": {
-				"one": "Client",
-				"two": "Projects",
-				"three": "Tasks",
-				"four": "Skills"
-			},
-			"content": {
-				"one": "RSI",
-				"two": "Frontend management for Banco Caminos, Arquia, Vall Banc, Fiare, Bancofar, etc...",
-				"three": "- Web application development using Vue.js and React.js\n- REST API integration in front-end applications\n- Unit and integration test development\n- Code documentation\n- Translations using i18n\n- Modification and elaboration of login pages\n- Internal SSO access elaboration\n- Modification of CSS styles",
-				"four": "vue.js\nreact.js\ntypescript\njavascript\njest.js\nnode.js\nhtml\ncss\njsp\noracle db\ninkscape\njira\ngit\ndbeaver\npostman\ninvision\noverflow"
-			}
-		},
-		"url": "https://devoteam.com/"
-	},
-	{
 		"id": "2",
 		"title": "knowmad mood",
 		"image": "/experience/knowmadmood.svg",
@@ -42,5 +20,27 @@
 			}
 		},
 		"url": "https://knowmadmood.com/"
+	},
+	{
+		"id": "1",
+		"title": "devoteam",
+		"image": "/experience/devoteam.svg",
+		"date_from": "October 2021",
+		"date_to": "April 2023",
+		"description": {
+			"title": {
+				"one": "Client",
+				"two": "Projects",
+				"three": "Tasks",
+				"four": "Skills"
+			},
+			"content": {
+				"one": "RSI",
+				"two": "Frontend management for Banco Caminos, Arquia, Vall Banc, Fiare, Bancofar, etc...",
+				"three": "- Web application development using Vue.js and React.js\n- REST API integration in front-end applications\n- Unit and integration test development\n- Code documentation\n- Translations using i18n\n- Modification and elaboration of login pages\n- Internal SSO access elaboration\n- Modification of CSS styles",
+				"four": "vue.js\nreact.js\ntypescript\njavascript\njest.js\nnode.js\nhtml\ncss\njsp\noracle db\ninkscape\njira\ngit\ndbeaver\npostman\ninvision\noverflow"
+			}
+		},
+		"url": "https://devoteam.com/"
 	}
 ]

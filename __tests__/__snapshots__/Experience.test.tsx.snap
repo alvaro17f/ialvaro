@@ -65,12 +65,15 @@ exports[`<Experience /> > should match the snapshot 1`] = `
           >
             Client
           </p>
-          Open Bank
+          Openbank
           <br />
           <br />
           <p
             class="text-xl underline text-alvaro-danger"
-          />
+          >
+            Projects
+          </p>
+          Onboarding
           <br />
           <br />
           <p

@@ -26,7 +26,7 @@ exports[`<Biography /> > should match the snapshot 1`] = `
               target="_blank"
             >
               <img
-                alt="profile picture"
+                alt="profile"
                 class="border-[7px] rounded-full border-alvaro-white hover:border-dashed cursor-pointer"
                 height="250"
                 src="/images/profile/profile.png"
@@ -68,6 +68,7 @@ exports[`<Biography /> > should match the snapshot 1`] = `
         >
           <button
             class="p-2 border text-alvaro-primary rounded-xl border-alvaro-primary md:hover:bg-alvaro-primary md:hover:text-alvaro-base"
+            type="button"
           >
             Shortest
           </button>
@@ -81,6 +82,7 @@ exports[`<Biography /> > should match the snapshot 1`] = `
           />
           <button
             class="p-2 border text-alvaro-danger rounded-xl border-alvaro-danger md:hover:bg-alvaro-danger md:hover:text-alvaro-base"
+            type="button"
           >
             Longest
           </button>

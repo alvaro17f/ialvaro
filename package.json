@@ -14,27 +14,27 @@
 	},
 	"dependencies": {
 		"@emailjs/browser": "^3.11.0",
-		"@types/react": "18.2.18",
+		"@types/react": "18.2.21",
 		"@types/react-dom": "18.2.7",
-		"framer-motion": "^10.15.0",
-		"next": "13.4.12",
+		"framer-motion": "^10.16.1",
+		"next": "13.4.19",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-hot-toast": "^2.4.1",
-		"typescript": "5.1.6"
+		"typescript": "5.2.2"
 	},
 	"devDependencies": {
 		"@testing-library/react": "^14.0.0",
 		"@vitejs/plugin-react": "^4.0.4",
-		"@vitest/coverage-v8": "^0.33.0",
-		"@vitest/ui": "^0.33.0",
-		"autoprefixer": "10.4.14",
+		"@vitest/coverage-v8": "^0.34.3",
+		"@vitest/ui": "^0.34.3",
+		"autoprefixer": "10.4.15",
 		"csstype": "^3.1.2",
-		"happy-dom": "^10.5.2",
-		"postcss": "8.4.27",
+		"happy-dom": "^10.11.1",
+		"postcss": "8.4.28",
 		"rome": "12.1.3",
 		"tailwindcss": "3.3.3",
-		"vite": "^4.4.8",
-		"vitest": "^0.33.0"
+		"vite": "^4.4.9",
+		"vitest": "^0.34.3"
 	}
 }

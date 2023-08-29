@@ -1,7 +1,7 @@
 # ialvaro
 
 
-![azama_next](public/images/readme/demo.png)
+![azama_next](public/images/readme/ialvaro.png)
 
 ## TODO
 - [x] Title reactive

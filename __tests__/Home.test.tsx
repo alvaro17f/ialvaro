@@ -20,7 +20,6 @@ describe("<Home />", () => {
 		expect(container).toMatchSnapshot();
 	});
 	it("should show wobble content with 18 letters", () => {
-		expect(screen.getAllByLabelText("wobble").length).toBe(18)
-	})
-
+		expect(screen.getAllByLabelText("wobble").length).toBe(18);
+	});
 });

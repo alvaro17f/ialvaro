@@ -34,14 +34,12 @@ describe("<Experience />", () => {
 	});
 
 	it("should render a experience's title", () => {
-		expect(
-			screen.getAllByLabelText(/title/i).length,
-		).toBeGreaterThanOrEqual(1);
+		expect(screen.getAllByLabelText(/title/i).length).toBeGreaterThanOrEqual(1);
 	});
 
 	it("should render a experience's content", () => {
-		expect(
-			screen.getAllByLabelText(/content/i).length,
-		).toBeGreaterThanOrEqual(1);
+		expect(screen.getAllByLabelText(/content/i).length).toBeGreaterThanOrEqual(
+			1,
+		);
 	});
 });

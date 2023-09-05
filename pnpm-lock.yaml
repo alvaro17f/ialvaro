@@ -15,8 +15,8 @@ dependencies:
     specifier: 18.2.7
     version: 18.2.7
   framer-motion:
-    specifier: 10.16.2
-    version: 10.16.2(react-dom@18.2.0)(react@18.2.0)
+    specifier: 10.16.4
+    version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
   next:
     specifier: 13.4.19
     version: 13.4.19(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
@@ -29,9 +29,6 @@ dependencies:
   react-hot-toast:
     specifier: 2.4.1
     version: 2.4.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
-  typescript:
-    specifier: 5.2.2
-    version: 5.2.2
 
 devDependencies:
   '@biomejs/biome':
@@ -64,6 +61,9 @@ devDependencies:
   tailwindcss:
     specifier: 3.3.3
     version: 3.3.3
+  typescript:
+    specifier: ^5.2.2
+    version: 5.2.2
   vite:
     specifier: 4.4.9
     version: 4.4.9(@types/node@18.15.11)
@@ -1315,8 +1315,8 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion@10.16.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-aY6L9YMvqMWtfOQptaUvvr8dp97jskXY5UYLQM0vOPxKeERrG/Z034EIQZ/52u7MeCT0HlCQy3/l0HdUZCB9Tw==}
+  /framer-motion@10.16.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-p9V9nGomS3m6/CALXqv6nFGMuFOxbWsmaOrdmhyQimMIlLl3LC7h7l86wge/Js/8cRu5ktutS/zlzgR7eBOtFA==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -2383,7 +2383,7 @@ packages:
     resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: false
+    dev: true
 
   /ufo@1.1.2:
     resolution: {integrity: sha512-TrY6DsjTQQgyS3E3dBaOXf0TpPD8u9FVrVYmKVegJuFw51n/YB9XPt+U6ydzFG5ZIN7+DIjPbNmXoBj9esYhgQ==}

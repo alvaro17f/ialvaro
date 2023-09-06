@@ -9,13 +9,13 @@
 			"title": {
 				"one": "Client",
 				"two": "Projects",
-				"three": "",
+				"three": "Tasks",
 				"four": ""
 			},
 			"content": {
 				"one": "Openbank",
 				"two": "Onboarding",
-				"three": "",
+				"three": "- Elaboration and modification of pages for the onboarding process",
 				"four": ""
 			}
 		},

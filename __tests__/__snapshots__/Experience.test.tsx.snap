@@ -78,7 +78,10 @@ exports[`<Experience /> > should match the snapshot 1`] = `
           <br />
           <p
             class="text-xl underline text-alvaro-danger"
-          />
+          >
+            Tasks
+          </p>
+          - Elaboration and modification of pages for the onboarding process
           <br />
           <br />
           <p

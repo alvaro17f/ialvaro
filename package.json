@@ -1,40 +1,40 @@
 {
-  "name": "ialvaro",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "turbo": "next dev --turbo",
-    "build": "next build",
-    "start": "next start",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "coverage": "vitest --coverage",
-    "coverage:ui": "vitest --coverage --ui"
-  },
-  "dependencies": {
-    "@emailjs/browser": "3.11.0",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
-    "framer-motion": "10.16.4",
-    "next": "13.4.19",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-hot-toast": "2.4.1"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.1.2",
-    "@testing-library/react": "14.0.0",
-    "@vitejs/plugin-react": "4.0.4",
-    "@vitest/coverage-v8": "0.34.3",
-    "@vitest/ui": "0.34.3",
-    "autoprefixer": "10.4.15",
-    "csstype": "3.1.2",
-    "happy-dom": "11.0.2",
-    "postcss": "8.4.29",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.2.2",
-    "vite": "4.4.9",
-    "vitest": "0.34.3"
-  }
+	"name": "ialvaro",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"turbo": "next dev --turbo",
+		"build": "next build",
+		"start": "next start",
+		"test": "vitest",
+		"test:ui": "vitest --ui",
+		"coverage": "vitest --coverage",
+		"coverage:ui": "vitest --coverage --ui"
+	},
+	"dependencies": {
+		"@emailjs/browser": "3.11.0",
+		"@types/react": "18.2.21",
+		"@types/react-dom": "18.2.7",
+		"framer-motion": "10.16.4",
+		"next": "13.4.19",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-hot-toast": "2.4.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.1.2",
+		"@testing-library/react": "14.0.0",
+		"@vitejs/plugin-react": "4.0.4",
+		"@vitest/coverage-v8": "0.34.4",
+		"@vitest/ui": "0.34.4",
+		"autoprefixer": "10.4.15",
+		"csstype": "3.1.2",
+		"happy-dom": "11.0.6",
+		"postcss": "8.4.29",
+		"tailwindcss": "3.3.3",
+		"typescript": "5.2.2",
+		"vite": "4.4.9",
+		"vitest": "0.34.4"
+	}
 }

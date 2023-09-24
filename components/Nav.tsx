@@ -19,10 +19,10 @@ const links = [
 		label: "Experience",
 		route: "experience",
 	},
-	// {
-	// 	label: "Portfolio",
-	// 	route: "portfolio",
-	// },
+	{
+		label: "Portfolio",
+		route: "portfolio",
+	},
 	{
 		label: "CV",
 		route: "cv",

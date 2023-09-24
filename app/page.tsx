@@ -7,55 +7,64 @@ import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
+import Portfolio from "./pages/Portfolio";
 
 export default function Page() {
 	const [isMobile, setIsMobile] = useState(true);
-	const [scrollPosition, setScrollPosition] = useState(0);
-	const [title, setTitle] = useState("[ iAlvaro ]");
+	const [title, setTitle] = useState("ialvaro");
 
 	useEffect(() => {
 		setIsMobile(window.innerWidth < 768);
 	});
 
 	useEffect(() => {
-		const updatePosition = () => {
-			setScrollPosition(window.scrollY);
-		};
-
-		window.addEventListener("scroll", updatePosition);
-
 		if (!isMobile) {
-			if (scrollPosition < 700) {
-				setTitle("Home - [ iAlvaro ]");
-			} else if (scrollPosition < 1600) {
-				setTitle("Biography - [ iAlvaro ]");
-			} else if (scrollPosition < 2600) {
-				setTitle("Skills - [ iAlvaro ]");
-			} else if (scrollPosition < 4200) {
-				setTitle("Experience - [ iAlvaro ]");
-			} else if (scrollPosition < 4500) {
-				setTitle("CV - [ iAlvaro ]");
-			} else if (scrollPosition >= 4500) {
-				setTitle("Contact - [ iAlvaro ]");
-			} else {
-				setTitle("[ iAlvaro ]");
-			}
-		} else {
-			setTitle("[ iAlvaro ]");
-		}
+			const sections = [
+				"home",
+				"biography",
+				"skills",
+				"experience",
+				"portfolio",
+				"cv",
+				"contact",
+			];
 
-		return () => window.removeEventListener("scroll", updatePosition);
+			const scrollPosition = window.scrollY;
+
+			if (scrollPosition === 0) {
+				setTitle(`${sections[0]} - ialvaro`);
+			}
+
+			const updateTitle = () => {
+				for (let i = 0; i < sections.length; i++) {
+					const section = sections[i];
+					const element = document.getElementById(section);
+					if (element) {
+						const elementPosition =
+							element.getBoundingClientRect().top + (scrollPosition - 100);
+						if (scrollPosition >= elementPosition) {
+							setTitle(`${section} - ialvaro`);
+						}
+					}
+				}
+			};
+
+			window.addEventListener("scroll", updateTitle);
+
+			return () => {
+				window.removeEventListener("scroll", updateTitle);
+			};
+		}
 	});
 
 	return (
 		<>
 			<title>{title}</title>
-			{/* TODO: BACKGROUND WITH HTML ELEMENTS TRANSPARENT */}
 			<Home />
 			<Biography />
 			<Skills />
 			<Experience />
-			{/* <Portfolio /> */}
+			<Portfolio />
 			<CV />
 			<Contact />
 			<Scrollup />

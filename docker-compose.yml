@@ -1,8 +1,18 @@
-version: '3.8'
+version: "3.9"
 services:
   ialvaro:
-    build: .
+    image: node:latest
     container_name: ialvaro
     ports:
-      - "127.0.0.1:3900:3000"
+      - "127.0.0.1:3900:4321"
     restart: unless-stopped
+    volumes:
+        - .:/project
+    command: >
+        sh -c
+        "
+        cd /project
+        && npm install
+        && npm run dev -- --host 0.0.0.0 &
+        tail -f /dev/null
+        "

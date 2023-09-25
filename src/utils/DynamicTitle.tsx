@@ -1,15 +1,14 @@
-"use client";
-import Scrollup from "@/components/Scrollup";
+// import Scrollup from "@/components/Scrollup";
 import { useEffect, useState } from "react";
-import Biography from "./pages/Biography";
-import CV from "./pages/CV";
-import Contact from "./pages/Contact";
-import Experience from "./pages/Experience";
-import Home from "./pages/Home";
-import Skills from "./pages/Skills";
-import Portfolio from "./pages/Portfolio";
+// import Biography from "./pages/Biography";
+// import CV from "./pages/CV";
+// import Contact from "./pages/Contact";
+// import Experience from "./pages/Experience";
+// import Home from "./pages/Home";
+// import Skills from "./pages/Skills";
+// import Portfolio from "./pages/Portfolio";
 
-export default function Page() {
+export function DynamicTitle() {
 	const [isMobile, setIsMobile] = useState(true);
 	const [title, setTitle] = useState("ialvaro");
 
@@ -57,17 +56,5 @@ export default function Page() {
 		}
 	});
 
-	return (
-		<>
-			<title>{title}</title>
-			<Home />
-			<Biography />
-			<Skills />
-			<Experience />
-			<Portfolio />
-			<CV />
-			<Contact />
-			<Scrollup />
-		</>
-	);
+	return <title>{title}</title>;
 }

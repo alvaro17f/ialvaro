@@ -1,7 +1,7 @@
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
-import { ChangeEvent, FormEvent, useRef, useState } from "react";
+import { type ChangeEvent, type FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Spinner from "@/components/Spinner";
+import Spinner from "src/components/Spinner";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function Contact() {
@@ -29,10 +29,10 @@ export default function Contact() {
 		setIsSubmitting(true);
 		emailjs
 			.sendForm(
-				process.env.NEXT_PUBLIC_SERVICE_ID,
-				process.env.NEXT_PUBLIC_TEMPLATE_ID,
+				import.meta.env.PUBLIC_SERVICE_ID,
+				import.meta.env.PUBLIC_TEMPLATE_ID,
 				form.current,
-				process.env.NEXT_PUBLIC_PUBLIC_KEY,
+				import.meta.env.PUBLIC_PUBLIC_KEY,
 			)
 			.then(
 				(result) => {

@@ -2,14 +2,7 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		"./app/**/*.{js,ts,jsx,tsx, json}",
-		"./pages/**/*.{js,ts,jsx,tsx, json}",
-		"./components/**/*.{js,ts,jsx,tsx, json}",
-
-		// Or if using `src` directory:
-		"./src/**/*.{js,ts,jsx,tsx, json}",
-	],
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
 			colors: {
@@ -28,7 +21,7 @@ module.exports = {
 				},
 			},
 			fontFamily: {
-				sans: ["var(--font-poppins)", ...fontFamily.sans],
+				sans: ["Poppins", ...fontFamily.sans],
 			},
 		},
 	},

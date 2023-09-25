@@ -1,4 +1,4 @@
-import Home from "@/app/pages/Home";
+import Home from "src/views/Home";
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 

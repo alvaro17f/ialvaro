@@ -1,6 +1,6 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
-import data from "@/data/skills.json";
-import Header from "@/components/Header";
+import data from "src/data/skills.json";
+import Header from "src/components/Header";
 
 export default function Skills() {
 	return (

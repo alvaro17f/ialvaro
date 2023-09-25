@@ -1,4 +1,4 @@
-import Wobble from "@/components/Wobble";
+import Wobble from "src/components/Wobble";
 
 export default function Home() {
 	return (

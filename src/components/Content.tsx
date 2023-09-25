@@ -1,4 +1,3 @@
-"use client";
 import { m, domAnimation, LazyMotion } from "framer-motion";
 
 type Props = {

@@ -1,4 +1,4 @@
-import Contact from "@/app/pages/Contact";
+import Contact from "src/views/Contact";
 import { expect, it, describe, beforeEach, afterEach, vi } from "vitest";
 import {
 	render,

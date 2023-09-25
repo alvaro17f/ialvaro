@@ -1,4 +1,4 @@
-import Spinner from "../../components/Spinner";
+import Spinner from "src/components/Spinner";
 import { render, screen } from "@testing-library/react";
 import { describe, it } from "vitest";
 

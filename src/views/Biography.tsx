@@ -1,6 +1,6 @@
-import Content from "@/components/Content";
-import data from "@/data/biography.json";
-import { ChangeEvent, useEffect, useState } from "react";
+import Content from "src/components/Content";
+import data from "src/data/biography.json";
+import { type ChangeEvent, useEffect, useState } from "react";
 
 export default function Biography() {
 	const [isMobile, setIsMobile] = useState(true);

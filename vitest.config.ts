@@ -6,11 +6,12 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
 	plugins: [react()],
 	test: {
+		globals: true,
 		environment: "happy-dom",
-	},
-	resolve: {
+		environmentMatchGlobs: [["src/**", "happy-dom"]],
+		include: ["**/*.{test,spec,test.integration}.?(c|m)[t|j]s?(x)"],
 		alias: {
-			"@": path.resolve(__dirname, "./"),
+			src: path.resolve(__dirname, "./src"),
 		},
 	},
 });

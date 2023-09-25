@@ -1,4 +1,4 @@
-import Nav from "@/components/Nav";
+import Nav from "src/components/Nav";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
 	render,

@@ -1,6 +1,6 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
-import data from "@/data/portfolio.json";
-import Header from "@/components/Header";
+import data from "src/data/portfolio.json";
+import Header from "src/components/Header";
 
 export default function Portfolio() {
 	return (

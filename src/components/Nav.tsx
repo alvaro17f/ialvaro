@@ -1,4 +1,3 @@
-"use client";
 import { m, LazyMotion, domAnimation, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 

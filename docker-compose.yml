@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   ialvaro:
-    image: node:latest
+    image: node:20
     container_name: ialvaro
     ports:
       - "127.0.0.1:3900:4321"

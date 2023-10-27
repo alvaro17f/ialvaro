@@ -55,7 +55,7 @@ export default function Page() {
 				window.removeEventListener("scroll", updateTitle);
 			};
 		}
-	});
+	}, [isMobile]);
 
 	return (
 		<>

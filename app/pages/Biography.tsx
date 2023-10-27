@@ -13,7 +13,7 @@ export default function Biography() {
 
 	useEffect(() => {
 		setSelectedBio(data[slider]);
-	}, [slider < data.length && slider]);
+	}, [slider]);
 
 	const handleSlider = (e: ChangeEvent<HTMLInputElement>) => {
 		setSlider(Number(e.target.value));

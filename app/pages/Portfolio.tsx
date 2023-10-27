@@ -20,7 +20,7 @@ export default function Portfolio() {
 							transition={{ duration: 0.7 }}
 						>
 							<a href={url} target="_blank" rel="noopener noreferrer">
-								<img src={image} alt={title} />
+								<img src={image} alt={title} className="max-h-[13rem]" />
 							</a>
 						</m.div>
 						<div className="mt-12 md:mt-0">

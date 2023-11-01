@@ -54,7 +54,7 @@ export function DynamicTitle() {
 				window.removeEventListener("scroll", updateTitle);
 			};
 		}
-	});
+	}, [isMobile]);
 
 	return <title>{title}</title>;
 }

@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  ialvaro:
+    build: .
+    container_name: ialvaro
+    ports:
+      - "127.0.0.1:3900:3000"
+    restart: unless-stopped

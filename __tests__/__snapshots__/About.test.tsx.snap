@@ -1,0 +1,128 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<About /> > should match the snapshot 1`] = `
+<div>
+  <section
+    class="p-2 mb-5 rounded-lg text-alvaro-dark bg-alvaro-primary"
+    style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
+  >
+    <h1
+      class="text-5xl md:text-3xl"
+      style="opacity: 0;"
+    >
+      About
+    </h1>
+  </section>
+  <section
+    aria-label="content"
+    class="p-5 mb-5 rounded-lg text-alvaro-white undefined"
+    style="opacity: 0; transform: translateX(-800px) translateZ(0);"
+  >
+    <article
+      class="p-5 animate__animated animate__fadeIn animate__delay-1.2s"
+    >
+      <div
+        class="grid md:gap-10 md:grid-cols-[1fr_2fr] place-items-center"
+      >
+        <div
+          class="mb-5"
+        >
+          <img
+            alt="profile picture"
+            class="border-[5px] rounded-full border-alvaro-white"
+            height="200"
+            src="/images/profile.png"
+            width="200"
+          />
+        </div>
+        <div
+          class="max-w-[75ch]"
+        >
+          <h2
+            class="text-3xl"
+          >
+            Hello World!
+          </h2>
+          <p>
+            My name is Álvaro and I am a Full Stack Developer.
+            <br />
+            I feel very fortunate to have found what I am passionate about and to make it my job.
+            <br />
+            I have also worked managing, training and leading marketing teams at a national level.
+            <br />
+            If there is one thing that characterises me, it is that I am 100% involved in everything I do.
+            <br />
+            I am hard-working, perfectionist and non-conformist.
+            <br />
+            I have a direct and creative working style. And I put all the energy I get from working in what I am so enthusiastic about.
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
+  <section
+    aria-label="section-form"
+    class="grid grid-cols-1 md:grid-cols-[1fr_2fr] place-items-center p-5 mb-5 rounded-lg text-alvaro-dark bg-alvaro-white"
+    style="opacity: 0; transform: translateX(-70px) scale(0.7) translateZ(0);"
+  >
+    <div
+      class="mb-5 md:mb-0 md:text-center"
+    >
+      <h2
+        class="text-3xl"
+      >
+        CONTACT ME!
+      </h2>
+      <p>
+        It's free
+      </p>
+    </div>
+    <form
+      aria-label="contact-form"
+      class="grid gap-5 p-2 place-items-center md:w-full"
+    >
+      <input
+        aria-label="name"
+        class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-alvaro-base"
+        defaultvalue=""
+        name="name"
+        placeholder="Name *"
+        required=""
+        type="text"
+      />
+      <input
+        aria-label="email"
+        class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-alvaro-base"
+        defaultvalue=""
+        name="email"
+        placeholder="Email *"
+        required=""
+        type="email"
+      />
+      <input
+        aria-label="phone"
+        class="bg-alvaro-base placeholder:text-alvaro-muted text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 shadow-md rounded-xl shadow-alvaro-base"
+        defaultvalue=""
+        name="phone"
+        placeholder="Phone"
+        type="text"
+      />
+      <textarea
+        aria-label="message"
+        class="bg-alvaro-base text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 shadow-md rounded-xl shadow-alvaro-base placeholder:text-alvaro-danger"
+        name="message"
+        placeholder="Your message goes here... *"
+        required=""
+      />
+      <button
+        aria-label="submit"
+        class="p-4 text-5xl rounded-full shadow-md md:w-40 shadow-alvaro-base bg-alvaro-base"
+        tabindex="0"
+        type="submit"
+      >
+        🔥
+      </button>
+    </form>
+  </section>
+</div>
+`;

@@ -1,0 +1,22 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import Home from "src/views/Home";
+import Biography from "src/views/Biography";
+import CV from "src/views/CV";
+import Skills from "src/views/Skills";
+import Experience from "src/views/Experience";
+import Portfolio from "src/views/Portfolio";
+import Contact from "src/views/Contact";
+import Scrollup from "src/components/Scrollup";
+---
+
+<Layout>
+	<Home client:load />
+	<Biography client:load />
+	<Skills client:load />
+	<Experience client:load />
+	<Portfolio client:load />
+	<CV client:load />
+	<Contact client:load />
+	<Scrollup client:load />
+</Layout>

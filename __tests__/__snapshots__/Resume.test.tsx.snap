@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<CV /> > should match the snapshot 1`] = `
+<div>
+  <section
+    id="cv"
+  >
+    <div
+      class="h-24"
+    />
+    <a
+      href="/cv/cv.pdf"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div
+        aria-label="content"
+        class="grid place-items-center p-5 mb-5 rounded-xl border-[5px] border-alvaro-danger text-alvaro-white"
+        style="opacity: 0;"
+        tabindex="0"
+      >
+        <h1
+          class="text-5xl text-center"
+        >
+          GET MY CV FOR FREE!
+        </h1>
+        <img
+          alt="download"
+          class="w-10 h-10 mt-5"
+          src="/cv/download.svg"
+        />
+      </div>
+    </a>
+  </section>
+</div>
+`;

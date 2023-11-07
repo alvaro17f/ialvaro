@@ -1,0 +1,21 @@
+---
+import Nav from "src/components/Nav";
+import { DynamicTitle } from "src/utils/DynamicTitle";
+import "styles/globals.css";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<DynamicTitle client:load />
+	</head>
+	<body>
+		<Nav client:load />
+		<main class="py-6 mx-5 md:mx-auto max-w-7xl sm:px-6 lg:px-8">
+			<slot />
+		</main>
+	</body>
+</html>

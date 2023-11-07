@@ -1,0 +1,124 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Home /> > should match the snapshot 1`] = `
+<div>
+  <section
+    class="h-[100dvh] top-0 grid place-items-center gap-5"
+    id="home"
+  >
+    <div>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        A
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        L
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        V
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        A
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        R
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        O
+      </span>
+      <br />
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+      >
+        G
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+      >
+        A
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+      >
+        R
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+      >
+        C
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+      >
+        I
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+      >
+        A
+      </span>
+      <br />
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        M
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        A
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        C
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        I
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        A
+      </span>
+      <span
+        aria-label="wobble"
+        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+      >
+        S
+      </span>
+      <br />
+    </div>
+  </section>
+</div>
+`;

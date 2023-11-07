@@ -1,0 +1,345 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Portfolio /> > should match the snapshot 1`] = `
+<div>
+  <title>
+    Portfolio - [ iAlvaro ]
+  </title>
+  <section
+    class="p-2 mb-5 rounded-lg text-alvaro-dark bg-alvaro-primary"
+    style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
+  >
+    <h1
+      class="text-5xl md:text-3xl"
+      style="opacity: 0;"
+    >
+      Portfolio
+    </h1>
+  </section>
+  <section
+    class="m-0 p-0 pb-32 h-[100dvh]"
+  >
+    <div
+      class="grid grid-cols-[1fr_2fr] place-items-center gap-2"
+    >
+      <figure
+        class="sticky top-0 w-20 h-20 p-0 m-0"
+      >
+        <svg
+          class="-rotate-90"
+          height="75"
+          viewBox="0 0 100 100"
+          width="75"
+        >
+          <circle
+            class="stroke-alvaro-danger fill-none stroke-[5%] opacity-20"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+          />
+          <circle
+            class="stroke-alvaro-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+            stroke-dasharray="0px 1px"
+            stroke-dashoffset="0px"
+          />
+        </svg>
+      </figure>
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <a
+          href="https://github.com/alvaro17f"
+          target="_blank"
+        >
+          <div
+            class="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
+            style="transform: none;"
+            tabindex="0"
+          >
+            <div
+              class="h-32"
+            />
+            <h1
+              class="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
+            >
+              ialvaro WEBSITE
+            </h1>
+            <img
+              alt="ialvaro WEBSITE"
+              src="/demo/azama_next.png"
+            />
+            <p>
+              A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section
+    class="m-0 p-0 pb-32 h-[100dvh]"
+  >
+    <div
+      class="grid grid-cols-[1fr_2fr] place-items-center gap-2"
+    >
+      <figure
+        class="sticky top-0 w-20 h-20 p-0 m-0"
+      >
+        <svg
+          class="-rotate-90"
+          height="75"
+          viewBox="0 0 100 100"
+          width="75"
+        >
+          <circle
+            class="stroke-alvaro-danger fill-none stroke-[5%] opacity-20"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+          />
+          <circle
+            class="stroke-alvaro-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+            stroke-dasharray="0px 1px"
+            stroke-dashoffset="0px"
+          />
+        </svg>
+      </figure>
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <a
+          href="https://github.com/alvaro17f"
+          target="_blank"
+        >
+          <div
+            class="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
+            style="transform: none;"
+            tabindex="0"
+          >
+            <div
+              class="h-32"
+            />
+            <h1
+              class="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
+            >
+              TWO
+            </h1>
+            <img
+              alt="TWO"
+              src="/portfolio/2.jpg"
+            />
+            <p>
+              A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section
+    class="m-0 p-0 pb-32 h-[100dvh]"
+  >
+    <div
+      class="grid grid-cols-[1fr_2fr] place-items-center gap-2"
+    >
+      <figure
+        class="sticky top-0 w-20 h-20 p-0 m-0"
+      >
+        <svg
+          class="-rotate-90"
+          height="75"
+          viewBox="0 0 100 100"
+          width="75"
+        >
+          <circle
+            class="stroke-alvaro-danger fill-none stroke-[5%] opacity-20"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+          />
+          <circle
+            class="stroke-alvaro-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+            stroke-dasharray="0px 1px"
+            stroke-dashoffset="0px"
+          />
+        </svg>
+      </figure>
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <a
+          href="https://github.com/alvaro17f"
+          target="_blank"
+        >
+          <div
+            class="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
+            style="transform: none;"
+            tabindex="0"
+          >
+            <div
+              class="h-32"
+            />
+            <h1
+              class="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
+            >
+              THREE
+            </h1>
+            <img
+              alt="THREE"
+              src="/portfolio/3.jpg"
+            />
+            <p>
+              A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section
+    class="m-0 p-0 pb-32 h-[100dvh]"
+  >
+    <div
+      class="grid grid-cols-[1fr_2fr] place-items-center gap-2"
+    >
+      <figure
+        class="sticky top-0 w-20 h-20 p-0 m-0"
+      >
+        <svg
+          class="-rotate-90"
+          height="75"
+          viewBox="0 0 100 100"
+          width="75"
+        >
+          <circle
+            class="stroke-alvaro-danger fill-none stroke-[5%] opacity-20"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+          />
+          <circle
+            class="stroke-alvaro-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+            stroke-dasharray="0px 1px"
+            stroke-dashoffset="0px"
+          />
+        </svg>
+      </figure>
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <a
+          href="https://github.com/alvaro17f"
+          target="_blank"
+        >
+          <div
+            class="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
+            style="transform: none;"
+            tabindex="0"
+          >
+            <div
+              class="h-32"
+            />
+            <h1
+              class="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
+            >
+              FOUR
+            </h1>
+            <img
+              alt="FOUR"
+              src="/portfolio/4.jpg"
+            />
+            <p>
+              A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section
+    class="m-0 p-0 pb-32 h-[100dvh]"
+  >
+    <div
+      class="grid grid-cols-[1fr_2fr] place-items-center gap-2"
+    >
+      <figure
+        class="sticky top-0 w-20 h-20 p-0 m-0"
+      >
+        <svg
+          class="-rotate-90"
+          height="75"
+          viewBox="0 0 100 100"
+          width="75"
+        >
+          <circle
+            class="stroke-alvaro-danger fill-none stroke-[5%] opacity-20"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+          />
+          <circle
+            class="stroke-alvaro-danger fill-none stroke-[5%] [stroke-dashoffset:0]"
+            cx="50"
+            cy="50"
+            pathLength="1"
+            r="30"
+            stroke-dasharray="0px 1px"
+            stroke-dashoffset="0px"
+          />
+        </svg>
+      </figure>
+      <div
+        style="opacity: 0; transform: scale(0) translateZ(0);"
+      >
+        <a
+          href="https://github.com/alvaro17f"
+          target="_blank"
+        >
+          <div
+            class="cursor-pointer relative h-[300px]  w-[200px] md:w-[300px]"
+            style="transform: none;"
+            tabindex="0"
+          >
+            <div
+              class="h-32"
+            />
+            <h1
+              class="mb-5 text-4xl md:text-6xl text-alvaro-white w-[100%]"
+            >
+              FIVE
+            </h1>
+            <img
+              alt="FIVE"
+              src="/portfolio/5.jpg"
+            />
+            <p>
+              A website done by using TypeScript, React.js, Next.js, Tailwind & Framer Motion
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -12,6 +12,7 @@ services:
         "
         cd /project
         && bun install
-        && bun run dev -- --host 0.0.0.0 &
+        && bun run build
+        && bun run preview -- --host 0.0.0.0 &
         tail -f /dev/null
         "

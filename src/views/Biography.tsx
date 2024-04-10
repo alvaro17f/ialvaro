@@ -1,4 +1,4 @@
-import Content from "src/components/Content";
+import { Content } from "src/components/Content";
 import data from "src/data/biography.json";
 import { type ChangeEvent, useEffect, useState } from "react";
 
@@ -12,8 +12,10 @@ export default function Biography() {
 	});
 
 	useEffect(() => {
-		setSelectedBio(data[slider]);
-	}, [slider < data.length && slider]);
+		if (slider < data.length) {
+			setSelectedBio(data[slider]);
+		}
+	}, [slider]);
 
 	const handleSlider = (e: ChangeEvent<HTMLInputElement>) => {
 		setSlider(Number(e.target.value));

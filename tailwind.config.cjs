@@ -10,7 +10,6 @@ module.exports = {
 					base: "#1e1e2e",
 					primary: "#89b4fa",
 					secondary: "#cba6f7",
-					// secondary: "#f2cdcd",
 					success: "#94e2d5",
 					danger: "#f38ba8",
 					warning: "#f9e2af",

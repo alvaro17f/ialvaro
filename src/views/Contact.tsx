@@ -1,10 +1,10 @@
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { type ChangeEvent, type FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Spinner from "src/components/Spinner";
+import { Spinner } from "src/components/Spinner";
 import toast, { Toaster } from "react-hot-toast";
 
-export default function Contact() {
+export const Contact = () => {
 	const form = useRef(null);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
@@ -113,6 +113,7 @@ export default function Contact() {
 									onChange={updateData}
 									placeholder="Name *"
 									aria-label="name"
+									autoComplete="name"
 									className="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-alvaro-danger border-alvaro-muted rounded-xl focus:outline-none"
 									required
 								/>
@@ -123,6 +124,7 @@ export default function Contact() {
 									onChange={updateData}
 									placeholder="Email *"
 									aria-label="email"
+									autoComplete="email"
 									className="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border border-alvaro-muted rounded-xl focus:outline-none focus:border-alvaro-danger"
 									required
 								/>
@@ -133,6 +135,7 @@ export default function Contact() {
 									onChange={updateData}
 									placeholder="Phone"
 									aria-label="phone"
+									autoComplete="tel"
 									className="bg-alvaro-base placeholder:text-alvaro-muted text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 border border-alvaro-muted rounded-xl focus:border-alvaro-primary focus:outline-none"
 								/>
 								<textarea
@@ -180,4 +183,4 @@ export default function Contact() {
 			<Toaster position="top-center" reverseOrder={false} />
 		</section>
 	);
-}
+};

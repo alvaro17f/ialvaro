@@ -1,8 +1,8 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import data from "src/data/skills.json";
-import Header from "src/components/Header";
+import { Header } from "src/components/Header";
 
-export default function Skills() {
+export const Skills = () => {
 	return (
 		<section id="skills">
 			<Header title="Skills" />
@@ -33,4 +33,4 @@ export default function Skills() {
 			</div>
 		</section>
 	);
-}
+};

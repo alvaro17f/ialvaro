@@ -1,4 +1,4 @@
-import Skills from "src/views/Skills";
+import { Skills } from "src/views/Skills";
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 

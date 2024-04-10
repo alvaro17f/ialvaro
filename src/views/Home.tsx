@@ -1,6 +1,6 @@
-import Wobble from "src/components/Wobble";
+import { Wobble } from "src/components/Wobble";
 
-export default function Home() {
+export const Home = () => {
 	return (
 		<section
 			id="home"
@@ -13,4 +13,4 @@ export default function Home() {
 			</div>
 		</section>
 	);
-}
+};

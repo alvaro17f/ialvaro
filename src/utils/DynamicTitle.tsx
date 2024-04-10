@@ -1,14 +1,6 @@
-// import Scrollup from "@/components/Scrollup";
 import { useEffect, useState } from "react";
-// import Biography from "./pages/Biography";
-// import CV from "./pages/CV";
-// import Contact from "./pages/Contact";
-// import Experience from "./pages/Experience";
-// import Home from "./pages/Home";
-// import Skills from "./pages/Skills";
-// import Portfolio from "./pages/Portfolio";
 
-export function DynamicTitle() {
+export const DynamicTitle = () => {
 	const [isMobile, setIsMobile] = useState(true);
 	const [title, setTitle] = useState("ialvaro");
 
@@ -57,4 +49,4 @@ export function DynamicTitle() {
 	}, [isMobile]);
 
 	return <title>{title}</title>;
-}
+};

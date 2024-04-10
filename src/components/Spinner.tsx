@@ -1,4 +1,4 @@
-export default function Spinner() {
+export const Spinner = () => {
 	return (
 		<div role="status">
 			<svg
@@ -21,4 +21,4 @@ export default function Spinner() {
 			<span className="sr-only">Loading...</span>
 		</div>
 	);
-}
+};

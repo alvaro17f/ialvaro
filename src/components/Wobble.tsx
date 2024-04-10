@@ -50,14 +50,12 @@ type Props = {
 	style?: string;
 };
 
-export default function Wobble({ sentence, style }: Props) {
-	const uuid = useId();
-
+export const Wobble = ({ sentence, style }: Props) => {
 	return (
 		<>
-			{sentence.split("").map((letter, index) => {
+			{sentence.split("").map((letter) => {
 				return (
-					<Text style={style} key={`${uuid}-${index}`}>
+					<Text style={style} key={`${useId()}`}>
 						{letter === " " ? "\u00A0" : letter}
 					</Text>
 				);
@@ -65,4 +63,4 @@ export default function Wobble({ sentence, style }: Props) {
 			<br />
 		</>
 	);
-}
+};

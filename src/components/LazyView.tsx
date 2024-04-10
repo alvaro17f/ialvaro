@@ -5,11 +5,7 @@ type Props = {
 	duration?: number;
 };
 
-export default function LazyView({
-	children,
-	once = true,
-	duration = 1,
-}: Props) {
+export const LazyView = ({ children, once = true, duration = 1 }: Props) => {
 	return (
 		<LazyMotion features={domAnimation}>
 			<m.div
@@ -26,4 +22,4 @@ export default function LazyView({
 			</m.div>
 		</LazyMotion>
 	);
-}
+};

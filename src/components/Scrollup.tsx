@@ -9,7 +9,7 @@ export const goToTop = () => {
 	});
 };
 
-export default function Scrollup() {
+export const Scrollup = () => {
 	const [scrollPosition, setScrollPosition] = useState(0);
 
 	useEffect(() => {
@@ -64,4 +64,4 @@ export default function Scrollup() {
 			</AnimatePresence>
 		</LazyMotion>
 	);
-}
+};

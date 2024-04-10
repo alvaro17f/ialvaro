@@ -1,4 +1,4 @@
-import Experience from "src/views/Experience";
+import { Experience } from "src/views/Experience";
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 

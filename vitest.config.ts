@@ -1,9 +1,9 @@
 /// <reference types="vitest" />
 import react from "@vitejs/plugin-react";
-import path from "path";
-import { defineConfig } from "vitest/config";
+import path from "node:path";
+import { getViteConfig } from "astro/config";
 
-export default defineConfig({
+export default getViteConfig({
 	plugins: [react()],
 	test: {
 		globals: true,

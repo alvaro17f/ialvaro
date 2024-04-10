@@ -1,4 +1,4 @@
-import Scrollup, { goToTop } from "src/components/Scrollup";
+import { Scrollup, goToTop } from "src/components/Scrollup";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 

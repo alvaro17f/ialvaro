@@ -1,8 +1,8 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import data from "src/data/portfolio.json";
-import Header from "src/components/Header";
+import { Header } from "src/components/Header";
 
-export default function Portfolio() {
+export const Portfolio = () => {
 	return (
 		<section id="portfolio">
 			<Header title="Portfolio" />
@@ -52,4 +52,4 @@ export default function Portfolio() {
 			))}
 		</section>
 	);
-}
+};

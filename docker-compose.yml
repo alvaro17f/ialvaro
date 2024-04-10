@@ -12,7 +12,7 @@ services:
         sh -c
         "
         cd /project
-        && npm install
-        && npm run dev -- --host 0.0.0.0 &
+        && bun install
+        && bun run dev -- --host 0.0.0.0 &
         tail -f /dev/null
         "

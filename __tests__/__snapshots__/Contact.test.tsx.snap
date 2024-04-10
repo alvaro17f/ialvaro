@@ -70,10 +70,10 @@ exports[`<Contact /> > should match the snapshot 1`] = `
       <form
         aria-label="contact-form"
         class="grid gap-5 p-2 place-items-center md:w-full"
-        name="<input type=\\"text\\" placeholder=\\"Name *\\" aria-label=\\"name\\" class=\\"bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-alvaro-danger border-alvaro-muted rounded-xl focus:outline-none\\" required=\\"\\" value=\\"\\" name=\\"name\\">"
       >
         <input
           aria-label="name"
+          autocomplete="name"
           class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-alvaro-danger border-alvaro-muted rounded-xl focus:outline-none"
           name="name"
           placeholder="Name *"
@@ -83,6 +83,7 @@ exports[`<Contact /> > should match the snapshot 1`] = `
         />
         <input
           aria-label="email"
+          autocomplete="email"
           class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border border-alvaro-muted rounded-xl focus:outline-none focus:border-alvaro-danger"
           name="email"
           placeholder="Email *"
@@ -92,6 +93,7 @@ exports[`<Contact /> > should match the snapshot 1`] = `
         />
         <input
           aria-label="phone"
+          autocomplete="tel"
           class="bg-alvaro-base placeholder:text-alvaro-muted text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 border border-alvaro-muted rounded-xl focus:border-alvaro-primary focus:outline-none"
           name="phone"
           placeholder="Phone"

@@ -5,7 +5,7 @@ type Props = {
 	duration?: number;
 };
 
-export default function Header({ title, duration = 1.2 }: Props) {
+export const Header = ({ title, duration = 1.2 }: Props) => {
 	return (
 		<LazyMotion features={domAnimation}>
 			<div className="h-24" />
@@ -27,4 +27,4 @@ export default function Header({ title, duration = 1.2 }: Props) {
 			</m.section>
 		</LazyMotion>
 	);
-}
+};

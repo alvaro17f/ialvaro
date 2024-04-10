@@ -1,4 +1,4 @@
-import CV from "src/views/CV";
+import { CV } from "src/views/CV";
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 

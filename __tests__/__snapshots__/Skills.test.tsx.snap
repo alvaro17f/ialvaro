@@ -10,7 +10,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
     />
     <section
       class="p-2 mb-5 rounded-lg text-alvaro-dark from-alvaro-primary to-transparent bg-gradient-to-r"
-      style="width: 0%; opacity: 0; transform: scaleY(0.5) translateZ(0);"
+      style="width: 0%; opacity: 0; transform: scaleY(0.5);"
     >
       <h1
         class="text-5xl md:text-3xl"

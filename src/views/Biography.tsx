@@ -1,6 +1,7 @@
 import { Content } from "src/components/Content";
 import data from "src/data/biography.json";
 import { type ChangeEvent, useEffect, useState } from "react";
+import { TABLET } from "src/constants/devices";
 
 export default function Biography() {
 	const [isMobile, setIsMobile] = useState(true);
@@ -8,7 +9,7 @@ export default function Biography() {
 	const [selectedBio, setSelectedBio] = useState(data[slider]);
 
 	useEffect(() => {
-		setIsMobile(window.innerWidth < 768);
+		setIsMobile(window.innerWidth < TABLET);
 	});
 
 	useEffect(() => {

@@ -67,8 +67,11 @@ exports[`<Contact /> > should match the snapshot 1`] = `
           </a>
         </div>
       </div>
-      bound HTMLFormElement {
-        "0": <input
+      <form
+        aria-label="contact-form"
+        class="grid gap-5 p-2 place-items-center md:w-full"
+      >
+        <input
           aria-label="name"
           autocomplete="name"
           class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border focus:border-alvaro-danger border-alvaro-muted rounded-xl focus:outline-none"
@@ -77,8 +80,8 @@ exports[`<Contact /> > should match the snapshot 1`] = `
           required=""
           type="text"
           value=""
-        />,
-        "1": <input
+        />
+        <input
           aria-label="email"
           autocomplete="email"
           class="bg-alvaro-base placeholder:text-alvaro-danger text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5  border border-alvaro-muted rounded-xl focus:outline-none focus:border-alvaro-danger"
@@ -87,8 +90,8 @@ exports[`<Contact /> > should match the snapshot 1`] = `
           required=""
           type="email"
           value=""
-        />,
-        "2": <input
+        />
+        <input
           aria-label="phone"
           autocomplete="tel"
           class="bg-alvaro-base placeholder:text-alvaro-muted text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-5 border border-alvaro-muted rounded-xl focus:border-alvaro-primary focus:outline-none"
@@ -96,28 +99,29 @@ exports[`<Contact /> > should match the snapshot 1`] = `
           placeholder="Phone"
           type="text"
           value=""
-        />,
-        "3": <textarea
+        />
+        <textarea
           aria-label="message"
           class="bg-alvaro-base text-alvaro-white max-w-[15rem] md:w-[42rem] md:max-w-none p-8 border border-alvaro-muted focus:border-alvaro-danger rounded-xl placeholder:text-alvaro-danger focus:outline-none"
           name="message"
           placeholder="Your message goes here... *"
           required=""
-        />,
-        "4": <button
+        />
+        <button
           aria-label="submit"
           class="p-0 m-5 text-5xl rounded-full shadow-md md:w-40 shadow-alvaro-base bg-alvaro-base"
           tabindex="0"
           type="submit"
         >
           🔥
-        </button>,
-      }
+        </button>
+      </form>
     </section>
     <div
       class="h-28"
     />
     <div
+      id="_rht_toaster"
       style="position: fixed; z-index: 9999; top: 16px; left: 16px; right: 16px; bottom: 16px; pointer-events: none;"
     />
   </section>

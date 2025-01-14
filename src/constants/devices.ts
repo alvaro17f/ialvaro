@@ -1,1 +1,1 @@
-export const TABLET: number = 768;
+export const TABLET: number = 768

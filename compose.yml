@@ -4,21 +4,21 @@ services:
     image: oven/bun:latest
     restart: unless-stopped
     command: >
-        sh -c
-        "
-        cd /project
-        && bun install
-        && bun run build
-        && bun run preview -- --host 0.0.0.0 &
-        tail -f /dev/null
-        "
+      sh -c
+      "
+      cd /project
+      && bun install
+      && bun run build
+      && bun run preview -- --host 0.0.0.0 &
+      tail -f /dev/null
+      "
     volumes:
       - .:/project
     networks: [proxy]
     labels:
       caddy: ialvaro.com, azama.es
       caddy.import: cloudflare
-      caddy.reverse_proxy: "{{upstreams 4321}}"
+      caddy.reverse_proxy: '{{upstreams 4321}}'
 
 networks:
   proxy:

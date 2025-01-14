@@ -5,4 +5,3 @@
 ![ialvaro](public/images/readme/ialvaro.png)
 
 A website done by using TypeScript, React.js, Astro.js, Tailwind & Framer Motion
-

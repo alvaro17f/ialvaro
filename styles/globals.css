@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 * {
-	-webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-	@apply box-border;
-	@apply text-alvaro-white bg-alvaro-base;
+  @apply box-border;
+  @apply text-alvaro-white bg-alvaro-base;
 }
 
 body::-webkit-scrollbar {
-	width: 0.5em;
+  width: 0.5em;
 }
 
 body::-webkit-scrollbar-thumb {
-	@apply bg-alvaro-primary active:bg-alvaro-danger;
-	-webkit-border-radius: 1ex;
+  @apply bg-alvaro-primary active:bg-alvaro-danger;
+  -webkit-border-radius: 1ex;
 }

@@ -4,14 +4,14 @@ services:
     image: oven/bun:latest
     restart: unless-stopped
     command: >
-        sh -c
-        "
-        cd /project
-        && bun install
-        && bun run build
-        && bun run preview -- --host 0.0.0.0 &
-        tail -f /dev/null
-        "
+      sh -c
+      "
+      cd /project
+      && bun install
+      && bun run build
+      && bun run preview -- --host 0.0.0.0 &
+      tail -f /dev/null
+      "
     volumes:
       - .:/project
     networks: [proxy]

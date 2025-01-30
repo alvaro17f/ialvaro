@@ -3,6 +3,7 @@ services:
     container_name: ialvaro
     image: oven/bun:latest
     restart: unless-stopped
+    user: 1000:100
     command: >
       sh -c
       "

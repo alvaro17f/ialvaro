@@ -8,7 +8,14 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'happy-dom',
-    environmentMatchGlobs: [['src/**', 'happy-dom']],
+    workspace: [
+      {
+        extends: true,
+        test: {
+          environment: 'happy-dom',
+        },
+      },
+    ],
     include: ['**/*.{test,spec,test.integration}.?(c|m)[t|j]s?(x)'],
     alias: {
       src: path.resolve(__dirname, './src'),

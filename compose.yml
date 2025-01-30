@@ -3,14 +3,13 @@ services:
     container_name: ialvaro
     image: oven/bun:latest
     restart: unless-stopped
-    user: 1000:100
     command: >
       sh -c
       "
       cd /project
       && bun install
       && bun run build
-      && bun run preview -- --host 0.0.0.0 &
+      && bun dist/server/entry.mjs &
       tail -f /dev/null
       "
     volumes:

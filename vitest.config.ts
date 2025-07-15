@@ -1,24 +1,35 @@
-/// <reference types="vitest" />
-import react from '@vitejs/plugin-react'
+import { defineConfig, mergeConfig } from 'vitest/config'
+import viteConfig from './vite.config.ts'
 import path from 'node:path'
-import { defineConfig } from 'vite'
 
-export default defineConfig({
-  plugins: [react()],
-  test: {
-    globals: true,
-    environment: 'happy-dom',
-    workspace: [
-      {
-        extends: true,
-        test: {
-          environment: 'happy-dom',
+export default mergeConfig(
+  viteConfig,
+  defineConfig({
+    test: {
+      globals: true,
+      environment: 'happy-dom',
+      projects: [
+        {
+          extends: true,
+          test: {
+            environment: 'happy-dom',
+          },
         },
+      ],
+      alias: {
+        src: path.resolve(__dirname, './src'),
       },
-    ],
-    include: ['**/*.{test,spec,test.integration}.?(c|m)[t|j]s?(x)'],
-    alias: {
-      src: path.resolve(__dirname, './src'),
+      fakeTimers: {
+        toFake: [
+          'setTimeout',
+          'clearTimeout',
+          'setInterval',
+          'clearInterval',
+          'setImmediate',
+          'clearImmediate',
+          'Date',
+        ],
+      },
     },
-  },
-})
+  })
+)

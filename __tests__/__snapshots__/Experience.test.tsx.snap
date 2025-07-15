@@ -29,14 +29,14 @@ exports[`<Experience /> > should match the snapshot 1`] = `
         tabindex="0"
       >
         <a
-          href="https://knowmadmood.com/"
+          href="https://openbank.es/"
           rel="noopener noreferrer"
           target="_blank"
         >
           <img
-            alt="knowmad mood"
+            alt="Openbank"
             class="w-56 h-36"
-            src="/experience/knowmadmood.svg"
+            src="/experience/openbank.svg"
           />
         </a>
         <p>
@@ -53,7 +53,7 @@ exports[`<Experience /> > should match the snapshot 1`] = `
           class="mb-5 text-4xl md:text-6xl text-alvaro-primary"
           style="opacity: 0;"
         >
-          knowmad mood
+          Openbank
         </h1>
         <div
           aria-label="content"
@@ -63,9 +63,9 @@ exports[`<Experience /> > should match the snapshot 1`] = `
           <p
             class="text-xl underline text-alvaro-danger"
           >
-            Client
+            Consulting Firm
           </p>
-          Openbank
+          Knowmad Mood & Plexus
           <br />
           <br />
           <p
@@ -73,15 +73,13 @@ exports[`<Experience /> > should match the snapshot 1`] = `
           >
             Projects
           </p>
-          Onboarding
+          - Onboarding
+- Customer
           <br />
           <br />
           <p
             class="text-xl underline text-alvaro-danger"
-          >
-            Tasks
-          </p>
-          - Elaboration and modification of pages for the onboarding process
+          />
           <br />
           <br />
           <p
@@ -100,14 +98,14 @@ exports[`<Experience /> > should match the snapshot 1`] = `
         tabindex="0"
       >
         <a
-          href="https://devoteam.com/"
+          href="https://grupocajarural.es/"
           rel="noopener noreferrer"
           target="_blank"
         >
           <img
-            alt="devoteam"
+            alt="RSI"
             class="w-56 h-36"
-            src="/experience/devoteam.svg"
+            src="/experience/rsi.svg"
           />
         </a>
         <p>
@@ -124,7 +122,7 @@ exports[`<Experience /> > should match the snapshot 1`] = `
           class="mb-5 text-4xl md:text-6xl text-alvaro-primary"
           style="opacity: 0;"
         >
-          devoteam
+          RSI
         </h1>
         <div
           aria-label="content"
@@ -134,9 +132,9 @@ exports[`<Experience /> > should match the snapshot 1`] = `
           <p
             class="text-xl underline text-alvaro-danger"
           >
-            Client
+            Consulting Firm
           </p>
-          RSI
+          Devoteam
           <br />
           <br />
           <p
@@ -144,7 +142,8 @@ exports[`<Experience /> > should match the snapshot 1`] = `
           >
             Projects
           </p>
-          Frontend management for Banco Caminos, Arquia, Vall Banc, Fiare, Bancofar, etc...
+          - Onboarding
+- Customer
           <br />
           <br />
           <p

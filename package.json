@@ -15,15 +15,15 @@
     "coverage:ui": "vitest --coverage --ui"
   },
   "dependencies": {
-    "@astrojs/node": "9.4.2",
+    "@astrojs/node": "9.4.3",
     "@astrojs/react": "4.3.0",
     "@emailjs/browser": "4.4.1",
     "@fontsource/poppins": "5.2.6",
     "@tailwindcss/postcss": "4.1.12",
     "@tailwindcss/vite": "4.1.12",
-    "@types/react": "19.1.10",
+    "@types/react": "19.1.11",
     "@types/react-dom": "19.1.7",
-    "astro": "5.13.2",
+    "astro": "5.13.3",
     "framer-motion": "12.23.12",
     "react": "19.1.1",
     "react-dom": "19.1.1",

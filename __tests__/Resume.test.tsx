@@ -1,26 +1,23 @@
-import { CV } from 'src/views/CV'
-import { cleanup, render, screen } from '@testing-library/react'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { cleanup, render, screen } from "@testing-library/react";
+import { CV } from "src/views/CV";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { mockIntersectionObserver } from "./mocks/IntersectionObserver.tsx";
 
-describe('<CV />', () => {
-  beforeEach(() => {
-    const mockIntersectionObserver = vi.fn()
-    mockIntersectionObserver.mockReturnValue({
-      observe: () => null,
-      unobserve: () => null,
-      disconnect: () => null,
-    })
-    window.IntersectionObserver = mockIntersectionObserver
-    render(<CV />)
-  })
-  afterEach(cleanup)
+describe("<CV />", () => {
+	beforeEach(() => {
+		mockIntersectionObserver();
+		render(<CV />);
+	});
+	afterEach(cleanup);
 
-  it('should match the snapshot', () => {
-    const { container } = render(<CV />)
-    expect(container).toMatchSnapshot()
-  })
+	it("should match the snapshot", () => {
+		const { container } = render(<CV />);
+		expect(container).toMatchSnapshot();
+	});
 
-  it('should render a heading', () => {
-    expect(screen.getByRole('heading', { level: 1, name: /cv/i })).toBeDefined()
-  })
-})
+	it("should render a heading", () => {
+		expect(
+			screen.getByRole("heading", { level: 1, name: /cv/i }),
+		).toBeDefined();
+	});
+});

@@ -1,33 +1,38 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-  --color-alvaro-base: #1e1e2e;
-  --color-alvaro-primary: #89b4fa;
-  --color-alvaro-secondary: #cba6f7;
-  --color-alvaro-success: #94e2d5;
-  --color-alvaro-danger: #f38ba8;
-  --color-alvaro-warning: #f9e2af;
-  --color-alvaro-info: #89b4fa;
-  --color-alvaro-muted: #6c7086;
-  --color-alvaro-white: #cdd6f4;
-  --color-alvaro-dark: #1e1e2e;
+	--color-alvaro-base: #1e1e2e;
+	--color-alvaro-primary: #89b4fa;
+	--color-alvaro-secondary: #cba6f7;
+	--color-alvaro-success: #94e2d5;
+	--color-alvaro-danger: #f38ba8;
+	--color-alvaro-warning: #f9e2af;
+	--color-alvaro-info: #89b4fa;
+	--color-alvaro-muted: #6c7086;
+	--color-alvaro-white: #cdd6f4;
+	--color-alvaro-dark: #1e1e2e;
 }
 
 * {
-  -webkit-tap-highlight-color: transparent;
-  font-family: 'Poppins', sans-serif;
+	-webkit-tap-highlight-color: transparent;
+	font-family: "Poppins", sans-serif;
 }
 
 body {
-  @apply box-border;
-  @apply text-alvaro-white bg-alvaro-base;
+	box-sizing: border-box;
+	color: var(--color-alvaro-white);
+	background-color: var(--color-alvaro-base);
 }
 
 body::-webkit-scrollbar {
-  width: 0.5em;
+	width: 0.5em;
 }
 
 body::-webkit-scrollbar-thumb {
-  @apply bg-alvaro-primary active:bg-alvaro-danger;
-  -webkit-border-radius: 1ex;
+	background-color: var(--color-alvaro-primary);
+	-webkit-border-radius: 1ex;
+}
+
+body::-webkit-scrollbar-thumb:active {
+	background-color: var(--color-alvaro-danger);
 }

@@ -121,7 +121,7 @@ exports[`<Contact /> > should match the snapshot 1`] = `
       class="h-28"
     />
     <div
-      id="_rht_toaster"
+      data-rht-toaster=""
       style="position: fixed; z-index: 9999; top: 16px; left: 16px; right: 16px; bottom: 16px; pointer-events: none;"
     />
   </section>

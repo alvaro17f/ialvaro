@@ -20,6 +20,7 @@ vi.mock("@react-three/drei", () => ({
 	}: Record<string, unknown>) => (
 		<span>{children as React.ReactNode}</span>
 	),
+	useTexture: () => ({}) as unknown,
 }));
 
 describe("<Skills />", () => {

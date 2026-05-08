@@ -19,7 +19,23 @@ vi.mock("@react-three/drei", () => ({
 	}: Record<string, unknown>) => (
 		<span>{children as React.ReactNode}</span>
 	),
+	useTexture: () => ({}) as unknown,
 }));
+
+const expectedSkills = [
+	"react.js",
+	"vue.js",
+	"typescript",
+	"javascript",
+	"tailwind",
+	"next.js",
+	"rust",
+	"go",
+	"jest",
+	"node.js",
+	"docker",
+	"sql",
+];
 
 describe("<TechSphere />", () => {
 	afterEach(cleanup);
@@ -29,28 +45,10 @@ describe("<TechSphere />", () => {
 		expect(screen.getByTestId("three-canvas")).toBeDefined();
 	});
 
-	it("renders technology labels", () => {
+	it("renders all 12 skill labels from data", () => {
 		render(<TechSphere />);
-		expect(screen.getByText("React")).toBeDefined();
-		expect(screen.getByText("TypeScript")).toBeDefined();
-		expect(screen.getByText("Node.js")).toBeDefined();
-		expect(screen.getByText("Docker")).toBeDefined();
-	});
-
-	it("renders all 8 tech labels", () => {
-		render(<TechSphere />);
-		const labels = [
-			"React",
-			"TypeScript",
-			"Node.js",
-			"Astro",
-			"Tailwind",
-			"PostgreSQL",
-			"Docker",
-			"AWS",
-		];
-		for (const label of labels) {
-			expect(screen.getByText(label)).toBeDefined();
+		for (const skill of expectedSkills) {
+			expect(screen.getByText(skill)).toBeDefined();
 		}
 	});
 });

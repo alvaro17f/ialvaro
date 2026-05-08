@@ -21,18 +21,14 @@
 		"@fontsource-variable/jetbrains-mono": "^5.2.8",
 		"@fontsource-variable/outfit": "^5.2.8",
 		"@phosphor-icons/react": "^2.1.10",
-		"@react-three/drei": "^10.7.7",
-		"@react-three/fiber": "^9.6.1",
 		"@tailwindcss/postcss": "4.2.4",
 		"@tailwindcss/vite": "4.2.4",
 		"@types/react": "19.2.14",
 		"@types/react-dom": "19.2.3",
-		"@types/three": "^0.184.1",
 		"astro": "6.1.9",
 		"react": "19.2.5",
 		"react-dom": "19.2.5",
-		"react-hot-toast": "2.6.0",
-		"three": "^0.184.0"
+		"react-hot-toast": "2.6.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.13",

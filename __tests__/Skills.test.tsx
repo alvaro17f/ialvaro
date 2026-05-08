@@ -15,6 +15,11 @@ vi.mock("@react-three/drei", () => ({
 	Float: ({ children }: Record<string, unknown>) => (
 		<>{children as React.ReactNode}</>
 	),
+	Html: ({
+		children,
+	}: Record<string, unknown>) => (
+		<span>{children as React.ReactNode}</span>
+	),
 }));
 
 describe("<Skills />", () => {

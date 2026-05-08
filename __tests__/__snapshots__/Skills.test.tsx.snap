@@ -25,166 +25,222 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       class="transition-all duration-700 opacity-0"
     >
       <div
-        class="w-full h-[500px] md:h-[550px]"
+        class="w-full h-[500px] md:h-[550px] overflow-visible"
       >
         <div
           data-testid="three-canvas"
         >
           <ambientlight
-            intensity="0.4"
+            intensity="0.5"
           />
           <pointlight
             intensity="1.5"
-            position="10,10,10"
+            position="8,8,8"
           />
           <pointlight
             color="#3b82f6"
-            intensity="0.5"
+            intensity="0.4"
             position="-5,-5,-5"
           />
           <group>
             <mesh>
               <spheregeometry
-                args="0.9,64,64"
+                args="0.7,64,64"
               />
               <meshstandardmaterial
                 color="#3b82f6"
                 emissive="#3b82f6"
-                emissiveintensity="0.4"
-                metalness="0.3"
-                roughness="0.1"
+                emissiveintensity="0.45"
+                metalness="0.4"
+                roughness="0.08"
               />
             </mesh>
             <mesh>
               <spheregeometry
-                args="1.05,32,32"
+                args="0.85,32,32"
               />
               <meshbasicmaterial
                 color="#3b82f6"
-                opacity="0.08"
+                opacity="0.06"
               />
             </mesh>
             <mesh
-              position="0.2591473262540479,1.9024307249661885,-2.5600000000000005"
+              position="0.19436049469053593,1.4268230437246414,-1.92"
               scale="1"
             >
               <spheregeometry
-                args="0.28,32,32"
+                args="0.24,32,32"
               />
               <meshstandardmaterial
                 color="#61dafb"
                 emissive="#61dafb"
                 emissiveintensity="0.15"
-                roughness="0.2"
+                roughness="0.15"
               />
             </mesh>
+            <span>
+              <span
+                class="text-[10px] font-medium tracking-wide whitespace-nowrap transition-all duration-300 text-alvaro-muted/60"
+              >
+                React
+              </span>
+            </span>
             <mesh
-              position="2.529209473713511,-0.39585279849689975,-1.9199999999999997"
+              position="1.8969071052851332,-0.2968895988726748,-1.4399999999999997"
               scale="1"
             >
               <spheregeometry
-                args="0.28,32,32"
+                args="0.24,32,32"
               />
               <meshstandardmaterial
                 color="#3178c6"
                 emissive="#3178c6"
                 emissiveintensity="0.15"
-                roughness="0.2"
+                roughness="0.15"
               />
             </mesh>
+            <span>
+              <span
+                class="text-[10px] font-medium tracking-wide whitespace-nowrap transition-all duration-300 text-alvaro-muted/60"
+              >
+                TypeScript
+              </span>
+            </span>
             <mesh
-              position="0.3373318615724556,-2.913384151664188,-1.28"
+              position="0.2529988961793417,-2.185038113748141,-0.9599999999999999"
               scale="1"
             >
               <spheregeometry
-                args="0.28,32,32"
+                args="0.24,32,32"
               />
               <meshstandardmaterial
                 color="#5fa04e"
                 emissive="#5fa04e"
                 emissiveintensity="0.15"
-                roughness="0.2"
+                roughness="0.15"
               />
             </mesh>
+            <span>
+              <span
+                class="text-[10px] font-medium tracking-wide whitespace-nowrap transition-all duration-300 text-alvaro-muted/60"
+              >
+                Node.js
+              </span>
+            </span>
             <mesh
-              position="-2.739212633478617,-1.525488167306171,-0.6400000000000001"
+              position="-2.0544094751089625,-1.1441161254796284,-0.4800000000000001"
               scale="1"
             >
               <spheregeometry
-                args="0.28,32,32"
+                args="0.24,32,32"
               />
               <meshstandardmaterial
                 color="#ff5a03"
                 emissive="#ff5a03"
                 emissiveintensity="0.15"
-                roughness="0.2"
+                roughness="0.15"
               />
             </mesh>
+            <span>
+              <span
+                class="text-[10px] font-medium tracking-wide whitespace-nowrap transition-all duration-300 text-alvaro-muted/60"
+              >
+                Astro
+              </span>
+            </span>
             <mesh
-              position="-2.603521368065169,1.8605581114354024,1.9594348786357652e-16"
+              position="-1.9526410260488767,1.3954185835765518,1.4695761589768238e-16"
               scale="1"
             >
               <spheregeometry
-                args="0.28,32,32"
+                args="0.24,32,32"
               />
               <meshstandardmaterial
                 color="#06b6d4"
                 emissive="#06b6d4"
                 emissiveintensity="0.15"
-                roughness="0.2"
+                roughness="0.15"
               />
             </mesh>
+            <span>
+              <span
+                class="text-[10px] font-medium tracking-wide whitespace-nowrap transition-all duration-300 text-alvaro-muted/60"
+              >
+                Tailwind
+              </span>
+            </span>
             <mesh
-              position="0.5560484830851609,3.085645813190278,0.6399999999999998"
+              position="0.4170363623138706,2.3142343598927084,0.4799999999999998"
               scale="1"
             >
               <spheregeometry
-                args="0.28,32,32"
+                args="0.24,32,32"
               />
               <meshstandardmaterial
                 color="#336791"
                 emissive="#336791"
                 emissiveintensity="0.15"
-                roughness="0.2"
+                roughness="0.15"
               />
             </mesh>
+            <span>
+              <span
+                class="text-[10px] font-medium tracking-wide whitespace-nowrap transition-all duration-300 text-alvaro-muted/60"
+              >
+                PostgreSQL
+              </span>
+            </span>
             <mesh
-              position="2.8655949892914094,0.6244720629043135,1.2799999999999998"
+              position="2.1491962419685566,0.46835404717823503,0.9599999999999997"
               scale="1"
             >
               <spheregeometry
-                args="0.28,32,32"
+                args="0.24,32,32"
               />
               <meshstandardmaterial
                 color="#2496ed"
                 emissive="#2496ed"
                 emissiveintensity="0.15"
-                roughness="0.2"
+                roughness="0.15"
               />
             </mesh>
+            <span>
+              <span
+                class="text-[10px] font-medium tracking-wide whitespace-nowrap transition-all duration-300 text-alvaro-muted/60"
+              >
+                Docker
+              </span>
+            </span>
             <mesh
-              position="1.1937030480835025,-2.264657376513312,1.9200000000000004"
+              position="0.8952772860626267,-1.6984930323849834,1.4400000000000002"
               scale="1"
             >
               <spheregeometry
-                args="0.28,32,32"
+                args="0.24,32,32"
               />
               <meshstandardmaterial
                 color="#ff9900"
                 emissive="#ff9900"
                 emissiveintensity="0.15"
-                roughness="0.2"
+                roughness="0.15"
               />
             </mesh>
+            <span>
+              <span
+                class="text-[10px] font-medium tracking-wide whitespace-nowrap transition-all duration-300 text-alvaro-muted/60"
+              >
+                AWS
+              </span>
+            </span>
             <mesh
               rotation="1.5707963267948966,0,0"
             >
               <torusgeometry
-                args="3.8,0.01,16,100"
+                args="2.7,0.008,16,120"
               />
               <meshbasicmaterial
                 color="#3b82f6"
-                opacity="0.08"
+                opacity="0.06"
               />
             </mesh>
           </group>

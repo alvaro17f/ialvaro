@@ -14,6 +14,11 @@ vi.mock("@react-three/drei", () => ({
 	Float: ({ children }: Record<string, unknown>) => (
 		<>{children as React.ReactNode}</>
 	),
+	Html: ({
+		children,
+	}: Record<string, unknown>) => (
+		<span>{children as React.ReactNode}</span>
+	),
 }));
 
 describe("<TechSphere />", () => {
@@ -24,15 +29,28 @@ describe("<TechSphere />", () => {
 		expect(screen.getByTestId("three-canvas")).toBeDefined();
 	});
 
-	it("renders with correct height", () => {
-		const { container } = render(<TechSphere />);
-		const div = container.firstChild as HTMLElement;
-		expect(div.className).toContain("h-[500px]");
+	it("renders technology labels", () => {
+		render(<TechSphere />);
+		expect(screen.getByText("React")).toBeDefined();
+		expect(screen.getByText("TypeScript")).toBeDefined();
+		expect(screen.getByText("Node.js")).toBeDefined();
+		expect(screen.getByText("Docker")).toBeDefined();
 	});
 
-	it("is hidden on mobile via parent conditional", () => {
-		// The parent component is responsible for conditional rendering
-		const { container } = render(<TechSphere />);
-		expect(container.firstChild).toBeDefined();
+	it("renders all 8 tech labels", () => {
+		render(<TechSphere />);
+		const labels = [
+			"React",
+			"TypeScript",
+			"Node.js",
+			"Astro",
+			"Tailwind",
+			"PostgreSQL",
+			"Docker",
+			"AWS",
+		];
+		for (const label of labels) {
+			expect(screen.getByText(label)).toBeDefined();
+		}
 	});
 });

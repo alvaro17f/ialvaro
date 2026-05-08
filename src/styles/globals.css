@@ -109,6 +109,15 @@ html {
 	}
 }
 
+@keyframes marquee-reverse {
+	from {
+		transform: translateX(-50%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
 @keyframes scaleIn {
 	from {
 		opacity: 0;
@@ -153,9 +162,20 @@ html {
 	0%,
 	100% {
 		opacity: 0.15;
+		transform: scale(1);
 	}
 	50% {
 		opacity: 0.3;
+		transform: scale(1.05);
+	}
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
 	}
 }
 
@@ -175,7 +195,13 @@ html {
 	animation: marquee 30s linear infinite;
 }
 
-.marquee-track:hover {
+.marquee-track-reverse {
+	display: inline-flex;
+	animation: marquee-reverse 25s linear infinite;
+}
+
+.marquee-track:hover,
+.marquee-track-reverse:hover {
 	animation-play-state: paused;
 }
 
@@ -192,11 +218,50 @@ html {
 	animation-delay: -3s;
 }
 
-/* Animated gradient border */
+.mesh-blob-slow {
+	animation: float-blob 14s ease-in-out infinite;
+	animation-delay: -6s;
+}
+
+/* ─── Spotlight card ─── */
+
+.spotlight-card {
+	position: relative;
+	overflow: hidden;
+	background: var(--color-alvaro-surface);
+	border: 1px solid var(--color-alvaro-border);
+	border-radius: 1.5rem;
+	transition: border-color 0.3s ease;
+}
+
+.spotlight-card::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(
+		500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+		rgba(59, 130, 246, 0.08),
+		transparent 60%
+	);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+
+.spotlight-card:hover::after {
+	opacity: 1;
+}
+
+.spotlight-card:hover {
+	border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* ─── Animated gradient border ─── */
+
 .gradient-border {
 	position: relative;
 	background: var(--color-alvaro-surface);
-	border-radius: 1rem;
+	border-radius: 1.5rem;
 }
 
 .gradient-border::before {
@@ -221,7 +286,8 @@ html {
 	opacity: 1;
 }
 
-/* Spring-like hover */
+/* ─── Spring hover ─── */
+
 .spring-hover {
 	transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
 		box-shadow 0.4s ease;
@@ -236,7 +302,8 @@ html {
 	transform: scale(0.98);
 }
 
-/* Section divider with subtle curve */
+/* ─── Section divider ─── */
+
 .section-curve {
 	position: relative;
 }
@@ -255,4 +322,17 @@ html {
 		var(--color-alvaro-border),
 		transparent
 	);
+}
+
+/* ─── Shimmer loading ─── */
+
+.shimmer {
+	background: linear-gradient(
+		90deg,
+		var(--color-alvaro-surface) 25%,
+		var(--color-alvaro-border) 50%,
+		var(--color-alvaro-surface) 75%
+	);
+	background-size: 200% 100%;
+	animation: shimmer 1.5s infinite;
 }

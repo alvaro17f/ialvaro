@@ -27,8 +27,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: react.js"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								md:col-span-2 md:row-span-2 md:p-10
 								opacity-0 translate-y-8
 							"
@@ -51,8 +50,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: vue.js"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								
 								opacity-0 translate-y-8
 							"
@@ -75,8 +73,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: typescript"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								
 								opacity-0 translate-y-8
 							"
@@ -99,8 +96,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: javascript"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								
 								opacity-0 translate-y-8
 							"
@@ -123,8 +119,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: tailwind"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								
 								opacity-0 translate-y-8
 							"
@@ -147,8 +142,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: next.js"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								md:col-span-2 md:row-span-2 md:p-10
 								opacity-0 translate-y-8
 							"
@@ -171,8 +165,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: rust"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								
 								opacity-0 translate-y-8
 							"
@@ -195,8 +188,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: go"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								
 								opacity-0 translate-y-8
 							"
@@ -219,8 +211,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: jest"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								md:col-span-2 md:row-span-2 md:p-10
 								opacity-0 translate-y-8
 							"
@@ -243,8 +234,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: node.js"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								
 								opacity-0 translate-y-8
 							"
@@ -267,8 +257,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: docker"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								
 								opacity-0 translate-y-8
 							"
@@ -291,8 +280,7 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       <a
         aria-label="Skill: sql"
         class="
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								
 								opacity-0 translate-y-8
 							"

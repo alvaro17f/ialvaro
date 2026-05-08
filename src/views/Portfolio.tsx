@@ -1,4 +1,5 @@
 import { Header } from "src/components/Header";
+import { SpotlightCard } from "src/components/SpotlightCard";
 import data from "src/data/portfolio.json";
 
 export const Portfolio = () => {
@@ -7,12 +8,14 @@ export const Portfolio = () => {
 			<Header title="Portfolio" />
 			<div className="space-y-6">
 				{data.map(({ id, title, image, url, description }, i) => (
-					<div
+					<SpotlightCard
 						key={id}
-						className="sticky top-20 grid md:grid-cols-[1fr_2fr] gap-8 p-6 md:p-10 rounded-3xl bg-alvaro-surface border border-alvaro-border group transition-colors duration-300 hover:border-alvaro-primary/20"
-						style={{ zIndex: i + 1 }}
+						className={`sticky top-20 grid md:grid-cols-[1fr_2fr] gap-8 p-6 md:p-10 group`}
 					>
-						<div className="grid cursor-pointer place-items-center rounded-2xl overflow-hidden bg-alvaro-base/50">
+						<div
+							className="grid cursor-pointer place-items-center rounded-2xl overflow-hidden bg-alvaro-base/50"
+							style={{ zIndex: i + 1 }}
+						>
 							<a
 								href={url}
 								target="_blank"
@@ -45,7 +48,7 @@ export const Portfolio = () => {
 								</span>
 							</a>
 						</div>
-					</div>
+					</SpotlightCard>
 				))}
 			</div>
 		</section>

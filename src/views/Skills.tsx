@@ -1,4 +1,5 @@
 import { Header } from "src/components/Header";
+import { SpotlightCard } from "src/components/SpotlightCard";
 import { useScrollReveal } from "src/hooks/useScrollReveal";
 import data from "src/data/skills.json";
 
@@ -23,12 +24,13 @@ export const Skills = () => {
 							rel="noopener noreferrer"
 							target="_blank"
 							className={`
-								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
-								gradient-border spring-hover group transition-all duration-500
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								${isFeatured ? "md:col-span-2 md:row-span-2 md:p-10" : ""}
 								${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
 							`}
-							style={{ transitionDelay: `${i * 60}ms` }}
+							style={{
+								transitionDelay: `${i * 60}ms`,
+							}}
 							aria-label={`Skill: ${title}`}
 						>
 							<img
@@ -42,7 +44,9 @@ export const Skills = () => {
 							/>
 							<h2
 								className={`font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 ${
-									isFeatured ? "text-base md:text-lg" : "text-sm"
+									isFeatured
+										? "text-base md:text-lg"
+										: "text-sm"
 								}`}
 							>
 								{title}

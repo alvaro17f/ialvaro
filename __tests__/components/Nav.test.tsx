@@ -22,11 +22,10 @@ describe("<Nav />", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render the navbar logo", async () => {
+	it("should render the nav brand", async () => {
 		fireEvent.scroll(window, { target: { scrollY: 800 } });
 		await waitFor(() => {
-			const logo = screen.getByAltText("logo");
-			expect(logo).toBeTruthy();
+			expect(screen.getByText("AM")).toBeTruthy();
 		});
 	});
 
@@ -35,10 +34,10 @@ describe("<Nav />", () => {
 		await waitFor(() => {
 			const navigation = within(screen.getByRole("navigation"));
 			expect(navigation.getByLabelText(/home/i)).toBeDefined();
-			expect(navigation.getByLabelText(/biography/i)).toBeDefined();
+			expect(navigation.getByLabelText(/about/i)).toBeDefined();
 			expect(navigation.getByLabelText(/skills/i)).toBeDefined();
 			expect(navigation.getByLabelText(/experience/i)).toBeDefined();
-			expect(navigation.getByLabelText(/cv/i)).toBeDefined();
+			expect(navigation.getByLabelText(/portfolio/i)).toBeDefined();
 			expect(navigation.getByLabelText(/contact/i)).toBeDefined();
 		});
 	});
@@ -50,10 +49,10 @@ describe("<Nav />", () => {
 		await waitFor(() => {
 			const navigation = within(screen.getByRole("navigation"));
 			expect(navigation.getByLabelText(/home-mobile/i)).toBeDefined();
-			expect(navigation.getByLabelText(/biography-mobile/i)).toBeDefined();
+			expect(navigation.getByLabelText(/about-mobile/i)).toBeDefined();
 			expect(navigation.getByLabelText(/skills-mobile/i)).toBeDefined();
 			expect(navigation.getByLabelText(/experience-mobile/i)).toBeDefined();
-			expect(navigation.getByLabelText(/cv-mobile/i)).toBeDefined();
+			expect(navigation.getByLabelText(/portfolio-mobile/i)).toBeDefined();
 			expect(navigation.getByLabelText(/contact-mobile/i)).toBeDefined();
 		});
 	});
@@ -65,11 +64,12 @@ describe("<Nav />", () => {
 			const navigation = within(screen.getByRole("navigation"));
 			fireEvent.click(navigation.getByLabelText(/home-mobile/i));
 		});
-		expect(screen.queryByLabelText(/home-mobile/i)).toBeNull();
+		await waitFor(() => {
+			expect(screen.queryByLabelText(/home-mobile/i)).toBeNull();
+		});
 	});
 
-	it("should allow button to be clicked", () => {
-		fireEvent.scroll(window, { target: { scrollY: 800 } });
-		fireEvent.click(screen.getByAltText("logo"));
+	it("should allow brand button to be clicked", () => {
+		fireEvent.click(screen.getByText("AM"));
 	});
 });

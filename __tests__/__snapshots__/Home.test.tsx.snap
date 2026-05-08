@@ -3,121 +3,133 @@
 exports[`<Home /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="h-[100dvh] top-0 grid place-items-center gap-5"
+    class="min-h-[100dvh] grid md:grid-cols-[1.2fr_1fr] items-center gap-8 px-4 md:px-0"
     id="home"
   >
-    <div>
+    <div
+      class="space-y-2"
+    >
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         A
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         L
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         V
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         A
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         R
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         O
       </span>
       <br />
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         G
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         A
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         R
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         C
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         I
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-danger"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         A
       </span>
       <br />
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         M
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         A
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         C
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         I
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         A
       </span>
       <span
         aria-label="wobble"
-        class="inline-block cursor-default text-6xl md:text-9xl hover:text-alvaro-primary"
+        class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
       >
         S
       </span>
       <br />
+    </div>
+    <div
+      class="hidden md:block"
+      style="opacity: 0; transform: translateX(40px);"
+    >
+      <p
+        class="text-alvaro-muted text-lg leading-relaxed max-w-[40ch]"
+      >
+        Full Stack Developer. Building interfaces that move.
+      </p>
     </div>
   </section>
 </div>

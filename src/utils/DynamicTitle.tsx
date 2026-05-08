@@ -1,52 +1,43 @@
 import { useEffect, useState } from "react";
 
+const sections = [
+	"home",
+	"biography",
+	"skills",
+	"experience",
+	"portfolio",
+	"cv",
+	"contact",
+];
+
 export const DynamicTitle = () => {
-	const [isMobile, setIsMobile] = useState(true);
 	const [title, setTitle] = useState("ialvaro");
 
 	useEffect(() => {
-		setIsMobile(window.innerWidth < 768);
-	});
+		const updateTitle = () => {
+			const scrollY = window.scrollY;
 
-	useEffect(() => {
-		if (!isMobile) {
-			const sections = [
-				"home",
-				"biography",
-				"skills",
-				"experience",
-				"portfolio",
-				"cv",
-				"contact",
-			];
-
-			const scrollPosition = window.scrollY;
-
-			if (scrollPosition === 0) {
-				setTitle(`${sections[0]} - ialvaro`);
+			if (scrollY < 100) {
+				setTitle("home - ialvaro");
+				return;
 			}
 
-			const updateTitle = () => {
-				for (let i = 0; i < sections.length; i++) {
-					const section = sections[i];
-					const element = document.getElementById(section);
-					if (element) {
-						const elementPosition =
-							element.getBoundingClientRect().top + (scrollPosition - 100);
-						if (scrollPosition >= elementPosition) {
-							setTitle(`${section} - ialvaro`);
-						}
+			for (let i = sections.length - 1; i >= 0; i--) {
+				const el = document.getElementById(sections[i]);
+				if (el) {
+					const rect = el.getBoundingClientRect();
+					if (rect.top <= 150) {
+						setTitle(`${sections[i]} - ialvaro`);
+						return;
 					}
 				}
-			};
+			}
+		};
 
-			window.addEventListener("scroll", updateTitle);
-
-			return () => {
-				window.removeEventListener("scroll", updateTitle);
-			};
-		}
-	}, [isMobile]);
+		updateTitle();
+		window.addEventListener("scroll", updateTitle, { passive: true });
+		return () => window.removeEventListener("scroll", updateTitle);
+	}, []);
 
 	return <title>{title}</title>;
 };

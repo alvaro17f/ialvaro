@@ -9,149 +9,148 @@ exports[`<Experience /> > should match the snapshot 1`] = `
       class="h-24"
     />
     <section
-      class="p-2 mb-5 rounded-lg text-alvaro-dark from-alvaro-primary to-transparent bg-gradient-to-r"
-      style="width: 0%; opacity: 0; transform: scaleY(0.5);"
+      class="px-4 py-2 mb-8 rounded-lg text-alvaro-dark bg-alvaro-primary"
+      style="width: 0%; opacity: 0;"
     >
       <h1
-        class="text-5xl md:text-3xl"
+        class="text-3xl md:text-4xl tracking-tight leading-none font-semibold"
         style="opacity: 0;"
       >
         Experience
       </h1>
     </section>
     <div
-      class="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
+      style="opacity: 0;"
     >
       <div
-        aria-label="experience"
-        class="grid gap-2 border-dashed cursor-pointer border-[4px] border-alvaro-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
-        style="opacity: 0;"
-        tabindex="0"
+        class="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
+        style="opacity: 0; transform: translateX(-30px);"
       >
-        <a
-          href="https://openbank.es/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Openbank"
-            class="w-56 h-36"
-            src="/experience/openbank.svg"
-          />
-        </a>
-        <p>
-          June 2023
-           - 
-          now
-        </p>
-      </div>
-      <div
-        class="mt-12 md:mt-0"
-      >
-        <h1
-          aria-label="title"
-          class="mb-5 text-4xl md:text-6xl text-alvaro-primary"
-          style="opacity: 0;"
-        >
-          Openbank
-        </h1>
         <div
-          aria-label="content"
-          class="mb-20 whitespace-pre-wrap"
-          style="opacity: 0;"
+          class="grid gap-2 cursor-pointer md:p-5 h-60 md:mb-36 place-items-center rounded-2xl border-2 border-dashed border-alvaro-border hover:border-alvaro-primary transition-colors duration-300"
         >
-          <p
-            class="text-xl underline text-alvaro-danger"
+          <a
+            aria-label="Openbank"
+            href="https://openbank.es/"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            Consulting Firm
-          </p>
-          Knowmad Mood & Plexus
-          <br />
-          <br />
+            <img
+              alt="Openbank"
+              class="w-56 h-36 object-contain"
+              src="/experience/openbank.svg"
+            />
+          </a>
           <p
-            class="text-xl underline text-alvaro-danger"
+            class="text-sm font-mono text-alvaro-muted tabular-nums"
           >
-            Projects
+            June 2023
+             — 
+            now
           </p>
-          - Onboarding
+        </div>
+        <div
+          class="mt-12 md:mt-0"
+        >
+          <h2
+            class="mb-5 text-4xl md:text-5xl tracking-tighter leading-none font-semibold text-alvaro-white"
+          >
+            Openbank
+          </h2>
+          <div
+            class="space-y-8 text-alvaro-muted leading-relaxed max-w-[65ch]"
+          >
+            <div>
+              <h3
+                class="text-lg font-medium text-alvaro-white mb-2"
+              >
+                Consulting Firm
+              </h3>
+              <p>
+                Knowmad Mood & Plexus
+              </p>
+            </div>
+            <div>
+              <h3
+                class="text-lg font-medium text-alvaro-white mb-2"
+              >
+                Projects
+              </h3>
+              <p>
+                - Onboarding
 - Customer
-          <br />
-          <br />
-          <p
-            class="text-xl underline text-alvaro-danger"
-          />
-          <br />
-          <br />
-          <p
-            class="text-xl underline text-alvaro-danger"
-          />
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      class="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
-    >
       <div
-        aria-label="experience"
-        class="grid gap-2 border-dashed cursor-pointer border-[4px] border-alvaro-muted b-20 md:p-5 h-60 md:mb-36 place-items-center rounded-xl"
-        style="opacity: 0;"
-        tabindex="0"
+        class="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
+        style="opacity: 0; transform: translateX(-30px);"
       >
-        <a
-          href="https://grupocajarural.es/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="RSI"
-            class="w-56 h-36"
-            src="/experience/rsi.svg"
-          />
-        </a>
-        <p>
-          October 2021
-           - 
-          April 2023
-        </p>
-      </div>
-      <div
-        class="mt-12 md:mt-0"
-      >
-        <h1
-          aria-label="title"
-          class="mb-5 text-4xl md:text-6xl text-alvaro-primary"
-          style="opacity: 0;"
-        >
-          RSI
-        </h1>
         <div
-          aria-label="content"
-          class="mb-20 whitespace-pre-wrap"
-          style="opacity: 0;"
+          class="grid gap-2 cursor-pointer md:p-5 h-60 md:mb-36 place-items-center rounded-2xl border-2 border-dashed border-alvaro-border hover:border-alvaro-primary transition-colors duration-300"
         >
-          <p
-            class="text-xl underline text-alvaro-danger"
+          <a
+            aria-label="RSI"
+            href="https://grupocajarural.es/"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            Consulting Firm
-          </p>
-          Devoteam
-          <br />
-          <br />
+            <img
+              alt="RSI"
+              class="w-56 h-36 object-contain"
+              src="/experience/rsi.svg"
+            />
+          </a>
           <p
-            class="text-xl underline text-alvaro-danger"
+            class="text-sm font-mono text-alvaro-muted tabular-nums"
           >
-            Projects
+            October 2021
+             — 
+            April 2023
           </p>
-          - Onboarding
+        </div>
+        <div
+          class="mt-12 md:mt-0"
+        >
+          <h2
+            class="mb-5 text-4xl md:text-5xl tracking-tighter leading-none font-semibold text-alvaro-white"
+          >
+            RSI
+          </h2>
+          <div
+            class="space-y-8 text-alvaro-muted leading-relaxed max-w-[65ch]"
+          >
+            <div>
+              <h3
+                class="text-lg font-medium text-alvaro-white mb-2"
+              >
+                Consulting Firm
+              </h3>
+              <p>
+                Devoteam
+              </p>
+            </div>
+            <div>
+              <h3
+                class="text-lg font-medium text-alvaro-white mb-2"
+              >
+                Projects
+              </h3>
+              <p>
+                - Onboarding
 - Customer
-          <br />
-          <br />
-          <p
-            class="text-xl underline text-alvaro-danger"
-          >
-            Tasks
-          </p>
-          - Web application development using Vue.js and React.js
+              </p>
+            </div>
+            <div>
+              <h3
+                class="text-lg font-medium text-alvaro-white mb-2"
+              >
+                Tasks
+              </h3>
+              <p>
+                - Web application development using Vue.js and React.js
 - REST API integration in front-end applications
 - Unit and integration test development
 - Code documentation
@@ -159,14 +158,16 @@ exports[`<Experience /> > should match the snapshot 1`] = `
 - Modification and elaboration of login pages
 - Internal SSO access elaboration
 - Modification of CSS styles
-          <br />
-          <br />
-          <p
-            class="text-xl underline text-alvaro-danger"
-          >
-            Skills
-          </p>
-          vue.js
+              </p>
+            </div>
+            <div>
+              <h3
+                class="text-lg font-medium text-alvaro-white mb-2"
+              >
+                Skills
+              </h3>
+              <p>
+                vue.js
 react.js
 typescript
 javascript
@@ -183,6 +184,9 @@ dbeaver
 postman
 invision
 overflow
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

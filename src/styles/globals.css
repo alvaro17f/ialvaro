@@ -1,38 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-	--color-alvaro-base: #1e1e2e;
-	--color-alvaro-primary: #89b4fa;
-	--color-alvaro-secondary: #cba6f7;
-	--color-alvaro-success: #94e2d5;
-	--color-alvaro-danger: #f38ba8;
-	--color-alvaro-warning: #f9e2af;
-	--color-alvaro-info: #89b4fa;
-	--color-alvaro-muted: #6c7086;
-	--color-alvaro-white: #cdd6f4;
-	--color-alvaro-dark: #1e1e2e;
+	--color-alvaro-base: #09090b;
+	--color-alvaro-surface: #111113;
+	--color-alvaro-border: #1e1e2a;
+	--color-alvaro-muted: #5c5c6b;
+	--color-alvaro-white: #ededf0;
+	--color-alvaro-primary: #3b82f6;
+	--color-alvaro-dark: #09090b;
 }
 
 * {
 	-webkit-tap-highlight-color: transparent;
-	font-family: "Poppins", sans-serif;
+	font-family: "Outfit Variable", "Outfit", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
 	box-sizing: border-box;
 	color: var(--color-alvaro-white);
 	background-color: var(--color-alvaro-base);
+	font-variant-numeric: tabular-nums;
 }
 
+/* Noise texture overlay */
+body::after {
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: 50;
+	pointer-events: none;
+	opacity: 0.025;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+	background-repeat: repeat;
+	background-size: 256px 256px;
+}
+
+/* Scrollbar */
 body::-webkit-scrollbar {
 	width: 0.5em;
 }
 
 body::-webkit-scrollbar-thumb {
 	background-color: var(--color-alvaro-primary);
-	-webkit-border-radius: 1ex;
+	border-radius: 1ex;
 }
 
 body::-webkit-scrollbar-thumb:active {
-	background-color: var(--color-alvaro-danger);
+	background-color: var(--color-alvaro-muted);
+}
+
+/* Focus ring */
+*:focus-visible {
+	outline: 2px solid var(--color-alvaro-primary);
+	outline-offset: 2px;
+}
+
+/* Smooth scroll */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+	background-color: var(--color-alvaro-primary);
+	color: var(--color-alvaro-dark);
 }

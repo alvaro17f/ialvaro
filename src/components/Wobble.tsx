@@ -1,4 +1,4 @@
-import { useId, useState } from "react";
+import { useState } from "react";
 import {
 	m,
 	LazyMotion,
@@ -6,13 +6,7 @@ import {
 	useAnimationControls,
 } from "framer-motion";
 
-const Text = ({
-	children,
-	style,
-}: {
-	children: React.ReactNode;
-	style?: string;
-}) => {
+const Text = ({ children }: { children: React.ReactNode }) => {
 	const controls = useAnimationControls();
 	const [isPlaying, setIsPlaying] = useState(false);
 
@@ -20,10 +14,10 @@ const Text = ({
 		controls.start({
 			transform: [
 				"scale3d(1, 1, 1)",
-				"scale3d(1.4, .55, 1)",
-				"scale3d(.75, 1.25, 1)",
-				"scale3d(1.25, .85, 1)",
-				"scale3d(.9, 1.05, 1)",
+				"scale3d(1.4, 0.55, 1)",
+				"scale3d(0.75, 1.25, 1)",
+				"scale3d(1.25, 0.85, 1)",
+				"scale3d(0.9, 1.05, 1)",
 				"scale3d(1, 1, 1)",
 			],
 			transition: {
@@ -36,7 +30,7 @@ const Text = ({
 	return (
 		<LazyMotion features={domAnimation}>
 			<m.span
-				className={`inline-block cursor-default text-6xl md:text-9xl ${style}`}
+				className="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
 				animate={controls}
 				onMouseOver={() => !isPlaying && rubberBand()}
 				onAnimationComplete={() => setIsPlaying(false)}
@@ -50,19 +44,16 @@ const Text = ({
 
 type Props = {
 	sentence: string;
-	style?: string;
 };
 
-export const Wobble = ({ sentence, style }: Props) => {
+export const Wobble = ({ sentence }: Props) => {
 	return (
 		<>
-			{sentence.split("").map((letter) => {
-				return (
-					<Text style={style} key={`${useId()}`}>
-						{letter === " " ? "\u00A0" : letter}
-					</Text>
-				);
-			})}
+			{sentence.split("").map((letter, i) => (
+				<Text key={`${sentence}-${i}`}>
+					{letter === " " ? "\u00A0" : letter}
+				</Text>
+			))}
 			<br />
 		</>
 	);

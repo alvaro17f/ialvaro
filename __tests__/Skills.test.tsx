@@ -17,7 +17,7 @@ describe("<Skills />", () => {
 	it("should render a heading", () => {
 		render(<Skills />);
 		expect(
-			screen.getByRole("heading", { level: 1, name: /skills/i }),
+			screen.getByRole("heading", { name: /skills/i }),
 		).toBeDefined();
 	});
 

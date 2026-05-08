@@ -1,7 +1,9 @@
 ---
-import "@fontsource/poppins";
+import "@fontsource-variable/outfit";
+import "@fontsource-variable/jetbrains-mono";
 import "src/styles/globals.css";
 import { Nav } from "src/components/Nav";
+import { Footer } from "src/components/Footer";
 import { DynamicTitle } from "src/utils/DynamicTitle";
 ---
 
@@ -9,14 +11,31 @@ import { DynamicTitle } from "src/utils/DynamicTitle";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta
+			name="description"
+			content="Alvaro Garcia Macias — Full Stack Developer. Portfolio, experience, and contact."
+		/>
+		<meta property="og:title" content="Alvaro Garcia Macias" />
+		<meta
+			property="og:description"
+			content="Full Stack Developer portfolio"
+		/>
+		<meta property="og:type" content="website" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<DynamicTitle client:load />
 	</head>
 	<body>
+		<a
+			href="#main-content"
+			class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-alvaro-primary focus:text-alvaro-dark focus:rounded-lg focus:font-medium"
+		>
+			Skip to content
+		</a>
 		<Nav client:load />
-		<main class="py-6 mx-5 md:mx-auto max-w-7xl sm:px-6 lg:px-8">
+		<main id="main-content" class="py-6 mx-5 md:mx-auto max-w-7xl sm:px-6 lg:px-8">
 			<slot />
 		</main>
+		<Footer />
 	</body>
 </html>

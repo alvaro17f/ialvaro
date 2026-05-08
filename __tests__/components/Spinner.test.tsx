@@ -5,11 +5,11 @@ import { describe, it } from "vitest";
 describe("Spinner", () => {
 	it("renders the spinner", () => {
 		render(<Spinner />);
-		screen.getByTitle("spinner");
+		screen.getByTitle("Loading");
 	});
 
 	it("renders the loading text", () => {
 		render(<Spinner />);
-		screen.getAllByText("Loading...");
+		screen.getAllByText("Loading");
 	});
 });

@@ -10,7 +10,10 @@ export default function Biography() {
 
 	useEffect(() => {
 		setIsMobile(window.innerWidth < TABLET);
-	});
+		const handleResize = () => setIsMobile(window.innerWidth < TABLET);
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 
 	useEffect(() => {
 		if (slider < data.length) {
@@ -25,64 +28,75 @@ export default function Biography() {
 	return (
 		<section
 			id="biography"
-			className="md:h-[100dvh] grid items-center pt-24 md:pt-0"
+			className="md:min-h-[100dvh] grid items-center pt-24 md:pt-0"
 		>
 			<Content>
-				<div className="grid grid-cols-1 md:gap-10 md:grid-cols-[1fr_2fr]">
+				<div className="grid grid-cols-1 md:gap-12 md:grid-cols-[1fr_2fr]">
 					<div className="mb-5">
 						<a
 							href="https://linkedin.com/in/alvarogarciamacias"
 							rel="noopener noreferrer"
 							target="_blank"
+							aria-label="LinkedIn profile"
 						>
 							<img
 								src="/images/profile/profile.png"
-								alt="profile"
+								alt="Alvaro Garcia Macias"
 								width={250}
 								height={250}
-								className="border-[7px] rounded-full border-alvaro-white hover:border-dashed cursor-pointer"
+								className="rounded-2xl border-2 border-alvaro-border hover:border-alvaro-primary cursor-pointer transition-colors duration-300"
 							/>
 						</a>
 					</div>
-					<div className="max-w-[75ch] md:h-[300px] items-center md:text-justify grid  whitespace-pre-wrap">
+					<div className="max-w-[65ch] md:h-[300px] items-center grid whitespace-pre-wrap">
 						<div>
-							<h1 className="mb-5 text-4xl">
-								Hello <span className="text-alvaro-danger">World</span>!
+							<h1 className="mb-5 text-4xl md:text-5xl tracking-tighter leading-none font-semibold">
+								Hello{" "}
+								<span className="text-alvaro-primary">World</span>
 							</h1>
-							<p>
+							<p className="text-alvaro-muted leading-relaxed">
 								My name is{" "}
-								<span className="text-xl text-alvaro-primary">Álvaro</span>, and
-								I am a Full Stack Developer.
+								<span className="text-lg text-alvaro-white font-medium">
+									Alvaro
+								</span>
+								, and I am a Full Stack Developer.
 							</p>
-							{selectedBio.bio}
+							<div className="mt-4 text-alvaro-muted leading-relaxed">
+								{selectedBio.bio}
+							</div>
 						</div>
 					</div>
 				</div>
-				<div className="grid w-full grid-cols-2 mt-20 md:grid-cols-3 place-items-center">
+				<div className="grid w-full grid-cols-2 mt-16 md:grid-cols-3 place-items-center gap-4">
 					<button
 						type="button"
-						onClick={() => slider !== 0 && setSlider((slider) => slider - 1)}
-						className="p-2 border text-alvaro-primary rounded-xl border-alvaro-primary md:hover:bg-alvaro-primary md:hover:text-alvaro-base"
+						onClick={() => slider !== 0 && setSlider((s) => s - 1)}
+						className="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200"
 					>
 						Shortest
 					</button>
 					{!isMobile && (
-						<input
-							id="minmax-range"
-							type="range"
-							min="0"
-							max={data.length - 1}
-							value={slider}
-							onChange={handleSlider}
-							className="w-full h-2 bg-gray-200 rounded-lg outline-none appearance-none cursor-pointer dark:bg-gray-700"
-						/>
+						<div className="w-full px-4">
+							<label htmlFor="bio-slider" className="sr-only">
+								Biography length
+							</label>
+							<input
+								id="bio-slider"
+								type="range"
+								min="0"
+								max={data.length - 1}
+								value={slider}
+								onChange={handleSlider}
+								className="w-full h-1 bg-alvaro-border rounded-lg appearance-none cursor-pointer accent-alvaro-primary"
+							/>
+						</div>
 					)}
 					<button
 						type="button"
 						onClick={() =>
-							slider !== data.length - 1 && setSlider((slider) => slider + 1)
+							slider !== data.length - 1 && setSlider((s) => s + 1)
 						}
-						className="p-2 border text-alvaro-danger rounded-xl border-alvaro-danger md:hover:bg-alvaro-danger md:hover:text-alvaro-base"
+						className="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200"
 					>
 						Longest
 					</button>

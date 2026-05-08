@@ -3,25 +3,19 @@ import { domAnimation, LazyMotion, m } from "framer-motion";
 type Props = {
 	children: React.ReactNode;
 	duration?: number;
-	style?: string;
 };
 
-export const Content = ({
-	children,
-	duration = 1,
-	style = "text-alvaro-white",
-}: Props) => {
+export const Content = ({ children, duration = 1 }: Props) => {
 	return (
 		<LazyMotion features={domAnimation}>
 			<m.section
-				className={`p-5 mb-5 rounded-lg ${style}`}
-				initial={{ opacity: 0 }}
-				whileInView={{ opacity: 1 }}
-				viewport={{ once: false }}
-				transition={{ duration }}
-				aria-label="content"
+				className="p-6 md:p-8"
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				transition={{ type: "spring", stiffness: 80, damping: 20, duration }}
 			>
-				<article className="p-5">{children}</article>
+				{children}
 			</m.section>
 		</LazyMotion>
 	);

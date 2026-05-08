@@ -17,7 +17,7 @@ describe("<Contact />", () => {
 
 	it("should render a heading", () => {
 		expect(
-			screen.getByRole("heading", { level: 1, name: /contact/i }),
+			screen.getByRole("heading", { name: /get in touch/i }),
 		).toBeDefined();
 	});
 

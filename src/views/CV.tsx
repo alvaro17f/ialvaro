@@ -1,26 +1,36 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
+import { DownloadSimple } from "@phosphor-icons/react";
 
 export const CV = () => {
 	return (
 		<LazyMotion features={domAnimation}>
-			<section id="cv">
-				<div className="h-24" />
-				<a href="/cv/cv.pdf" target="_blank" rel="noopener noreferrer">
+			<section id="cv" className="mt-12">
+				<a
+					href="/cv/cv.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Download CV"
+				>
 					<m.div
-						className="grid place-items-center p-5 mb-5 rounded-xl border-[5px] border-alvaro-danger text-alvaro-white"
+						className="grid place-items-center p-8 rounded-2xl border-2 border-alvaro-border bg-alvaro-surface hover:border-alvaro-primary transition-colors duration-300 group cursor-pointer"
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
-						whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-						whileTap={{ scale: 0.99, transition: { duration: 0.1 } }}
-						viewport={{ once: false }}
-						transition={{ duration: 2 }}
-						aria-label="content"
+						whileHover={{ y: -2 }}
+						whileTap={{ scale: 0.98 }}
+						viewport={{ once: true }}
+						transition={{
+							type: "spring",
+							stiffness: 100,
+							damping: 20,
+						}}
 					>
-						<h1 className="text-5xl text-center">GET MY CV FOR FREE!</h1>
-						<img
-							src="/cv/download.svg"
-							alt="download"
-							className="w-10 h-10 mt-5"
+						<h2 className="text-3xl md:text-4xl tracking-tight font-semibold text-alvaro-white group-hover:text-alvaro-primary transition-colors duration-200">
+							Download my CV
+						</h2>
+						<DownloadSimple
+							size={32}
+							weight="bold"
+							className="mt-4 text-alvaro-muted group-hover:text-alvaro-primary transition-colors duration-200"
 						/>
 					</m.div>
 				</a>

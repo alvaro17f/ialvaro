@@ -3,91 +3,103 @@
 exports[`<Biography /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="md:h-[100dvh] grid items-center pt-24 md:pt-0"
+    class="md:min-h-[100dvh] grid items-center pt-24 md:pt-0"
     id="biography"
   >
     <section
-      aria-label="content"
-      class="p-5 mb-5 rounded-lg text-alvaro-white"
-      style="opacity: 0;"
+      class="p-6 md:p-8"
+      style="opacity: 0; transform: translateY(20px);"
     >
-      <article
-        class="p-5"
+      <div
+        class="grid grid-cols-1 md:gap-12 md:grid-cols-[1fr_2fr]"
       >
         <div
-          class="grid grid-cols-1 md:gap-10 md:grid-cols-[1fr_2fr]"
+          class="mb-5"
         >
-          <div
-            class="mb-5"
+          <a
+            aria-label="LinkedIn profile"
+            href="https://linkedin.com/in/alvarogarciamacias"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <a
-              href="https://linkedin.com/in/alvarogarciamacias"
-              rel="noopener noreferrer"
-              target="_blank"
+            <img
+              alt="Alvaro Garcia Macias"
+              class="rounded-2xl border-2 border-alvaro-border hover:border-alvaro-primary cursor-pointer transition-colors duration-300"
+              height="250"
+              src="/images/profile/profile.png"
+              width="250"
+            />
+          </a>
+        </div>
+        <div
+          class="max-w-[65ch] md:h-[300px] items-center grid whitespace-pre-wrap"
+        >
+          <div>
+            <h1
+              class="mb-5 text-4xl md:text-5xl tracking-tighter leading-none font-semibold"
             >
-              <img
-                alt="profile"
-                class="border-[7px] rounded-full border-alvaro-white hover:border-dashed cursor-pointer"
-                height="250"
-                src="/images/profile/profile.png"
-                width="250"
-              />
-            </a>
-          </div>
-          <div
-            class="max-w-[75ch] md:h-[300px] items-center md:text-justify grid  whitespace-pre-wrap"
-          >
-            <div>
-              <h1
-                class="mb-5 text-4xl"
+              Hello
+               
+              <span
+                class="text-alvaro-primary"
               >
-                Hello 
-                <span
-                  class="text-alvaro-danger"
-                >
-                  World
-                </span>
-                !
-              </h1>
-              <p>
-                My name is
-                 
-                <span
-                  class="text-xl text-alvaro-primary"
-                >
-                  Álvaro
-                </span>
-                , and I am a Full Stack Developer.
-              </p>
+                World
+              </span>
+            </h1>
+            <p
+              class="text-alvaro-muted leading-relaxed"
+            >
+              My name is
+               
+              <span
+                class="text-lg text-alvaro-white font-medium"
+              >
+                Alvaro
+              </span>
+              , and I am a Full Stack Developer.
+            </p>
+            <div
+              class="mt-4 text-alvaro-muted leading-relaxed"
+            >
               I feel very fortunate to have found what I am passionate about and to make it my job.
             </div>
           </div>
         </div>
-        <div
-          class="grid w-full grid-cols-2 mt-20 md:grid-cols-3 place-items-center"
+      </div>
+      <div
+        class="grid w-full grid-cols-2 mt-16 md:grid-cols-3 place-items-center gap-4"
+      >
+        <button
+          class="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200"
+          type="button"
         >
-          <button
-            class="p-2 border text-alvaro-primary rounded-xl border-alvaro-primary md:hover:bg-alvaro-primary md:hover:text-alvaro-base"
-            type="button"
+          Shortest
+        </button>
+        <div
+          class="w-full px-4"
+        >
+          <label
+            class="sr-only"
+            for="bio-slider"
           >
-            Shortest
-          </button>
+            Biography length
+          </label>
           <input
-            class="w-full h-2 bg-gray-200 rounded-lg outline-none appearance-none cursor-pointer dark:bg-gray-700"
-            id="minmax-range"
+            class="w-full h-1 bg-alvaro-border rounded-lg appearance-none cursor-pointer accent-alvaro-primary"
+            id="bio-slider"
             max="2"
             min="0"
             type="range"
             value="1"
           />
-          <button
-            class="p-2 border text-alvaro-danger rounded-xl border-alvaro-danger md:hover:bg-alvaro-danger md:hover:text-alvaro-base"
-            type="button"
-          >
-            Longest
-          </button>
         </div>
-      </article>
+        <button
+          class="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200"
+          type="button"
+        >
+          Longest
+        </button>
+      </div>
     </section>
   </section>
 </div>

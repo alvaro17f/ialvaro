@@ -1,4 +1,5 @@
 import { domAnimation, LazyMotion, m } from "framer-motion";
+
 type Props = {
 	children: React.ReactNode;
 	once?: boolean;
@@ -11,11 +12,16 @@ export const LazyView = ({ children, once = true, duration = 1 }: Props) => {
 			<m.div
 				initial="hidden"
 				whileInView="visible"
-				viewport={{ once: once }}
-				transition={{ duration }}
+				viewport={{ once }}
+				transition={{
+					type: "spring",
+					stiffness: 80,
+					damping: 20,
+					duration,
+				}}
 				variants={{
-					visible: { opacity: 1 },
-					hidden: { opacity: 0 },
+					visible: { opacity: 1, y: 0 },
+					hidden: { opacity: 0, y: 20 },
 				}}
 			>
 				{children}

@@ -1,185 +1,137 @@
-import { m, LazyMotion, domAnimation, AnimatePresence } from "framer-motion";
+"use client";
+
 import { useEffect, useRef, useState } from "react";
+import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
+import { List, X } from "@phosphor-icons/react";
 
 const links = [
-	{
-		label: "Home",
-		route: "home",
-	},
-	{
-		label: "Biography",
-		route: "biography",
-	},
-	{
-		label: "Skills",
-		route: "skills",
-	},
-	{
-		label: "Experience",
-		route: "experience",
-	},
-	{
-		label: "Portfolio",
-		route: "portfolio",
-	},
-	{
-		label: "CV",
-		route: "cv",
-	},
-	{
-		label: "Contact",
-		route: "contact",
-	},
+	{ label: "Home", route: "home" },
+	{ label: "About", route: "biography" },
+	{ label: "Skills", route: "skills" },
+	{ label: "Experience", route: "experience" },
+	{ label: "Portfolio", route: "portfolio" },
+	{ label: "Contact", route: "contact" },
 ];
 
 export const Nav = () => {
-	const [scrollPosition, setScrollPosition] = useState(0);
 	const [isOpen, setIsOpen] = useState(false);
-	const ref = useRef(null);
+	const ref = useRef<HTMLDivElement>(null);
+
+	const scroller = (id: string) => {
+		document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+	};
 
 	useEffect(() => {
-		const updatePosition = () => {
-			setScrollPosition(window.scrollY);
+		const handleClickOutside = (e: MouseEvent) => {
+			if (ref.current && !ref.current.contains(e.target as Node)) {
+				setIsOpen(false);
+			}
 		};
-
-		window.addEventListener("scroll", updatePosition);
-
-		return () => window.removeEventListener("scroll", updatePosition);
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => document.removeEventListener("mousedown", handleClickOutside);
 	}, []);
-
-	const scroller = (route: string) =>
-		document.getElementById(route)?.scrollIntoView({ behavior: "smooth" });
 
 	return (
 		<LazyMotion features={domAnimation}>
 			<AnimatePresence>
-				{scrollPosition > 700 && (
-					<m.nav
-						className="fixed z-50 w-full bg-alvaro-base rounded-xl "
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0, transition: { duration: 0.3 } }}
-						transition={{ duration: 1.5 }}
-					>
-						<div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-							<div className="flex items-center justify-between h-16">
-								<div className="flex items-center">
-									<div className="flex-shrink-0">
-										<button
-											type="button"
-											onClick={() => {
-												scroller("home");
-												isOpen && setIsOpen(!isOpen);
-											}}
-										>
-											<img
-												src="/images/logo/blue.png"
-												alt="logo"
-												className="h-10"
-											/>
-										</button>
-									</div>
-									<div className="hidden md:block">
-										<div className="flex items-baseline ml-10 space-x-4">
-											{links.map(({ label, route }) => (
-												<m.div
-													key={route}
-													initial={{ scale: 1 }}
-													whileHover={{ scale: 1.2 }}
-													whileTap={{ scale: 1 }}
-												>
-													<button
-														key={route}
-														type="button"
-														onClick={() => scroller(route)}
-														className="px-3 py-2 text-sm font-medium rounded-md cursor-pointer text-alvaro-white hover:bg-alvaro-danger hover:text-alvaro-dark"
-														aria-label={`${label}-desktop`}
-													>
-														{label}
-													</button>
-												</m.div>
-											))}
-										</div>
-									</div>
-								</div>
-								<div className="flex -mr-2 md:hidden">
-									<button
-										onClick={() => setIsOpen(!isOpen)}
+				<m.nav
+					className="fixed top-0 left-0 right-0 z-40 bg-alvaro-base/80 backdrop-blur-xl border-b border-alvaro-border"
+					initial={{ y: -80, opacity: 0 }}
+					animate={{ y: 0, opacity: 1 }}
+					transition={{ type: "spring", stiffness: 100, damping: 20 }}
+				>
+					<div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+						<div className="flex items-center justify-between h-16">
+							<button
+								type="button"
+								onClick={() => {
+									scroller("home");
+									isOpen && setIsOpen(false);
+								}}
+								className="text-lg font-semibold tracking-tight text-alvaro-white"
+							>
+								AM
+							</button>
+
+							{/* Desktop nav */}
+							<div className="hidden md:flex items-center gap-1">
+								{links.map(({ label, route }) => (
+									<m.button
+										key={route}
 										type="button"
-										className="inline-flex items-center justify-center p-2 rounded-md text-alvaro-white focus:outline-none focus:ring-2 focus:ring-offset-2"
-										aria-label="menu-mobile"
-										aria-controls="mobile-menu"
-										aria-expanded="false"
+										onClick={() => scroller(route)}
+										className="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface transition-colors duration-200"
+										whileHover={{ scale: 1.02 }}
+										whileTap={{ scale: 0.98 }}
+										aria-label={`${label}-desktop`}
 									>
-										<span className="sr-only">menu-mobile</span>
-										{!isOpen ? (
-											<svg
-												className="block w-6 h-6"
-												xmlns="http://www.w3.org/2000/svg"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-												aria-hidden="true"
-											>
-												<title>hamburguer</title>
-												<path
-													strokeLinecap="round"
-													strokeLinejoin="round"
-													strokeWidth="2"
-													d="M4 6h16M4 12h16M4 18h16"
-												/>
-											</svg>
-										) : (
-											<svg
-												className="block w-6 h-6"
-												xmlns="http://www.w3.org/2000/svg"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-												aria-hidden="true"
-											>
-												<title>x</title>
-												<path
-													strokeLinecap="round"
-													strokeLinejoin="round"
-													strokeWidth="2"
-													d="M6 18L18 6M6 6l12 12"
-												/>
-											</svg>
-										)}
-									</button>
-								</div>
+										{label}
+									</m.button>
+								))}
+							</div>
+
+							{/* Mobile hamburger */}
+							<div className="flex md:hidden">
+								<button
+									onClick={() => setIsOpen(!isOpen)}
+									type="button"
+									className="p-2 rounded-lg text-alvaro-white hover:bg-alvaro-surface transition-colors duration-200"
+									aria-label="menu-mobile"
+									aria-controls="mobile-menu"
+									aria-expanded={isOpen}
+								>
+									{isOpen ? (
+										<X size={24} weight="bold" />
+									) : (
+										<List size={24} weight="bold" />
+									)}
+								</button>
 							</div>
 						</div>
+					</div>
 
+					{/* Mobile menu */}
+					<AnimatePresence>
 						{isOpen && (
-							<div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-								<m.div
-									className="md:hidden"
-									initial={{ x: 10, opacity: 0 }}
-									animate={{ x: 0, opacity: 1 }}
-									exit={{ opacity: 0 }}
-									transition={{ duration: 1 }}
-								>
-									{links.map(({ label, route }) => (
-										<button
-											key={route}
-											type="button"
-											onClick={() => {
-												setIsOpen(!isOpen);
-												scroller(route);
-											}}
-											className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-alvaro-muted"
-											aria-label={`${label}-mobile`}
-										>
-											{label}
-										</button>
-									))}
-								</m.div>
-							</div>
+							<m.div
+								ref={ref}
+								id="mobile-menu"
+								className="md:hidden px-4 pb-4 space-y-1"
+								initial={{ height: 0, opacity: 0 }}
+								animate={{ height: "auto", opacity: 1 }}
+								exit={{ height: 0, opacity: 0 }}
+								transition={{
+									type: "spring",
+									stiffness: 200,
+									damping: 25,
+								}}
+							>
+								{links.map(({ label, route }, i) => (
+									<m.button
+										key={route}
+										type="button"
+										onClick={() => {
+											setIsOpen(false);
+											scroller(route);
+										}}
+										className="block w-full px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg hover:text-alvaro-white hover:bg-alvaro-surface transition-colors duration-200 text-left"
+										initial={{ x: -20, opacity: 0 }}
+										animate={{ x: 0, opacity: 1 }}
+										transition={{
+											delay: i * 0.05,
+											type: "spring",
+											stiffness: 200,
+											damping: 20,
+										}}
+										aria-label={`${label}-mobile`}
+									>
+										{label}
+									</m.button>
+								))}
+							</m.div>
 						)}
-					</m.nav>
-				)}
+					</AnimatePresence>
+				</m.nav>
 			</AnimatePresence>
 		</LazyMotion>
 	);

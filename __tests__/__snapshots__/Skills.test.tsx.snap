@@ -9,343 +9,260 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       class="h-24"
     />
     <section
-      class="p-2 mb-5 rounded-lg text-alvaro-dark from-alvaro-primary to-transparent bg-gradient-to-r"
-      style="width: 0%; opacity: 0; transform: scaleY(0.5);"
+      class="px-4 py-2 mb-8 rounded-lg text-alvaro-dark bg-alvaro-primary"
+      style="width: 0%; opacity: 0;"
     >
       <h1
-        class="text-5xl md:text-3xl"
+        class="text-3xl md:text-4xl tracking-tight leading-none font-semibold"
         style="opacity: 0;"
       >
         Skills
       </h1>
     </section>
     <div
-      class="grid grid-cols-2 gap-5 md:grid-cols-4 place-items-center"
+      class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6"
+      style="opacity: 0;"
     >
-      <div
-        class="grid place-content-center"
+      <a
+        aria-label="Skill: react.js"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://react.dev/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://react.dev/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="react.js"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/react.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="react.js"
-              class="w-40 h-40 p-3"
-              src="/skills/react.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              react.js
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          react.js
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: vue.js"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://vuejs.org/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://vuejs.org/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="vue.js"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/vue.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="vue.js"
-              class="w-40 h-40 p-3"
-              src="/skills/vue.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              vue.js
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          vue.js
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: typescript"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://typescriptlang.org/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://typescriptlang.org/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="typescript"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/typescript.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="typescript"
-              class="w-40 h-40 p-3"
-              src="/skills/typescript.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              typescript
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          typescript
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: javascript"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://javascript.com/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://javascript.com/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="javascript"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/javascript.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="javascript"
-              class="w-40 h-40 p-3"
-              src="/skills/javascript.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              javascript
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          javascript
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: tailwind"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://tailwindcss.com/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://tailwindcss.com/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="tailwind"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/tailwind.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="tailwind"
-              class="w-40 h-40 p-3"
-              src="/skills/tailwind.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              tailwind
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          tailwind
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: next.js"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://nextjs.org/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://nextjs.org/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="next.js"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/next.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="next.js"
-              class="w-40 h-40 p-3"
-              src="/skills/next.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              next.js
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          next.js
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: rust"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://rust-lang.org/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://rust-lang.org/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="rust"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/ferris.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="rust"
-              class="w-40 h-40 p-3"
-              src="/skills/ferris.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              rust
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          rust
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: go"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://go.dev/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://go.dev/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="go"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/go.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="go"
-              class="w-40 h-40 p-3"
-              src="/skills/go.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              go
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          go
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: jest"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://jestjs.io/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://jestjs.io/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="jest"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/jest.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="jest"
-              class="w-40 h-40 p-3"
-              src="/skills/jest.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              jest
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          jest
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: node.js"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://nodejs.org/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://nodejs.org/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="node.js"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/node.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="node.js"
-              class="w-40 h-40 p-3"
-              src="/skills/node.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              node.js
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          node.js
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: docker"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://docker.com/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://docker.com/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="docker"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/docker.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="docker"
-              class="w-40 h-40 p-3"
-              src="/skills/docker.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              docker
-            </h2>
-          </div>
-        </a>
-      </div>
-      <div
-        class="grid place-content-center"
+          docker
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: sql"
+        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group"
+        href="https://mysql.com/"
+        rel="noopener noreferrer"
+        style="opacity: 0; transform: translateY(20px);"
+        tabindex="0"
+        target="_blank"
       >
-        <a
-          href="https://mysql.com/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <img
+          alt="sql"
+          class="w-24 h-24 md:w-32 md:h-32 object-contain"
+          src="/skills/sql.svg"
+        />
+        <h2
+          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
         >
-          <div
-            aria-label="skill"
-            class="grid gap-2 p-5 text-center border-dashed cursor-pointer place-items-center rounded-xl"
-            style="opacity: 0; transform: none;"
-            tabindex="0"
-          >
-            <img
-              alt="sql"
-              class="w-40 h-40 p-3"
-              src="/skills/sql.svg"
-            />
-            <h2
-              class="mb-5 text-xl text-alvaro-white"
-            >
-              sql
-            </h2>
-          </div>
-        </a>
-      </div>
+          sql
+        </h2>
+      </a>
     </div>
   </section>
 </div>

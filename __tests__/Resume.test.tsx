@@ -17,7 +17,7 @@ describe("<CV />", () => {
 
 	it("should render a heading", () => {
 		expect(
-			screen.getByRole("heading", { level: 1, name: /cv/i }),
+			screen.getByRole("heading", { name: /download my cv/i }),
 		).toBeDefined();
 	});
 });

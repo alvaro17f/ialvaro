@@ -1,110 +1,150 @@
-import { Content } from "src/components/Content";
+import { WordReveal } from "src/components/WordReveal";
+import { FloatingTags } from "src/components/FloatingTags";
+import { TimelineSlider } from "src/components/TimelineSlider";
+import { useScrollReveal } from "src/hooks/useScrollReveal";
 import data from "src/data/biography.json";
-import { type ChangeEvent, useEffect, useState } from "react";
-import { TABLET } from "src/constants/devices";
+import { useEffect, useState } from "react";
+
+const profileTags = [
+	"React",
+	"TypeScript",
+	"Node.js",
+	"Full Stack",
+	"UI/UX",
+];
 
 export default function Biography() {
-	const [isMobile, setIsMobile] = useState(true);
 	const [slider, setSlider] = useState(Math.round((data.length - 1) / 2));
 	const [selectedBio, setSelectedBio] = useState(data[slider]);
-
-	useEffect(() => {
-		setIsMobile(window.innerWidth < TABLET);
-		const handleResize = () => setIsMobile(window.innerWidth < TABLET);
-		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+	const { ref, isVisible } = useScrollReveal({ threshold: 0.15 });
 
 	useEffect(() => {
 		if (slider < data.length) setSelectedBio(data[slider]);
 	}, [slider]);
 
-	const handleSlider = (e: ChangeEvent<HTMLInputElement>) => {
-		setSlider(Number(e.target.value));
-	};
+	const bioText =
+		typeof selectedBio.bio === "string"
+			? selectedBio.bio
+			: String(selectedBio.bio);
 
 	return (
 		<section
 			id="biography"
-			className="md:min-h-[100dvh] grid items-center pt-24 md:pt-0 section-curve"
+			className="relative min-h-[100dvh] grid items-center overflow-hidden"
 		>
-			<Content>
-				<div className="grid grid-cols-1 md:gap-16 md:grid-cols-[1fr_2fr]">
-					<div className="mb-5">
-						<a
-							href="https://linkedin.com/in/alvarogarciamacias"
-							rel="noopener noreferrer"
-							target="_blank"
-							aria-label="LinkedIn profile"
+			{/* Background glow */}
+			<div className="absolute inset-0 pointer-events-none">
+				<div className="mesh-blob-delayed absolute top-1/3 right-0 w-[400px] h-[400px] rounded-full bg-alvaro-primary/5 blur-[100px]" />
+			</div>
+
+			<div
+				ref={ref}
+				className="relative z-10 grid md:grid-cols-[1fr_1.5fr] gap-12 md:gap-20 items-center"
+			>
+				{/* Left: Profile with floating tags */}
+				<div className="relative flex justify-center">
+					<div className="relative">
+						{/* Glow behind image */}
+						<div className="absolute -inset-6 rounded-3xl bg-alvaro-primary/8 blur-2xl" />
+						{/* Gradient border */}
+						<div className="absolute -inset-[2px] rounded-3xl gradient-border -z-10" />
+						<img
+							src="/images/profile/profile.png"
+							alt="Alvaro Garcia Macias"
+							className={`relative w-64 h-64 md:w-72 md:h-72 object-cover rounded-3xl border-2 border-alvaro-border transition-all duration-700 ${
+								isVisible
+									? "opacity-100 scale-100"
+									: "opacity-0 scale-95"
+							}`}
+						/>
+					</div>
+					{/* Floating skill tags */}
+					<div className="hidden md:block">
+						<FloatingTags tags={profileTags} />
+					</div>
+				</div>
+
+				{/* Right: Bio content */}
+				<div className="space-y-6">
+					<div>
+						<p
+							className={`text-sm font-semibold tracking-widest uppercase text-alvaro-primary mb-3 transition-all duration-500 ${
+								isVisible
+									? "opacity-100 translate-y-0"
+									: "opacity-0 translate-y-4"
+							}`}
 						>
-							<img
-								src="/images/profile/profile.png"
-								alt="Alvaro Garcia Macias"
-								width={250}
-								height={250}
-								className="rounded-3xl border-2 border-alvaro-border hover:border-alvaro-primary cursor-pointer transition-colors duration-300"
-							/>
-						</a>
+							About
+						</p>
+						<h2
+							className={`text-4xl md:text-5xl lg:text-6xl tracking-tighter leading-[0.95] font-bold text-alvaro-white transition-all duration-700 delay-100 ${
+								isVisible
+									? "opacity-100 translate-y-0"
+									: "opacity-0 translate-y-6"
+							}`}
+						>
+							I build things
+							<br />
+							<span className="text-alvaro-muted">for the web.</span>
+						</h2>
 					</div>
-					<div className="max-w-[65ch] md:h-[300px] items-center grid whitespace-pre-wrap">
+
+					<WordReveal
+						text={bioText}
+						className="text-alvaro-muted leading-relaxed max-w-[55ch]"
+					/>
+
+					{/* Timeline slider */}
+					<div
+						className={`transition-all duration-700 delay-300 ${
+							isVisible
+								? "opacity-100 translate-y-0"
+								: "opacity-0 translate-y-4"
+						}`}
+					>
+						<TimelineSlider
+							value={slider}
+							onChange={setSlider}
+							min={0}
+							max={data.length - 1}
+						/>
+					</div>
+
+					{/* Inline stats */}
+					<div
+						className={`flex gap-8 pt-2 transition-all duration-700 delay-500 ${
+							isVisible
+								? "opacity-100 translate-y-0"
+								: "opacity-0 translate-y-4"
+						}`}
+					>
 						<div>
-							<h1 className="mb-6 text-5xl md:text-6xl tracking-tighter leading-none font-bold">
-								Hello{" "}
-								<span className="text-alvaro-primary">
-									World
-								</span>
-							</h1>
-							<p className="text-alvaro-muted text-lg leading-relaxed">
-								My name is{" "}
-								<span className="text-xl text-alvaro-white font-semibold">
-									Alvaro
-								</span>
-								, and I am a Full Stack Developer.
+							<span className="text-2xl md:text-3xl font-bold tracking-tight text-alvaro-white">
+								5+
+							</span>
+							<p className="text-xs text-alvaro-muted mt-1">
+								Years
 							</p>
-							<div className="mt-6 text-alvaro-muted leading-relaxed">
-								{selectedBio.bio}
-							</div>
+						</div>
+						<div>
+							<span className="text-2xl md:text-3xl font-bold tracking-tight text-alvaro-white">
+								20+
+							</span>
+							<p className="text-xs text-alvaro-muted mt-1">
+								Projects
+							</p>
+						</div>
+						<div>
+							<span className="text-2xl md:text-3xl font-bold tracking-tight text-alvaro-white">
+								12
+							</span>
+							<p className="text-xs text-alvaro-muted mt-1">
+								Technologies
+							</p>
 						</div>
 					</div>
 				</div>
-				<div className="grid w-full grid-cols-2 mt-20 md:grid-cols-3 place-items-center gap-4">
-					<button
-						type="button"
-						onClick={() =>
-							slider !== 0 && setSlider((s) => s - 1)
-						}
-						className="p-3 border border-alvaro-border text-alvaro-muted rounded-xl hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
-					>
-						Shortest
-					</button>
-					{!isMobile && (
-						<div className="w-full px-4">
-							<label htmlFor="bio-slider" className="sr-only">
-								Biography length
-							</label>
-							<input
-								id="bio-slider"
-								type="range"
-								min="0"
-								max={data.length - 1}
-								value={slider}
-								onChange={handleSlider}
-								className="w-full h-1 bg-alvaro-border rounded-lg appearance-none cursor-pointer accent-alvaro-primary"
-							/>
-						</div>
-					)}
-					<button
-						type="button"
-						onClick={() =>
-							slider !== data.length - 1 &&
-							setSlider((s) => s + 1)
-						}
-						className="p-3 border border-alvaro-border text-alvaro-muted rounded-xl hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
-					>
-						Longest
-					</button>
-				</div>
-			</Content>
+			</div>
 		</section>
 	);
 }

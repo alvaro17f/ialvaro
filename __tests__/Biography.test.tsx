@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import Biography from "src/views/Biography";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { mockIntersectionObserver } from "./mocks/IntersectionObserver.tsx";
@@ -15,27 +15,32 @@ describe("<Biography />", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render an image", () => {
+	it("should render profile image", () => {
 		expect(screen.getByRole("img")).toBeDefined();
 	});
 
-	it("should render a heading", () => {
-		expect(
-			screen.getByRole("heading", { level: 1, name: /hello world/i }),
-		).toBeDefined();
+	it("should render about heading", () => {
+		expect(screen.getByText("About")).toBeDefined();
+		expect(screen.getByText("I build things")).toBeDefined();
 	});
 
-	it("should render a paragraph", () => {
-		expect(screen.getByText(/Full Stack Developer/i)).toBeDefined();
+	it("should render inline stats", () => {
+		expect(screen.getByText("5+")).toBeDefined();
+		expect(screen.getByText("20+")).toBeDefined();
+		expect(screen.getByText("12")).toBeDefined();
 	});
 
-	it("should render a slider", () => {
+	it("should render timeline slider", () => {
 		expect(screen.getByRole("slider")).toBeDefined();
 	});
 
-	it("should be able to change biography's value", () => {
-		const slider = screen.getByRole("slider");
-		expect(slider).toBeDefined();
-		fireEvent.change(slider, { target: { value: 0 } });
+	it("should render floating tags on desktop", () => {
+		expect(screen.getByText("React")).toBeDefined();
+		expect(screen.getByText("TypeScript")).toBeDefined();
+	});
+
+	it("should render word reveal text", () => {
+		expect(screen.getByText("fortunate")).toBeDefined();
+		expect(screen.getByText("passionate")).toBeDefined();
 	});
 });

@@ -167,6 +167,7 @@ exports[`<Home /> > should match the snapshot 1`] = `
           alt="Alvaro Garcia Macias"
           class="relative w-80 h-80 object-cover rounded-3xl border-2 border-alvaro-border transition-transform duration-700 group-hover:scale-[1.02] group-hover:border-alvaro-primary/30"
           src="/images/profile/profile.png"
+          style="transform: translateY(0px); will-change: transform;"
         />
         <div
           class="absolute inset-0 rounded-3xl bg-gradient-to-t from-alvaro-base/50 via-transparent to-transparent"

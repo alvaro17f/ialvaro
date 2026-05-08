@@ -1,8 +1,18 @@
+import { useEffect, useState } from "react";
 import { ScrambleWobble } from "src/components/ScrambleWobble";
 import { useScrollReveal } from "src/hooks/useScrollReveal";
 
 export const Home = () => {
 	const { ref, isVisible } = useScrollReveal({ threshold: 0.2 });
+	const [parallax, setParallax] = useState(0);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setParallax(window.scrollY * 0.12);
+		};
+		window.addEventListener("scroll", handleScroll, { passive: true });
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
 	return (
 		<section
@@ -70,7 +80,7 @@ export const Home = () => {
 				</div>
 			</div>
 
-			{/* Profile image — desktop */}
+			{/* Profile image — desktop, parallax */}
 			<div
 				className={`hidden md:block relative z-10 transition-all duration-1000 delay-500 ${
 					isVisible
@@ -84,6 +94,10 @@ export const Home = () => {
 						src="/images/profile/profile.png"
 						alt="Alvaro Garcia Macias"
 						className="relative w-80 h-80 object-cover rounded-3xl border-2 border-alvaro-border transition-transform duration-700 group-hover:scale-[1.02] group-hover:border-alvaro-primary/30"
+						style={{
+							transform: `translateY(${parallax}px)`,
+							willChange: "transform",
+						}}
 					/>
 					<div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-alvaro-base/50 via-transparent to-transparent" />
 				</div>

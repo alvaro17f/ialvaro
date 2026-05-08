@@ -8,19 +8,20 @@ vi.mock("@react-three/fiber", () => ({
 		<div data-testid="three-canvas">{children as React.ReactNode}</div>
 	),
 	useFrame: () => {},
+	useThree: () => ({
+		camera: {} as unknown,
+		gl: { domElement: document.createElement("div") },
+		raycaster: {},
+		scene: {},
+	}),
 }));
 
 vi.mock("@react-three/drei", () => ({
-	OrbitControls: () => null,
-	Float: ({ children }: Record<string, unknown>) => (
-		<>{children as React.ReactNode}</>
-	),
 	Html: ({
 		children,
 	}: Record<string, unknown>) => (
 		<span>{children as React.ReactNode}</span>
 	),
-	useTexture: () => ({}) as unknown,
 }));
 
 describe("<Skills />", () => {
@@ -51,7 +52,7 @@ describe("<Skills />", () => {
 		expect(screen.getAllByRole("img").length).toBe(12);
 	});
 
-	it("renders tech sphere on desktop", () => {
+	it("renders sailboat game on desktop", () => {
 		mockIntersectionObserver();
 		vi.spyOn(window, "innerWidth", "get").mockReturnValue(1024);
 		render(<Skills />);

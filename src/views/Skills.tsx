@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Header } from "src/components/Header";
-import { TechSphere } from "src/components/TechSphere";
+import { SailboatGame } from "src/components/SailboatGame";
 import { SpotlightCard } from "src/components/SpotlightCard";
 import { useScrollReveal } from "src/hooks/useScrollReveal";
 import data from "src/data/skills.json";
@@ -25,11 +25,11 @@ export const Skills = () => {
 			<Header title="Skills" />
 			{isDesktop ? (
 				<div
-					className={`transition-all duration-700 ${
+					className={`relative transition-all duration-700 ${
 						isVisible ? "opacity-100" : "opacity-0"
 					}`}
 				>
-					<TechSphere />
+					<SailboatGame />
 				</div>
 			) : (
 				<div

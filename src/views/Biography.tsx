@@ -3,7 +3,7 @@ import { FloatingTags } from "src/components/FloatingTags";
 import { TimelineSlider } from "src/components/TimelineSlider";
 import { useScrollReveal } from "src/hooks/useScrollReveal";
 import data from "src/data/biography.json";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const profileTags = [
 	"React",
@@ -14,13 +14,14 @@ const profileTags = [
 ];
 
 export default function Biography() {
-	const [slider, setSlider] = useState(Math.round((data.length - 1) / 2));
-	const [selectedBio, setSelectedBio] = useState(data[slider]);
+	const [rawValue, setRawValue] = useState(50);
+	const index = Math.round((rawValue / 100) * (data.length - 1));
+	const selectedBio = data[index];
 	const { ref, isVisible } = useScrollReveal({ threshold: 0.15 });
 
-	useEffect(() => {
-		if (slider < data.length) setSelectedBio(data[slider]);
-	}, [slider]);
+	const positions = data.map((_, i) =>
+		Math.round((i / (data.length - 1)) * 100),
+	);
 
 	const bioText =
 		typeof selectedBio.bio === "string"
@@ -103,10 +104,11 @@ export default function Biography() {
 						}`}
 					>
 						<TimelineSlider
-							value={slider}
-							onChange={setSlider}
+							value={rawValue}
+							onChange={setRawValue}
 							min={0}
-							max={data.length - 1}
+							max={100}
+							positions={positions}
 						/>
 					</div>
 

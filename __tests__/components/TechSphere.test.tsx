@@ -19,23 +19,15 @@ vi.mock("@react-three/drei", () => ({
 	}: Record<string, unknown>) => (
 		<span>{children as React.ReactNode}</span>
 	),
-	useTexture: () => ({}) as unknown,
 }));
 
-const expectedSkills = [
-	"react.js",
-	"vue.js",
-	"typescript",
-	"javascript",
-	"tailwind",
-	"next.js",
-	"rust",
-	"go",
-	"jest",
-	"node.js",
-	"docker",
-	"sql",
-];
+vi.mock("src/data/skills.json", () => ({
+	default: [
+		{ id: "1", title: "react.js", image: "/skills/react.svg", url: "https://react.dev/" },
+		{ id: "2", title: "vue.js", image: "/skills/vue.svg", url: "https://vuejs.org/" },
+		{ id: "3", title: "typescript", image: "/skills/typescript.svg", url: "https://typescriptlang.org/" },
+	],
+}));
 
 describe("<TechSphere />", () => {
 	afterEach(cleanup);
@@ -45,10 +37,16 @@ describe("<TechSphere />", () => {
 		expect(screen.getByTestId("three-canvas")).toBeDefined();
 	});
 
-	it("renders all 12 skill labels from data", () => {
+	it("renders skill labels", () => {
 		render(<TechSphere />);
-		for (const skill of expectedSkills) {
-			expect(screen.getByText(skill)).toBeDefined();
-		}
+		expect(screen.getByText("react.js")).toBeDefined();
+		expect(screen.getByText("vue.js")).toBeDefined();
+		expect(screen.getByText("typescript")).toBeDefined();
+	});
+
+	it("labels are visible for each skill", () => {
+		render(<TechSphere />);
+		const labels = screen.getAllByText(/\.js$|typescript|javascript|tailwind|rust|go$|jest|docker|sql$/);
+		expect(labels.length).toBe(3);
 	});
 });

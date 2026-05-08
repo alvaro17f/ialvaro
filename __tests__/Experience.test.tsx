@@ -21,12 +21,12 @@ describe("<Experience />", () => {
 		).toBeDefined();
 	});
 
-	it("should render experience entries", () => {
-		expect(screen.getAllByRole("img").length).toBeGreaterThanOrEqual(1);
+	it("should render accordion items", () => {
+		const buttons = screen.getAllByRole("button", { expanded: false });
+		expect(buttons.length).toBeGreaterThanOrEqual(1);
 	});
 
-	it("should render experience titles", () => {
-		const headings = screen.getAllByRole("heading");
-		expect(headings.length).toBeGreaterThanOrEqual(2);
+	it("should render experience images", () => {
+		expect(screen.getAllByRole("img").length).toBeGreaterThanOrEqual(1);
 	});
 });

@@ -26,10 +26,10 @@ export default function Biography() {
 	return (
 		<section
 			id="biography"
-			className="md:min-h-[100dvh] grid items-center pt-24 md:pt-0"
+			className="md:min-h-[100dvh] grid items-center pt-24 md:pt-0 section-curve"
 		>
 			<Content>
-				<div className="grid grid-cols-1 md:gap-12 md:grid-cols-[1fr_2fr]">
+				<div className="grid grid-cols-1 md:gap-16 md:grid-cols-[1fr_2fr]">
 					<div className="mb-5">
 						<a
 							href="https://linkedin.com/in/alvarogarciamacias"
@@ -42,38 +42,38 @@ export default function Biography() {
 								alt="Alvaro Garcia Macias"
 								width={250}
 								height={250}
-								className="rounded-2xl border-2 border-alvaro-border hover:border-alvaro-primary cursor-pointer transition-colors duration-300"
+								className="rounded-3xl border-2 border-alvaro-border hover:border-alvaro-primary cursor-pointer transition-colors duration-300"
 							/>
 						</a>
 					</div>
 					<div className="max-w-[65ch] md:h-[300px] items-center grid whitespace-pre-wrap">
 						<div>
-							<h1 className="mb-5 text-4xl md:text-5xl tracking-tighter leading-none font-semibold">
+							<h1 className="mb-6 text-5xl md:text-6xl tracking-tighter leading-none font-bold">
 								Hello{" "}
 								<span className="text-alvaro-primary">
 									World
 								</span>
 							</h1>
-							<p className="text-alvaro-muted leading-relaxed">
+							<p className="text-alvaro-muted text-lg leading-relaxed">
 								My name is{" "}
-								<span className="text-lg text-alvaro-white font-medium">
+								<span className="text-xl text-alvaro-white font-semibold">
 									Alvaro
 								</span>
 								, and I am a Full Stack Developer.
 							</p>
-							<div className="mt-4 text-alvaro-muted leading-relaxed">
+							<div className="mt-6 text-alvaro-muted leading-relaxed">
 								{selectedBio.bio}
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className="grid w-full grid-cols-2 mt-16 md:grid-cols-3 place-items-center gap-4">
+				<div className="grid w-full grid-cols-2 mt-20 md:grid-cols-3 place-items-center gap-4">
 					<button
 						type="button"
 						onClick={() =>
 							slider !== 0 && setSlider((s) => s - 1)
 						}
-						className="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
+						className="p-3 border border-alvaro-border text-alvaro-muted rounded-xl hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
 					>
 						Shortest
 					</button>
@@ -99,7 +99,7 @@ export default function Biography() {
 							slider !== data.length - 1 &&
 							setSlider((s) => s + 1)
 						}
-						className="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
+						className="p-3 border border-alvaro-border text-alvaro-muted rounded-xl hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
 					>
 						Longest
 					</button>

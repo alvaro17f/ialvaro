@@ -3,14 +3,14 @@
 exports[`<Biography /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="md:min-h-[100dvh] grid items-center pt-24 md:pt-0"
+    class="md:min-h-[100dvh] grid items-center pt-24 md:pt-0 section-curve"
     id="biography"
   >
     <section
       class="p-6 md:p-8 transition-all duration-700 ease-out opacity-0 translate-y-5"
     >
       <div
-        class="grid grid-cols-1 md:gap-12 md:grid-cols-[1fr_2fr]"
+        class="grid grid-cols-1 md:gap-16 md:grid-cols-[1fr_2fr]"
       >
         <div
           class="mb-5"
@@ -23,7 +23,7 @@ exports[`<Biography /> > should match the snapshot 1`] = `
           >
             <img
               alt="Alvaro Garcia Macias"
-              class="rounded-2xl border-2 border-alvaro-border hover:border-alvaro-primary cursor-pointer transition-colors duration-300"
+              class="rounded-3xl border-2 border-alvaro-border hover:border-alvaro-primary cursor-pointer transition-colors duration-300"
               height="250"
               src="/images/profile/profile.png"
               width="250"
@@ -35,7 +35,7 @@ exports[`<Biography /> > should match the snapshot 1`] = `
         >
           <div>
             <h1
-              class="mb-5 text-4xl md:text-5xl tracking-tighter leading-none font-semibold"
+              class="mb-6 text-5xl md:text-6xl tracking-tighter leading-none font-bold"
             >
               Hello
                
@@ -46,19 +46,19 @@ exports[`<Biography /> > should match the snapshot 1`] = `
               </span>
             </h1>
             <p
-              class="text-alvaro-muted leading-relaxed"
+              class="text-alvaro-muted text-lg leading-relaxed"
             >
               My name is
                
               <span
-                class="text-lg text-alvaro-white font-medium"
+                class="text-xl text-alvaro-white font-semibold"
               >
                 Alvaro
               </span>
               , and I am a Full Stack Developer.
             </p>
             <div
-              class="mt-4 text-alvaro-muted leading-relaxed"
+              class="mt-6 text-alvaro-muted leading-relaxed"
             >
               I feel very fortunate to have found what I am passionate about and to make it my job.
             </div>
@@ -66,10 +66,10 @@ exports[`<Biography /> > should match the snapshot 1`] = `
         </div>
       </div>
       <div
-        class="grid w-full grid-cols-2 mt-16 md:grid-cols-3 place-items-center gap-4"
+        class="grid w-full grid-cols-2 mt-20 md:grid-cols-3 place-items-center gap-4"
       >
         <button
-          class="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
+          class="p-3 border border-alvaro-border text-alvaro-muted rounded-xl hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
           type="button"
         >
           Shortest
@@ -93,7 +93,7 @@ exports[`<Biography /> > should match the snapshot 1`] = `
           />
         </div>
         <button
-          class="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
+          class="p-3 border border-alvaro-border text-alvaro-muted rounded-xl hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
           type="button"
         >
           Longest

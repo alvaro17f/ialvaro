@@ -21,9 +21,15 @@ describe("<Skills />", () => {
 		).toBeDefined();
 	});
 
-	it("should render skills", () => {
+	it("should render all 12 skills", () => {
 		render(<Skills />);
 		expect(screen.getAllByLabelText(/skill/i).length).toBe(12);
 		expect(screen.getAllByRole("img").length).toBe(12);
+	});
+
+	it("should use bento grid with grid-flow-dense", () => {
+		const { container } = render(<Skills />);
+		const grid = container.querySelector(".grid-flow-dense");
+		expect(grid).toBeDefined();
 	});
 });

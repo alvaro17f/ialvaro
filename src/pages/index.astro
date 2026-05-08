@@ -1,5 +1,6 @@
 ---
 import { Scrollup } from "src/components/Scrollup";
+import { CursorGlow } from "src/components/CursorGlow";
 import { Marquee } from "src/components/Marquee";
 import Layout from "src/layouts/Layout.astro";
 import Biography from "src/views/Biography";
@@ -23,6 +24,7 @@ const techStack = [
 ---
 
 <Layout>
+	<CursorGlow client:load />
 	<Home client:load />
 	<Marquee items={techStack} speed={35} />
 	<Biography client:load />

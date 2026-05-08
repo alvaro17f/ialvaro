@@ -3,26 +3,35 @@
 exports[`<Skills /> > should match the snapshot 1`] = `
 <div>
   <section
+    class="section-curve"
     id="skills"
   >
     <div
-      class="h-24"
+      class="h-32 md:h-48"
     />
     <div
-      class="mb-8 overflow-hidden"
+      class="mb-10 overflow-hidden"
     >
       <h1
-        class="text-3xl md:text-4xl tracking-tight leading-none font-semibold text-alvaro-dark bg-alvaro-primary px-4 py-2 rounded-lg transition-all duration-700 ease-out origin-left opacity-0 scale-x-0"
+        class="text-4xl md:text-5xl tracking-tight leading-none font-bold text-alvaro-white transition-all duration-700 ease-out origin-left opacity-0 scale-x-0"
       >
         Skills
       </h1>
+      <div
+        class="mt-3 h-[2px] bg-alvaro-primary transition-all duration-700 delay-200 ease-out origin-left w-0 opacity-0"
+      />
     </div>
     <div
-      class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+      class="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-4 md:gap-6"
     >
       <a
         aria-label="Skill: react.js"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								md:col-span-2 md:row-span-2 md:p-10
+								opacity-0 translate-y-8
+							"
         href="https://react.dev/"
         rel="noopener noreferrer"
         style="transition-delay: 0ms;"
@@ -30,220 +39,275 @@ exports[`<Skills /> > should match the snapshot 1`] = `
       >
         <img
           alt="react.js"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-32 h-32 md:w-48 md:h-48"
           src="/skills/react.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-base md:text-lg"
         >
           react.js
         </h2>
       </a>
       <a
         aria-label="Skill: vue.js"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
         href="https://vuejs.org/"
         rel="noopener noreferrer"
-        style="transition-delay: 70ms;"
+        style="transition-delay: 60ms;"
         target="_blank"
       >
         <img
           alt="vue.js"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
           src="/skills/vue.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
         >
           vue.js
         </h2>
       </a>
       <a
         aria-label="Skill: typescript"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
         href="https://typescriptlang.org/"
         rel="noopener noreferrer"
-        style="transition-delay: 140ms;"
+        style="transition-delay: 120ms;"
         target="_blank"
       >
         <img
           alt="typescript"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
           src="/skills/typescript.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
         >
           typescript
         </h2>
       </a>
       <a
         aria-label="Skill: javascript"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
         href="https://javascript.com/"
         rel="noopener noreferrer"
-        style="transition-delay: 210ms;"
+        style="transition-delay: 180ms;"
         target="_blank"
       >
         <img
           alt="javascript"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
           src="/skills/javascript.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
         >
           javascript
         </h2>
       </a>
       <a
         aria-label="Skill: tailwind"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
         href="https://tailwindcss.com/"
         rel="noopener noreferrer"
-        style="transition-delay: 280ms;"
+        style="transition-delay: 240ms;"
         target="_blank"
       >
         <img
           alt="tailwind"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
           src="/skills/tailwind.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
         >
           tailwind
         </h2>
       </a>
       <a
         aria-label="Skill: next.js"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								md:col-span-2 md:row-span-2 md:p-10
+								opacity-0 translate-y-8
+							"
         href="https://nextjs.org/"
         rel="noopener noreferrer"
-        style="transition-delay: 350ms;"
+        style="transition-delay: 300ms;"
         target="_blank"
       >
         <img
           alt="next.js"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-32 h-32 md:w-48 md:h-48"
           src="/skills/next.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-base md:text-lg"
         >
           next.js
         </h2>
       </a>
       <a
         aria-label="Skill: rust"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
         href="https://rust-lang.org/"
         rel="noopener noreferrer"
-        style="transition-delay: 420ms;"
+        style="transition-delay: 360ms;"
         target="_blank"
       >
         <img
           alt="rust"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
           src="/skills/ferris.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
         >
           rust
         </h2>
       </a>
       <a
         aria-label="Skill: go"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
         href="https://go.dev/"
         rel="noopener noreferrer"
-        style="transition-delay: 490ms;"
+        style="transition-delay: 420ms;"
         target="_blank"
       >
         <img
           alt="go"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
           src="/skills/go.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
         >
           go
         </h2>
       </a>
       <a
         aria-label="Skill: jest"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								md:col-span-2 md:row-span-2 md:p-10
+								opacity-0 translate-y-8
+							"
         href="https://jestjs.io/"
         rel="noopener noreferrer"
-        style="transition-delay: 560ms;"
+        style="transition-delay: 480ms;"
         target="_blank"
       >
         <img
           alt="jest"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-32 h-32 md:w-48 md:h-48"
           src="/skills/jest.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-base md:text-lg"
         >
           jest
         </h2>
       </a>
       <a
         aria-label="Skill: node.js"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
         href="https://nodejs.org/"
         rel="noopener noreferrer"
-        style="transition-delay: 630ms;"
+        style="transition-delay: 540ms;"
         target="_blank"
       >
         <img
           alt="node.js"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
           src="/skills/node.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
         >
           node.js
         </h2>
       </a>
       <a
         aria-label="Skill: docker"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
         href="https://docker.com/"
         rel="noopener noreferrer"
-        style="transition-delay: 700ms;"
+        style="transition-delay: 600ms;"
         target="_blank"
       >
         <img
           alt="docker"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
           src="/skills/docker.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
         >
           docker
         </h2>
       </a>
       <a
         aria-label="Skill: sql"
-        class="grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl bg-alvaro-surface border border-alvaro-border spring-hover group transition-all duration-500 opacity-0 translate-y-6"
+        class="
+								grid gap-3 p-6 text-center cursor-pointer place-items-center rounded-2xl
+								gradient-border spring-hover group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
         href="https://mysql.com/"
         rel="noopener noreferrer"
-        style="transition-delay: 770ms;"
+        style="transition-delay: 660ms;"
         target="_blank"
       >
         <img
           alt="sql"
-          class="w-24 h-24 md:w-32 md:h-32 object-contain transition-transform duration-500 group-hover:scale-110"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
           src="/skills/sql.svg"
         />
         <h2
-          class="text-sm font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200"
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
         >
           sql
         </h2>

@@ -3,7 +3,7 @@
 exports[`<CV /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="mt-16"
+    class="mt-32 md:mt-48"
     id="cv"
   >
     <a
@@ -13,19 +13,22 @@ exports[`<CV /> > should match the snapshot 1`] = `
       target="_blank"
     >
       <div
-        class="grid place-items-center p-8 md:p-12 rounded-2xl border-2 border-alvaro-border bg-alvaro-surface hover:border-alvaro-primary transition-all duration-300 group cursor-pointer active:scale-[0.99]"
+        class="grid place-items-center p-10 md:p-16 rounded-3xl border-2 border-alvaro-border bg-alvaro-surface hover:border-alvaro-primary transition-all duration-300 group cursor-pointer active:scale-[0.99] relative overflow-hidden"
       >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-alvaro-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        />
         <h2
-          class="text-3xl md:text-4xl tracking-tight font-semibold text-alvaro-white group-hover:text-alvaro-primary transition-colors duration-200"
+          class="relative z-10 text-4xl md:text-5xl tracking-tight font-bold text-alvaro-white group-hover:text-alvaro-primary transition-colors duration-200"
         >
           Download my CV
         </h2>
         <svg
-          class="mt-4 text-alvaro-muted group-hover:text-alvaro-primary transition-colors duration-200"
+          class="relative z-10 mt-5 text-alvaro-muted group-hover:text-alvaro-primary transition-colors duration-200"
           fill="currentColor"
-          height="32"
+          height="36"
           viewBox="0 0 256 256"
-          width="32"
+          width="36"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

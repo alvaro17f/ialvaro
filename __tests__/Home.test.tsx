@@ -14,7 +14,21 @@ describe("<Home />", () => {
 		const { container } = render(<Home />);
 		expect(container).toMatchSnapshot();
 	});
-	it("should show wobble content with 18 letters", () => {
-		expect(screen.getAllByLabelText("wobble").length).toBe(18);
+
+	it("should render hero name with text scramble", () => {
+		expect(screen.getByLabelText("ALVARO")).toBeDefined();
+		expect(screen.getByLabelText("GARCIA")).toBeDefined();
+		expect(screen.getByLabelText("MACIAS")).toBeDefined();
+	});
+
+	it("should render CTAs", () => {
+		expect(screen.getByText("View work")).toBeDefined();
+		expect(screen.getByText("CV")).toBeDefined();
+	});
+
+	it("should render tagline", () => {
+		expect(
+			screen.getByText(/Full Stack Developer/i),
+		).toBeDefined();
 	});
 });

@@ -3,143 +3,64 @@
 exports[`<Home /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="min-h-[100dvh] grid md:grid-cols-[1.3fr_1fr] items-center justify-items-center md:justify-items-start gap-8 md:gap-16 px-4 md:px-0"
+    class="relative min-h-[100dvh] grid md:grid-cols-[1.4fr_1fr] items-center justify-items-center md:justify-items-start gap-8 md:gap-16 px-4 md:px-0 overflow-hidden"
     id="home"
   >
     <div
-      class="space-y-6 text-center md:text-left"
+      class="absolute inset-0 overflow-hidden pointer-events-none"
     >
       <div
-        class="space-y-1"
+        class="mesh-blob absolute top-1/4 -left-1/4 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full bg-alvaro-primary/8 blur-[120px]"
+      />
+      <div
+        class="mesh-blob-delayed absolute bottom-1/4 -right-1/4 w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full bg-alvaro-primary/5 blur-[100px]"
+      />
+    </div>
+    <div
+      class="relative z-10 space-y-8 text-center md:text-left"
+    >
+      <div
+        class="space-y-0"
       >
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
+        <h1
+          class="text-[clamp(3.5rem,10vw,8rem)] md:text-[clamp(5rem,8vw,9rem)] tracking-[-0.04em] leading-[0.85] font-bold"
         >
-          A
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          L
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          V
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          A
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          R
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          O
-        </span>
-        <br />
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          G
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          A
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          R
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          C
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          I
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          A
-        </span>
-        <br />
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          M
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          A
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          C
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          I
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          A
-        </span>
-        <span
-          aria-label="wobble"
-          class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
-        >
-          S
-        </span>
-        <br />
+          <span
+            aria-label="ALVARO"
+            class="block text-alvaro-white"
+          >
+            ALVARO
+          </span>
+          <span
+            aria-label="GARCIA"
+            class="block text-alvaro-muted"
+          >
+            GARCIA
+          </span>
+          <span
+            aria-label="MACIAS"
+            class="block text-alvaro-white"
+          >
+            MACIAS
+          </span>
+        </h1>
       </div>
       <p
-        class="text-alvaro-muted text-lg leading-relaxed max-w-[40ch] transition-all duration-700 delay-300 opacity-0 translate-y-4"
+        class="text-alvaro-muted text-lg md:text-xl leading-relaxed max-w-[35ch] mx-auto md:mx-0 transition-all duration-700 delay-1000 opacity-0 translate-y-4"
       >
         Full Stack Developer. Building interfaces that move.
       </p>
       <div
-        class="flex gap-4 pt-2 justify-center md:justify-start transition-all duration-700 delay-500 opacity-0 translate-y-4"
+        class="flex gap-4 justify-center md:justify-start pt-2 transition-all duration-700 delay-[1200ms] opacity-0 translate-y-4"
       >
         <a
-          class="px-6 py-3 bg-alvaro-primary text-alvaro-dark font-medium rounded-lg hover:opacity-90 transition-all duration-200 active:scale-[0.97]"
+          class="px-8 py-3.5 bg-alvaro-primary text-alvaro-dark font-semibold rounded-xl hover:opacity-90 transition-all duration-200 active:scale-[0.97]"
           href="#portfolio"
         >
           View work
         </a>
         <a
-          class="px-6 py-3 border border-alvaro-border text-alvaro-white font-medium rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-all duration-200 active:scale-[0.97]"
+          class="px-8 py-3.5 border border-alvaro-border text-alvaro-white font-semibold rounded-xl hover:border-alvaro-primary hover:text-alvaro-primary transition-all duration-200 active:scale-[0.97]"
           href="/cv/cv.pdf"
           target="_blank"
         >
@@ -148,18 +69,21 @@ exports[`<Home /> > should match the snapshot 1`] = `
       </div>
     </div>
     <div
-      class="hidden md:flex justify-center transition-all duration-1000 delay-200 opacity-0 translate-x-8"
+      class="hidden md:block relative z-10 transition-all duration-1000 delay-500 opacity-0 translate-x-12"
     >
       <div
-        class="relative"
+        class="relative group"
       >
         <img
           alt="Alvaro Garcia Macias"
-          class="w-72 h-72 object-cover rounded-2xl border-2 border-alvaro-border"
+          class="w-80 h-80 object-cover rounded-3xl border-2 border-alvaro-border transition-transform duration-700 group-hover:scale-[1.02]"
           src="/images/profile/profile.png"
         />
         <div
-          class="absolute inset-0 rounded-2xl bg-gradient-to-t from-alvaro-base/30 to-transparent"
+          class="absolute inset-0 rounded-3xl bg-gradient-to-t from-alvaro-base/50 via-transparent to-transparent"
+        />
+        <div
+          class="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-alvaro-primary/10 blur-xl float"
         />
       </div>
     </div>

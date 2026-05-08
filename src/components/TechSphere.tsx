@@ -190,7 +190,7 @@ function CentralCore() {
 		<Float speed={1.8} rotationIntensity={0} floatIntensity={0.15}>
 			{/* Wide soft glow */}
 			<mesh>
-				<sphereGeometry args={[0.85, 32, 32]} />
+				<sphereGeometry args={[0.95, 32, 32]} />
 				<meshBasicMaterial
 					color="#3b82f6"
 					transparent
@@ -201,7 +201,7 @@ function CentralCore() {
 
 			{/* Medium glow ring */}
 			<mesh rotation={[Math.PI / 2, 0, 0]}>
-				<torusGeometry args={[0.55, 0.015, 16, 64]} />
+				<torusGeometry args={[0.6, 0.015, 16, 64]} />
 				<meshBasicMaterial
 					color="#3b82f6"
 					transparent
@@ -212,7 +212,7 @@ function CentralCore() {
 
 			{/* Outer wireframe shell */}
 			<mesh ref={wireRef}>
-				<icosahedronGeometry args={[0.45, 2]} />
+				<icosahedronGeometry args={[0.5, 2]} />
 				<meshBasicMaterial
 					color="#60a5fa"
 					wireframe
@@ -223,7 +223,7 @@ function CentralCore() {
 
 			{/* Inner wireframe */}
 			<mesh>
-				<icosahedronGeometry args={[0.28, 2]} />
+				<icosahedronGeometry args={[0.32, 2]} />
 				<meshBasicMaterial
 					color="#3b82f6"
 					wireframe

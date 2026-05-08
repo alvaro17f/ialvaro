@@ -7,9 +7,9 @@ export const Home = () => {
 	return (
 		<section
 			id="home"
-			className="min-h-[100dvh] grid md:grid-cols-[1.3fr_1fr] items-center gap-8 md:gap-16 px-4 md:px-0"
+			className="min-h-[100dvh] grid md:grid-cols-[1.3fr_1fr] items-center justify-items-center md:justify-items-start gap-8 md:gap-16 px-4 md:px-0"
 		>
-			<div ref={ref} className="space-y-6">
+			<div ref={ref} className="space-y-6 text-center md:text-left">
 				<div className="space-y-1">
 					<Wobble sentence="ALVARO" />
 					<Wobble sentence="GARCIA" />
@@ -25,7 +25,7 @@ export const Home = () => {
 					Full Stack Developer. Building interfaces that move.
 				</p>
 				<div
-					className={`flex gap-4 pt-2 transition-all duration-700 delay-500 ${
+					className={`flex gap-4 pt-2 justify-center md:justify-start transition-all duration-700 delay-500 ${
 						isVisible
 							? "opacity-100 translate-y-0"
 							: "opacity-0 translate-y-4"

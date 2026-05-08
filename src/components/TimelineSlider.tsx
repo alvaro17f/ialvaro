@@ -30,29 +30,31 @@ export const TimelineSlider = ({
 			</div>
 
 			{/* Slider */}
-			<div className="relative h-6 flex items-center">
-				{/* Track background */}
-				<div className="absolute inset-x-0 h-[3px] bg-alvaro-border rounded-full" />
-				{/* Track fill */}
-				<div
-					className="absolute left-0 h-[3px] bg-alvaro-primary rounded-full transition-[width] duration-200 ease-out"
-					style={{ width: `${pct}%` }}
-				/>
-				{/* Input */}
-				<input
-					type="range"
-					min={min}
-					max={max}
-					value={value}
-					onChange={handleChange}
-					className="timeline-slider absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-					aria-label="Bio length"
-				/>
-				{/* Thumb */}
-				<div
-					className="absolute w-4 h-4 bg-alvaro-primary rounded-full border-2 border-alvaro-base shadow-lg transition-[left] duration-200 ease-out pointer-events-none"
-					style={{ left: `calc(${pct}% - 8px)` }}
-				/>
+			<div className="relative h-6 flex items-center px-2">
+				<div className="relative w-full h-full flex items-center">
+					{/* Track background */}
+					<div className="absolute inset-x-0 h-[3px] bg-alvaro-border rounded-full" />
+					{/* Track fill */}
+					<div
+						className="absolute left-0 h-[3px] bg-alvaro-primary rounded-full transition-[width] duration-200 ease-out"
+						style={{ width: `${pct}%` }}
+					/>
+					{/* Input */}
+					<input
+						type="range"
+						min={min}
+						max={max}
+						value={value}
+						onChange={handleChange}
+						className="timeline-slider absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+						aria-label="Bio length"
+					/>
+					{/* Thumb */}
+					<div
+						className="absolute w-4 h-4 bg-alvaro-primary rounded-full border-2 border-alvaro-base shadow-lg transition-[left] duration-200 ease-out pointer-events-none"
+						style={{ left: `calc(${pct}% - 8px)` }}
+					/>
+				</div>
 			</div>
 
 			{/* Position markers */}

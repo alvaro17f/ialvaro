@@ -241,27 +241,31 @@ exports[`<Biography /> > should match the snapshot 1`] = `
               </span>
             </div>
             <div
-              class="relative h-6 flex items-center"
+              class="relative h-6 flex items-center px-2"
             >
               <div
-                class="absolute inset-x-0 h-[3px] bg-alvaro-border rounded-full"
-              />
-              <div
-                class="absolute left-0 h-[3px] bg-alvaro-primary rounded-full transition-[width] duration-200 ease-out"
-                style="width: 50%;"
-              />
-              <input
-                aria-label="Bio length"
-                class="timeline-slider absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-                max="100"
-                min="0"
-                type="range"
-                value="50"
-              />
-              <div
-                class="absolute w-4 h-4 bg-alvaro-primary rounded-full border-2 border-alvaro-base shadow-lg transition-[left] duration-200 ease-out pointer-events-none"
-                style="left: calc(50% - 8px);"
-              />
+                class="relative w-full h-full flex items-center"
+              >
+                <div
+                  class="absolute inset-x-0 h-[3px] bg-alvaro-border rounded-full"
+                />
+                <div
+                  class="absolute left-0 h-[3px] bg-alvaro-primary rounded-full transition-[width] duration-200 ease-out"
+                  style="width: 50%;"
+                />
+                <input
+                  aria-label="Bio length"
+                  class="timeline-slider absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="50"
+                />
+                <div
+                  class="absolute w-4 h-4 bg-alvaro-primary rounded-full border-2 border-alvaro-base shadow-lg transition-[left] duration-200 ease-out pointer-events-none"
+                  style="left: calc(50% - 8px);"
+                />
+              </div>
             </div>
             <div
               class="relative h-3 mx-1"

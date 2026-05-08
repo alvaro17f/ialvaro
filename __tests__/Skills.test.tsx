@@ -1,35 +1,54 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { Skills } from "src/views/Skills";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { mockIntersectionObserver } from "./mocks/IntersectionObserver.tsx";
 
+vi.mock("@react-three/fiber", () => ({
+	Canvas: ({ children }: Record<string, unknown>) => (
+		<div data-testid="three-canvas">{children as React.ReactNode}</div>
+	),
+	useFrame: () => {},
+}));
+
+vi.mock("@react-three/drei", () => ({
+	OrbitControls: () => null,
+	Float: ({ children }: Record<string, unknown>) => (
+		<>{children as React.ReactNode}</>
+	),
+}));
+
 describe("<Skills />", () => {
-	beforeEach(() => {
-		mockIntersectionObserver();
+	afterEach(() => {
+		cleanup();
+		vi.restoreAllMocks();
 	});
-	afterEach(cleanup);
 
 	it("should match the snapshot", () => {
+		mockIntersectionObserver();
 		const { container } = render(<Skills />);
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render a heading", () => {
+		mockIntersectionObserver();
 		render(<Skills />);
 		expect(
 			screen.getByRole("heading", { name: /skills/i }),
 		).toBeDefined();
 	});
 
-	it("should render all 12 skills", () => {
+	it("renders bento grid on mobile", () => {
+		mockIntersectionObserver();
+		vi.spyOn(window, "innerWidth", "get").mockReturnValue(600);
 		render(<Skills />);
 		expect(screen.getAllByLabelText(/skill/i).length).toBe(12);
 		expect(screen.getAllByRole("img").length).toBe(12);
 	});
 
-	it("should use bento grid with grid-flow-dense", () => {
-		const { container } = render(<Skills />);
-		const grid = container.querySelector(".grid-flow-dense");
-		expect(grid).toBeDefined();
+	it("renders tech sphere on desktop", () => {
+		mockIntersectionObserver();
+		vi.spyOn(window, "innerWidth", "get").mockReturnValue(1024);
+		render(<Skills />);
+		expect(screen.getByTestId("three-canvas")).toBeDefined();
 	});
 });

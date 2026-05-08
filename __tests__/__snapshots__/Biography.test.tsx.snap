@@ -228,10 +228,10 @@ exports[`<Biography /> > should match the snapshot 1`] = `
           class="transition-all duration-700 delay-300 opacity-0 translate-y-4"
         >
           <div
-            class="space-y-3"
+            class="space-y-4 pt-2"
           >
             <div
-              class="flex justify-between text-xs text-alvaro-muted font-medium"
+              class="flex items-center justify-between text-xs text-alvaro-muted font-medium px-1"
             >
               <span>
                 Short
@@ -241,28 +241,39 @@ exports[`<Biography /> > should match the snapshot 1`] = `
               </span>
             </div>
             <div
-              class="relative"
+              class="relative h-6 flex items-center"
             >
+              <div
+                class="absolute inset-x-0 h-[3px] bg-alvaro-border rounded-full"
+              />
+              <div
+                class="absolute left-0 h-[3px] bg-alvaro-primary rounded-full transition-[width] duration-300 ease-out"
+                style="width: 50%;"
+              />
               <input
                 aria-label="Bio length"
-                class="w-full h-1 bg-alvaro-border rounded-full appearance-none cursor-pointer accent-alvaro-primary relative z-10"
+                class="timeline-slider absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                 max="2"
                 min="0"
                 type="range"
                 value="1"
+              />
+              <div
+                class="absolute w-4 h-4 bg-alvaro-primary rounded-full border-2 border-alvaro-base shadow-lg transition-[left] duration-300 ease-out pointer-events-none"
+                style="left: calc(50% - 8px);"
               />
             </div>
             <div
               class="flex justify-between px-1"
             >
               <div
-                class="w-2 h-2 rounded-full transition-all duration-300 bg-alvaro-primary scale-110"
+                class="w-1.5 h-1.5 rounded-full transition-all duration-300 bg-alvaro-primary"
               />
               <div
-                class="w-2 h-2 rounded-full transition-all duration-300 bg-alvaro-primary scale-110"
+                class="w-1.5 h-1.5 rounded-full transition-all duration-300 bg-alvaro-primary"
               />
               <div
-                class="w-2 h-2 rounded-full transition-all duration-300 bg-alvaro-border"
+                class="w-1.5 h-1.5 rounded-full transition-all duration-300 bg-alvaro-border"
               />
             </div>
           </div>

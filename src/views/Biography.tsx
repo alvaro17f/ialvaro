@@ -16,9 +16,7 @@ export default function Biography() {
 	}, []);
 
 	useEffect(() => {
-		if (slider < data.length) {
-			setSelectedBio(data[slider]);
-		}
+		if (slider < data.length) setSelectedBio(data[slider]);
 	}, [slider]);
 
 	const handleSlider = (e: ChangeEvent<HTMLInputElement>) => {
@@ -52,7 +50,9 @@ export default function Biography() {
 						<div>
 							<h1 className="mb-5 text-4xl md:text-5xl tracking-tighter leading-none font-semibold">
 								Hello{" "}
-								<span className="text-alvaro-primary">World</span>
+								<span className="text-alvaro-primary">
+									World
+								</span>
 							</h1>
 							<p className="text-alvaro-muted leading-relaxed">
 								My name is{" "}
@@ -70,8 +70,10 @@ export default function Biography() {
 				<div className="grid w-full grid-cols-2 mt-16 md:grid-cols-3 place-items-center gap-4">
 					<button
 						type="button"
-						onClick={() => slider !== 0 && setSlider((s) => s - 1)}
-						className="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200"
+						onClick={() =>
+							slider !== 0 && setSlider((s) => s - 1)
+						}
+						className="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
 					>
 						Shortest
 					</button>
@@ -94,9 +96,10 @@ export default function Biography() {
 					<button
 						type="button"
 						onClick={() =>
-							slider !== data.length - 1 && setSlider((s) => s + 1)
+							slider !== data.length - 1 &&
+							setSlider((s) => s + 1)
 						}
-						className="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200"
+						className="p-2 border border-alvaro-border text-alvaro-muted rounded-lg hover:border-alvaro-primary hover:text-alvaro-primary transition-colors duration-200 active:scale-[0.97]"
 					>
 						Longest
 					</button>

@@ -3,8 +3,7 @@
 exports[`<Nav /> > should match the snapshot 1`] = `
 <div>
   <nav
-    class="fixed top-0 left-0 right-0 z-40 bg-alvaro-base/80 backdrop-blur-xl border-b border-alvaro-border"
-    style="opacity: 0; transform: translateY(-80px);"
+    class="fixed top-0 left-0 right-0 z-40 transition-all duration-500 bg-transparent"
   >
     <div
       class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8"
@@ -13,7 +12,7 @@ exports[`<Nav /> > should match the snapshot 1`] = `
         class="flex items-center justify-between h-16"
       >
         <button
-          class="text-lg font-semibold tracking-tight text-alvaro-white"
+          class="text-lg font-semibold tracking-tight text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
           type="button"
         >
           AM
@@ -23,48 +22,42 @@ exports[`<Nav /> > should match the snapshot 1`] = `
         >
           <button
             aria-label="Home-desktop"
-            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface transition-colors duration-200"
-            tabindex="0"
+            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface/50 transition-all duration-200 active:scale-[0.97]"
             type="button"
           >
             Home
           </button>
           <button
             aria-label="About-desktop"
-            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface transition-colors duration-200"
-            tabindex="0"
+            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface/50 transition-all duration-200 active:scale-[0.97]"
             type="button"
           >
             About
           </button>
           <button
             aria-label="Skills-desktop"
-            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface transition-colors duration-200"
-            tabindex="0"
+            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface/50 transition-all duration-200 active:scale-[0.97]"
             type="button"
           >
             Skills
           </button>
           <button
             aria-label="Experience-desktop"
-            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface transition-colors duration-200"
-            tabindex="0"
+            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface/50 transition-all duration-200 active:scale-[0.97]"
             type="button"
           >
             Experience
           </button>
           <button
             aria-label="Portfolio-desktop"
-            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface transition-colors duration-200"
-            tabindex="0"
+            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface/50 transition-all duration-200 active:scale-[0.97]"
             type="button"
           >
             Portfolio
           </button>
           <button
             aria-label="Contact-desktop"
-            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface transition-colors duration-200"
-            tabindex="0"
+            class="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface/50 transition-all duration-200 active:scale-[0.97]"
             type="button"
           >
             Contact
@@ -74,10 +67,9 @@ exports[`<Nav /> > should match the snapshot 1`] = `
           class="flex md:hidden"
         >
           <button
-            aria-controls="mobile-menu"
             aria-expanded="false"
             aria-label="menu-mobile"
-            class="p-2 rounded-lg text-alvaro-white hover:bg-alvaro-surface transition-colors duration-200"
+            class="p-2 rounded-lg text-alvaro-white hover:bg-alvaro-surface/50 transition-colors duration-200"
             type="button"
           >
             <svg

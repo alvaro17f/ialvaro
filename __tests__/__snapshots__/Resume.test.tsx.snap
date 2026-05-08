@@ -3,7 +3,7 @@
 exports[`<CV /> > should match the snapshot 1`] = `
 <div>
   <section
-    class="mt-12"
+    class="mt-16"
     id="cv"
   >
     <a
@@ -13,9 +13,7 @@ exports[`<CV /> > should match the snapshot 1`] = `
       target="_blank"
     >
       <div
-        class="grid place-items-center p-8 rounded-2xl border-2 border-alvaro-border bg-alvaro-surface hover:border-alvaro-primary transition-colors duration-300 group cursor-pointer"
-        style="opacity: 0;"
-        tabindex="0"
+        class="grid place-items-center p-8 md:p-12 rounded-2xl border-2 border-alvaro-border bg-alvaro-surface hover:border-alvaro-primary transition-all duration-300 group cursor-pointer active:scale-[0.99]"
       >
         <h2
           class="text-3xl md:text-4xl tracking-tight font-semibold text-alvaro-white group-hover:text-alvaro-primary transition-colors duration-200"

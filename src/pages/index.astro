@@ -1,5 +1,6 @@
 ---
 import { Scrollup } from "src/components/Scrollup";
+import { Marquee } from "src/components/Marquee";
 import Layout from "src/layouts/Layout.astro";
 import Biography from "src/views/Biography";
 import { Contact } from "src/views/Contact";
@@ -8,10 +9,22 @@ import { Experience } from "src/views/Experience";
 import { Home } from "src/views/Home";
 import { Portfolio } from "src/views/Portfolio";
 import { Skills } from "src/views/Skills";
+
+const techStack = [
+	"React",
+	"TypeScript",
+	"Node.js",
+	"Astro",
+	"Tailwind CSS",
+	"PostgreSQL",
+	"Docker",
+	"AWS",
+];
 ---
 
 <Layout>
 	<Home client:load />
+	<Marquee items={techStack} speed={35} />
 	<Biography client:load />
 	<Skills client:load />
 	<Experience client:load />

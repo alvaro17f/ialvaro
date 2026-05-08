@@ -29,22 +29,4 @@ describe("<Contact />", () => {
 		expect(screen.getByLabelText(/message/i)).toBeDefined();
 		expect(screen.getByLabelText(/submit/i)).toBeDefined();
 	});
-
-	it("should render the submitted message", () => {
-		// fireEvent.change(screen.getByLabelText(/name/i), {
-		// 	target: { value: "Alex Turner" },
-		// });
-		// fireEvent.change(screen.getByLabelText(/email/i), {
-		// 	target: { value: "alex@arcticmonkeys.com" },
-		// });
-		// fireEvent.change(screen.getByLabelText(/phone/i), {
-		// 	target: { value: "666666666" },
-		// });
-		// fireEvent.change(screen.getByLabelText(/message/i), {
-		// 	target: { value: "I'm going back to 505..." },
-		// });
-		// fireEvent.click(screen.getByLabelText(/submit/i));
-	});
-
-	it("should render <Spinner /> component on loading", () => {});
 });

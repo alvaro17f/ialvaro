@@ -1,5 +1,9 @@
-import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
-import { type ChangeEvent, type FormEvent, useRef, useState } from "react";
+import {
+	type ChangeEvent,
+	type FormEvent,
+	useRef,
+	useState,
+} from "react";
 import emailjs from "@emailjs/browser";
 import { Spinner } from "src/components/Spinner";
 import { PaperPlaneTilt, CheckCircle } from "@phosphor-icons/react";
@@ -47,7 +51,6 @@ export const Contact = () => {
 	const sendEmail = async (e: FormEvent) => {
 		e.preventDefault();
 		if (!validate()) return;
-
 		setIsSubmitting(true);
 		try {
 			await emailjs.sendForm(
@@ -77,200 +80,162 @@ export const Contact = () => {
 					},
 				}}
 			/>
-			<LazyMotion features={domAnimation}>
-				<AnimatePresence mode="wait">
-					{!isSubmitted ? (
-						<m.section
-							className="grid grid-cols-1 md:grid-cols-[1fr_2fr] p-8 rounded-2xl bg-alvaro-surface border border-alvaro-border"
-							aria-label="contact-form"
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1 }}
-							viewport={{ once: true }}
-							exit={{ opacity: 0 }}
-							transition={{
-								type: "spring",
-								stiffness: 80,
-								damping: 20,
-							}}
-						>
-							<div className="mb-8 md:mb-0 md:pr-8">
-								<h2 className="text-3xl md:text-4xl tracking-tighter leading-none font-semibold mb-4">
-									Get in touch
-								</h2>
-								<p className="text-alvaro-muted leading-relaxed max-w-[35ch]">
-									Have a project or opportunity? Drop a
-									message.
-								</p>
-							</div>
-							<form
-								ref={form}
-								onSubmit={sendEmail}
-								className="grid gap-4"
+			{!isSubmitted ? (
+				<section
+					className="grid grid-cols-1 md:grid-cols-[1fr_2fr] p-8 rounded-2xl bg-alvaro-surface border border-alvaro-border"
+					aria-label="contact-form"
+				>
+					<div className="mb-8 md:mb-0 md:pr-8">
+						<h2 className="text-3xl md:text-4xl tracking-tighter leading-none font-semibold mb-4">
+							Get in touch
+						</h2>
+						<p className="text-alvaro-muted leading-relaxed max-w-[35ch]">
+							Have a project or opportunity? Drop a message.
+						</p>
+					</div>
+					<form
+						ref={form}
+						onSubmit={sendEmail}
+						className="grid gap-4"
+					>
+						<div className="grid gap-2">
+							<label
+								htmlFor="contact-name"
+								className="text-sm font-medium text-alvaro-muted"
 							>
-								<div className="grid gap-2">
-									<label
-										htmlFor="contact-name"
-										className="text-sm font-medium text-alvaro-muted"
-									>
-										Name
-									</label>
-									<input
-										id="contact-name"
-										type="text"
-										name="name"
-										value={data.name}
-										onChange={updateData}
-										autoComplete="name"
-										className="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200"
-										aria-describedby={
-											errors.name ? "name-error" : undefined
-										}
-										required
-									/>
-									{errors.name && (
-										<p
-											id="name-error"
-											className="text-sm text-red-400"
-										>
-											{errors.name}
-										</p>
-									)}
-								</div>
-
-								<div className="grid gap-2">
-									<label
-										htmlFor="contact-email"
-										className="text-sm font-medium text-alvaro-muted"
-									>
-										Email
-									</label>
-									<input
-										id="contact-email"
-										type="email"
-										name="email"
-										value={data.email}
-										onChange={updateData}
-										autoComplete="email"
-										className="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200"
-										aria-describedby={
-											errors.email ? "email-error" : undefined
-										}
-										required
-									/>
-									{errors.email && (
-										<p
-											id="email-error"
-											className="text-sm text-red-400"
-										>
-											{errors.email}
-										</p>
-									)}
-								</div>
-
-								<div className="grid gap-2">
-									<label
-										htmlFor="contact-phone"
-										className="text-sm font-medium text-alvaro-muted"
-									>
-										Phone{" "}
-										<span className="text-alvaro-border">
-											(optional)
-										</span>
-									</label>
-									<input
-										id="contact-phone"
-										type="tel"
-										name="phone"
-										value={data.phone}
-										onChange={updateData}
-										autoComplete="tel"
-										className="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200"
-									/>
-								</div>
-
-								<div className="grid gap-2">
-									<label
-										htmlFor="contact-message"
-										className="text-sm font-medium text-alvaro-muted"
-									>
-										Message
-									</label>
-									<textarea
-										id="contact-message"
-										name="message"
-										value={data.message}
-										onChange={updateData}
-										className="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200 min-h-[120px] resize-y"
-										aria-describedby={
-											errors.message
-												? "message-error"
-												: undefined
-										}
-										required
-									/>
-									{errors.message && (
-										<p
-											id="message-error"
-											className="text-sm text-red-400"
-										>
-											{errors.message}
-										</p>
-									)}
-								</div>
-
-								<m.button
-									className="flex items-center justify-center gap-2 p-4 mt-2 rounded-lg bg-alvaro-primary text-alvaro-dark font-medium cursor-pointer hover:opacity-90 transition-opacity duration-200 disabled:opacity-50"
-									type="submit"
-									aria-label="submit"
-									disabled={isSubmitting}
-									whileHover={{ scale: 1.01 }}
-									whileTap={{ scale: 0.98 }}
-									transition={{
-										type: "spring",
-										stiffness: 400,
-										damping: 17,
-									}}
-								>
-									{isSubmitting ? (
-										<Spinner />
-									) : (
-										<>
-											Send message
-											<PaperPlaneTilt
-												size={20}
-												weight="bold"
-											/>
-										</>
-									)}
-								</m.button>
-							</form>
-						</m.section>
-					) : (
-						<m.section
-							className="grid place-items-center p-12 rounded-2xl bg-alvaro-surface border border-alvaro-border"
-							initial={{ opacity: 0, scale: 0.95 }}
-							animate={{ opacity: 1, scale: 1 }}
-							transition={{
-								type: "spring",
-								stiffness: 100,
-								damping: 20,
-							}}
-						>
-							<CheckCircle
-								size={48}
-								weight="bold"
-								className="text-alvaro-primary mb-4"
+								Name
+							</label>
+							<input
+								id="contact-name"
+								type="text"
+								name="name"
+								value={data.name}
+								onChange={updateData}
+								autoComplete="name"
+								className="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200"
+								aria-describedby={
+									errors.name ? "name-error" : undefined
+								}
+								required
 							/>
-							<h2 className="text-2xl font-semibold tracking-tight mb-2">
-								Message sent
-							</h2>
-							<p className="text-alvaro-muted">
-								I will get back to you soon.
-							</p>
-						</m.section>
-					)}
-				</AnimatePresence>
-			</LazyMotion>
+							{errors.name && (
+								<p id="name-error" className="text-sm text-red-400">
+									{errors.name}
+								</p>
+							)}
+						</div>
+
+						<div className="grid gap-2">
+							<label
+								htmlFor="contact-email"
+								className="text-sm font-medium text-alvaro-muted"
+							>
+								Email
+							</label>
+							<input
+								id="contact-email"
+								type="email"
+								name="email"
+								value={data.email}
+								onChange={updateData}
+								autoComplete="email"
+								className="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200"
+								aria-describedby={
+									errors.email ? "email-error" : undefined
+								}
+								required
+							/>
+							{errors.email && (
+								<p
+									id="email-error"
+									className="text-sm text-red-400"
+								>
+									{errors.email}
+								</p>
+							)}
+						</div>
+
+						<div className="grid gap-2">
+							<label
+								htmlFor="contact-phone"
+								className="text-sm font-medium text-alvaro-muted"
+							>
+								Phone{" "}
+								<span className="text-alvaro-border">
+									(optional)
+								</span>
+							</label>
+							<input
+								id="contact-phone"
+								type="tel"
+								name="phone"
+								value={data.phone}
+								onChange={updateData}
+								autoComplete="tel"
+								className="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200"
+							/>
+						</div>
+
+						<div className="grid gap-2">
+							<label
+								htmlFor="contact-message"
+								className="text-sm font-medium text-alvaro-muted"
+							>
+								Message
+							</label>
+							<textarea
+								id="contact-message"
+								name="message"
+								value={data.message}
+								onChange={updateData}
+								className="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200 min-h-[120px] resize-y"
+								aria-describedby={
+									errors.message ? "message-error" : undefined
+								}
+								required
+							/>
+							{errors.message && (
+								<p
+									id="message-error"
+									className="text-sm text-red-400"
+								>
+									{errors.message}
+								</p>
+							)}
+						</div>
+
+						<button
+							className="flex items-center justify-center gap-2 p-4 mt-2 rounded-lg bg-alvaro-primary text-alvaro-dark font-medium cursor-pointer hover:opacity-90 transition-all duration-200 active:scale-[0.98] disabled:opacity-50"
+							type="submit"
+							aria-label="submit"
+							disabled={isSubmitting}
+						>
+							{isSubmitting ? (
+								<Spinner />
+							) : (
+								<>
+									Send message
+									<PaperPlaneTilt size={20} weight="bold" />
+								</>
+							)}
+						</button>
+					</form>
+				</section>
+			) : (
+				<section className="grid place-items-center p-12 rounded-2xl bg-alvaro-surface border border-alvaro-border animate-[scaleIn_0.5s_ease-out]">
+					<CheckCircle
+						size={48}
+						weight="bold"
+						className="text-alvaro-primary mb-4"
+					/>
+					<h2 className="text-2xl font-semibold tracking-tight mb-2">
+						Message sent
+					</h2>
+					<p className="text-alvaro-muted">
+						I will get back to you soon.
+					</p>
+				</section>
+			)}
 		</section>
 	);
 };

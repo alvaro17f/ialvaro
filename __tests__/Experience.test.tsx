@@ -27,6 +27,6 @@ describe("<Experience />", () => {
 
 	it("should render experience titles", () => {
 		const headings = screen.getAllByRole("heading");
-		expect(headings.length).toBeGreaterThanOrEqual(2); // section header + at least one entry
+		expect(headings.length).toBeGreaterThanOrEqual(2);
 	});
 });

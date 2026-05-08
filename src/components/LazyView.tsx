@@ -1,31 +1,23 @@
-import { domAnimation, LazyMotion, m } from "framer-motion";
+import { useScrollReveal } from "src/hooks/useScrollReveal";
 
 type Props = {
 	children: React.ReactNode;
 	once?: boolean;
-	duration?: number;
 };
 
-export const LazyView = ({ children, once = true, duration = 1 }: Props) => {
+export const LazyView = ({ children, once = true }: Props) => {
+	const { ref, isVisible } = useScrollReveal({ once });
+
 	return (
-		<LazyMotion features={domAnimation}>
-			<m.div
-				initial="hidden"
-				whileInView="visible"
-				viewport={{ once }}
-				transition={{
-					type: "spring",
-					stiffness: 80,
-					damping: 20,
-					duration,
-				}}
-				variants={{
-					visible: { opacity: 1, y: 0 },
-					hidden: { opacity: 0, y: 20 },
-				}}
-			>
-				{children}
-			</m.div>
-		</LazyMotion>
+		<div
+			ref={ref}
+			className={`transition-all duration-700 ease-out ${
+				isVisible
+					? "opacity-100 translate-y-0"
+					: "opacity-0 translate-y-5"
+			}`}
+		>
+			{children}
+		</div>
 	);
 };

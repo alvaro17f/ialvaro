@@ -1,111 +1,94 @@
-import { domAnimation, LazyMotion, m } from "framer-motion";
-import data from "src/data/experience.json";
 import { Header } from "src/components/Header";
-
-const container = {
-	hidden: { opacity: 0 },
-	visible: {
-		opacity: 1,
-		transition: { staggerChildren: 0.15 },
-	},
-};
-
-const item = {
-	hidden: { opacity: 0, x: -30 },
-	visible: {
-		opacity: 1,
-		x: 0,
-		transition: { type: "spring", stiffness: 80, damping: 20 },
-	},
-};
+import { useScrollReveal } from "src/hooks/useScrollReveal";
+import data from "src/data/experience.json";
 
 export const Experience = () => {
 	return (
 		<section id="experience">
 			<Header title="Experience" />
-			<LazyMotion features={domAnimation}>
-				<m.div
-					variants={container}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true, margin: "-100px" }}
-				>
-					{data.map(
-						({
-							id,
-							title,
-							image,
-							url,
-							date_from,
-							date_to,
-							description,
-						}) => (
-							<m.div
-								key={id}
-								className="grid md:grid-cols-[1fr_2fr] mt-12 md:gap-10"
-								variants={item}
-							>
-								<div className="grid gap-2 cursor-pointer md:p-5 h-60 md:mb-36 place-items-center rounded-2xl border-2 border-dashed border-alvaro-border hover:border-alvaro-primary transition-colors duration-300">
-									<a
-										href={url}
-										target="_blank"
-										rel="noopener noreferrer"
-										aria-label={title}
-									>
-										<img
-											src={image}
-											alt={title}
-											className="w-56 h-36 object-contain"
-										/>
-									</a>
-									<p className="text-sm font-mono text-alvaro-muted tabular-nums">
-										{date_from} — {date_to}
-									</p>
-								</div>
-								<div className="mt-12 md:mt-0">
-									<h2 className="mb-5 text-4xl md:text-5xl tracking-tighter leading-none font-semibold text-alvaro-white">
-										{title}
-									</h2>
-									<div className="space-y-8 text-alvaro-muted leading-relaxed max-w-[65ch]">
-										{description?.title?.one && (
-											<div>
-												<h3 className="text-lg font-medium text-alvaro-white mb-2">
-													{description.title.one}
-												</h3>
-												<p>{description.content?.one}</p>
-											</div>
-										)}
-										{description?.title?.two && (
-											<div>
-												<h3 className="text-lg font-medium text-alvaro-white mb-2">
-													{description.title.two}
-												</h3>
-												<p>{description.content?.two}</p>
-											</div>
-										)}
-										{description?.title?.three && (
-											<div>
-												<h3 className="text-lg font-medium text-alvaro-white mb-2">
-													{description.title.three}
-												</h3>
-												<p>{description.content?.three}</p>
-											</div>
-										)}
-										{description?.title?.four && (
-											<div>
-												<h3 className="text-lg font-medium text-alvaro-white mb-2">
-													{description.title.four}
-												</h3>
-												<p>{description.content?.four}</p>
-											</div>
-										)}
-									</div>
-								</div>
-							</m.div>
-						),
-					)}
-				</m.div>
-			</LazyMotion>
+			<div className="space-y-24">
+				{data.map((entry, i) => (
+					<ExperienceEntry key={entry.id} entry={entry} index={i} />
+				))}
+			</div>
 		</section>
+	);
+};
+
+type Entry = (typeof data)[number];
+
+const ExperienceEntry = ({
+	entry,
+	index,
+}: { entry: Entry; index: number }) => {
+	const { ref, isVisible } = useScrollReveal({ threshold: 0.15 });
+
+	return (
+		<div
+			ref={ref}
+			className={`grid md:grid-cols-[1fr_2fr] gap-8 md:gap-12 transition-all duration-700 ease-out ${
+				isVisible
+					? "opacity-100 translate-y-0"
+					: "opacity-0 translate-y-8"
+			}`}
+			style={{ transitionDelay: `${index * 100}ms` }}
+		>
+			<div className="grid gap-3 cursor-pointer md:p-5 h-60 place-items-center rounded-2xl border-2 border-dashed border-alvaro-border hover:border-alvaro-primary transition-colors duration-300 group">
+				<a
+					href={entry.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label={entry.title}
+				>
+					<img
+						src={entry.image}
+						alt={entry.title}
+						className="w-56 h-36 object-contain transition-transform duration-500 group-hover:scale-105"
+					/>
+				</a>
+				<p className="text-sm font-mono text-alvaro-muted tabular-nums">
+					{entry.date_from} — {entry.date_to}
+				</p>
+			</div>
+			<div className="mt-12 md:mt-0">
+				<h2 className="mb-6 text-4xl md:text-5xl tracking-tighter leading-none font-semibold text-alvaro-white">
+					{entry.title}
+				</h2>
+				<div className="space-y-6 text-alvaro-muted leading-relaxed max-w-[65ch]">
+					{entry.description?.title?.one && (
+						<div>
+							<h3 className="text-lg font-medium text-alvaro-white mb-2">
+								{entry.description.title.one}
+							</h3>
+							<p>{entry.description.content?.one}</p>
+						</div>
+					)}
+					{entry.description?.title?.two && (
+						<div>
+							<h3 className="text-lg font-medium text-alvaro-white mb-2">
+								{entry.description.title.two}
+							</h3>
+							<p>{entry.description.content?.two}</p>
+						</div>
+					)}
+					{entry.description?.title?.three && (
+						<div>
+							<h3 className="text-lg font-medium text-alvaro-white mb-2">
+								{entry.description.title.three}
+							</h3>
+							<p>{entry.description.content?.three}</p>
+						</div>
+					)}
+					{entry.description?.title?.four && (
+						<div>
+							<h3 className="text-lg font-medium text-alvaro-white mb-2">
+								{entry.description.title.four}
+							</h3>
+							<p>{entry.description.content?.four}</p>
+						</div>
+					)}
+				</div>
+			</div>
+		</div>
 	);
 };

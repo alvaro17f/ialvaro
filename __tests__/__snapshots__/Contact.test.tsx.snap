@@ -16,7 +16,6 @@ exports[`<Contact /> > should match the snapshot 1`] = `
     <section
       aria-label="contact-form"
       class="grid grid-cols-1 md:grid-cols-[1fr_2fr] p-8 rounded-2xl bg-alvaro-surface border border-alvaro-border"
-      style="opacity: 0;"
     >
       <div
         class="mb-8 md:mb-0 md:pr-8"
@@ -115,8 +114,7 @@ exports[`<Contact /> > should match the snapshot 1`] = `
         </div>
         <button
           aria-label="submit"
-          class="flex items-center justify-center gap-2 p-4 mt-2 rounded-lg bg-alvaro-primary text-alvaro-dark font-medium cursor-pointer hover:opacity-90 transition-opacity duration-200 disabled:opacity-50"
-          tabindex="0"
+          class="flex items-center justify-center gap-2 p-4 mt-2 rounded-lg bg-alvaro-primary text-alvaro-dark font-medium cursor-pointer hover:opacity-90 transition-all duration-200 active:scale-[0.98] disabled:opacity-50"
           type="submit"
         >
           Send message

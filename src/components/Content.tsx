@@ -1,22 +1,22 @@
-import { domAnimation, LazyMotion, m } from "framer-motion";
+import { useScrollReveal } from "src/hooks/useScrollReveal";
 
 type Props = {
 	children: React.ReactNode;
-	duration?: number;
 };
 
-export const Content = ({ children, duration = 1 }: Props) => {
+export const Content = ({ children }: Props) => {
+	const { ref, isVisible } = useScrollReveal();
+
 	return (
-		<LazyMotion features={domAnimation}>
-			<m.section
-				className="p-6 md:p-8"
-				initial={{ opacity: 0, y: 20 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true }}
-				transition={{ type: "spring", stiffness: 80, damping: 20, duration }}
-			>
-				{children}
-			</m.section>
-		</LazyMotion>
+		<section
+			ref={ref}
+			className={`p-6 md:p-8 transition-all duration-700 ease-out ${
+				isVisible
+					? "opacity-100 translate-y-0"
+					: "opacity-0 translate-y-5"
+			}`}
+		>
+			{children}
+		</section>
 	);
 };

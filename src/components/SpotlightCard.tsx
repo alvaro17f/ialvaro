@@ -1,11 +1,16 @@
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode, type CSSProperties } from "react";
 
 type Props = {
 	children: ReactNode;
 	className?: string;
+	style?: CSSProperties;
 };
 
-export const SpotlightCard = ({ children, className = "" }: Props) => {
+export const SpotlightCard = ({
+	children,
+	className = "",
+	style,
+}: Props) => {
 	const cardRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -25,10 +30,7 @@ export const SpotlightCard = ({ children, className = "" }: Props) => {
 	}, []);
 
 	return (
-		<div
-			ref={cardRef}
-			className={`spotlight-card ${className}`}
-		>
+		<div ref={cardRef} className={`spotlight-card ${className}`} style={style}>
 			{children}
 		</div>
 	);

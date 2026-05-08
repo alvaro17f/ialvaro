@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Stats /> > should match the snapshot 1`] = `
+<div>
+  <section
+    class="py-32 md:py-48"
+  >
+    <div
+      class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center"
+    >
+      <div>
+        <div
+          class="text-5xl md:text-7xl font-bold tracking-tighter text-alvaro-white"
+        >
+          <span
+            class="tabular-nums"
+          >
+            0
+            +
+          </span>
+        </div>
+        <p
+          class="mt-3 text-sm text-alvaro-muted"
+        >
+          Years experience
+        </p>
+      </div>
+      <div>
+        <div
+          class="text-5xl md:text-7xl font-bold tracking-tighter text-alvaro-white"
+        >
+          <span
+            class="tabular-nums"
+          >
+            0
+            +
+          </span>
+        </div>
+        <p
+          class="mt-3 text-sm text-alvaro-muted"
+        >
+          Projects delivered
+        </p>
+      </div>
+      <div>
+        <div
+          class="text-5xl md:text-7xl font-bold tracking-tighter text-alvaro-white"
+        >
+          <span
+            class="tabular-nums"
+          >
+            0
+          </span>
+        </div>
+        <p
+          class="mt-3 text-sm text-alvaro-muted"
+        >
+          Technologies
+        </p>
+      </div>
+      <div>
+        <div
+          class="text-5xl md:text-7xl font-bold tracking-tighter text-alvaro-primary"
+        >
+          <span
+            class="tabular-nums"
+          >
+            0
+            %
+          </span>
+        </div>
+        <p
+          class="mt-3 text-sm text-alvaro-muted"
+        >
+          Commitment
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;

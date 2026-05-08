@@ -88,6 +88,13 @@ export const Home = () => {
 					<div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-alvaro-base/50 via-transparent to-transparent" />
 				</div>
 			</div>
+
+			{/* Scroll indicator */}
+			<div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden md:block">
+				<div className="w-6 h-10 border-2 border-alvaro-muted/30 rounded-full flex justify-center">
+					<div className="w-1 h-3 bg-alvaro-muted/50 rounded-full mt-2 animate-bounce" />
+				</div>
+			</div>
 		</section>
 	);
 };

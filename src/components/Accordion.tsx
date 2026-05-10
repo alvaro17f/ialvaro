@@ -10,10 +10,11 @@ type Item = {
 
 type Props = {
 	items: Item[];
+	defaultOpenId?: string;
 };
 
-export const Accordion = ({ items }: Props) => {
-	const [openId, setOpenId] = useState<string | null>(null);
+export const Accordion = ({ items, defaultOpenId }: Props) => {
+	const [openId, setOpenId] = useState<string | null>(defaultOpenId ?? null);
 
 	return (
 		<div className="space-y-3">

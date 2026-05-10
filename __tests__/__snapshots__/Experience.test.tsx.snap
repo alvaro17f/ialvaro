@@ -25,11 +25,11 @@ exports[`<Experience /> > should match the snapshot 1`] = `
       class="space-y-3"
     >
       <div
-        class="border rounded-2xl overflow-hidden transition-colors duration-300 border-alvaro-border hover:border-alvaro-muted"
+        class="border rounded-2xl overflow-hidden transition-colors duration-300 border-alvaro-primary/30 bg-alvaro-surface"
       >
         <button
           aria-controls="accordion-content-2"
-          aria-expanded="false"
+          aria-expanded="true"
           class="w-full flex items-center justify-between p-6 text-left cursor-pointer"
           type="button"
         >
@@ -46,7 +46,7 @@ exports[`<Experience /> > should match the snapshot 1`] = `
             </p>
           </div>
           <svg
-            class="text-alvaro-muted transition-transform duration-300 flex-shrink-0 ml-4 "
+            class="text-alvaro-muted transition-transform duration-300 flex-shrink-0 ml-4 rotate-180"
             fill="currentColor"
             height="20"
             viewBox="0 0 256 256"
@@ -59,7 +59,7 @@ exports[`<Experience /> > should match the snapshot 1`] = `
           </svg>
         </button>
         <div
-          class="overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] max-h-0 opacity-0"
+          class="overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] max-h-[1000px] opacity-100"
           id="accordion-content-2"
         >
           <div

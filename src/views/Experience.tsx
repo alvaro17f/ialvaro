@@ -65,7 +65,7 @@ export const Experience = () => {
 	return (
 		<section id="experience" className="section-curve">
 			<Header title="Experience" />
-			<Accordion items={items} />
+			<Accordion items={items} defaultOpenId={String(data[0].id)} />
 		</section>
 	);
 };

@@ -24,10 +24,18 @@ describe("<Accordion />", () => {
 		expect(screen.getByText("Third")).toBeDefined();
 	});
 
-	it("items start collapsed", () => {
+	it("items start collapsed by default", () => {
 		render(<Accordion items={items} />);
 		const button = screen.getByText("First").closest("button");
 		expect(button?.getAttribute("aria-expanded")).toBe("false");
+	});
+
+	it("opens item specified by defaultOpenId", () => {
+		render(<Accordion items={items} defaultOpenId="2" />);
+		const first = screen.getByText("First").closest("button");
+		const second = screen.getByText("Second").closest("button");
+		expect(first?.getAttribute("aria-expanded")).toBe("false");
+		expect(second?.getAttribute("aria-expanded")).toBe("true");
 	});
 
 	it("expands item on click", async () => {

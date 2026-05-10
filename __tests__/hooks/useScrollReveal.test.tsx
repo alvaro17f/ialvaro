@@ -1,4 +1,5 @@
 import { act, cleanup, render } from "@testing-library/react";
+import { useState } from "react";
 import { useScrollReveal } from "src/hooks/useScrollReveal";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -13,6 +14,12 @@ function HookTester({ once }: { once?: boolean }) {
 			{isVisible ? "visible" : "hidden"}
 		</div>
 	);
+}
+
+// Component that uses the hook but never attaches the ref
+function NullRefTester() {
+	useScrollReveal();
+	return <div>no ref</div>;
 }
 
 describe("useScrollReveal", () => {
@@ -74,5 +81,11 @@ describe("useScrollReveal", () => {
 		const { unmount } = render(<HookTester />);
 		unmount();
 		expect(disconnectMock).toHaveBeenCalled();
+	});
+
+	it("handles null ref gracefully (ref not attached)", () => {
+		const { container } = render(<NullRefTester />);
+		expect(container.textContent).toBe("no ref");
+		expect(observeMock).not.toHaveBeenCalled();
 	});
 });

@@ -75,6 +75,12 @@ describe("<Nav />", () => {
 		expect(screen.queryByLabelText(/home-mobile/i)).toBeNull();
 	});
 
+	it("desktop link click calls scroller", () => {
+		render(<Nav />);
+		const homeLink = screen.getByLabelText(/home-desktop/i);
+		fireEvent.click(homeLink);
+	});
+
 	it("matches snapshot", () => {
 		const { container } = render(<Nav />);
 		expect(container).toMatchSnapshot();

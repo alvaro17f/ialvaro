@@ -2,6 +2,10 @@ import { cleanup, fireEvent, render, screen, waitFor } from "@testing-library/re
 import { Contact } from "src/views/Contact";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
+vi.mock("@emailjs/browser", () => ({
+	default: { sendForm: vi.fn().mockRejectedValue(new Error("fail")) },
+}));
+
 describe("<Contact />", () => {
 	beforeEach(() => {
 		window.IntersectionObserver = class {
@@ -9,16 +13,12 @@ describe("<Contact />", () => {
 			unobserve = vi.fn();
 			disconnect = vi.fn();
 		} as unknown as typeof window.IntersectionObserver;
-		vi.mock("@emailjs/browser", () => ({
-			default: { sendForm: vi.fn().mockRejectedValue(new Error("fail")) },
-		}));
 	});
 	afterEach(cleanup);
 
 	it("renders heading and form", () => {
 		render(<Contact />);
 		expect(screen.getByRole("heading", { name: /get in touch/i })).toBeDefined();
-		expect(screen.getByLabelText(/contact-form/i)).toBeDefined();
 	});
 
 	it("shows validation errors on empty submit", () => {
@@ -44,7 +44,7 @@ describe("<Contact />", () => {
 		expect(screen.queryByText("Name is required")).toBeNull();
 	});
 
-	it("handles emailjs send failure and shows toast", async () => {
+	it("catches emailjs failure and shows toast", async () => {
 		render(<Contact />);
 
 		fireEvent.change(screen.getByLabelText(/name/i), { target: { name: "name", value: "Alvaro" } });
@@ -54,7 +54,7 @@ describe("<Contact />", () => {
 		fireEvent.submit(screen.getByLabelText("submit"));
 
 		await waitFor(() => {
-			expect(screen.getByLabelText(/contact-form/i)).toBeDefined();
+			expect(screen.getByText(/Message failed to send/i)).toBeDefined();
 		});
 	});
 

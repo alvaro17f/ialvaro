@@ -4,7 +4,7 @@ exports[`<Biography /> > matches snapshot 1`] = `
 <div>
   <section
     class="relative min-h-[100dvh] grid items-center overflow-hidden py-24 md:py-32"
-    id="biography"
+    id="about"
   >
     <div
       class="absolute inset-0 pointer-events-none"

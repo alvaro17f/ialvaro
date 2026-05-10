@@ -11,7 +11,7 @@ describe("<DynamicTitle />", () => {
 	function setupSections(visibleIds: string[] = []) {
 		document.body.innerHTML = `
 			<section id="home"></section>
-			<section id="biography"></section>
+			<section id="about"></section>
 			<section id="skills"></section>
 			<section id="experience"></section>
 			<section id="portfolio"></section>
@@ -19,7 +19,7 @@ describe("<DynamicTitle />", () => {
 			<section id="contact"></section>
 		`;
 		const visibleSet = new Set(visibleIds);
-		for (const id of ["home", "biography", "skills", "experience", "portfolio", "cv", "contact"]) {
+		for (const id of ["home", "about", "skills", "experience", "portfolio", "cv", "contact"]) {
 			const el = document.getElementById(id)!;
 			const top = visibleSet.has(id) ? 100 : 999;
 			vi.spyOn(el, "getBoundingClientRect").mockReturnValue({ top } as DOMRect);
@@ -30,31 +30,31 @@ describe("<DynamicTitle />", () => {
 		vi.spyOn(window, "scrollY", "get").mockReturnValue(value);
 	}
 
-	it("sets initial title to home - ialvaro", () => {
+	it("sets initial title to home | ialvaro", () => {
 		setupSections();
 		render(<DynamicTitle />);
-		expect(document.title).toBe("home - ialvaro");
+		expect(document.title).toBe("home | ialvaro");
 	});
 
-	it("updates title for visible biography", () => {
-		setupSections(["biography"]);
+	it("updates title for visible about", () => {
+		setupSections(["about"]);
 		setScrollY(500);
 		render(<DynamicTitle />);
-		expect(document.title).toBe("biography - ialvaro");
+		expect(document.title).toBe("about | ialvaro");
 	});
 
 	it("updates title for visible skills", () => {
 		setupSections(["skills"]);
 		setScrollY(500);
 		render(<DynamicTitle />);
-		expect(document.title).toBe("skills - ialvaro");
+		expect(document.title).toBe("skills | ialvaro");
 	});
 
 	it("keeps home when scrollY < 100", () => {
 		setupSections(["skills"]);
 		setScrollY(50);
 		render(<DynamicTitle />);
-		expect(document.title).toBe("home - ialvaro");
+		expect(document.title).toBe("home | ialvaro");
 	});
 
 	it("falls back to default when no section visible", () => {

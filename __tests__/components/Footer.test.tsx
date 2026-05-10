@@ -31,7 +31,7 @@ describe("<Footer />", () => {
 	it("renders nav links with correct hrefs", () => {
 		render(<Footer />);
 		expect(screen.getByText("Home").closest("a")?.getAttribute("href")).toBe("#home");
-		expect(screen.getByText("About").closest("a")?.getAttribute("href")).toBe("#biography");
+		expect(screen.getByText("About").closest("a")?.getAttribute("href")).toBe("#about");
 		expect(screen.getByText("Skills").closest("a")?.getAttribute("href")).toBe("#skills");
 		expect(screen.getByText("Experience").closest("a")?.getAttribute("href")).toBe("#experience");
 		expect(screen.getByText("Portfolio").closest("a")?.getAttribute("href")).toBe("#portfolio");

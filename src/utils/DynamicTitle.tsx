@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const sections = [
 	"home",
-	"biography",
+	"about",
 	"skills",
 	"experience",
 	"portfolio",
@@ -18,7 +18,7 @@ export const DynamicTitle = () => {
 			const scrollY = window.scrollY;
 
 			if (scrollY < 100) {
-				setTitle("home - ialvaro");
+				setTitle("home | ialvaro");
 				return;
 			}
 
@@ -27,7 +27,7 @@ export const DynamicTitle = () => {
 				if (el) {
 					const rect = el.getBoundingClientRect();
 					if (rect.top <= 150) {
-						setTitle(`${sections[i]} - ialvaro`);
+						setTitle(`${sections[i]} | ialvaro`);
 						return;
 					}
 				}

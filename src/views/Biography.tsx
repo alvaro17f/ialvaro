@@ -21,7 +21,7 @@ export default function Biography() {
 
 	return (
 		<section
-			id="biography"
+			id="about"
 			className="relative min-h-[100dvh] grid items-center overflow-hidden py-24 md:py-32"
 		>
 			{/* Atmospheric layers */}

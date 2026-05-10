@@ -27,7 +27,11 @@ import { DynamicTitle } from "src/utils/DynamicTitle";
 		<DynamicTitle client:load />
 		<script is:inline>
 			const t = localStorage.getItem('theme');
-			if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+			if (t === 'light' || t === 'dark') {
+				document.documentElement.setAttribute('data-theme', t);
+			} else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+				document.documentElement.setAttribute('data-theme', 'light');
+			}
 		</script>
 	</head>
 	<body>

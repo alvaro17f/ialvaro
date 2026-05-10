@@ -1,10 +1,11 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it, afterEach, beforeEach, vi } from "vitest";
 
 describe("ThemeToggle", () => {
 	beforeEach(() => {
 		localStorage.clear();
 		document.documentElement.removeAttribute("data-theme");
+		vi.spyOn(window, "matchMedia").mockReturnValue({ matches: false } as MediaQueryList);
 	});
 	afterEach(cleanup);
 
@@ -17,9 +18,13 @@ describe("ThemeToggle", () => {
 	it("toggles from dark to light", async () => {
 		const { ThemeToggle } = await import("src/components/ThemeToggle");
 		render(<ThemeToggle />);
-		const btn = screen.getByLabelText(/toggle theme/i);
 
-		fireEvent.click(btn);
+		expect(document.documentElement.getAttribute("data-theme")).toBe("dark");
+
+		const btn = screen.getByLabelText(/toggle theme/i);
+		act(() => {
+			fireEvent.click(btn);
+		});
 
 		expect(document.documentElement.getAttribute("data-theme")).toBe("light");
 		expect(localStorage.getItem("theme")).toBe("light");
@@ -33,18 +38,38 @@ describe("ThemeToggle", () => {
 		render(<ThemeToggle />);
 		const btn = screen.getByLabelText(/toggle theme/i);
 
-		fireEvent.click(btn);
+		act(() => {
+			fireEvent.click(btn);
+		});
 
 		expect(document.documentElement.getAttribute("data-theme")).toBe("dark");
 		expect(localStorage.getItem("theme")).toBe("dark");
 	});
 
-	it("reads initial state from localStorage", async () => {
+	it("uses localStorage value when set", async () => {
 		localStorage.setItem("theme", "light");
 
 		const { ThemeToggle } = await import("src/components/ThemeToggle");
 		render(<ThemeToggle />);
 
 		expect(document.documentElement.getAttribute("data-theme")).toBe("light");
+	});
+
+	it("falls back to system preference (light) when no localStorage", async () => {
+		vi.mocked(window.matchMedia).mockReturnValue({ matches: true } as MediaQueryList);
+
+		const { ThemeToggle } = await import("src/components/ThemeToggle");
+		render(<ThemeToggle />);
+
+		expect(document.documentElement.getAttribute("data-theme")).toBe("light");
+	});
+
+	it("defaults to dark when no localStorage and system prefers dark", async () => {
+		vi.mocked(window.matchMedia).mockReturnValue({ matches: false } as MediaQueryList);
+
+		const { ThemeToggle } = await import("src/components/ThemeToggle");
+		render(<ThemeToggle />);
+
+		expect(document.documentElement.getAttribute("data-theme")).toBe("dark");
 	});
 });

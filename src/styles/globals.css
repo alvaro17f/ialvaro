@@ -131,9 +131,17 @@ html {
 	animation: marquee linear infinite;
 }
 
+.marquee-track:hover {
+	animation-play-state: paused;
+}
+
 .marquee-track-reverse {
 	display: inline-block;
 	animation: marquee-reverse linear infinite;
+}
+
+.marquee-track-reverse:hover {
+	animation-play-state: paused;
 }
 
 /* === SPOTLIGHT CARD === */
@@ -215,10 +223,6 @@ html {
 }
 
 /* === RUBBER BAND (wobble hover) === */
-
-.rubber-band-parent:hover .inline-block {
-	animation: rubberBand 0.8s ease;
-}
 
 .rubber-band:hover {
 	animation: rubberBand 0.8s ease;

@@ -1,10 +1,43 @@
 import { AnimatedCounter } from "src/components/AnimatedCounter";
+import experienceData from "src/data/experience.json";
+import portfolioData from "src/data/portfolio.json";
+import skillsData from "src/data/skills.json";
+
+function getYearsExperience(): number {
+	const dates = experienceData.map((e) => new Date(`${e.date_from} 01`));
+	const earliest = new Date(Math.min(...dates.map((d) => d.getTime())));
+	const now = new Date();
+	const diffMs = now.getTime() - earliest.getTime();
+	const years = Math.round(diffMs / (365.25 * 24 * 60 * 60 * 1000));
+	return years;
+}
 
 const stats = [
-	{ value: 5, suffix: "+", label: "Years experience", bar: 60 },
-	{ value: 20, suffix: "+", label: "Projects delivered", bar: 80 },
-	{ value: 13, suffix: "", label: "Technologies", bar: 50 },
-	{ value: 100, suffix: "%", label: "Commitment", bar: 100, accent: true },
+	{
+		value: getYearsExperience(),
+		suffix: "+",
+		label: "Years experience",
+		bar: 60,
+	},
+	{
+		value: portfolioData.length,
+		suffix: "+",
+		label: "Projects delivered",
+		bar: 80,
+	},
+	{
+		value: skillsData.length,
+		suffix: "",
+		label: "Technologies",
+		bar: 50,
+	},
+	{
+		value: 100,
+		suffix: "%",
+		label: "Commitment",
+		bar: 100,
+		accent: true,
+	},
 ];
 
 export const Stats = () => {

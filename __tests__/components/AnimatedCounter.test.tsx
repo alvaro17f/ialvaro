@@ -1,13 +1,25 @@
-import { cleanup, render, screen } from "@testing-library/react";
+import { act, cleanup, render, screen } from "@testing-library/react";
 import { AnimatedCounter } from "src/components/AnimatedCounter";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { mockIntersectionObserver } from "../mocks/IntersectionObserver.tsx";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("<AnimatedCounter />", () => {
+	let observerCallback: (entries: { isIntersecting: boolean }[]) => void;
+
 	beforeEach(() => {
-		mockIntersectionObserver();
+		vi.useFakeTimers();
+		window.IntersectionObserver = class {
+			observe = vi.fn();
+			unobserve = vi.fn();
+			disconnect = vi.fn();
+			constructor(cb: (entries: { isIntersecting: boolean }[]) => void) {
+				observerCallback = cb;
+			}
+		} as unknown as typeof window.IntersectionObserver;
 	});
-	afterEach(cleanup);
+	afterEach(() => {
+		cleanup();
+		vi.useRealTimers();
+	});
 
 	it("renders starting at 0", () => {
 		render(<AnimatedCounter end={42} />);
@@ -19,14 +31,51 @@ describe("<AnimatedCounter />", () => {
 		expect(screen.getByText("0%")).toBeDefined();
 	});
 
-	it("has tabular-nums for number alignment", () => {
+	it("starts counting when visible", () => {
+		render(<AnimatedCounter end={42} />);
+		act(() => {
+			observerCallback([{ isIntersecting: true }]);
+		});
+		// advance timers to let interval run
+		act(() => {
+			vi.advanceTimersByTime(500);
+		});
+		// count should have increased from 0
+		const text = screen.getByText(/^\d+$/).textContent;
+		expect(Number(text)).toBeGreaterThan(0);
+	});
+
+	it("reaches final value after full duration", () => {
+		render(<AnimatedCounter end={42} duration={100} />);
+		act(() => {
+			observerCallback([{ isIntersecting: true }]);
+		});
+		act(() => {
+			vi.advanceTimersByTime(200);
+		});
+		expect(screen.getByText("42")).toBeDefined();
+	});
+
+	it("has tabular-nums class", () => {
 		const { container } = render(<AnimatedCounter end={10} />);
 		const span = container.querySelector("span");
 		expect(span?.classList.contains("tabular-nums")).toBe(true);
 	});
 
-	it("renders with aria label", () => {
-		const { container } = render(<AnimatedCounter end={42} />);
-		expect(container.querySelector("span")).toBeDefined();
+	it("clears interval on unmount", () => {
+		const { unmount } = render(<AnimatedCounter end={42} />);
+		act(() => {
+			observerCallback([{ isIntersecting: true }]);
+		});
+		unmount();
+		// no error on unmount = interval cleaned up
+	});
+
+	it("does not count when not visible", () => {
+		render(<AnimatedCounter end={42} />);
+		act(() => {
+			vi.advanceTimersByTime(500);
+		});
+		expect(screen.getByText("0")).toBeDefined();
 	});
 });

@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<SpotlightCard /> > matches snapshot 1`] = `
+<div>
+  <div
+    class="spotlight-card "
+  >
+    <p>
+      Content
+    </p>
+  </div>
+</div>
+`;

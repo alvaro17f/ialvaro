@@ -1,0 +1,43 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Wobble /> > matches snapshot 1`] = `
+<div>
+  <span
+    aria-label="wobble"
+    class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
+  >
+    A
+  </span>
+  <span
+    aria-label="wobble"
+    class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
+  >
+    L
+  </span>
+  <span
+    aria-label="wobble"
+    class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
+  >
+    V
+  </span>
+  <span
+    aria-label="wobble"
+    class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
+  >
+    A
+  </span>
+  <span
+    aria-label="wobble"
+    class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
+  >
+    R
+  </span>
+  <span
+    aria-label="wobble"
+    class="inline-block cursor-default text-6xl md:text-8xl tracking-tighter leading-none font-bold text-alvaro-white rubber-band transition-colors duration-200 hover:text-alvaro-primary"
+  >
+    O
+  </span>
+  <br />
+</div>
+`;

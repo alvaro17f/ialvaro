@@ -1,24 +1,24 @@
 import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import { TextScramble } from "src/components/TextScramble";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 describe("<TextScramble />", () => {
 	afterEach(cleanup);
 
-	it("renders with final text after animation", async () => {
-		render(<TextScramble text="HELLO" />);
-		await waitFor(
-			() => {
-				expect(screen.getByText("HELLO")).toBeDefined();
-			},
-			{ timeout: 3000 },
-		);
+	it("renders final text after animation completes", async () => {
+		vi.useFakeTimers();
+		render(<TextScramble text="HELLO" scrambleSpeed={10} />);
+
+		// advance timers enough for all iterations
+		vi.advanceTimersByTime(500);
+
+		expect(screen.getByText("HELLO")).toBeDefined();
+		vi.useRealTimers();
 	});
 
 	it("has aria-label with original text", () => {
 		render(<TextScramble text="HELLO" />);
 		const el = screen.getByLabelText("HELLO");
-		expect(el).toBeDefined();
 		expect(el.getAttribute("aria-label")).toBe("HELLO");
 	});
 
@@ -26,5 +26,13 @@ describe("<TextScramble />", () => {
 		render(<TextScramble text="TEST" className="custom-class" />);
 		const el = screen.getByLabelText("TEST");
 		expect(el.classList.contains("custom-class")).toBe(true);
+	});
+
+	it("preserves spaces in scramble", async () => {
+		vi.useFakeTimers();
+		render(<TextScramble text="HI THERE" scrambleSpeed={10} />);
+		vi.advanceTimersByTime(500);
+		expect(screen.getByText("HI THERE")).toBeDefined();
+		vi.useRealTimers();
 	});
 });

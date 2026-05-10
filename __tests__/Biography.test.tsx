@@ -1,46 +1,66 @@
-import { cleanup, render, screen } from "@testing-library/react";
+import { act, cleanup, render, screen } from "@testing-library/react";
 import Biography from "src/views/Biography";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { mockIntersectionObserver } from "./mocks/IntersectionObserver.tsx";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("<Biography />", () => {
+	let observerCallback: (entries: { isIntersecting: boolean }[]) => void;
+
 	beforeEach(() => {
-		mockIntersectionObserver();
-		render(<Biography />);
+		window.IntersectionObserver = class {
+			observe = vi.fn();
+			unobserve = vi.fn();
+			disconnect = vi.fn();
+			constructor(cb: (entries: { isIntersecting: boolean }[]) => void) {
+				observerCallback = cb;
+			}
+		} as unknown as typeof window.IntersectionObserver;
 	});
 	afterEach(cleanup);
 
-	it("should match the snapshot", () => {
-		const { container } = render(<Biography />);
-		expect(container).toMatchSnapshot();
+	it("should render about heading", () => {
+		render(<Biography />);
+		expect(screen.getByText(/I build things/i)).toBeDefined();
 	});
 
 	it("should render profile image", () => {
-		expect(screen.getByRole("img")).toBeDefined();
+		render(<Biography />);
+		expect(screen.getByAltText("Alvaro Garcia Macias")).toBeDefined();
 	});
 
-	it("should render about heading", () => {
-		expect(screen.getByText("About")).toBeDefined();
-		expect(screen.getByText("I build things")).toBeDefined();
+	it("reveals profile image when intersecting", () => {
+		render(<Biography />);
+		const img = screen.getByAltText("Alvaro Garcia Macias");
+		expect(img.className).toContain("opacity-0");
+
+		act(() => {
+			observerCallback([{ isIntersecting: true }]);
+		});
+
+		expect(img.className).toContain("opacity-100");
+		expect(img.className).toContain("scale-100");
 	});
 
-	it("should render inline stats", () => {
-		expect(screen.getByText("5+")).toBeDefined();
-		expect(screen.getByText("20+")).toBeDefined();
-		expect(screen.getByText("12")).toBeDefined();
+	it("reveals stats when intersecting", () => {
+		render(<Biography />);
+		const statsEl = screen.getByText("Projects").closest("div")?.parentElement;
+		expect(statsEl?.className).toContain("opacity-0");
+
+		act(() => {
+			observerCallback([{ isIntersecting: true }]);
+		});
+
+		expect(statsEl?.className).toContain("opacity-100");
 	});
 
-	it("should render timeline slider", () => {
-		expect(screen.getByRole("slider")).toBeDefined();
+	it("renders inline stats", () => {
+		render(<Biography />);
+		expect(screen.getByText("Years")).toBeDefined();
+		expect(screen.getByText("Projects")).toBeDefined();
+		expect(screen.getByText("Technologies")).toBeDefined();
 	});
 
-	it("should render floating tags on desktop", () => {
-		expect(screen.getByText("React")).toBeDefined();
-		expect(screen.getByText("TypeScript")).toBeDefined();
-	});
-
-	it("should render word reveal text", () => {
-		expect(screen.getByText("fortunate")).toBeDefined();
-		expect(screen.getByText("passionate")).toBeDefined();
+	it("matches snapshot", () => {
+		const { container } = render(<Biography />);
+		expect(container).toMatchSnapshot();
 	});
 });

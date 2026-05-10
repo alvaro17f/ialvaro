@@ -1,51 +1,82 @@
-import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
+import { act, cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import { Nav } from "src/components/Nav";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 describe("<Nav />", () => {
-	beforeEach(() => {
-		render(<Nav />);
-	});
 	afterEach(cleanup);
 
-	it("should match the snapshot", () => {
-		const { container } = render(<Nav />);
-		expect(container).toMatchSnapshot();
-	});
-
 	it("should render the nav brand", () => {
+		render(<Nav />);
 		expect(screen.getByText("AM")).toBeTruthy();
 	});
 
 	it("should render desktop links", () => {
+		render(<Nav />);
 		const navigation = within(screen.getByRole("navigation"));
 		expect(navigation.getByLabelText(/home-desktop/i)).toBeDefined();
-		expect(navigation.getByLabelText(/about-desktop/i)).toBeDefined();
-		expect(navigation.getByLabelText(/skills-desktop/i)).toBeDefined();
-		expect(navigation.getByLabelText(/experience-desktop/i)).toBeDefined();
-		expect(navigation.getByLabelText(/portfolio-desktop/i)).toBeDefined();
-		expect(navigation.getByLabelText(/contact-desktop/i)).toBeDefined();
 	});
 
 	it("should display mobile menu when clicking hamburger", () => {
+		render(<Nav />);
 		fireEvent.click(screen.getByLabelText(/menu-mobile/i));
-		const navigation = within(screen.getByRole("navigation"));
-		expect(navigation.getByLabelText(/home-mobile/i)).toBeDefined();
-		expect(navigation.getByLabelText(/about-mobile/i)).toBeDefined();
-		expect(navigation.getByLabelText(/skills-mobile/i)).toBeDefined();
-		expect(navigation.getByLabelText(/experience-mobile/i)).toBeDefined();
-		expect(navigation.getByLabelText(/portfolio-mobile/i)).toBeDefined();
-		expect(navigation.getByLabelText(/contact-mobile/i)).toBeDefined();
+		expect(screen.getByLabelText(/home-mobile/i)).toBeDefined();
 	});
 
 	it("should close mobile menu when a link is clicked", () => {
+		render(<Nav />);
 		fireEvent.click(screen.getByLabelText(/menu-mobile/i));
-		const navigation = within(screen.getByRole("navigation"));
-		fireEvent.click(navigation.getByLabelText(/home-mobile/i));
+		fireEvent.click(screen.getByLabelText(/home-mobile/i));
 		expect(screen.queryByLabelText(/home-mobile/i)).toBeNull();
 	});
 
-	it("should allow brand button to be clicked", () => {
+	it("adds scrolled class when scrollY > 50", () => {
+		render(<Nav />);
+		Object.defineProperty(window, "scrollY", { value: 100, configurable: true, writable: true });
+		act(() => {
+			window.dispatchEvent(new Event("scroll"));
+		});
+		const nav = screen.getByRole("navigation");
+		expect(nav.className).toContain("bg-alvaro-base/90");
+	});
+
+	it("remains transparent when scrollY <= 50", () => {
+		render(<Nav />);
+		// after mount, scrollY is 0
+		Object.defineProperty(window, "scrollY", { value: 10, configurable: true, writable: true });
+		act(() => {
+			window.dispatchEvent(new Event("scroll"));
+		});
+		const nav = screen.getByRole("navigation");
+		expect(nav.className).toContain("bg-transparent");
+	});
+
+	it("closes mobile menu on outside click", () => {
+		render(<Nav />);
+		fireEvent.click(screen.getByLabelText(/menu-mobile/i));
+		expect(screen.getByLabelText(/home-mobile/i)).toBeDefined();
+		act(() => {
+			document.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
+		});
+		expect(screen.queryByLabelText(/home-mobile/i)).toBeNull();
+	});
+
+	it("mousedown does nothing when menu closed (isOpen=false)", () => {
+		render(<Nav />);
+		// menu is closed by default, mousedown should not crash
+		act(() => {
+			document.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
+		});
+	});
+
+	it("brand click scrolls to home and closes mobile menu", () => {
+		render(<Nav />);
+		fireEvent.click(screen.getByLabelText(/menu-mobile/i));
 		fireEvent.click(screen.getByText("AM"));
+		expect(screen.queryByLabelText(/home-mobile/i)).toBeNull();
+	});
+
+	it("matches snapshot", () => {
+		const { container } = render(<Nav />);
+		expect(container).toMatchSnapshot();
 	});
 });

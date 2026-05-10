@@ -30,6 +30,14 @@ export default mergeConfig(
 					"Date",
 				],
 			},
+			coverage: {
+				include: ["src/**/*.{ts,tsx}"],
+				exclude: [
+					"src/data/**",
+					"src/env.d.ts",
+					".astro/**",
+				],
+			},
 		},
 	}),
 );

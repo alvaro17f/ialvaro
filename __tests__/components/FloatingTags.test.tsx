@@ -1,11 +1,19 @@
-import { cleanup, render, screen } from "@testing-library/react";
+import { act, cleanup, render, screen } from "@testing-library/react";
 import { FloatingTags } from "src/components/FloatingTags";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { mockIntersectionObserver } from "../mocks/IntersectionObserver.tsx";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("<FloatingTags />", () => {
+	let observerCallback: (entries: { isIntersecting: boolean }[]) => void;
+
 	beforeEach(() => {
-		mockIntersectionObserver();
+		window.IntersectionObserver = class {
+			observe = vi.fn();
+			unobserve = vi.fn();
+			disconnect = vi.fn();
+			constructor(cb: (entries: { isIntersecting: boolean }[]) => void) {
+				observerCallback = cb;
+			}
+		} as unknown as typeof window.IntersectionObserver;
 	});
 	afterEach(cleanup);
 
@@ -19,5 +27,17 @@ describe("<FloatingTags />", () => {
 	it("renders empty tags gracefully", () => {
 		const { container } = render(<FloatingTags tags={[]} />);
 		expect(container.firstChild).toBeDefined();
+	});
+
+	it("tags become visible when intersecting", () => {
+		const { container } = render(<FloatingTags tags={["React"]} />);
+		const tag = screen.getByText("React");
+		// initially hidden
+		expect(tag.className).toContain("opacity-0");
+
+		act(() => {
+			observerCallback([{ isIntersecting: true }]);
+		});
+		expect(tag.className).toContain("opacity-100");
 	});
 });

@@ -1,5 +1,194 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`<Home /> > matches snapshot 1`] = `
+<div>
+  <section
+    class="relative min-h-[100dvh] grid md:grid-cols-[1.4fr_1fr] items-center justify-items-center md:justify-items-start gap-8 md:gap-16 px-4 md:px-0 overflow-hidden"
+    id="home"
+  >
+    <div
+      class="absolute inset-0 overflow-hidden pointer-events-none"
+    >
+      <div
+        class="mesh-blob absolute top-1/4 -left-1/4 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full bg-alvaro-primary/8 blur-[120px]"
+      />
+      <div
+        class="mesh-blob-delayed absolute bottom-1/3 -right-1/4 w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full bg-alvaro-primary/5 blur-[100px]"
+      />
+      <div
+        class="mesh-blob-slow absolute top-1/2 left-1/3 w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full bg-alvaro-primary/3 blur-[80px]"
+      />
+    </div>
+    <div
+      class="relative z-10 space-y-8 text-center md:text-left"
+    >
+      <h1
+        class="text-[clamp(3.5rem,10vw,8rem)] md:text-[clamp(5rem,8vw,9rem)] tracking-[-0.04em] leading-[0.85] font-bold"
+      >
+        <span
+          aria-label="ALVARO"
+          class="block text-alvaro-white"
+        >
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            A
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            L
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            V
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            A
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            R
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            O
+          </span>
+        </span>
+        <span
+          aria-label="GARCIA"
+          class="block text-alvaro-muted"
+        >
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            G
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            A
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            R
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            C
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            I
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            A
+          </span>
+        </span>
+        <span
+          aria-label="MACIAS"
+          class="block text-alvaro-white"
+        >
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            M
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            A
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            C
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            I
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            A
+          </span>
+          <span
+            class="inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary "
+          >
+            S
+          </span>
+        </span>
+      </h1>
+      <p
+        class="text-alvaro-muted text-lg md:text-xl leading-relaxed max-w-[35ch] mx-auto md:mx-0 transition-all duration-700 delay-1000 opacity-0 translate-y-4"
+      >
+        Full Stack Developer. Building interfaces that move.
+      </p>
+      <div
+        class="flex gap-4 justify-center md:justify-start pt-2 transition-all duration-700 delay-[1200ms] opacity-0 translate-y-4"
+      >
+        <a
+          class="px-8 py-3.5 bg-alvaro-primary text-alvaro-dark font-semibold rounded-xl hover:opacity-90 transition-all duration-200 active:scale-[0.97]"
+          href="#portfolio"
+        >
+          View work
+        </a>
+        <a
+          class="px-8 py-3.5 border border-alvaro-border text-alvaro-white font-semibold rounded-xl hover:border-alvaro-primary hover:text-alvaro-primary transition-all duration-200 active:scale-[0.97]"
+          href="/cv/cv.pdf"
+          target="_blank"
+        >
+          CV
+        </a>
+      </div>
+    </div>
+    <div
+      class="hidden md:block relative z-10 transition-all duration-1000 delay-500 opacity-0 translate-x-12"
+    >
+      <div
+        class="relative group"
+      >
+        <div
+          class="absolute -inset-4 rounded-3xl bg-alvaro-primary/5 blur-2xl group-hover:bg-alvaro-primary/10 transition-colors duration-700"
+        />
+        <img
+          alt="Alvaro Garcia Macias"
+          class="relative w-80 h-80 object-cover rounded-3xl border-2 border-alvaro-border transition-transform duration-700 group-hover:scale-[1.02] group-hover:border-alvaro-primary/30"
+          src="/images/profile/profile.png"
+          style="transform: translateY(0px); will-change: transform;"
+        />
+        <div
+          class="absolute inset-0 rounded-3xl bg-gradient-to-t from-alvaro-base/50 via-transparent to-transparent"
+        />
+      </div>
+    </div>
+    <div
+      class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden md:block"
+    >
+      <div
+        class="w-6 h-10 border-2 border-alvaro-muted/30 rounded-full flex justify-center"
+      >
+        <div
+          class="w-1 h-3 bg-alvaro-muted/50 rounded-full mt-2 animate-bounce"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
 exports[`<Home /> > should match the snapshot 1`] = `
 <div>
   <section

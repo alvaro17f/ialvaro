@@ -1,0 +1,126 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Portfolio /> > matches snapshot 1`] = `
+<div>
+  <section
+    class="section-curve"
+    id="portfolio"
+  >
+    <div
+      class="h-32 md:h-48"
+    />
+    <div
+      class="mb-10 overflow-hidden"
+    >
+      <h1
+        class="text-4xl md:text-5xl tracking-tight leading-none font-bold text-alvaro-white transition-all duration-700 ease-out origin-left opacity-0 scale-x-0"
+      >
+        Portfolio
+      </h1>
+      <div
+        class="mt-3 h-[2px] bg-alvaro-primary transition-all duration-700 delay-200 ease-out origin-left w-0 opacity-0"
+      />
+    </div>
+    <div
+      class="space-y-6"
+    >
+      <div
+        class="spotlight-card sticky top-20 grid md:grid-cols-[1fr_2fr] gap-8 p-6 md:p-10 group"
+      >
+        <div
+          class="grid cursor-pointer place-items-center rounded-2xl overflow-hidden bg-alvaro-base/50"
+          style="z-index: 1;"
+        >
+          <a
+            aria-label="ialvaro"
+            href="https://github.com/alvaro17f/ialvaro"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="ialvaro"
+              class="object-contain max-h-40 transition-transform duration-700 group-hover:scale-105"
+              src="images/readme/ialvaro.png"
+            />
+          </a>
+        </div>
+        <div
+          class="flex flex-col justify-center"
+        >
+          <h2
+            class="mb-4 text-3xl md:text-4xl tracking-tighter leading-none font-bold text-alvaro-white"
+          >
+            ialvaro
+          </h2>
+          <p
+            class="text-alvaro-muted leading-relaxed max-w-[60ch]"
+          >
+            A website done by using TypeScript, React.js, Astro.js, Tailwind & Framer Motion
+          </p>
+          <a
+            class="inline-flex items-center gap-2 mt-6 text-sm font-medium text-alvaro-primary hover:underline underline-offset-4"
+            href="https://github.com/alvaro17f/ialvaro"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            View project
+            <span
+              class="transition-transform duration-200 group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="spotlight-card sticky top-20 grid md:grid-cols-[1fr_2fr] gap-8 p-6 md:p-10 group"
+      >
+        <div
+          class="grid cursor-pointer place-items-center rounded-2xl overflow-hidden bg-alvaro-base/50"
+          style="z-index: 2;"
+        >
+          <a
+            aria-label="wrestic"
+            href="https://github.com/alvaro17f/wrestic"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="wrestic"
+              class="object-contain max-h-40 transition-transform duration-700 group-hover:scale-105"
+              src="portfolio/wrestic/wrestic_mockup.png"
+            />
+          </a>
+        </div>
+        <div
+          class="flex flex-col justify-center"
+        >
+          <h2
+            class="mb-4 text-3xl md:text-4xl tracking-tighter leading-none font-bold text-alvaro-white"
+          >
+            wrestic
+          </h2>
+          <p
+            class="text-alvaro-muted leading-relaxed max-w-[60ch]"
+          >
+            Wrestic is a backup tool built in Rust that provides a wrapper around Restic, a popular backup program. With Wrestic, you can easily configure and run backups of your files and directories, and take advantage of Restic's powerful features such as deduplication, encryption, and compression. Whether you need to back up your personal files or your organization's data, Wrestic can help you automate the process and ensure your data is safe and secure.
+          </p>
+          <a
+            class="inline-flex items-center gap-2 mt-6 text-sm font-medium text-alvaro-primary hover:underline underline-offset-4"
+            href="https://github.com/alvaro17f/wrestic"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            View project
+            <span
+              class="transition-transform duration-200 group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

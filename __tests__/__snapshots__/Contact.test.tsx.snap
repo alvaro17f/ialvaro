@@ -1,5 +1,173 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`<Contact /> > matches snapshot 1`] = `
+<div>
+  <section
+    class="min-h-[80vh]"
+    id="contact"
+  >
+    <div
+      class="h-12 md:h-24"
+    />
+    <div
+      data-rht-toaster=""
+      style="position: fixed; z-index: 9999; top: 16px; left: 16px; right: 16px; bottom: 16px; pointer-events: none;"
+    >
+      <div
+        class="go4109123758"
+        style="left: 0px; right: 0px; display: flex; position: absolute; transition: all 230ms cubic-bezier(.21,1.02,.73,1); transform: translateY(0px); bottom: 0px; justify-content: flex-end;"
+      >
+        <div
+          class="go2072408551"
+          style="opacity: 0; background: var(--color-alvaro-surface); color: var(--color-alvaro-white); border: 1px solid; border-width: var(--color-alvaro-border); border-style: var(--color-alvaro-border); border-color: var(--color-alvaro-border);"
+        >
+          <div
+            class="go685806154"
+          >
+            <div
+              class="go1858758034"
+            />
+            <div
+              class="go1579819456"
+            >
+              <div
+                class="go2534082608"
+              />
+            </div>
+          </div>
+          <div
+            aria-live="polite"
+            class="go3958317564"
+            role="status"
+          >
+            Message failed to send. Please try again.
+          </div>
+        </div>
+      </div>
+    </div>
+    <section
+      aria-label="contact-form"
+      class="grid grid-cols-1 md:grid-cols-[1fr_2fr] p-8 rounded-2xl bg-alvaro-surface border border-alvaro-border"
+    >
+      <div
+        class="mb-8 md:mb-0 md:pr-8"
+      >
+        <h2
+          class="text-3xl md:text-4xl tracking-tighter leading-none font-semibold mb-4"
+        >
+          Get in touch
+        </h2>
+        <p
+          class="text-alvaro-muted leading-relaxed max-w-[35ch]"
+        >
+          Have a project or opportunity? Drop a message.
+        </p>
+      </div>
+      <form
+        class="grid gap-4"
+      >
+        <div
+          class="grid gap-2"
+        >
+          <label
+            class="text-sm font-medium text-alvaro-muted"
+            for="contact-name"
+          >
+            Name
+          </label>
+          <input
+            autocomplete="name"
+            class="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200"
+            id="contact-name"
+            name="name"
+            required=""
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="grid gap-2"
+        >
+          <label
+            class="text-sm font-medium text-alvaro-muted"
+            for="contact-email"
+          >
+            Email
+          </label>
+          <input
+            autocomplete="email"
+            class="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200"
+            id="contact-email"
+            name="email"
+            required=""
+            type="email"
+            value=""
+          />
+        </div>
+        <div
+          class="grid gap-2"
+        >
+          <label
+            class="text-sm font-medium text-alvaro-muted"
+            for="contact-phone"
+          >
+            Phone
+             
+            <span
+              class="text-alvaro-border"
+            >
+              (optional)
+            </span>
+          </label>
+          <input
+            autocomplete="tel"
+            class="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200"
+            id="contact-phone"
+            name="phone"
+            type="tel"
+            value=""
+          />
+        </div>
+        <div
+          class="grid gap-2"
+        >
+          <label
+            class="text-sm font-medium text-alvaro-muted"
+            for="contact-message"
+          >
+            Message
+          </label>
+          <textarea
+            class="bg-alvaro-base text-alvaro-white p-4 border border-alvaro-border rounded-lg focus:outline-none focus:border-alvaro-primary transition-colors duration-200 min-h-[120px] resize-y"
+            id="contact-message"
+            name="message"
+            required=""
+          />
+        </div>
+        <button
+          aria-label="submit"
+          class="flex items-center justify-center gap-2 p-4 mt-2 rounded-lg bg-alvaro-primary text-alvaro-dark font-medium cursor-pointer hover:opacity-90 transition-all duration-200 active:scale-[0.98] disabled:opacity-50"
+          type="submit"
+        >
+          Send message
+          <svg
+            fill="currentColor"
+            height="20"
+            viewBox="0 0 256 256"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M230.14,25.86a20,20,0,0,0-19.57-5.11l-.22.07L18.44,79a20,20,0,0,0-3.06,37.25L99,157l40.71,83.65a19.81,19.81,0,0,0,18,11.38c.57,0,1.15,0,1.73-.07A19.82,19.82,0,0,0,177,237.56L235.18,45.65a1.42,1.42,0,0,0,.07-.22A20,20,0,0,0,230.14,25.86ZM156.91,221.07l-34.37-70.64,46-45.95a12,12,0,0,0-17-17l-46,46L34.93,99.09,210,46Z"
+            />
+          </svg>
+        </button>
+      </form>
+    </section>
+  </section>
+</div>
+`;
+
 exports[`<Contact /> > should match the snapshot 1`] = `
 <div>
   <section

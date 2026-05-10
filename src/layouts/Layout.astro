@@ -4,6 +4,7 @@ import "@fontsource-variable/jetbrains-mono";
 import "src/styles/globals.css";
 import { Nav } from "src/components/Nav";
 import { Footer } from "src/components/Footer";
+import { ThemeToggle } from "src/components/ThemeToggle";
 import { DynamicTitle } from "src/utils/DynamicTitle";
 ---
 
@@ -24,6 +25,10 @@ import { DynamicTitle } from "src/utils/DynamicTitle";
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<DynamicTitle client:load />
+		<script is:inline>
+			const t = localStorage.getItem('theme');
+			if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+		</script>
 	</head>
 	<body>
 		<a

@@ -11,6 +11,18 @@
 	--color-alvaro-accent: #C0392B;
 }
 
+/* Light theme */
+[data-theme="light"] {
+	--color-alvaro-base: #FAF8F5;
+	--color-alvaro-surface: #F2EFEA;
+	--color-alvaro-border: #D9D3CA;
+	--color-alvaro-muted: #7A7268;
+	--color-alvaro-white: #1A1816;
+	--color-alvaro-primary: #B8932E;
+	--color-alvaro-dark: #0D0D0D;
+	--color-alvaro-accent: #C0392B;
+}
+
 @property --angle {
 	syntax: "<angle>";
 	initial-value: 0deg;

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { List, X } from "@phosphor-icons/react";
+import { ThemeToggle } from "src/components/ThemeToggle";
 
 const links = [
 	{ label: "Home", route: "home" },
@@ -73,6 +74,8 @@ export const Nav = () => {
 							</button>
 						))}
 					</div>
+
+					<ThemeToggle />
 
 					{/* Mobile */}
 					<div className="flex md:hidden">

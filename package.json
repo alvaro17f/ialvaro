@@ -21,10 +21,8 @@
 		"@fontsource-variable/jetbrains-mono": "^5.2.8",
 		"@fontsource-variable/outfit": "^5.2.8",
 		"@phosphor-icons/react": "^2.1.10",
-		"@tailwindcss/postcss": "4.2.4",
 		"@tailwindcss/vite": "4.2.4",
 		"@types/react": "19.2.14",
-		"@types/react-dom": "19.2.3",
 		"astro": "6.3.1",
 		"react": "19.2.5",
 		"react-dom": "19.2.5",
@@ -36,7 +34,6 @@
 		"@vitejs/plugin-react": "5.2.0",
 		"@vitest/coverage-v8": "4.1.5",
 		"@vitest/ui": "4.1.5",
-		"autoprefixer": "10.5.0",
 		"happy-dom": "20.9.0",
 		"typescript": "6.0.3",
 		"vitest": "4.1.5"

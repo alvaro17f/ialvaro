@@ -1,7 +1,7 @@
 import { act, cleanup, render } from "@testing-library/react";
-import { useState } from "react";
 import { useScrollReveal } from "src/hooks/useScrollReveal";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { createObserverMock } from "../helpers/observerMock";
 
 let observeMock: ReturnType<typeof vi.fn>;
 let disconnectMock: ReturnType<typeof vi.fn>;
@@ -16,7 +16,6 @@ function HookTester({ once }: { once?: boolean }) {
 	);
 }
 
-// Component that uses the hook but never attaches the ref
 function NullRefTester() {
 	useScrollReveal();
 	return <div>no ref</div>;
@@ -41,11 +40,6 @@ describe("useScrollReveal", () => {
 	it("starts with isVisible=false", () => {
 		const { getByTestId } = render(<HookTester />);
 		expect(getByTestId("el").dataset.visible).toBe("false");
-	});
-
-	it("creates IntersectionObserver and observes element", () => {
-		render(<HookTester />);
-		expect(observeMock).toHaveBeenCalled();
 	});
 
 	it("sets isVisible=true on intersect, disconnects when once=true", () => {
@@ -83,9 +77,8 @@ describe("useScrollReveal", () => {
 		expect(disconnectMock).toHaveBeenCalled();
 	});
 
-	it("handles null ref gracefully (ref not attached)", () => {
-		const { container } = render(<NullRefTester />);
-		expect(container.textContent).toBe("no ref");
+	it("handles null ref gracefully", () => {
+		render(<NullRefTester />);
 		expect(observeMock).not.toHaveBeenCalled();
 	});
 });

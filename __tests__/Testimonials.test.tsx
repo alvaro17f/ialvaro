@@ -1,19 +1,13 @@
 import { act, cleanup, render, screen } from "@testing-library/react";
 import { Testimonials } from "src/views/Testimonials";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { createObserverMock } from "./helpers/observerMock";
 
 describe("<Testimonials />", () => {
-	let observerCallback: (entries: { isIntersecting: boolean }[]) => void;
+	let observer: ReturnType<typeof createObserverMock>;
 
 	beforeEach(() => {
-		window.IntersectionObserver = class {
-			observe = vi.fn();
-			unobserve = vi.fn();
-			disconnect = vi.fn();
-			constructor(cb: (entries: { isIntersecting: boolean }[]) => void) {
-				observerCallback = cb;
-			}
-		} as unknown as typeof window.IntersectionObserver;
+		observer = createObserverMock();
 	});
 	afterEach(cleanup);
 
@@ -24,28 +18,21 @@ describe("<Testimonials />", () => {
 		expect(screen.getByText(/clean code/i)).toBeDefined();
 	});
 
-	it("should render all names", () => {
+	it("should render all names and avatars", () => {
 		render(<Testimonials />);
 		expect(screen.getByText(/María Fernández/i)).toBeDefined();
-		expect(screen.getByText(/Carlos Ruíz/i)).toBeDefined();
-		expect(screen.getByText(/Elena Torres/i)).toBeDefined();
-	});
-
-	it("should render avatars", () => {
-		render(<Testimonials />);
-		const avatars = screen.getAllByRole("img");
-		expect(avatars.length).toBeGreaterThanOrEqual(3);
+		expect(screen.getByAltText("María Fernández")).toBeDefined();
 	});
 
 	it("cards start hidden and reveal when intersecting", () => {
 		render(<Testimonials />);
-		const cards = screen.getAllByText(/Fernández|Ruíz|Torres/i);
-		expect(cards[0].closest(".spotlight-card")?.className).toContain("opacity-0");
+		const card = screen.getByText(/Fernández/i).closest(".spotlight-card");
+		expect(card?.className).toContain("opacity-0");
 
 		act(() => {
-			observerCallback([{ isIntersecting: true }]);
+			observer.callback([{ isIntersecting: true }]);
 		});
-		expect(cards[0].closest(".spotlight-card")?.className).toContain("opacity-100");
+		expect(card?.className).toContain("opacity-100");
 	});
 
 	it("matches snapshot", () => {

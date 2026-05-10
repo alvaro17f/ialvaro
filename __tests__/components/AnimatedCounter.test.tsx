@@ -36,11 +36,9 @@ describe("<AnimatedCounter />", () => {
 		act(() => {
 			observerCallback([{ isIntersecting: true }]);
 		});
-		// advance timers to let interval run
 		act(() => {
 			vi.advanceTimersByTime(500);
 		});
-		// count should have increased from 0
 		const text = screen.getByText(/^\d+$/).textContent;
 		expect(Number(text)).toBeGreaterThan(0);
 	});
@@ -62,13 +60,12 @@ describe("<AnimatedCounter />", () => {
 		expect(span?.classList.contains("tabular-nums")).toBe(true);
 	});
 
-	it("clears interval on unmount", () => {
+	it("cleans up interval on unmount without error", () => {
 		const { unmount } = render(<AnimatedCounter end={42} />);
 		act(() => {
 			observerCallback([{ isIntersecting: true }]);
 		});
-		unmount();
-		// no error on unmount = interval cleaned up
+		expect(() => unmount()).not.toThrow();
 	});
 
 	it("does not count when not visible", () => {

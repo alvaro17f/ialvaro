@@ -32,20 +32,6 @@ describe("<TimelineSlider />", () => {
 		expect(screen.getByRole("slider")).toBeDefined();
 	});
 
-	it("renders position markers", () => {
-		render(
-			<TimelineSlider
-				value={50}
-				onChange={() => {}}
-				min={0}
-				max={100}
-				positions={[0, 50, 100]}
-			/>,
-		);
-		// Check that position dots exist via the slider being present
-		expect(screen.getByRole("slider")).toBeDefined();
-	});
-
 	it("calls onChange when value changes", () => {
 		const onChange = vi.fn();
 		render(

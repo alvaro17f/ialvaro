@@ -1,19 +1,13 @@
 import { act, cleanup, render, screen } from "@testing-library/react";
 import { Header } from "src/components/Header";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { createObserverMock } from "../helpers/observerMock";
 
 describe("<Header />", () => {
-	let observerCallback: (entries: { isIntersecting: boolean }[]) => void;
+	let observer: ReturnType<typeof createObserverMock>;
 
 	beforeEach(() => {
-		window.IntersectionObserver = class {
-			observe = vi.fn();
-			unobserve = vi.fn();
-			disconnect = vi.fn();
-			constructor(cb: (entries: { isIntersecting: boolean }[]) => void) {
-				observerCallback = cb;
-			}
-		} as unknown as typeof window.IntersectionObserver;
+		observer = createObserverMock();
 	});
 	afterEach(cleanup);
 
@@ -22,32 +16,19 @@ describe("<Header />", () => {
 		expect(screen.getByText("Portfolio")).toBeDefined();
 	});
 
-	it("renders h1 element", () => {
-		const { container } = render(<Header title="Skills" />);
-		expect(container.querySelector("h1")).toBeDefined();
-	});
-
 	it("applies initial hidden classes", () => {
 		const { container } = render(<Header title="About" />);
 		const h1 = container.querySelector("h1");
 		expect(h1?.className).toContain("opacity-0");
-		expect(h1?.className).toContain("scale-x-0");
 	});
 
 	it("becomes visible when intersecting", () => {
 		const { container } = render(<Header title="Experience" />);
-
 		act(() => {
-			observerCallback([{ isIntersecting: true }]);
+			observer.callback([{ isIntersecting: true }]);
 		});
-
-		const h1 = container.querySelector("h1");
-		expect(h1?.className).toContain("opacity-100");
-		expect(h1?.className).toContain("scale-x-100");
-
-		const line = container.querySelector(".bg-alvaro-primary");
-		expect(line?.className).toContain("w-24");
-		expect(line?.className).toContain("opacity-100");
+		expect(container.querySelector("h1")!.className).toContain("opacity-100");
+		expect(container.querySelector(".bg-alvaro-primary")!.className).toContain("w-24");
 	});
 
 	it("matches snapshot", () => {

@@ -1,15 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import { Spinner } from "src/components/Spinner";
-import { describe, it } from "vitest";
+import { describe, expect, it } from "vitest";
 
 describe("Spinner", () => {
 	it("renders the spinner", () => {
 		render(<Spinner />);
-		screen.getByTitle("Loading");
+		expect(screen.getByTitle("Loading")).toBeDefined();
 	});
 
 	it("renders the loading text", () => {
 		render(<Spinner />);
-		screen.getAllByText("Loading");
+		expect(screen.getAllByText("Loading")).toHaveLength(2);
 	});
 });

@@ -30,14 +30,12 @@ describe("<FloatingTags />", () => {
 	});
 
 	it("tags become visible when intersecting", () => {
-		const { container } = render(<FloatingTags tags={["React"]} />);
-		const tag = screen.getByText("React");
-		// initially hidden
-		expect(tag.className).toContain("opacity-0");
+		render(<FloatingTags tags={["React"]} />);
+		expect(screen.getByText("React").className).toContain("opacity-0");
 
 		act(() => {
 			observerCallback([{ isIntersecting: true }]);
 		});
-		expect(tag.className).toContain("opacity-100");
+		expect(screen.getByText("React").className).toContain("opacity-100");
 	});
 });

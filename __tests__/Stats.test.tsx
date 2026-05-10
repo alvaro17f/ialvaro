@@ -16,13 +16,14 @@ describe("<Stats />", () => {
 	});
 
 	it("should render all stat labels", () => {
-		expect(screen.getByText(/years/i)).toBeDefined();
-		expect(screen.getByText(/projects/i)).toBeDefined();
-		expect(screen.getByText(/technologies/i)).toBeDefined();
-		expect(screen.getByText(/commitment/i)).toBeDefined();
+		expect(screen.getByText(/years experience/i)).toBeDefined();
+		expect(screen.getByText(/projects delivered/i)).toBeDefined();
+		expect(screen.getByText("Technologies")).toBeDefined();
+		expect(screen.getByText("Commitment")).toBeDefined();
 	});
 
-	it("should render stat numbers", () => {
-		expect(screen.getByText("0")).toBeDefined();
+	it("counters start at 0", () => {
+		const zeros = screen.getAllByText("0");
+		expect(zeros.length).toBeGreaterThanOrEqual(1);
 	});
 });

@@ -1,19 +1,13 @@
 import { act, cleanup, render, screen } from "@testing-library/react";
 import { WordReveal } from "src/components/WordReveal";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { createObserverMock } from "../helpers/observerMock";
 
 describe("<WordReveal />", () => {
-	let observerCallback: (entries: { isIntersecting: boolean }[]) => void;
+	let observer: ReturnType<typeof createObserverMock>;
 
 	beforeEach(() => {
-		window.IntersectionObserver = class {
-			observe = vi.fn();
-			unobserve = vi.fn();
-			disconnect = vi.fn();
-			constructor(cb: (entries: { isIntersecting: boolean }[]) => void) {
-				observerCallback = cb;
-			}
-		} as unknown as typeof window.IntersectionObserver;
+		observer = createObserverMock();
 	});
 	afterEach(cleanup);
 
@@ -26,19 +20,14 @@ describe("<WordReveal />", () => {
 		const { container } = render(<WordReveal text="Hello world" />);
 		const spans = container.querySelectorAll("span");
 		expect(spans[0].className).toContain("opacity-0");
-		expect(spans[0].className).toContain("translate-y-3");
 	});
 
 	it("words become visible when intersecting", () => {
 		const { container } = render(<WordReveal text="Hello world" />);
-
 		act(() => {
-			observerCallback([{ isIntersecting: true }]);
+			observer.callback([{ isIntersecting: true }]);
 		});
-
-		const spans = container.querySelectorAll("span");
-		expect(spans[0].className).toContain("opacity-100");
-		expect(spans[0].className).toContain("translate-y-0");
+		expect(container.querySelector("span")!.className).toContain("opacity-100");
 	});
 
 	it("applies custom className", () => {

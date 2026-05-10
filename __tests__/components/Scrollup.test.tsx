@@ -1,6 +1,6 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { goToTop, Scrollup } from "src/components/Scrollup";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("<Scrollup />", () => {
 	beforeEach(() => {
@@ -20,7 +20,10 @@ describe("<Scrollup />", () => {
 	});
 
 	it("should scroll to top when clicked", () => {
+		const scrollToSpy = vi.spyOn(document.documentElement, "scrollTo").mockImplementation(() => {});
 		fireEvent.scroll(window, { target: { scrollY: 401 } });
 		goToTop();
+		expect(scrollToSpy).toHaveBeenCalledWith({ top: 0, behavior: "smooth" });
+		scrollToSpy.mockRestore();
 	});
 });

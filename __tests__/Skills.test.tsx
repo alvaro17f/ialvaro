@@ -1,19 +1,13 @@
 import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { Skills } from "src/views/Skills";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { createObserverMock } from "./helpers/observerMock";
 
 describe("<Skills />", () => {
-	let observerCallback: (entries: { isIntersecting: boolean }[]) => void;
+	let observer: ReturnType<typeof createObserverMock>;
 
 	beforeEach(() => {
-		window.IntersectionObserver = class {
-			observe = vi.fn();
-			unobserve = vi.fn();
-			disconnect = vi.fn();
-			constructor(cb: (entries: { isIntersecting: boolean }[]) => void) {
-				observerCallback = cb;
-			}
-		} as unknown as typeof window.IntersectionObserver;
+		observer = createObserverMock();
 	});
 	afterEach(cleanup);
 
@@ -27,19 +21,14 @@ describe("<Skills />", () => {
 		expect(screen.getAllByLabelText(/skill/i).length).toBe(12);
 	});
 
-	it("should show 'Show more' button when there are hidden skills", () => {
-		render(<Skills />);
-		expect(screen.getByText(/show more/i)).toBeDefined();
-	});
-
-	it("should reveal all skills when clicking Show more", () => {
+	it("should reveal all skills on Show more", () => {
 		render(<Skills />);
 		fireEvent.click(screen.getByText(/show more/i));
 		expect(screen.getAllByLabelText(/skill/i).length).toBe(17);
 		expect(screen.getByText(/show less/i)).toBeDefined();
 	});
 
-	it("should collapse back when clicking Show less", () => {
+	it("should collapse back on Show less", () => {
 		render(<Skills />);
 		fireEvent.click(screen.getByText(/show more/i));
 		fireEvent.click(screen.getByText(/show less/i));
@@ -48,13 +37,13 @@ describe("<Skills />", () => {
 
 	it("skills become visible when intersecting", () => {
 		render(<Skills />);
-		const firstSkill = screen.getAllByLabelText(/skill:/i)[0];
-		expect(firstSkill.className).toContain("opacity-0");
+		const skill = screen.getAllByLabelText(/skill:/i)[0];
+		expect(skill.className).toContain("opacity-0");
 
 		act(() => {
-			observerCallback([{ isIntersecting: true }]);
+			observer.callback([{ isIntersecting: true }]);
 		});
-		expect(firstSkill.className).toContain("opacity-100");
+		expect(skill.className).toContain("opacity-100");
 	});
 
 	it("matches snapshot", () => {

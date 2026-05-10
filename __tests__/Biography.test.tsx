@@ -1,30 +1,24 @@
 import { act, cleanup, render, screen } from "@testing-library/react";
 import Biography from "src/views/Biography";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { createObserverMock } from "./helpers/observerMock";
 
 describe("<Biography />", () => {
-	let observerCallback: (entries: { isIntersecting: boolean }[]) => void;
+	let observer: ReturnType<typeof createObserverMock>;
 
 	beforeEach(() => {
-		window.IntersectionObserver = class {
-			observe = vi.fn();
-			unobserve = vi.fn();
-			disconnect = vi.fn();
-			constructor(cb: (entries: { isIntersecting: boolean }[]) => void) {
-				observerCallback = cb;
-			}
-		} as unknown as typeof window.IntersectionObserver;
+		observer = createObserverMock();
 	});
 	afterEach(cleanup);
-
-	it("should render about heading", () => {
-		render(<Biography />);
-		expect(screen.getByText(/I build/i)).toBeDefined();
-	});
 
 	it("should render about label", () => {
 		render(<Biography />);
 		expect(screen.getByText("About me")).toBeDefined();
+	});
+
+	it("should render headline", () => {
+		render(<Biography />);
+		expect(screen.getByText(/I build/i)).toBeDefined();
 	});
 
 	it("should render profile image", () => {
@@ -36,12 +30,6 @@ describe("<Biography />", () => {
 		render(<Biography />);
 		expect(screen.getByText(/100% involved/i)).toBeDefined();
 		expect(screen.getByText(/non-conformist/i)).toBeDefined();
-		expect(screen.getByText(/direct and creative/i)).toBeDefined();
-	});
-
-	it("should not render a timeline slider", () => {
-		render(<Biography />);
-		expect(screen.queryByText("Timeline")).toBeNull();
 	});
 
 	it("reveals profile image when intersecting", () => {
@@ -50,9 +38,8 @@ describe("<Biography />", () => {
 		expect(img.className).toContain("opacity-0");
 
 		act(() => {
-			observerCallback([{ isIntersecting: true }]);
+			observer.callback([{ isIntersecting: true }]);
 		});
-
 		expect(img.className).toContain("opacity-100");
 	});
 

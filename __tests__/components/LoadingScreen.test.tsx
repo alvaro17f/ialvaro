@@ -25,28 +25,27 @@ describe("<LoadingScreen />", () => {
 		expect(container.firstChild).toBeNull();
 	});
 
-	it("shows exit animation then hides after timers", () => {
+	it("triggers exit animation then hides after timers", () => {
 		vi.useFakeTimers();
 		const { container } = render(<LoadingScreen />);
-		expect(container.firstChild).toBeDefined();
+		expect(screen.getByLabelText("loading-screen")).toBeDefined();
 
 		act(() => {
 			vi.advanceTimersByTime(1900);
 		});
-		// exit animation triggered
-		const el = screen.getByLabelText("loading-screen");
-		expect(el.className).toContain("opacity-0");
+		expect(screen.getByLabelText("loading-screen").className).toContain("opacity-0");
 
 		act(() => {
 			vi.advanceTimersByTime(600);
 		});
 
+		expect(container.querySelector("[aria-label='loading-screen']")).toBeNull();
 		vi.useRealTimers();
 	});
 
-	it("clicking skip triggers exit animation and hides", () => {
+	it("skips and hides after click", () => {
 		vi.useFakeTimers();
-		render(<LoadingScreen />);
+		const { container } = render(<LoadingScreen />);
 
 		fireEvent.click(screen.getByLabelText("loading-screen"));
 
@@ -54,6 +53,7 @@ describe("<LoadingScreen />", () => {
 			vi.advanceTimersByTime(500);
 		});
 
+		expect(container.querySelector("[aria-label='loading-screen']")).toBeNull();
 		vi.useRealTimers();
 	});
 });

@@ -47,7 +47,7 @@ export default function Biography() {
 									? "opacity-100 scale-100"
 									: "opacity-0 scale-90"
 							}`}
-							style={{ border: "1px solid rgba(74,144,217,0.12)" }}
+							style={{ border: "1px solid rgba(91,155,213,0.12)" }}
 						/>
 						<div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-alvaro-primary/40 rounded-tr-lg" />
 					</div>

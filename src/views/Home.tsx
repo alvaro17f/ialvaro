@@ -81,7 +81,7 @@ export const Home = () => {
 				>
 					<a
 						href="#portfolio"
-						className="group relative px-8 py-3.5 bg-alvaro-primary text-alvaro-dark font-semibold rounded-xl overflow-hidden transition-all duration-300 active:scale-[0.97] hover:shadow-[0_0_30px_-5px_rgba(74,144,217,0.3)]"
+						className="group relative px-8 py-3.5 bg-alvaro-primary text-alvaro-dark font-semibold rounded-xl overflow-hidden transition-all duration-300 active:scale-[0.97] hover:shadow-[0_0_30px_-5px_rgba(91,155,213,0.3)]"
 					>
 						<span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
 						<span className="relative">View work</span>
@@ -116,7 +116,7 @@ export const Home = () => {
 						style={{
 							transform: `translateY(${parallax}px)`,
 							willChange: "transform",
-							border: "1px solid rgba(74,144,217,0.15)",
+							border: "1px solid rgba(91,155,213,0.15)",
 						}}
 					/>
 					<div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-alvaro-base/60 via-transparent to-transparent" />

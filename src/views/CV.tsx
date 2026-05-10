@@ -9,18 +9,24 @@ export const CV = () => {
 				rel="noopener noreferrer"
 				aria-label="Download CV"
 			>
-				<div className="grid place-items-center p-10 md:p-16 rounded-3xl border-2 border-alvaro-border bg-alvaro-surface hover:border-alvaro-primary transition-all duration-300 group cursor-pointer active:scale-[0.99] relative overflow-hidden">
+				<div className="grid place-items-center p-12 md:p-20 rounded-3xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary/40 transition-all duration-500 group cursor-pointer active:scale-[0.99] relative overflow-hidden">
 					{/* Background glow */}
-					<div className="absolute inset-0 bg-gradient-to-br from-alvaro-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+					<div className="absolute inset-0 bg-gradient-to-br from-alvaro-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-					<h2 className="relative z-10 text-4xl md:text-5xl tracking-tight font-bold text-alvaro-white group-hover:text-alvaro-primary transition-colors duration-200">
+					{/* Corner decorations */}
+					<div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-alvaro-primary/20 rounded-tl-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100" />
+					<div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-alvaro-primary/20 rounded-br-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100" />
+
+					<h2 className="relative z-10 text-4xl md:text-5xl tracking-[-0.03em] font-bold text-alvaro-white group-hover:text-alvaro-primary transition-colors duration-300">
 						Download my CV
 					</h2>
-					<DownloadSimple
-						size={36}
-						weight="bold"
-						className="relative z-10 mt-5 text-alvaro-muted group-hover:text-alvaro-primary transition-colors duration-200"
-					/>
+					<div className="relative z-10 mt-6 p-3 rounded-full bg-alvaro-primary/10 group-hover:bg-alvaro-primary/20 transition-all duration-300">
+						<DownloadSimple
+							size={32}
+							weight="bold"
+							className="text-alvaro-muted group-hover:text-alvaro-primary transition-colors duration-300"
+						/>
+					</div>
 				</div>
 			</a>
 		</section>

@@ -82,11 +82,11 @@ export const Contact = () => {
 			/>
 			{!isSubmitted ? (
 				<section
-					className="grid grid-cols-1 md:grid-cols-[1fr_2fr] p-8 rounded-2xl bg-alvaro-surface border border-alvaro-border"
+					className="grid grid-cols-1 md:grid-cols-[1fr_2fr] p-8 md:p-10 rounded-2xl bg-alvaro-surface border border-alvaro-border hover:border-alvaro-primary/20 transition-all duration-500"
 					aria-label="contact-form"
 				>
 					<div className="mb-8 md:mb-0 md:pr-8">
-						<h2 className="text-3xl md:text-4xl tracking-tighter leading-none font-semibold mb-4">
+						<h2 className="text-3xl md:text-4xl tracking-[-0.03em] leading-none font-bold mb-4">
 							Get in touch
 						</h2>
 						<p className="text-alvaro-muted leading-relaxed max-w-[35ch]">

@@ -36,7 +36,7 @@ describe("<Nav />", () => {
 			window.dispatchEvent(new Event("scroll"));
 		});
 		const nav = screen.getByRole("navigation");
-		expect(nav.className).toContain("bg-alvaro-base/90");
+		expect(nav.className).toContain("bg-alvaro-base/80");
 	});
 
 	it("remains transparent when scrollY <= 50", () => {

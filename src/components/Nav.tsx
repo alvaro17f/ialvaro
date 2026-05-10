@@ -41,7 +41,7 @@ export const Nav = () => {
 			ref={navRef}
 			className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
 				isScrolled
-					? "bg-alvaro-base/90 backdrop-blur-xl border-b border-alvaro-border shadow-lg shadow-black/5"
+					? "bg-alvaro-base/80 backdrop-blur-xl border-b border-alvaro-primary/10 shadow-[0_1px_0_0_rgba(212,168,83,0.05)]"
 					: "bg-transparent"
 			}`}
 		>
@@ -53,22 +53,23 @@ export const Nav = () => {
 							scroller("home");
 							isOpen && setIsOpen(false);
 						}}
-						className="text-lg font-semibold tracking-tight text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
+						className="text-lg font-bold tracking-[-0.03em] text-alvaro-white hover:text-alvaro-primary transition-colors duration-300"
 					>
 						AM
 					</button>
 
-					{/* Desktop */}
-					<div className="hidden md:flex items-center gap-1">
+					{/* Desktop — refined pill nav */}
+					<div className="hidden md:flex items-center gap-0.5">
 						{links.map(({ label, route }) => (
 							<button
 								key={route}
 								type="button"
 								onClick={() => scroller(route)}
-								className="px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white hover:bg-alvaro-surface/50 transition-all duration-200 active:scale-[0.97]"
+								className="group relative px-3.5 py-2 text-[13px] font-medium text-alvaro-muted rounded-lg cursor-pointer hover:text-alvaro-white transition-all duration-300 active:scale-[0.97]"
 								aria-label={`${label}-desktop`}
 							>
 								{label}
+								<span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-alvaro-primary scale-0 group-hover:scale-100 transition-transform duration-300" />
 							</button>
 						))}
 					</div>
@@ -78,7 +79,7 @@ export const Nav = () => {
 						<button
 							onClick={() => setIsOpen(!isOpen)}
 							type="button"
-							className="p-2 rounded-lg text-alvaro-white hover:bg-alvaro-surface/50 transition-colors duration-200"
+							className="p-2 rounded-lg text-alvaro-white hover:text-alvaro-primary transition-colors duration-200"
 							aria-label="menu-mobile"
 							aria-expanded={isOpen}
 						>
@@ -94,8 +95,8 @@ export const Nav = () => {
 
 			{/* Mobile menu */}
 			{isOpen && (
-				<div className="md:hidden border-t border-alvaro-border/30">
-					<div className="px-4 py-3 space-y-1">
+				<div className="md:hidden border-t border-alvaro-primary/10 bg-alvaro-base/95 backdrop-blur-xl">
+					<div className="px-4 py-3 space-y-0.5">
 						{links.map(({ label, route }, i) => (
 							<button
 								key={route}
@@ -104,10 +105,11 @@ export const Nav = () => {
 									setIsOpen(false);
 									scroller(route);
 								}}
-								className="block w-full px-3 py-2 text-sm font-medium text-alvaro-muted rounded-lg hover:text-alvaro-white hover:bg-alvaro-surface/50 transition-all duration-200 text-left active:scale-[0.98]"
-								style={{ transitionDelay: `${i * 40}ms` }}
+								className="block w-full px-4 py-2.5 text-sm font-medium text-alvaro-muted rounded-lg hover:text-alvaro-white hover:bg-alvaro-primary/5 transition-all duration-200 text-left active:scale-[0.98]"
+								style={{ transitionDelay: `${i * 30}ms` }}
 								aria-label={`${label}-mobile`}
 							>
+								<span className="text-alvaro-primary/40 mr-2">0{i + 1}</span>
 								{label}
 							</button>
 						))}

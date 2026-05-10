@@ -42,7 +42,8 @@ describe("<Home />", () => {
 
 	it("should render tagline", () => {
 		render(<Home />);
-		expect(screen.getByText(/Full Stack Developer/i)).toBeDefined();
+		expect(screen.getByText(/Building interfaces that move/i)).toBeDefined();
+		expect(screen.getByText("Full Stack Developer")).toBeDefined();
 	});
 
 	it("updates parallax on scroll", () => {
@@ -58,7 +59,7 @@ describe("<Home />", () => {
 
 	it("reveals tagline and CTAs when visible", () => {
 		render(<Home />);
-		const taglineParent = screen.getByText(/Full Stack Developer/i).closest("p");
+		const taglineParent = screen.getByText(/Building interfaces that move/i).closest("p");
 		expect(taglineParent?.className).toContain("opacity-0");
 
 		act(() => {

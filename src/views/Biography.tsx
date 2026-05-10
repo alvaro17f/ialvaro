@@ -33,9 +33,10 @@ export default function Biography() {
 			id="biography"
 			className="relative min-h-[100dvh] grid items-center overflow-hidden"
 		>
-			{/* Background glow */}
+			{/* Atmospheric mesh */}
 			<div className="absolute inset-0 pointer-events-none">
-				<div className="mesh-blob-delayed absolute top-1/3 right-0 w-[400px] h-[400px] rounded-full bg-alvaro-primary/5 blur-[100px]" />
+				<div className="absolute top-1/3 -right-1/4 w-[500px] h-[500px] rounded-full bg-alvaro-primary/3 blur-[120px]" />
+				<div className="absolute bottom-0 -left-1/4 w-[400px] h-[400px] rounded-full bg-alvaro-primary/2 blur-[100px]" />
 			</div>
 
 			<div
@@ -48,15 +49,16 @@ export default function Biography() {
 						{/* Glow behind image */}
 						<div className="absolute -inset-6 rounded-3xl bg-alvaro-primary/8 blur-2xl" />
 						{/* Gradient border */}
-						<div className="absolute -inset-[2px] rounded-3xl gradient-border -z-10" />
+						<div className="absolute -inset-[2px] rounded-3xl gradient-border -z-10 opacity-70" />
 						<img
 							src="/images/profile/profile.png"
 							alt="Alvaro Garcia Macias"
-							className={`relative w-64 h-64 md:w-72 md:h-72 object-cover rounded-3xl border-2 border-alvaro-border transition-all duration-700 ${
+							className={`relative w-64 h-64 md:w-72 md:h-72 object-cover rounded-3xl transition-all duration-700 ${
 								isVisible
 									? "opacity-100 scale-100"
 									: "opacity-0 scale-95"
 							}`}
+							style={{ border: "1px solid rgba(212,168,83,0.15)" }}
 						/>
 					</div>
 					{/* Floating skill tags */}
@@ -69,7 +71,7 @@ export default function Biography() {
 				<div className="space-y-6">
 					<div>
 						<p
-							className={`text-sm font-semibold tracking-widest uppercase text-alvaro-primary mb-3 transition-all duration-500 ${
+							className={`text-xs tracking-[0.2em] uppercase text-alvaro-primary/60 font-medium mb-3 transition-all duration-500 ${
 								isVisible
 									? "opacity-100 translate-y-0"
 									: "opacity-0 translate-y-4"
@@ -78,7 +80,7 @@ export default function Biography() {
 							About
 						</p>
 						<h2
-							className={`text-4xl md:text-5xl lg:text-6xl tracking-tighter leading-[0.95] font-bold text-alvaro-white transition-all duration-700 delay-100 ${
+							className={`text-4xl md:text-5xl lg:text-6xl tracking-[-0.03em] leading-[0.95] font-bold text-alvaro-white transition-all duration-700 delay-100 ${
 								isVisible
 									? "opacity-100 translate-y-0"
 									: "opacity-0 translate-y-6"
@@ -121,7 +123,7 @@ export default function Biography() {
 						}`}
 					>
 						<div>
-							<span className="text-2xl md:text-3xl font-bold tracking-tight text-alvaro-white">
+							<span className="text-2xl md:text-3xl font-bold tracking-[-0.02em] text-alvaro-primary">
 								5+
 							</span>
 							<p className="text-xs text-alvaro-muted mt-1">
@@ -129,7 +131,7 @@ export default function Biography() {
 							</p>
 						</div>
 						<div>
-							<span className="text-2xl md:text-3xl font-bold tracking-tight text-alvaro-white">
+							<span className="text-2xl md:text-3xl font-bold tracking-[-0.02em] text-alvaro-primary">
 								20+
 							</span>
 							<p className="text-xs text-alvaro-muted mt-1">
@@ -137,7 +139,7 @@ export default function Biography() {
 							</p>
 						</div>
 						<div>
-							<span className="text-2xl md:text-3xl font-bold tracking-tight text-alvaro-white">
+							<span className="text-2xl md:text-3xl font-bold tracking-[-0.02em] text-alvaro-primary">
 								12
 							</span>
 							<p className="text-xs text-alvaro-muted mt-1">

@@ -22,15 +22,21 @@ describe("<Biography />", () => {
 		expect(screen.getByText(/I build/i)).toBeDefined();
 	});
 
+	it("should render about label", () => {
+		render(<Biography />);
+		expect(screen.getByText("About me")).toBeDefined();
+	});
+
 	it("should render profile image", () => {
 		render(<Biography />);
 		expect(screen.getByAltText("Alvaro Garcia Macias")).toBeDefined();
 	});
 
-	it("should render single description text", () => {
+	it("should render description paragraphs", () => {
 		render(<Biography />);
 		expect(screen.getByText(/100% involved/i)).toBeDefined();
 		expect(screen.getByText(/non-conformist/i)).toBeDefined();
+		expect(screen.getByText(/direct and creative/i)).toBeDefined();
 	});
 
 	it("should not render a timeline slider", () => {
@@ -48,13 +54,6 @@ describe("<Biography />", () => {
 		});
 
 		expect(img.className).toContain("opacity-100");
-	});
-
-	it("renders inline stats", () => {
-		render(<Biography />);
-		expect(screen.getByText("Years")).toBeDefined();
-		expect(screen.getByText("Projects")).toBeDefined();
-		expect(screen.getByText("Technologies")).toBeDefined();
 	});
 
 	it("matches snapshot", () => {

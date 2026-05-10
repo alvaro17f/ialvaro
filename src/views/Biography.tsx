@@ -32,7 +32,7 @@ export default function Biography() {
 
 			<div
 				ref={ref}
-				className="relative z-10 grid md:grid-cols-[1fr_1.3fr] gap-12 md:gap-20 items-center max-w-7xl mx-auto px-5 sm:px-6 lg:px-8"
+				className="relative z-10 grid md:grid-cols-[1fr_1.3fr] gap-12 md:gap-24 items-center max-w-7xl mx-auto px-5 sm:px-6 lg:px-8"
 			>
 				{/* Left: Profile with floating tags */}
 				<div className="relative flex justify-center">
@@ -56,106 +56,60 @@ export default function Biography() {
 					</div>
 				</div>
 
-				{/* Right: Editorial spread */}
+				{/* Right: Editorial monograph */}
 				<div className="space-y-12">
-					{/* Header */}
-					<div className="space-y-6">
-						<div className="flex items-center gap-3">
-							<div className="w-10 h-px bg-alvaro-primary/50" />
-							<span className="text-[11px] tracking-[0.25em] uppercase text-alvaro-primary/60 font-medium">
-								About me
-							</span>
-						</div>
-
-						<h2
-							className={`text-4xl md:text-6xl lg:text-7xl tracking-[-0.03em] leading-[0.88] font-bold transition-all duration-700 delay-100 ${
-								isVisible
-									? "opacity-100 translate-y-0"
-									: "opacity-0 translate-y-8"
-							}`}
-						>
-							<span className="text-alvaro-white">I build</span>
-							<br />
-							<span className="text-alvaro-muted">things for</span>
-							<br />
-							<span className="text-alvaro-primary">the web.</span>
-						</h2>
-					</div>
-
-					{/* Description — refined paragraphs */}
+					{/* Label */}
 					<div
-						className={`space-y-5 transition-all duration-700 delay-200 ${
+						className={`flex items-center gap-3 transition-all duration-500 ${
 							isVisible
-								? "opacity-100 translate-x-0"
-								: "opacity-0 -translate-x-4"
+								? "opacity-100 translate-y-0"
+								: "opacity-0 translate-y-4"
 						}`}
 					>
-						{paragraphs.map((text, i) => (
-							<p
-								key={`p-${i}`}
-								className="text-alvaro-muted/80 leading-relaxed text-[15px] md:text-base max-w-[55ch]"
-							>
-								{i === 0 && (
-									<span className="float-left text-5xl md:text-6xl font-bold text-alvaro-primary/20 leading-[0.7] mr-2.5 mt-1">
-										&ldquo;
-									</span>
-								)}
-								{text}
-							</p>
-						))}
+						<div className="w-10 h-px bg-alvaro-primary/50" />
+						<span className="text-[11px] tracking-[0.25em] uppercase text-alvaro-primary/60 font-medium">
+							About me
+						</span>
 					</div>
 
-					{/* Stats — blueprint annotations */}
+					{/* Headline */}
+					<h2
+						className={`text-4xl md:text-6xl lg:text-7xl tracking-[-0.03em] leading-[0.85] font-bold transition-all duration-700 delay-100 ${
+							isVisible
+								? "opacity-100 translate-y-0"
+								: "opacity-0 translate-y-8"
+						}`}
+					>
+						<span className="text-alvaro-white">I build</span>
+						<br />
+						<span className="text-alvaro-muted">things for</span>
+						<br />
+						<span className="text-alvaro-primary">the web.</span>
+					</h2>
+
+					{/* Decorative rule */}
 					<div
-						className={`grid grid-cols-3 gap-8 pt-4 transition-all duration-700 delay-500 ${
+						className={`w-16 h-px bg-alvaro-primary/30 transition-all duration-700 delay-200 ${
+							isVisible ? "opacity-100 w-16" : "opacity-0 w-0"
+						}`}
+					/>
+
+					{/* Bio paragraphs */}
+					<div
+						className={`space-y-6 transition-all duration-700 delay-300 ${
 							isVisible
 								? "opacity-100 translate-y-0"
 								: "opacity-0 translate-y-6"
 						}`}
 					>
-						<div className="space-y-2">
-							<div className="flex items-baseline gap-1">
-								<span className="text-4xl md:text-5xl font-bold tracking-[-0.03em] text-alvaro-primary">
-									5
-								</span>
-								<span className="text-2xl text-alvaro-primary/50">+</span>
-							</div>
-							<div className="flex items-center gap-2">
-								<div className="w-4 h-px bg-alvaro-primary/30" />
-								<p className="text-[11px] tracking-[0.15em] uppercase text-alvaro-muted/50">
-									Years
-								</p>
-							</div>
-						</div>
-
-						<div className="space-y-2">
-							<div className="flex items-baseline gap-1">
-								<span className="text-4xl md:text-5xl font-bold tracking-[-0.03em] text-alvaro-primary">
-									20
-								</span>
-								<span className="text-2xl text-alvaro-primary/50">+</span>
-							</div>
-							<div className="flex items-center gap-2">
-								<div className="w-4 h-px bg-alvaro-primary/30" />
-								<p className="text-[11px] tracking-[0.15em] uppercase text-alvaro-muted/50">
-									Projects
-								</p>
-							</div>
-						</div>
-
-						<div className="space-y-2">
-							<div className="flex items-baseline gap-1">
-								<span className="text-4xl md:text-5xl font-bold tracking-[-0.03em] text-alvaro-primary">
-									12
-								</span>
-							</div>
-							<div className="flex items-center gap-2">
-								<div className="w-4 h-px bg-alvaro-primary/30" />
-								<p className="text-[11px] tracking-[0.15em] uppercase text-alvaro-muted/50">
-									Technologies
-								</p>
-							</div>
-						</div>
+						{paragraphs.map((text) => (
+							<p
+								key={text.slice(0, 20)}
+								className="text-alvaro-muted/80 leading-relaxed text-[15px] md:text-base max-w-[55ch]"
+							>
+								{text}
+							</p>
+						))}
 					</div>
 				</div>
 			</div>

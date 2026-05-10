@@ -17,7 +17,7 @@ exports[`<Biography /> > matches snapshot 1`] = `
       />
     </div>
     <div
-      class="relative z-10 grid md:grid-cols-[1fr_1.3fr] gap-12 md:gap-20 items-center max-w-7xl mx-auto px-5 sm:px-6 lg:px-8"
+      class="relative z-10 grid md:grid-cols-[1fr_1.3fr] gap-12 md:gap-24 items-center max-w-7xl mx-auto px-5 sm:px-6 lg:px-8"
     >
       <div
         class="relative flex justify-center"
@@ -84,53 +84,47 @@ exports[`<Biography /> > matches snapshot 1`] = `
         class="space-y-12"
       >
         <div
-          class="space-y-6"
+          class="flex items-center gap-3 transition-all duration-500 opacity-0 translate-y-4"
         >
           <div
-            class="flex items-center gap-3"
+            class="w-10 h-px bg-alvaro-primary/50"
+          />
+          <span
+            class="text-[11px] tracking-[0.25em] uppercase text-alvaro-primary/60 font-medium"
           >
-            <div
-              class="w-10 h-px bg-alvaro-primary/50"
-            />
-            <span
-              class="text-[11px] tracking-[0.25em] uppercase text-alvaro-primary/60 font-medium"
-            >
-              About me
-            </span>
-          </div>
-          <h2
-            class="text-4xl md:text-6xl lg:text-7xl tracking-[-0.03em] leading-[0.88] font-bold transition-all duration-700 delay-100 opacity-0 translate-y-8"
-          >
-            <span
-              class="text-alvaro-white"
-            >
-              I build
-            </span>
-            <br />
-            <span
-              class="text-alvaro-muted"
-            >
-              things for
-            </span>
-            <br />
-            <span
-              class="text-alvaro-primary"
-            >
-              the web.
-            </span>
-          </h2>
+            About me
+          </span>
         </div>
+        <h2
+          class="text-4xl md:text-6xl lg:text-7xl tracking-[-0.03em] leading-[0.85] font-bold transition-all duration-700 delay-100 opacity-0 translate-y-8"
+        >
+          <span
+            class="text-alvaro-white"
+          >
+            I build
+          </span>
+          <br />
+          <span
+            class="text-alvaro-muted"
+          >
+            things for
+          </span>
+          <br />
+          <span
+            class="text-alvaro-primary"
+          >
+            the web.
+          </span>
+        </h2>
         <div
-          class="space-y-5 transition-all duration-700 delay-200 opacity-0 -translate-x-4"
+          class="w-16 h-px bg-alvaro-primary/30 transition-all duration-700 delay-200 opacity-0 w-0"
+        />
+        <div
+          class="space-y-6 transition-all duration-700 delay-300 opacity-0 translate-y-6"
         >
           <p
             class="text-alvaro-muted/80 leading-relaxed text-[15px] md:text-base max-w-[55ch]"
           >
-            <span
-              class="float-left text-5xl md:text-6xl font-bold text-alvaro-primary/20 leading-[0.7] mr-2.5 mt-1"
-            >
-              “
-            </span>
             I feel very fortunate to have found what I am passionate about and to make it my job.
           </p>
           <p
@@ -153,95 +147,6 @@ exports[`<Biography /> > matches snapshot 1`] = `
           >
             I have a direct and creative working style. And I put all the energy I get from working in what I am so enthusiastic about.
           </p>
-        </div>
-        <div
-          class="grid grid-cols-3 gap-8 pt-4 transition-all duration-700 delay-500 opacity-0 translate-y-6"
-        >
-          <div
-            class="space-y-2"
-          >
-            <div
-              class="flex items-baseline gap-1"
-            >
-              <span
-                class="text-4xl md:text-5xl font-bold tracking-[-0.03em] text-alvaro-primary"
-              >
-                5
-              </span>
-              <span
-                class="text-2xl text-alvaro-primary/50"
-              >
-                +
-              </span>
-            </div>
-            <div
-              class="flex items-center gap-2"
-            >
-              <div
-                class="w-4 h-px bg-alvaro-primary/30"
-              />
-              <p
-                class="text-[11px] tracking-[0.15em] uppercase text-alvaro-muted/50"
-              >
-                Years
-              </p>
-            </div>
-          </div>
-          <div
-            class="space-y-2"
-          >
-            <div
-              class="flex items-baseline gap-1"
-            >
-              <span
-                class="text-4xl md:text-5xl font-bold tracking-[-0.03em] text-alvaro-primary"
-              >
-                20
-              </span>
-              <span
-                class="text-2xl text-alvaro-primary/50"
-              >
-                +
-              </span>
-            </div>
-            <div
-              class="flex items-center gap-2"
-            >
-              <div
-                class="w-4 h-px bg-alvaro-primary/30"
-              />
-              <p
-                class="text-[11px] tracking-[0.15em] uppercase text-alvaro-muted/50"
-              >
-                Projects
-              </p>
-            </div>
-          </div>
-          <div
-            class="space-y-2"
-          >
-            <div
-              class="flex items-baseline gap-1"
-            >
-              <span
-                class="text-4xl md:text-5xl font-bold tracking-[-0.03em] text-alvaro-primary"
-              >
-                12
-              </span>
-            </div>
-            <div
-              class="flex items-center gap-2"
-            >
-              <div
-                class="w-4 h-px bg-alvaro-primary/30"
-              />
-              <p
-                class="text-[11px] tracking-[0.15em] uppercase text-alvaro-muted/50"
-              >
-                Technologies
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

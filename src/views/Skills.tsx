@@ -3,7 +3,7 @@ import { Header } from "src/components/Header";
 import { useScrollReveal } from "src/hooks/useScrollReveal";
 import data from "src/data/skills.json";
 
-const featuredIndices = new Set([0, 2, 6, 8, 12, 16]);
+const featuredIndices = new Set([0, 2, 6, 7, 12]);
 const INITIAL_COUNT = 12;
 
 export const Skills = () => {

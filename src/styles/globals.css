@@ -3,22 +3,22 @@
 @theme {
 	--color-alvaro-base: #0D0D0D;
 	--color-alvaro-surface: #1A1A1A;
-	--color-alvaro-border: #2A2520;
-	--color-alvaro-muted: #8A8378;
-	--color-alvaro-white: #F5F0EB;
-	--color-alvaro-primary: #D4A853;
+	--color-alvaro-border: #222230;
+	--color-alvaro-muted: #5C5C6E;
+	--color-alvaro-white: #EDEDF2;
+	--color-alvaro-primary: #4A90D9;
 	--color-alvaro-dark: #0D0D0D;
 	--color-alvaro-accent: #C0392B;
 }
 
 /* Light theme */
 [data-theme="light"] {
-	--color-alvaro-base: #FAF8F5;
-	--color-alvaro-surface: #F2EFEA;
-	--color-alvaro-border: #D9D3CA;
-	--color-alvaro-muted: #7A7268;
-	--color-alvaro-white: #1A1816;
-	--color-alvaro-primary: #B8932E;
+	--color-alvaro-base: #F7F9FC;
+	--color-alvaro-surface: #EEF1F6;
+	--color-alvaro-border: #D4DAE2;
+	--color-alvaro-muted: #6B7280;
+	--color-alvaro-white: #111827;
+	--color-alvaro-primary: #3A7BD5;
 	--color-alvaro-dark: #0D0D0D;
 	--color-alvaro-accent: #C0392B;
 }
@@ -176,7 +176,7 @@ html {
 	transition: opacity 0.4s ease;
 	background: radial-gradient(
 		600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-		rgba(212, 168, 83, 0.06),
+		rgba(74, 144, 217, 0.06),
 		transparent 40%
 	);
 	pointer-events: none;
@@ -187,8 +187,8 @@ html {
 }
 
 .spotlight-card:hover {
-	border-color: rgba(212, 168, 83, 0.3);
-	box-shadow: 0 0 40px -10px rgba(212, 168, 83, 0.1);
+	border-color: rgba(74, 144, 217, 0.3);
+	box-shadow: 0 0 40px -10px rgba(74, 144, 217, 0.1);
 }
 
 /* === ANIMATED BORDER (BIOGRAPHY) === */

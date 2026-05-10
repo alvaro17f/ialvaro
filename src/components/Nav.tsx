@@ -42,7 +42,7 @@ export const Nav = () => {
 			ref={navRef}
 			className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
 				isScrolled
-					? "bg-alvaro-base/80 backdrop-blur-xl border-b border-alvaro-primary/10 shadow-[0_1px_0_0_rgba(212,168,83,0.05)]"
+					? "bg-alvaro-base/80 backdrop-blur-xl border-b border-alvaro-primary/10 shadow-[0_1px_0_0_rgba(74,144,217,0.08)]"
 					: "bg-transparent"
 			}`}
 		>

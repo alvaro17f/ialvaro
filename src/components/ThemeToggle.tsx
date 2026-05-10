@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Sun, Moon } from "@phosphor-icons/react";
 
 const getInitialTheme = (): "dark" | "light" => {
+	if (typeof window === "undefined") return "dark";
 	const stored = localStorage.getItem("theme");
 	if (stored === "light" || stored === "dark") return stored;
 	return "dark";

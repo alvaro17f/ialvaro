@@ -15,7 +15,7 @@
 		"coverage:ui": "vitest --coverage --ui"
 	},
 	"dependencies": {
-		"@astrojs/node": "10.0.6",
+		"@astrojs/node": "10.1.0",
 		"@astrojs/react": "5.0.4",
 		"@emailjs/browser": "4.4.1",
 		"@fontsource-variable/jetbrains-mono": "^5.2.8",
@@ -25,7 +25,7 @@
 		"@tailwindcss/vite": "4.2.4",
 		"@types/react": "19.2.14",
 		"@types/react-dom": "19.2.3",
-		"astro": "6.1.9",
+		"astro": "6.3.1",
 		"react": "19.2.5",
 		"react-dom": "19.2.5",
 		"react-hot-toast": "2.6.0"

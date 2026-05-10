@@ -68,7 +68,7 @@ export const Contact = () => {
 	};
 
 	return (
-		<section id="contact" className="min-h-[80vh]">
+		<section id="contact" className="min-h-[80vh] px-4 md:px-0">
 			<div className="h-12 md:h-24" />
 			<Toaster
 				position="bottom-right"

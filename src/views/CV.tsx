@@ -2,7 +2,7 @@ import { DownloadSimple } from "@phosphor-icons/react";
 
 export const CV = () => {
 	return (
-		<section id="cv" className="mt-32 md:mt-48">
+		<section id="cv" className="mt-32 md:mt-48 px-4 md:px-0">
 			<a
 				href="/cv/cv.pdf"
 				target="_blank"

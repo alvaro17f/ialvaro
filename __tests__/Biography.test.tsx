@@ -19,7 +19,7 @@ describe("<Biography />", () => {
 
 	it("should render about heading", () => {
 		render(<Biography />);
-		expect(screen.getByText(/I build things/i)).toBeDefined();
+		expect(screen.getByText(/I build/i)).toBeDefined();
 	});
 
 	it("should render profile image", () => {

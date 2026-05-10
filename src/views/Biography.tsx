@@ -31,80 +31,96 @@ export default function Biography() {
 	return (
 		<section
 			id="biography"
-			className="relative min-h-[100dvh] grid items-center overflow-hidden"
+			className="relative min-h-[100dvh] grid items-center overflow-hidden py-24 md:py-32"
 		>
-			{/* Atmospheric mesh */}
+			{/* Atmospheric layers */}
 			<div className="absolute inset-0 pointer-events-none">
-				<div className="absolute top-1/3 -right-1/4 w-[500px] h-[500px] rounded-full bg-alvaro-primary/3 blur-[120px]" />
-				<div className="absolute bottom-0 -left-1/4 w-[400px] h-[400px] rounded-full bg-alvaro-primary/2 blur-[100px]" />
+				<div className="absolute top-0 -right-1/3 w-[700px] h-[700px] rounded-full bg-alvaro-primary/3 blur-[150px]" />
+				<div className="absolute bottom-0 -left-1/3 w-[600px] h-[600px] rounded-full bg-alvaro-primary/2 blur-[130px]" />
+				{/* Geometric accent */}
+				<div className="absolute top-1/2 left-0 w-64 h-px bg-gradient-to-r from-alvaro-primary/20 to-transparent" />
 			</div>
 
 			<div
 				ref={ref}
-				className="relative z-10 grid md:grid-cols-[1fr_1.5fr] gap-12 md:gap-20 items-center"
+				className="relative z-10 grid md:grid-cols-[1fr_1.5fr] gap-16 md:gap-24 items-center max-w-7xl mx-auto px-5 sm:px-6 lg:px-8"
 			>
 				{/* Left: Profile with floating tags */}
 				<div className="relative flex justify-center">
 					<div className="relative">
-						{/* Glow behind image */}
-						<div className="absolute -inset-6 rounded-3xl bg-alvaro-primary/8 blur-2xl" />
-						{/* Gradient border */}
-						<div className="absolute -inset-[2px] rounded-3xl gradient-border -z-10 opacity-70" />
+						<div className="absolute -inset-8 rounded-3xl bg-alvaro-primary/6 blur-3xl" />
+						<div className="absolute -inset-[2px] rounded-3xl gradient-border -z-10 opacity-60" />
 						<img
 							src="/images/profile/profile.png"
 							alt="Alvaro Garcia Macias"
-							className={`relative w-64 h-64 md:w-72 md:h-72 object-cover rounded-3xl transition-all duration-700 ${
+							className={`relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-3xl transition-all duration-700 ${
 								isVisible
 									? "opacity-100 scale-100"
-									: "opacity-0 scale-95"
+									: "opacity-0 scale-90"
 							}`}
-							style={{ border: "1px solid rgba(212,168,83,0.15)" }}
+							style={{ border: "1px solid rgba(212,168,83,0.12)" }}
 						/>
+						{/* Corner accent */}
+						<div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-alvaro-primary/40 rounded-tr-lg" />
 					</div>
-					{/* Floating skill tags */}
 					<div className="hidden md:block">
 						<FloatingTags tags={profileTags} />
 					</div>
 				</div>
 
-				{/* Right: Bio content */}
-				<div className="space-y-6">
-					<div>
-						<p
-							className={`text-xs tracking-[0.2em] uppercase text-alvaro-primary/60 font-medium mb-3 transition-all duration-500 ${
-								isVisible
-									? "opacity-100 translate-y-0"
-									: "opacity-0 translate-y-4"
-							}`}
-						>
-							About
-						</p>
+				{/* Right: Editorial layout */}
+				<div className="space-y-10">
+					{/* Header block */}
+					<div className="space-y-4">
+						<div className="flex items-center gap-3">
+							<div className="w-8 h-px bg-alvaro-primary/50" />
+							<span className="text-[11px] tracking-[0.25em] uppercase text-alvaro-primary/60 font-medium">
+								About me
+							</span>
+						</div>
 						<h2
-							className={`text-4xl md:text-5xl lg:text-6xl tracking-[-0.03em] leading-[0.95] font-bold text-alvaro-white transition-all duration-700 delay-100 ${
+							className={`text-4xl md:text-5xl lg:text-6xl tracking-[-0.03em] leading-[0.92] font-bold transition-all duration-700 delay-100 ${
 								isVisible
 									? "opacity-100 translate-y-0"
-									: "opacity-0 translate-y-6"
+									: "opacity-0 translate-y-8"
 							}`}
 						>
-							I build things
+							<span className="text-alvaro-white">I build</span>
 							<br />
-							<span className="text-alvaro-muted">for the web.</span>
+							<span className="text-alvaro-muted">things for</span>
+							<br />
+							<span className="text-alvaro-primary">the web.</span>
 						</h2>
 					</div>
 
-					<WordReveal
-						text={bioText}
-						className="text-alvaro-muted leading-relaxed max-w-[55ch]"
-					/>
-
-					{/* Timeline slider */}
+					{/* Bio text — pull quote style */}
 					<div
-						className={`transition-all duration-700 delay-300 ${
+						className={`relative pl-6 border-l-2 border-alvaro-primary/20 transition-all duration-700 delay-200 ${
 							isVisible
-								? "opacity-100 translate-y-0"
-								: "opacity-0 translate-y-4"
+								? "opacity-100 translate-x-0"
+								: "opacity-0 -translate-x-4"
 						}`}
 					>
+						<WordReveal
+							text={bioText}
+							className="text-alvaro-muted/80 leading-relaxed text-[15px] md:text-base max-w-[60ch]"
+						/>
+					</div>
+
+					{/* Timeline section */}
+					<div
+						className={`space-y-3 transition-all duration-700 delay-400 ${
+							isVisible
+								? "opacity-100 translate-y-0"
+								: "opacity-0 translate-y-6"
+						}`}
+					>
+						<div className="flex items-center gap-2 mb-1">
+							<span className="text-[10px] tracking-[0.2em] uppercase text-alvaro-muted/40">
+								Timeline
+							</span>
+							<div className="flex-1 h-px bg-alvaro-border/50" />
+						</div>
 						<TimelineSlider
 							value={rawValue}
 							onChange={setRawValue}
@@ -114,35 +130,35 @@ export default function Biography() {
 						/>
 					</div>
 
-					{/* Inline stats */}
+					{/* Stats grid */}
 					<div
-						className={`flex gap-8 pt-2 transition-all duration-700 delay-500 ${
+						className={`grid grid-cols-3 gap-6 transition-all duration-700 delay-600 ${
 							isVisible
 								? "opacity-100 translate-y-0"
-								: "opacity-0 translate-y-4"
+								: "opacity-0 translate-y-6"
 						}`}
 					>
-						<div>
-							<span className="text-2xl md:text-3xl font-bold tracking-[-0.02em] text-alvaro-primary">
+						<div className="space-y-1">
+							<span className="text-3xl md:text-4xl font-bold tracking-[-0.03em] text-alvaro-primary">
 								5+
 							</span>
-							<p className="text-xs text-alvaro-muted mt-1">
+							<p className="text-[11px] tracking-[0.15em] uppercase text-alvaro-muted/50">
 								Years
 							</p>
 						</div>
-						<div>
-							<span className="text-2xl md:text-3xl font-bold tracking-[-0.02em] text-alvaro-primary">
+						<div className="space-y-1">
+							<span className="text-3xl md:text-4xl font-bold tracking-[-0.03em] text-alvaro-primary">
 								20+
 							</span>
-							<p className="text-xs text-alvaro-muted mt-1">
+							<p className="text-[11px] tracking-[0.15em] uppercase text-alvaro-muted/50">
 								Projects
 							</p>
 						</div>
-						<div>
-							<span className="text-2xl md:text-3xl font-bold tracking-[-0.02em] text-alvaro-primary">
+						<div className="space-y-1">
+							<span className="text-3xl md:text-4xl font-bold tracking-[-0.03em] text-alvaro-primary">
 								12
 							</span>
-							<p className="text-xs text-alvaro-muted mt-1">
+							<p className="text-[11px] tracking-[0.15em] uppercase text-alvaro-muted/50">
 								Technologies
 							</p>
 						</div>

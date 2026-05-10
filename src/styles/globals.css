@@ -216,6 +216,10 @@ html {
 
 /* === RUBBER BAND (wobble hover) === */
 
+.rubber-band-parent:hover .inline-block {
+	animation: rubberBand 0.8s ease;
+}
+
 .rubber-band:hover {
 	animation: rubberBand 0.8s ease;
 }

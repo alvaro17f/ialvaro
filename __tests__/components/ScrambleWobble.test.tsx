@@ -21,10 +21,8 @@ describe("<ScrambleWobble />", () => {
 		const el = screen.getByLabelText("ABC");
 		const spans = el.querySelectorAll("span");
 
-		// each span should have rubber-band after settling
-		for (const span of spans) {
-			expect(span.className).toContain("rubber-band");
-		}
+		// parent span should have rubber-band-parent after settling
+		expect(el.classList.contains("rubber-band-parent")).toBe(true);
 
 		vi.useRealTimers();
 	});

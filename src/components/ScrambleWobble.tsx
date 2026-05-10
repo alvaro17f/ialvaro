@@ -42,13 +42,14 @@ export const ScrambleWobble = ({
 	}, [text, scrambleSpeed]);
 
 	return (
-		<span className={className} aria-label={text}>
+		<span
+			className={`${className} ${settled ? "group rubber-band-parent" : ""}`}
+			aria-label={text}
+		>
 			{display.map((char, i) => (
 				<span
 					key={`${text}-${i}`}
-					className={`inline-block cursor-default transition-colors duration-200 hover:text-alvaro-primary ${
-						settled ? "rubber-band" : ""
-					}`}
+					className="inline-block cursor-default transition-colors duration-200 group-hover:text-alvaro-primary"
 				>
 					{char === " " ? "\u00A0" : char}
 				</span>

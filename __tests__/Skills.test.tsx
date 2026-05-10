@@ -23,7 +23,9 @@ describe("<Skills />", () => {
 
 	it("should reveal all skills on Show more", () => {
 		render(<Skills />);
-		fireEvent.click(screen.getByText(/show more/i));
+		const btn = screen.getByText(/show more/i);
+		expect(btn.classList.contains("cursor-pointer")).toBe(true);
+		fireEvent.click(btn);
 		expect(screen.getAllByLabelText(/skill/i).length).toBe(17);
 		expect(screen.getByText(/show less/i)).toBeDefined();
 	});

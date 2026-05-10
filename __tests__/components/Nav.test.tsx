@@ -81,6 +81,11 @@ describe("<Nav />", () => {
 		fireEvent.click(homeLink);
 	});
 
+	it("brand button has cursor-pointer", () => {
+		render(<Nav />);
+		expect(screen.getByText("AM").classList.contains("cursor-pointer")).toBe(true);
+	});
+
 	it("matches snapshot", () => {
 		const { container } = render(<Nav />);
 		expect(container).toMatchSnapshot();

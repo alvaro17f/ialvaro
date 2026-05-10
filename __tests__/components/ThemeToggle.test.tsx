@@ -12,7 +12,9 @@ describe("ThemeToggle", () => {
 	it("renders toggle button", async () => {
 		const { ThemeToggle } = await import("src/components/ThemeToggle");
 		render(<ThemeToggle />);
-		expect(screen.getByLabelText(/toggle theme/i)).toBeDefined();
+		const btn = screen.getByLabelText(/toggle theme/i);
+		expect(btn).toBeDefined();
+		expect(btn.classList.contains("cursor-pointer")).toBe(true);
 	});
 
 	it("toggles from dark to light", async () => {

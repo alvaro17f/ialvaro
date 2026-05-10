@@ -209,95 +209,26 @@ exports[`<Skills /> > matches snapshot 1`] = `
         </h2>
       </a>
       <a
-        aria-label="Skill: jest"
+        aria-label="Skill: astro"
         class="
 								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
 								md:col-span-2 md:row-span-2 md:p-10
 								opacity-0 translate-y-8
 							"
-        href="https://jestjs.io/"
+        href="https://astro.build/"
         rel="noopener noreferrer"
         style="transition-delay: 480ms;"
         target="_blank"
       >
         <img
-          alt="jest"
+          alt="astro"
           class="object-contain transition-transform duration-500 group-hover:scale-110 w-32 h-32 md:w-48 md:h-48"
-          src="/skills/jest.svg"
+          src="/skills/astro.svg"
         />
         <h2
           class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-base md:text-lg"
         >
-          jest
-        </h2>
-      </a>
-      <a
-        aria-label="Skill: node.js"
-        class="
-								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
-								
-								opacity-0 translate-y-8
-							"
-        href="https://nodejs.org/"
-        rel="noopener noreferrer"
-        style="transition-delay: 540ms;"
-        target="_blank"
-      >
-        <img
-          alt="node.js"
-          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
-          src="/skills/node.svg"
-        />
-        <h2
-          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
-        >
-          node.js
-        </h2>
-      </a>
-      <a
-        aria-label="Skill: docker"
-        class="
-								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
-								
-								opacity-0 translate-y-8
-							"
-        href="https://docker.com/"
-        rel="noopener noreferrer"
-        style="transition-delay: 600ms;"
-        target="_blank"
-      >
-        <img
-          alt="docker"
-          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
-          src="/skills/docker.svg"
-        />
-        <h2
-          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
-        >
-          docker
-        </h2>
-      </a>
-      <a
-        aria-label="Skill: sql"
-        class="
-								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
-								
-								opacity-0 translate-y-8
-							"
-        href="https://mysql.com/"
-        rel="noopener noreferrer"
-        style="transition-delay: 660ms;"
-        target="_blank"
-      >
-        <img
-          alt="sql"
-          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
-          src="/skills/sql.svg"
-        />
-        <h2
-          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
-        >
-          sql
+          astro
         </h2>
       </a>
       <a
@@ -309,7 +240,7 @@ exports[`<Skills /> > matches snapshot 1`] = `
 							"
         href="https://ziglang.org/"
         rel="noopener noreferrer"
-        style="transition-delay: 720ms;"
+        style="transition-delay: 540ms;"
         target="_blank"
       >
         <img
@@ -323,6 +254,62 @@ exports[`<Skills /> > matches snapshot 1`] = `
           zig
         </h2>
       </a>
+      <a
+        aria-label="Skill: odin"
+        class="
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
+        href="https://odin-lang.org/"
+        rel="noopener noreferrer"
+        style="transition-delay: 600ms;"
+        target="_blank"
+      >
+        <img
+          alt="odin"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
+          src="/skills/odin.svg"
+        />
+        <h2
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
+        >
+          odin
+        </h2>
+      </a>
+      <a
+        aria-label="Skill: node.js"
+        class="
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
+        href="https://nodejs.org/"
+        rel="noopener noreferrer"
+        style="transition-delay: 660ms;"
+        target="_blank"
+      >
+        <img
+          alt="node.js"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
+          src="/skills/node.svg"
+        />
+        <h2
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
+        >
+          node.js
+        </h2>
+      </a>
+    </div>
+    <div
+      class="flex justify-center mt-8"
+    >
+      <button
+        class="px-6 py-2.5 text-sm font-medium text-alvaro-muted border border-alvaro-border rounded-lg hover:text-alvaro-primary hover:border-alvaro-primary/40 transition-colors duration-200"
+        type="button"
+      >
+        Show more (5)
+      </button>
     </div>
   </section>
 </div>

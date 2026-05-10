@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { Header } from "src/components/Header";
-import { SpotlightCard } from "src/components/SpotlightCard";
 import { useScrollReveal } from "src/hooks/useScrollReveal";
 import data from "src/data/skills.json";
 
 const featuredIndices = new Set([0, 5, 8]);
+const INITIAL_COUNT = 12;
 
 export const Skills = () => {
 	const { ref, isVisible } = useScrollReveal({ threshold: 0.05 });
+	const [showAll, setShowAll] = useState(false);
+
+	const visible = showAll ? data : data.slice(0, INITIAL_COUNT);
+	const hasMore = data.length > INITIAL_COUNT;
 
 	return (
 		<section id="skills" className="section-curve">
@@ -15,7 +20,7 @@ export const Skills = () => {
 				ref={ref}
 				className="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-4 md:gap-6"
 			>
-				{data.map(({ id, title, image, url }, i) => {
+				{visible.map(({ id, title, image, url }, i) => {
 					const isFeatured = featuredIndices.has(i);
 					return (
 						<a
@@ -51,6 +56,18 @@ export const Skills = () => {
 					);
 				})}
 			</div>
+
+			{hasMore && (
+				<div className="flex justify-center mt-8">
+					<button
+						type="button"
+						onClick={() => setShowAll(!showAll)}
+						className="px-6 py-2.5 text-sm font-medium text-alvaro-muted border border-alvaro-border rounded-lg hover:text-alvaro-primary hover:border-alvaro-primary/40 transition-colors duration-200"
+					>
+						{showAll ? "Show less" : `Show more (${data.length - INITIAL_COUNT})`}
+					</button>
+				</div>
+			)}
 		</section>
 	);
 };

@@ -27,6 +27,17 @@ describe("<Biography />", () => {
 		expect(screen.getByAltText("Alvaro Garcia Macias")).toBeDefined();
 	});
 
+	it("should render single description text", () => {
+		render(<Biography />);
+		expect(screen.getByText(/100% involved/i)).toBeDefined();
+		expect(screen.getByText(/non-conformist/i)).toBeDefined();
+	});
+
+	it("should not render a timeline slider", () => {
+		render(<Biography />);
+		expect(screen.queryByText("Timeline")).toBeNull();
+	});
+
 	it("reveals profile image when intersecting", () => {
 		render(<Biography />);
 		const img = screen.getByAltText("Alvaro Garcia Macias");
@@ -37,19 +48,6 @@ describe("<Biography />", () => {
 		});
 
 		expect(img.className).toContain("opacity-100");
-		expect(img.className).toContain("scale-100");
-	});
-
-	it("reveals stats when intersecting", () => {
-		render(<Biography />);
-		const statsEl = screen.getByText("Projects").closest("div")?.parentElement;
-		expect(statsEl?.className).toContain("opacity-0");
-
-		act(() => {
-			observerCallback([{ isIntersecting: true }]);
-		});
-
-		expect(statsEl?.className).toContain("opacity-100");
 	});
 
 	it("renders inline stats", () => {

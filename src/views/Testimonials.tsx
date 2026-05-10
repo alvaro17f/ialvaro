@@ -26,7 +26,7 @@ export const Testimonials = () => {
 	const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
 
 	return (
-		<section className="py-32 md:py-48">
+		<section id="testimonials" className="py-32 md:py-48 px-4 md:px-0">
 			<div className="mb-12 text-center">
 				<h2 className="text-3xl md:text-4xl tracking-tight font-bold text-alvaro-white">
 					What people say

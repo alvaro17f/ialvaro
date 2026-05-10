@@ -54,7 +54,7 @@ export const Nav = () => {
 							scroller("home");
 							isOpen && setIsOpen(false);
 						}}
-						className="text-lg font-bold tracking-[-0.03em] text-alvaro-white hover:text-alvaro-primary transition-colors duration-300"
+						className="text-lg font-bold tracking-[-0.03em] text-alvaro-white hover:text-alvaro-primary transition-colors duration-300 cursor-pointer"
 					>
 						AM
 					</button>

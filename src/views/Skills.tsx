@@ -62,7 +62,7 @@ export const Skills = () => {
 					<button
 						type="button"
 						onClick={() => setShowAll(!showAll)}
-						className="px-6 py-2.5 text-sm font-medium text-alvaro-muted border border-alvaro-border rounded-lg hover:text-alvaro-primary hover:border-alvaro-primary/40 transition-colors duration-200"
+						className="px-6 py-2.5 text-sm font-medium text-alvaro-muted border border-alvaro-border rounded-lg hover:text-alvaro-primary hover:border-alvaro-primary/40 transition-colors duration-200 cursor-pointer"
 					>
 						{showAll ? "Show less" : `Show more (${data.length - INITIAL_COUNT})`}
 					</button>

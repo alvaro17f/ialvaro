@@ -305,7 +305,7 @@ exports[`<Skills /> > matches snapshot 1`] = `
       class="flex justify-center mt-8"
     >
       <button
-        class="px-6 py-2.5 text-sm font-medium text-alvaro-muted border border-alvaro-border rounded-lg hover:text-alvaro-primary hover:border-alvaro-primary/40 transition-colors duration-200"
+        class="px-6 py-2.5 text-sm font-medium text-alvaro-muted border border-alvaro-border rounded-lg hover:text-alvaro-primary hover:border-alvaro-primary/40 transition-colors duration-200 cursor-pointer"
         type="button"
       >
         Show more (5)

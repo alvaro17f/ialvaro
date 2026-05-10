@@ -1,9 +1,9 @@
 import { act, cleanup, render, screen } from "@testing-library/react";
-import Biography from "src/views/Biography";
+import About from "src/views/About";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { createObserverMock } from "./helpers/observerMock";
 
-describe("<Biography />", () => {
+describe("<About />", () => {
 	let observer: ReturnType<typeof createObserverMock>;
 
 	beforeEach(() => {
@@ -12,28 +12,28 @@ describe("<Biography />", () => {
 	afterEach(cleanup);
 
 	it("should render about label", () => {
-		render(<Biography />);
+		render(<About />);
 		expect(screen.getByText("About me")).toBeDefined();
 	});
 
 	it("should render headline", () => {
-		render(<Biography />);
+		render(<About />);
 		expect(screen.getByText(/I build/i)).toBeDefined();
 	});
 
 	it("should render profile image", () => {
-		render(<Biography />);
+		render(<About />);
 		expect(screen.getByAltText("Alvaro Garcia Macias")).toBeDefined();
 	});
 
 	it("should render description paragraphs", () => {
-		render(<Biography />);
+		render(<About />);
 		expect(screen.getByText(/100% involved/i)).toBeDefined();
 		expect(screen.getByText(/non-conformist/i)).toBeDefined();
 	});
 
 	it("reveals profile image when intersecting", () => {
-		render(<Biography />);
+		render(<About />);
 		const img = screen.getByAltText("Alvaro Garcia Macias");
 		expect(img.className).toContain("opacity-0");
 
@@ -44,7 +44,7 @@ describe("<Biography />", () => {
 	});
 
 	it("matches snapshot", () => {
-		const { container } = render(<Biography />);
+		const { container } = render(<About />);
 		expect(container).toMatchSnapshot();
 	});
 });

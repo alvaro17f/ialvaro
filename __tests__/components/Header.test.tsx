@@ -32,7 +32,7 @@ describe("<Header />", () => {
 	});
 
 	it("matches snapshot", () => {
-		const { container } = render(<Header title="Biography" />);
+		const { container } = render(<Header title="About" />);
 		expect(container).toMatchSnapshot();
 	});
 });

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Biography /> > matches snapshot 1`] = `
+exports[`<About /> > matches snapshot 1`] = `
 <div>
   <section
     class="relative min-h-[100dvh] grid items-center overflow-hidden py-24 md:py-32"

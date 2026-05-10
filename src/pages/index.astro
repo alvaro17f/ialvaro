@@ -5,7 +5,7 @@ import { LoadingScreen } from "src/components/LoadingScreen";
 import { CursorGlow } from "src/components/CursorGlow";
 import { Marquee } from "src/components/Marquee";
 import Layout from "src/layouts/Layout.astro";
-import Biography from "src/views/Biography";
+import About from "src/views/About";
 import { Stats } from "src/views/Stats";
 import { Contact } from "src/views/Contact";
 import { CV } from "src/views/CV";
@@ -26,7 +26,7 @@ const techStack = skillsData.map((s) => s.title);
 	<CursorGlow client:load />
 	<Home client:load />
 	<Marquee items={techStack} speed={35} />
-	<Biography client:load />
+	<About client:load />
 	<Stats client:load />
 	<Skills client:load />
 	<Experience client:load />

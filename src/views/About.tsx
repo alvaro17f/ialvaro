@@ -12,7 +12,7 @@ const profileTags = [
 
 const selectedBio = data[2];
 
-export default function Biography() {
+export default function About() {
 	const { ref, isVisible } = useScrollReveal({ threshold: 0.15 });
 
 	const paragraphs: string[] = selectedBio.bio

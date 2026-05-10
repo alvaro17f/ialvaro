@@ -15,17 +15,9 @@ import { Portfolio } from "src/views/Portfolio";
 import { Skills } from "src/views/Skills";
 import { Testimonials } from "src/views/Testimonials";
 
-const techStack = [
-	"React",
-	"TypeScript",
-	"Node.js",
-	"Astro",
-	"Tailwind CSS",
-	"PostgreSQL",
-	"Docker",
-	"AWS",
-	"Zig",
-];
+import skillsData from "src/data/skills.json";
+
+const techStack = skillsData.map((s) => s.title);
 ---
 
 <Layout>

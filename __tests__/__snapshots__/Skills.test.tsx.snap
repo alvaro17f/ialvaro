@@ -300,6 +300,29 @@ exports[`<Skills /> > matches snapshot 1`] = `
           sql
         </h2>
       </a>
+      <a
+        aria-label="Skill: zig"
+        class="
+								spotlight-card grid gap-3 p-6 text-center cursor-pointer place-items-center group transition-all duration-500
+								
+								opacity-0 translate-y-8
+							"
+        href="https://ziglang.org/"
+        rel="noopener noreferrer"
+        style="transition-delay: 720ms;"
+        target="_blank"
+      >
+        <img
+          alt="zig"
+          class="object-contain transition-transform duration-500 group-hover:scale-110 w-24 h-24 md:w-32 md:h-32"
+          src="/skills/zig.svg"
+        />
+        <h2
+          class="font-medium text-alvaro-muted group-hover:text-alvaro-white transition-colors duration-200 text-sm"
+        >
+          zig
+        </h2>
+      </a>
     </div>
   </section>
 </div>

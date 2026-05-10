@@ -70,5 +70,11 @@
 		"title": "sql",
 		"image": "/skills/sql.svg",
 		"url": "https://mysql.com/"
+	},
+	{
+		"id": "13",
+		"title": "zig",
+		"image": "/skills/zig.svg",
+		"url": "https://ziglang.org/"
 	}
 ]

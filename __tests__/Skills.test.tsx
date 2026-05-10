@@ -24,8 +24,8 @@ describe("<Skills />", () => {
 
 	it("should render all 12 skills", () => {
 		render(<Skills />);
-		expect(screen.getAllByLabelText(/skill/i).length).toBe(12);
-		expect(screen.getAllByRole("img").length).toBe(12);
+		expect(screen.getAllByLabelText(/skill/i).length).toBe(13);
+		expect(screen.getAllByRole("img").length).toBe(13);
 	});
 
 	it("featured skills have col-span-2 row-span-2", () => {

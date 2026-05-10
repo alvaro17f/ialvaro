@@ -3,7 +3,7 @@ import { AnimatedCounter } from "src/components/AnimatedCounter";
 const stats = [
 	{ value: 5, suffix: "+", label: "Years experience", bar: 60 },
 	{ value: 20, suffix: "+", label: "Projects delivered", bar: 80 },
-	{ value: 12, suffix: "", label: "Technologies", bar: 50 },
+	{ value: 13, suffix: "", label: "Technologies", bar: 50 },
 	{ value: 100, suffix: "%", label: "Commitment", bar: 100, accent: true },
 ];
 

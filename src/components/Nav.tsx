@@ -4,7 +4,7 @@ import { ThemeToggle } from "src/components/ThemeToggle";
 
 const links = [
 	{ label: "Home", route: "home" },
-	{ label: "About", route: "biography" },
+	{ label: "About", route: "about" },
 	{ label: "Skills", route: "skills" },
 	{ label: "Experience", route: "experience" },
 	{ label: "Portfolio", route: "portfolio" },

@@ -12,18 +12,19 @@
 		"test": "vitest",
 		"test:ui": "vitest --ui",
 		"coverage": "vitest --coverage",
-		"coverage:ui": "vitest --coverage --ui"
+		"coverage:ui": "vitest --coverage --ui",
+		"upgrade": "npx @astrojs/upgrade"
 	},
 	"dependencies": {
-		"@astrojs/node": "10.1.0",
-		"@astrojs/react": "5.0.4",
+		"@astrojs/node": "10.1.1",
+		"@astrojs/react": "5.0.5",
 		"@emailjs/browser": "4.4.1",
 		"@fontsource-variable/jetbrains-mono": "^5.2.8",
 		"@fontsource-variable/outfit": "^5.2.8",
 		"@phosphor-icons/react": "^2.1.10",
 		"@tailwindcss/vite": "4.3.0",
 		"@types/react": "19.2.14",
-		"astro": "6.3.1",
+		"astro": "6.3.3",
 		"react": "19.2.6",
 		"react-dom": "19.2.6",
 		"react-hot-toast": "2.6.0"

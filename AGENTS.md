@@ -2,12 +2,12 @@
 
 ## Package manager
 
-Always use **bun**. Never npm, yarn, or pnpm.
+Always use **npm**. Never bun, yarn, or pnpm.
 
 ```sh
-bun install
-bun add <package>
-bun remove <package>
+npm install
+npm install <package>
+npm uninstall <package>
 ```
 
 ---

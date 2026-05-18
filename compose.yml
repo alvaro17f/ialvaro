@@ -1,15 +1,15 @@
 services:
   ialvaro:
     container_name: ialvaro
-    image: oven/bun:latest
+    image: node:alpine
     restart: unless-stopped
     command: >
       sh -c
       "
       cd /project
-      && bun install
-      && bun run build
-      && bun dist/server/entry.mjs &
+      && npm install
+      && npm run build
+      && node dist/server/entry.mjs &
       tail -f /dev/null
       "
     volumes:

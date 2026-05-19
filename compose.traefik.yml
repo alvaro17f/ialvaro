@@ -1,16 +1,16 @@
 services:
   ialvaro:
     container_name: ialvaro
-    image: node:alpine
+    image: ghcr.io/pnpm/pnpm:latest
     restart: unless-stopped
     command: >
       sh -c
       "
-      cd /project
-      && npm install
-      && npm run build
-      && npm run preview -- --host 0.0.0.0 &
-      tail -f /dev/null
+      pnpm runtime set node latest -g
+      && cd /project
+      && pnpm install
+      && pnpm run build
+      && exec node dist/server/entry.mjs
       "
     volumes:
       - .:/project

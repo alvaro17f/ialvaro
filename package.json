@@ -13,7 +13,7 @@
 		"test:ui": "vitest --ui",
 		"coverage": "vitest --coverage",
 		"coverage:ui": "vitest --coverage --ui",
-		"upgrade": "npx @astrojs/upgrade"
+		"upgrade": "nlx @astrojs/upgrade"
 	},
 	"dependencies": {
 		"@astrojs/node": "10.1.1",

@@ -8,7 +8,7 @@ url: "https://openbank.es/"
 
 # Plexus
 
-> 1 year 3 months
+> april 2025 - now
 
 # Projects:
 
@@ -35,7 +35,7 @@ TypeScript, React.js, Jest.js, Git, GitHub, Postman, etc...
 
 # Knowmad Mood
 
-> 1 year 3 months
+> june 2023 - april 2025
 
 # Projects:
 

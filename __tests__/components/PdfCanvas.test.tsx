@@ -33,7 +33,7 @@ describe("PdfCanvas", () => {
     const { getDocument } = await import("pdfjs-dist/legacy/build/pdf.mjs");
     render(<PdfCanvas src="blob:test" />);
     await waitFor(() => {
-      expect(getDocument).toHaveBeenCalledWith("blob:test");
+      expect(getDocument).toHaveBeenCalledWith({ url: "blob:test" });
       expect(screen.queryByRole("status")).toBeNull();
     });
     expect(screen.getByTestId("pdf-canvas-container")).toBeDefined();

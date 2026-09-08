@@ -7,6 +7,10 @@ import { Spinner } from "./Spinner";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
 
+// pdfjs-dist v6 ya no acepta un string suelto: exige DocumentInitParameters ({ url }).
+// Estable a nivel de módulo para que usePdfPages no re-ejecute su efecto en cada render.
+const loadDocument = (src: string) => pdfjsLib.getDocument({ url: src });
+
 interface PdfCanvasProps {
   src: string;
   zoom?: number;
@@ -20,7 +24,8 @@ export function PdfCanvas({ src, zoom = 1, onZoomChange }: PdfCanvasProps) {
   const { loading, error } = usePdfPages({
     src,
     containerRef: canvasRef,
-    getDocument: pdfjsLib.getDocument,
+    // pdfjs-dist v6 no acepta un string suelto: exige DocumentInitParameters.
+    getDocument: loadDocument,
     renderPage: renderPageToCanvas,
   });
 

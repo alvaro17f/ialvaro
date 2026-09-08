@@ -13,6 +13,7 @@ url: "https://openbank.es/"
 # Projects:
 
 • Private client area
+• AI chat
 
 # Tasks:
 

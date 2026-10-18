@@ -414,39 +414,67 @@ export function drawMarkdown(
   return y;
 }
 
-function measureExperience(doc: any, job: ExperienceEntry, w: number): number {
-  let h = 0;
-  h += 14 + 18 + 14; // dot spacing + company row + dates
-  const subgroups = parseExperienceSubgroups(job.description);
-  const CHIP_PAD_TOP = 8;
-  const CHIP_PAD_BOTTOM = 8;
-  const CHIP_TITLE_H = 11;
-  const CHIP_SUBTITLE_H = 11; // subtitle line (9pt) + small gap
-  const BODY_TOP_PAD = 10; // breathing room before the body starts
-  const CHIP_GAP = 6;
+// Card layout constants shared by the measurer and the drawer, so a card's
+// frame always matches the content it wraps.
+const CARD_TOP_PAD = 14;
+const CARD_BOTTOM_PAD = 12;
+const COMPANY_ROW_H = 18;
+const DATES_ROW_H = 14;
+const CHIP_PAD_TOP = 8;
+const CHIP_PAD_BOTTOM = 8;
+const CHIP_TITLE_H = 11;
+const CHIP_SUBTITLE_H = 11; // subtitle line (9pt) + small gap
+const CHIP_GAP = 6;
+
+// Breathing room between a period's subtitle and its body. Multi-period jobs
+// get more of it so stacked chips don't read as a single block.
+export function chipBodyTopPad(periodCount: number): number {
+  return periodCount > 1 ? 30 : 2;
+}
+
+export function cardHeight(doc: any, subgroups: string[], w: number, bodyTopPad: number): number {
+  let h = CARD_TOP_PAD + COMPANY_ROW_H + DATES_ROW_H;
   for (let i = 0; i < subgroups.length; i++) {
-    h += CHIP_PAD_TOP;
-    h += CHIP_TITLE_H;
-    h += CHIP_SUBTITLE_H;
-    h += BODY_TOP_PAD;
+    h += CHIP_PAD_TOP + CHIP_TITLE_H + CHIP_SUBTITLE_H + bodyTopPad;
     h += measureMarkdown(doc, stripExtractedTitleAndSubtitle(subgroups[i]), w);
     h += CHIP_PAD_BOTTOM;
     if (i < subgroups.length - 1) h += CHIP_GAP;
   }
-  h += 12; // bottom padding inside the card
-  return h;
+  return h + CARD_BOTTOM_PAD;
 }
 
-export function drawJob(
+// Longest prefix of `subgroups` that fits in `available` height. 0 means not
+// even the first period fits. Callers use this to break a long job across
+// pages at period boundaries, never inside a list.
+export function fitSubgroups(
+  doc: any,
+  subgroups: string[],
+  w: number,
+  bodyTopPad: number,
+  available: number,
+): number {
+  let fit = 0;
+  while (
+    fit < subgroups.length &&
+    cardHeight(doc, subgroups.slice(0, fit + 1), w, bodyTopPad) <= available
+  ) {
+    fit++;
+  }
+  return fit;
+}
+
+export function drawJobCard(
   doc: any,
   C: CVColors,
   job: ExperienceEntry,
+  subgroups: string[],
   x: number,
   w: number,
   startY: number,
   logo: string | null,
+  bodyTopPad: number,
 ): number {
-  const cardH = measureExperience(doc, job, w);
+  const cardH = cardHeight(doc, subgroups, w, bodyTopPad);
   const LOGO = 16;
 
   // Card background. The card itself draws no left accent bar; every
@@ -457,11 +485,10 @@ export function drawJob(
   doc.setDrawColor(...C.border);
   doc.roundedRect(x - 12, startY - 10, w + 24, cardH, 4, 4, "FD");
 
-  const subgroups = parseExperienceSubgroups(job.description);
+  let y = startY + CARD_TOP_PAD;
 
-  let y = startY + 14;
-
-  // Company + logo
+  // Company + logo. Re-drawn for every segment so a job continued on the
+  // next page still says who it belongs to.
   if (logo) {
     try {
       doc.addImage(logo, "PNG", x, y - LOGO + 2, LOGO, LOGO);
@@ -473,14 +500,14 @@ export function drawJob(
   doc.setFontSize(11);
   doc.setTextColor(...C.white);
   doc.text(job.title, x + (logo ? LOGO + 6 : 0), y);
-  y += 18;
+  y += COMPANY_ROW_H;
 
   // Dates
   doc.setFont("helvetica", "normal");
   doc.setFontSize(8.5);
   doc.setTextColor(...C.muted);
   doc.text(`${job.date_from} — ${job.date_to}`, x, y);
-  y += 14;
+  y += DATES_ROW_H;
 
   for (let i = 0; i < subgroups.length; i++) {
     // Render each period as a chip inside the parent card. Both
@@ -492,17 +519,11 @@ export function drawJob(
     const meta = extractPeriodTitle(subgroups[i], i);
     const chipColor = C.primary as unknown as [number, number, number];
 
-    // Compute chip body height to draw the chip frame. The body-top
-    // pad is wider for multi-period jobs (30pt) than for single-
-    // period jobs (2pt) so the chip's body has visual breathing
-    // room when the card contains multiple chips stacked together.
+    // Chip body height drives the chip frame height. `bodyTopPad` comes
+    // from `chipBodyTopPad` so the measurer and the drawer agree.
     const bodyH = measureMarkdown(doc, stripExtractedTitleAndSubtitle(subgroups[i]), w);
-    const chipPadTop = 8;
-    const chipPadBottom = 8;
-    const chipTitleH = 11;
-    const chipSubtitleH = 11;
-    const bodyTopPad = subgroups.length > 1 ? 30 : 2;
-    const chipH = chipPadTop + chipTitleH + chipSubtitleH + bodyTopPad + bodyH + chipPadBottom;
+    const chipH =
+      CHIP_PAD_TOP + CHIP_TITLE_H + CHIP_SUBTITLE_H + bodyTopPad + bodyH + CHIP_PAD_BOTTOM;
 
     // Draw the chip frame: only a subtle base fill (no border, since
     // the parent card already provides one and a nested border would
@@ -518,7 +539,7 @@ export function drawJob(
 
     // Title inside the chip.
     const innerX = x + 2;
-    let innerY = y + chipPadTop + 9;
+    let innerY = y + CHIP_PAD_TOP + 9;
     doc.setFont("helvetica", "bold");
     doc.setFontSize(11);
     doc.setTextColor(...chipColor);
@@ -526,7 +547,7 @@ export function drawJob(
 
     // Subtitle on its own line below the title.
     if (meta.subtitle) {
-      innerY += chipSubtitleH;
+      innerY += CHIP_SUBTITLE_H;
       doc.setFont("helvetica", "italic");
       doc.setFontSize(9);
       doc.setTextColor(...C.muted);
@@ -535,16 +556,30 @@ export function drawJob(
 
     // Body content with the title and subtitle stripped. The body sits
     // to the right of the colored accent bar (4pt) with a small
-    // padding. bodyTopPad (10pt) leaves a clear gap between the
-    // subtitle and the first body heading so the two never collide.
-    const bodyY = y + chipPadTop + chipTitleH + chipSubtitleH + bodyTopPad;
+    // padding. bodyTopPad leaves a clear gap between the subtitle and
+    // the first body heading so the two never collide.
+    const bodyY = y + CHIP_PAD_TOP + CHIP_TITLE_H + CHIP_SUBTITLE_H + bodyTopPad;
     drawMarkdown(doc, C, stripExtractedTitleAndSubtitle(subgroups[i]), innerX, w + 12, bodyY);
 
     y += chipH;
-    if (i < subgroups.length - 1) y += 6;
+    if (i < subgroups.length - 1) y += CHIP_GAP;
   }
 
   return startY + cardH + 14;
+}
+
+// Draw a whole job (all of its periods) as one card.
+export function drawJob(
+  doc: any,
+  C: CVColors,
+  job: ExperienceEntry,
+  x: number,
+  w: number,
+  startY: number,
+  logo: string | null,
+): number {
+  const subgroups = parseExperienceSubgroups(job.description);
+  return drawJobCard(doc, C, job, subgroups, x, w, startY, logo, chipBodyTopPad(subgroups.length));
 }
 
 function continuationHeader(doc: any, C: CVColors): number {
@@ -823,24 +858,54 @@ export async function generateCV(
   // Experience area (no title)
   y += 8;
 
-  const totalJobs = sortedExperience.length;
+  const pageLimit = PAGE_H - M - 36;
 
-  for (let i = 0; i < totalJobs; i++) {
+  const addContinuationPage = () => {
+    drawFooter(doc, C, profileAltImg);
+    doc.addPage();
+    page++;
+    startPage(doc, W, C);
+    y = continuationHeader(doc, C);
+  };
+
+  for (let i = 0; i < sortedExperience.length; i++) {
     const job = sortedExperience[i];
     const logo = expLogos[i] ?? null;
-    const needed = measureExperience(doc, job, contW) + (i < totalJobs - 1 ? 14 : 0);
-    if (y + needed > PAGE_H - M - 36) {
-      drawFooter(doc, C, profileAltImg);
-      doc.addPage();
-      page++;
-      startPage(doc, W, C);
-      y = continuationHeader(doc, C);
+    const subgroups = parseExperienceSubgroups(job.description);
+    const bodyTopPad = chipBodyTopPad(subgroups.length);
+
+    let pending = subgroups;
+    // True once this job already started on a fresh page. Without it a
+    // single period taller than a page would ping-pong between pages.
+    let started = false;
+
+    while (pending.length > 0) {
+      // Page 1 keeps the narrow sidebar column; a job continued on the
+      // next page spans the full width, where its body wraps into fewer
+      // lines.
+      const usePage1 = page === 1;
+      const jx = usePage1 ? cx : M + 28;
+      const jw = usePage1 ? contW : CONTENT_W - 40;
+
+      let take = fitSubgroups(doc, pending, jw, bodyTopPad, pageLimit - y);
+      if (take === 0) {
+        if (started) {
+          take = 1;
+        } else {
+          addContinuationPage();
+          started = true;
+          continue;
+        }
+      }
+
+      y = drawJobCard(doc, C, job, pending.slice(0, take), jx, jw, y, logo, bodyTopPad);
+      pending = pending.slice(take);
+
+      if (pending.length > 0) {
+        addContinuationPage();
+        started = true;
+      }
     }
-    const startY = y;
-    const usePage1 = page === 1;
-    const jx = usePage1 ? cx : M + 28;
-    const jw = usePage1 ? contW : CONTENT_W - 40;
-    y = drawJob(doc, C, job, jx, jw, startY, logo);
   }
 
   drawFooter(doc, C, profileAltImg);

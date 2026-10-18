@@ -2,7 +2,7 @@
 title: "Openbank"
 image: "../../assets/experience/openbank.svg"
 date_from: "June 2023"
-date_to: "July 2026"
+date_to: "Now"
 url: "https://openbank.es/"
 ---
 
@@ -12,21 +12,20 @@ url: "https://openbank.es/"
 
 # Projects:
 
-• Private client area
-• AI chat
+• Private client area for the bank's customers
+• AI chat with suggested responses
+• Call center agent performance dashboard
+• Call queue dashboard for agents handling calls
 
 # Tasks:
 
-• Integrating REST APIs into frontend applications
-• Developing unit tests
-• Code documentation
-• Implementing view redesigns
-• Creating new views
-• Refactoring legacy code
-• Performance improvements
-• Migrating from old to new project
-• Component integration
-• Component creation
+• Building and maintaining the private client area
+• Developing the AI chat interface, including suggested responses
+• Building the performance dashboard for call center agents
+• Developing the call queue dashboard where agents receive and handle calls
+• Integrating REST APIs for the client area and the chat
+• Migrating the project from the legacy codebase to the new one
+• Working with Clean Code and Hexagonal Architecture
 
 # Technologies:
 
@@ -40,18 +39,17 @@ TypeScript, React.js, Jest.js, Git, GitHub, Postman, etc...
 
 # Projects:
 
-- Onboarding new users
+• Onboarding of new customers (account opening)
 
 # Responsibilities:
 
-- Integrating REST APIs into frontend applications
-- Developing unit tests
-- Code documentation
-- Implementing view redesigns
-- Creating new views
-- Refactoring legacy code
-- Performance improvements
-- Integration with third-party services
+• Developing the onboarding flow for opening new customer accounts
+• Integrating REST APIs for the onboarding flow
+• Integrating third-party services
+• Building new views and redesigning existing ones
+• Refactoring and improving existing code
+• Writing unit and integration tests
+• Documenting the onboarding flow
 
 # Technologies:
 

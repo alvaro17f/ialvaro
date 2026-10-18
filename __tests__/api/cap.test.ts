@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi } from "vite-plus/test";
 import { POST } from "src/pages/api/cap/verify";
 
 function createMockRequest(body: unknown) {

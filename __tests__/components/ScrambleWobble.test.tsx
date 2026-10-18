@@ -1,6 +1,6 @@
 import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { ScrambleWobble, triggerRubberBand } from "src/components/ScrambleWobble";
-import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeAll, describe, expect, it, vi } from "vite-plus/test";
 
 beforeAll(() => {
   if (!HTMLElement.prototype.animate) {

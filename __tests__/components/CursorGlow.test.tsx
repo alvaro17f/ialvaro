@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { CursorGlow, setupGlow } from "src/components/CursorGlow";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vite-plus/test";
 
 describe("setupGlow", () => {
   it("returns undefined when element is null", () => {

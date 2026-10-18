@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { Stats } from "src/views/Stats";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it } from "vite-plus/test";
 import { mockIntersectionObserver } from "../mocks/IntersectionObserver.tsx";
 import { testExperienceData, testPortfolioData, testSkillsData } from "../fixtures";
 

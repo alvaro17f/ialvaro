@@ -76,7 +76,7 @@ export function usePdfPages({ src, containerRef, getDocument, renderPage }: UseP
 
     return () => {
       destroyed = true;
-      task.destroy();
+      void task.destroy();
     };
   }, [src, containerRef, getDocument, renderPage]);
 

@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vite-plus/test";
 import { renderHook, act } from "@testing-library/react";
 import { useZoom, getResponsiveDefaultZoom } from "src/hooks/useZoom";
 

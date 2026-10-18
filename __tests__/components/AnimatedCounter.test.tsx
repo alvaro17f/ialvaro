@@ -1,6 +1,6 @@
 import { act, cleanup, render, screen } from "@testing-library/react";
 import { AnimatedCounter } from "src/components/AnimatedCounter";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vite-plus/test";
 
 describe("<AnimatedCounter />", () => {
   let observerCallback: (entries: { isIntersecting: boolean }[]) => void;

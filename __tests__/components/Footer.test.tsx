@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { Footer } from "src/components/Footer";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vite-plus/test";
 
 describe("<Footer />", () => {
   afterEach(cleanup);

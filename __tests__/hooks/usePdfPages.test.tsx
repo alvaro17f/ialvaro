@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vite-plus/test";
 import { render, screen, waitFor, cleanup } from "@testing-library/react";
 import { usePdfPages, loadPdfPages } from "src/hooks/usePdfPages";
 

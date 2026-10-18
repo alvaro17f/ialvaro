@@ -1,6 +1,6 @@
 import { act, cleanup, render, screen } from "@testing-library/react";
 import { Skills } from "src/views/Skills";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it } from "vite-plus/test";
 import { createObserverMock } from "../helpers/observerMock";
 import { testSkillsData } from "../fixtures";
 

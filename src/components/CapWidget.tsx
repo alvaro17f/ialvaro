@@ -39,7 +39,7 @@ export const CapWidget = ({ onVerified, name = "cap-token" }: CapWidgetProps) =>
     if (window.customElements?.get("cap-widget")) {
       attach();
     } else {
-      window.customElements?.whenDefined("cap-widget").then(attach);
+      void window.customElements?.whenDefined("cap-widget").then(attach);
     }
 
     return () => {

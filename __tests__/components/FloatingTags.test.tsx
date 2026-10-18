@@ -1,6 +1,6 @@
 import { act, cleanup, render, screen } from "@testing-library/react";
 import { FloatingTags } from "src/components/FloatingTags";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vite-plus/test";
 
 describe("<FloatingTags />", () => {
   let observerCallback: (entries: { isIntersecting: boolean }[]) => void;

@@ -1,6 +1,6 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { SpotlightCard, setupSpotlight } from "src/components/SpotlightCard";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vite-plus/test";
 
 describe("setupSpotlight", () => {
   it("returns undefined when element is null", () => {

@@ -186,7 +186,7 @@ export const Contact = () => {
             {showCaptcha && (
               <CapWidget
                 onVerified={(token) => {
-                  doSubmit(token);
+                  void doSubmit(token);
                 }}
               />
             )}

@@ -1,6 +1,6 @@
 import { act, cleanup, render, screen, waitFor } from "@testing-library/react";
 import { Home } from "src/views/Home";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vite-plus/test";
 import { createObserverMock } from "../helpers/observerMock";
 import { testExperienceData, testAboutData, testSkillsData } from "../fixtures";
 import toast from "react-hot-toast";

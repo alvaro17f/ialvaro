@@ -1,6 +1,6 @@
 import { cleanup, render, screen, waitFor, act } from "@testing-library/react";
 import { CV } from "src/views/CV";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vite-plus/test";
 import { testExperienceData, testAboutData, testSkillsData } from "../fixtures";
 import toast from "react-hot-toast";
 import { getThemeById } from "src/utils/cvThemes";

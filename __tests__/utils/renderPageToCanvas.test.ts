@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vite-plus/test";
 import { renderPageToCanvas } from "src/utils/renderPageToCanvas";
 
 describe("renderPageToCanvas", () => {
@@ -27,13 +27,14 @@ describe("renderPageToCanvas", () => {
     const canvas = document.createElement("canvas");
     (canvas as any).getContext = () => null;
 
+    const renderSpy = vi.fn().mockReturnValue({ promise: Promise.resolve() });
     const page = {
       getViewport: () => ({ width: 100, height: 150 }),
-      render: vi.fn().mockReturnValue({ promise: Promise.resolve() }),
+      render: renderSpy,
     } as unknown as import("pdfjs-dist/legacy/build/pdf.mjs").PDFPageProxy;
 
     await renderPageToCanvas(page, canvas);
-    expect(page.render).not.toHaveBeenCalled();
+    expect(renderSpy).not.toHaveBeenCalled();
   });
 
   it("uses devicePixelRatio when undefined", async () => {

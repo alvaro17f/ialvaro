@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vite-plus/test";
 import { render, screen, waitFor, cleanup, fireEvent } from "@testing-library/react";
 import { PdfCanvas } from "src/components/PdfCanvas";
 

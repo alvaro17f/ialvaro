@@ -1,6 +1,6 @@
 import { cleanup, render } from "@testing-library/react";
 import { DynamicTitle, getSiteName } from "src/utils/DynamicTitle";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vite-plus/test";
 
 describe("getSiteName", () => {
   it("extracts name from simple domain", () => {

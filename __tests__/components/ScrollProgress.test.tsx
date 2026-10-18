@@ -1,6 +1,6 @@
 import { act, cleanup, render, screen } from "@testing-library/react";
 import { ScrollProgress } from "src/components/ScrollProgress";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vite-plus/test";
 
 describe("<ScrollProgress />", () => {
   afterEach(cleanup);

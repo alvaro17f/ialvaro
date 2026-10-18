@@ -1,6 +1,6 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { Scrollup } from "src/components/Scrollup";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vite-plus/test";
 
 // happy-dom 20+ exposes window.scrollY as a getter-only property, so it can no
 // longer be assigned via the event target. Shadow it on the window instance

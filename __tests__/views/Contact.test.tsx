@@ -1,7 +1,7 @@
 import { cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { Contact } from "src/views/Contact";
 import type { EmailJSResponseStatus } from "@emailjs/browser";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vite-plus/test";
 
 vi.mock("@emailjs/browser", () => ({
   default: { sendForm: vi.fn().mockRejectedValue(new Error("fail")) },

@@ -24,7 +24,14 @@ export default defineConfig({
   vite: {
     plugins: [tailwind()],
     optimizeDeps: {
-      include: ["jspdf"],
+      // Both are reached through dynamic import() (CV generation / lazy PDF viewer), so
+      // pre-bundle them up front: otherwise Vite discovers them late and re-optimizes
+      // mid-session, which 504s the URLs the running page already has.
+      include: ["jspdf", "pdfjs-dist/legacy/build/pdf.mjs"],
+    },
+    build: {
+      // pdfjs-dist is a single ~500 kB module loaded on demand by the lazy CV viewer.
+      chunkSizeWarningLimit: 600,
     },
   },
 

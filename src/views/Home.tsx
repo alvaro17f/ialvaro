@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { ScrambleWobble } from "src/components/ScrambleWobble";
 import { useScrollReveal } from "src/hooks/useScrollReveal";
-import { generateCV } from "src/utils/generateCV";
-import { PdfViewer } from "src/components/PdfViewer";
 import { CapWidget } from "src/components/CapWidget";
 import { CVThemePicker } from "src/components/CVThemePicker";
 import { Modal } from "src/components/Modal";
 import { getThemeById, type CVTheme } from "src/utils/cvThemes";
 import toast, { Toaster } from "react-hot-toast";
 import type { ExperienceEntry, AboutEntry, SkillEntry } from "src/utils/content";
+
+// Cargado bajo demanda: arrastra pdfjs-dist y solo se necesita al abrir el CV.
+const PdfViewer = lazy(() =>
+  import("src/components/PdfViewer").then((m) => ({ default: m.PdfViewer })),
+);
 
 interface HomeProps {
   experienceData: ExperienceEntry[];
@@ -46,6 +49,7 @@ export const Home = ({ experienceData, aboutData, skillsData }: HomeProps) => {
         setCvStep("captcha");
         return;
       }
+      const { generateCV } = await import("src/utils/generateCV");
       const url = await generateCV(theme, experienceData, aboutData, skillsData);
       setPdfUrl(url);
       setShowViewer(true);
@@ -174,15 +178,19 @@ export const Home = ({ experienceData, aboutData, skillsData }: HomeProps) => {
         <span className="text-[10px] tracking-[0.2em] uppercase text-alvaro-muted/40">Scroll</span>
         <div className="w-px h-8 bg-gradient-to-b from-alvaro-primary/40 to-transparent" />
       </div>
-      <PdfViewer
-        src={pdfUrl ?? ""}
-        isOpen={showViewer}
-        onClose={() => {
-          if (pdfUrl) URL.revokeObjectURL(pdfUrl);
-          setPdfUrl(null);
-          setShowViewer(false);
-        }}
-      />
+      {showViewer && (
+        <Suspense fallback={null}>
+          <PdfViewer
+            src={pdfUrl ?? ""}
+            isOpen
+            onClose={() => {
+              if (pdfUrl) URL.revokeObjectURL(pdfUrl);
+              setPdfUrl(null);
+              setShowViewer(false);
+            }}
+          />
+        </Suspense>
+      )}
       <Modal
         isOpen={isThemeModalOpen}
         onClose={() => setIsThemeModalOpen(false)}

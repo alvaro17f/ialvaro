@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { ArrowLeftIcon, FileTextIcon, SpinnerIcon } from "@phosphor-icons/react";
 import { CapWidget } from "src/components/CapWidget";
 import { CVThemePicker } from "src/components/CVThemePicker";
-import { PdfViewer } from "src/components/PdfViewer";
-import { generateCV } from "src/utils/generateCV";
 import { getThemeById, type CVTheme } from "src/utils/cvThemes";
 import toast, { Toaster } from "react-hot-toast";
 import type { ExperienceEntry, AboutEntry, SkillEntry } from "src/utils/content";
+
+// Cargado bajo demanda: arrastra pdfjs-dist y solo se necesita al abrir el CV.
+const PdfViewer = lazy(() =>
+  import("src/components/PdfViewer").then((m) => ({ default: m.PdfViewer })),
+);
 
 interface CVProps {
   experienceData: ExperienceEntry[];
@@ -37,6 +40,7 @@ export const CV = ({ experienceData, aboutData, skillsData }: CVProps) => {
         setStep("captcha");
         return;
       }
+      const { generateCV } = await import("src/utils/generateCV");
       const url = await generateCV(theme, experienceData, aboutData, skillsData);
       setPdfUrl(url);
       setShowViewer(true);
@@ -70,15 +74,19 @@ export const CV = ({ experienceData, aboutData, skillsData }: CVProps) => {
         onVerified: handleOpen,
         selectedTheme: theme,
       })}
-      <PdfViewer
-        src={pdfUrl ?? ""}
-        isOpen={showViewer}
-        onClose={() => {
-          if (pdfUrl) URL.revokeObjectURL(pdfUrl);
-          setPdfUrl(null);
-          setShowViewer(false);
-        }}
-      />
+      {showViewer && (
+        <Suspense fallback={null}>
+          <PdfViewer
+            src={pdfUrl ?? ""}
+            isOpen
+            onClose={() => {
+              if (pdfUrl) URL.revokeObjectURL(pdfUrl);
+              setPdfUrl(null);
+              setShowViewer(false);
+            }}
+          />
+        </Suspense>
+      )}
     </section>
   );
 };
